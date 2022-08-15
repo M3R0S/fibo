@@ -1,0 +1,46 @@
+@use 'styles/_var.sass' as var
+
+.container
+    width: var.$section-width
+    margin-top
+    display: flex
+    align-items: center
+    ul 
+        display: flex
+        transform: translate(-5px)
+        li
+            padding: 5px
+            margin-right: 6px
+            font-size: 15px
+            font-weight: 600
+            color: var.$color-black
+            border-radius: 10px
+            transition: all 0.2s linear
+        li:hover
+            background-color: var.$color-yellow
+
+.login 
+    padding: 5px 10px
+    font-size: 16px
+    font-weight: 700
+    color: #696F7A
+    border-radius: 10px
+    transition: all 0.2s linear
+
+
+.login:hover
+    color: var.$color-yellow
+    background-color: #696f7a99
+
+.basket 
+    margin-left: 20px
+    width: 160px
+    height: 42px
+    background-color: var.$color-yellow
+    border-radius: 8px
+    font-weight: 700
+    font-size: 16px
+    color: #231F20
+
+.basket:hover 
+    box-shadow: 0 3px 5px 1px
