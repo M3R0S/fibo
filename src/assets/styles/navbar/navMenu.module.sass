@@ -1,4 +1,4 @@
-@use 'styles/_var.sass' as var
+@use '../../styles/_var' as var
 
 .container
     width: var.$section-width
@@ -16,8 +16,9 @@
             color: var.$color-black
             border-radius: 10px
             transition: all 0.2s linear
-        li:hover
-            background-color: var.$color-yellow
+
+            &:hover
+                background-color: var.$color-yellow
 
 .login 
     padding: 5px 10px
@@ -27,10 +28,9 @@
     border-radius: 10px
     transition: all 0.2s linear
 
-
-.login:hover
-    color: var.$color-yellow
-    background-color: #696f7a99
+    &:hover
+        color: var.$color-yellow
+        background-color: #696f7a99
 
 .basket 
     margin-left: 20px
@@ -41,6 +41,6 @@
     font-weight: 700
     font-size: 16px
     color: #231F20
-
-.basket:hover 
-    box-shadow: 0 3px 5px 1px
+    
+    &:hover 
+        box-shadow: 0 3px 5px 1px

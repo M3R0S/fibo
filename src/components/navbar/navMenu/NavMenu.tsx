@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { NavLink } from 'react-router-dom'
-import cl from '../../../styles/navbar/navMenu.module.sass'
+import cl from "../../../assets/styles/navbar/navMenu.module.sass";
 
-const NavMenu = () => {
+const links = [] //
+
+const NavMenu : FC = () => {
   return (
     <section className={cl.container}>
       <ul>

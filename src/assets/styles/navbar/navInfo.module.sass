@@ -1,9 +1,10 @@
-@use 'styles/_var.sass' as var
+@use '../../styles/_var' as var
 
 .container
     width: var.$section-width
     display: flex
     align-items: center
+
 
 .delivery_info 
     margin-left: 52px
@@ -30,7 +31,7 @@
     a:nth-of-type(1)
         margin-left: 22px
     a:nth-of-type(1)::before
-        background: url('../../assets/icons/header/yandex-delivery.png') no-repeat 0 50%
+        background: url('../../icons/header/yandex-delivery.png') no-repeat 0 50%
         position: absolute
         transform: translate(-25px, 1px)
         width: 18px
@@ -41,14 +42,14 @@
         margin-left: 15px
     a:nth-of-type(2)::before,
     b:nth-of-type(2)::before
-        background: url('../../assets/icons/header/red-ellipse.png') no-repeat 0 60%
+        background: url('../../icons/header/red-ellipse.png') no-repeat 0 60%
         position: absolute
         transform: translateX(-11px)
         width: 4px
         height: 20px
         content: ""
     a:nth-of-type(2)::after
-        background: url('../../assets/icons/header/star.png') no-repeat 0 50%
+        background: url('../../icons/header/star.png') no-repeat 0 50%
         position: absolute
         transform: translateX(4px)
         width: 14px
@@ -66,9 +67,9 @@
     font-weight: 700
     color: #696F7A
     margin-left: 170px
-
-.order_call:hover
-    box-shadow: 0 3px 5px 1px
+    
+    &:hover
+        box-shadow: 0 3px 5px 1px
 
 .call_number
     padding: 5px
@@ -77,6 +78,6 @@
     font-size: 26px
     font-weight: 700
     border-radius: 20px
-
-.call_number:hover
-    background-color: #f7d22d15
+    
+    &:hover
+        background-color: #f7d22d15

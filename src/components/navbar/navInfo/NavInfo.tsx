@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import cl from "../../../styles/navbar/navInfo.module.sass";
+import cl from "../../../assets/styles/navbar/navInfo.module.sass";
 import logoImg from "../../../assets/image/header-logo.png";
 
 const NavInfo: FC = () => {
