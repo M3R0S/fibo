@@ -1,0 +1,165 @@
+@use '../../styles/_var' as var
+
+footer
+    width: 100%
+    display: flex
+    justify-content: center
+    padding-bottom: 50px
+    overflow: hidden
+
+.footer_info_cont
+    width: 540px
+    display: flex
+    flex-direction: column
+
+    img
+        width: 90px
+        height: 66px
+        margin-top: 55px
+    
+    .group_h1
+        display: flex
+        flex-wrap: nowrap
+        margin-top: 33px
+
+        h1:nth-of-type(2)
+            margin-left: 50px
+    h1 
+        font-size: 16px
+        font-weight: 700
+        line-height: 28px
+
+    .i_social
+        margin-top: 23px
+    
+    .group_contact
+        margin-top: 15px
+        display: grid
+        grid-template-areas: "A B C" "D F C"
+        column-gap: 90px
+        row-gap: 7px
+
+        a
+            font-size: 16px
+            font-weight: 600
+            transition: all 0.1s linear
+        
+        a:hover
+                filter: drop-shadow(0px 3px 5px #00000031)
+                color: var.$color-yellow
+
+        a:nth-of-type(5)
+            grid-area: C
+            line-height: 33px
+    
+    .grop_footer
+        display: flex
+        justify-content: space-between
+        margin-top: 53px
+
+        .payment_systems
+            transform: translate(50px, -10px)
+
+            a
+                display: inline-block
+                width: 45px
+                height: 45px
+
+            a:hover
+                filter: drop-shadow(0 3px 3px #0000008e)
+
+            a:nth-of-type(1)
+                background: url('../../icons/footer/visa.png') no-repeat
+                margin-right: 25px
+            a:nth-of-type(2)
+                background: url('../../icons/footer/paypal.png') no-repeat
+                margin-right: 20px
+            a:nth-of-type(3)
+                background: url('../../icons/footer/mc.png') no-repeat
+                
+
+
+
+.footer_contact_cont
+    // justify-content: flex-end
+    width: 475px
+    display: flex
+    flex-direction: column
+    margin-left: 100px
+    overflow: hidden
+    padding-left: 20px
+    padding-right: 20px
+
+
+
+    strong
+        font-size: 14px
+        font-weight: 700px
+        margin-top: 80px
+
+    .contacts
+        display: flex
+        flex-wrap: wrap
+        gap: 13px
+        margin-top: 33px
+
+        a
+            display: block
+            max-width: 100px
+            min-width: 100px
+            height: 52px
+            border: 2px solid #E3ECF5
+            border-radius: 13px
+            transition: all 0.1s linear
+        
+        a:nth-of-type(1)
+            background: url('../../icons/footer/icon1.png') no-repeat 50% 50%
+        a:nth-of-type(2)
+            background: url('../../icons/footer/icon2.png') no-repeat 50% 50%
+        a:nth-of-type(3)
+            background: url('../../icons/footer/icon3.png') no-repeat 50% 50%
+        a:nth-of-type(4)
+            background: url('../../icons/footer/icon4.png') no-repeat 50% 50%
+        a:nth-of-type(5)
+            background: url('../../icons/footer/icon5.png') no-repeat 50% 50%
+        a:nth-of-type(6)
+            background: url('../../icons/footer/icon6.png') no-repeat 50% 50%
+
+        
+        .tell
+            width: 220px
+            height: 52px
+            border: 2px solid #E3ECF5
+            border-radius: 13px
+            font-size: 13px
+            font-weight: 700
+            transition: all 0.1s linear
+        
+        a:hover, .tell:hover 
+            box-shadow: 0px 8px 24px 0px #00000035
+
+    h1
+        font-size: 30px
+        font-weight: 700
+        color: var.$color-yellow
+        margin-top: 42px
+
+    .call
+        width: 180px
+        height: 42px
+        background-color: #F3F3F7
+        border-radius: 28px
+        color: #696F7A
+        font-size: 14px
+        font-weight: 700
+        margin-top: 20px
+        transition: all 0.1s linear
+
+    .call:hover
+        box-shadow: 0px 8px 24px 0px #00000035
+
+.pizaPasta 
+    position: absolute
+    right: 0
+    transform: translate(0, 330px)
+    
