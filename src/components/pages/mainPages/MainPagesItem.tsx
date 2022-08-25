@@ -14,12 +14,13 @@ const MainPagesItem: FC<IMainPageItemProps> = ({
   strongText,
   img,
 }) => {
-  
   return (
     <article className={cl.group_item}>
-      <img src={img} alt="pizza" />
-      <h2>{h2Text}</h2>
-      <p>{pText}</p>
+      <div className={cl.main_info}>
+        <img src={img} alt="pizza" />
+        <h2>{h2Text}</h2>
+        <p>{pText}</p>
+      </div>
       <div className={cl.footer_info}>
         <strong>{strongText}</strong>
         <button type="button" className={cl.basket}>

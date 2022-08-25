@@ -30,10 +30,10 @@ export const getNewPositionList = createAsyncThunk<
   { rejectValue: string }
 >("newPosition/getNewPositionList", async (_, { rejectWithValue }) => {
   try {
-    // const res = await axios.get<TNewPositionItem[]>(
-    //   "http://localhost:4000/newPosition"
-    // );
-    return newPosition.newPosition;
+    const res = await axios.get<TNewPositionItem[]>(
+      "http://localhost:4000/newPosition"
+    );
+    return res.data;
   } catch (error) {
     return rejectWithValue("Ошибка загрузки");
   }
@@ -63,28 +63,5 @@ export const newPositionSlice = createSlice({
 function isError(action: AnyAction) {
   return action.type.endsWith("rejected");
 }
-
-const newPosition = JSON.parse(`{"newPosition": [
-    {
-      "h2Text": "Маргарита",
-      "strongText": "от 120 ₽",
-      "img": "assets/image/newPosition/news-assortment.png"
-    },
-    {
-      "h2Text": "Маргарита",
-      "strongText": "от 120 ₽",
-      "img": "assets/image/newPosition/news-assortment.png"
-    },
-    {
-      "h2Text": "Маргарита",
-      "strongText": "от 120 ₽",
-      "img": "assets/image/newPosition/news-assortment.png"
-    },
-    {
-      "h2Text": "Маргарита",
-      "strongText": "от 120 ₽",
-      "img": "assets/image/newPosition/news-assortment.png"
-    }
-  ]}`);
 
 export default newPositionSlice.reducer;
