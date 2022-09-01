@@ -1,11 +1,14 @@
 import React, { FC } from "react";
 import cl from "../../../assets/styles/navbar/navInfo.module.sass";
 import logoImg from "../../../assets/image/header-logo.png";
+import { Link} from "react-router-dom";
 
 const NavInfo: FC = () => {
   return (
     <section className={cl.container}>
-      <img src={logoImg} alt="Logo" />
+      <Link to={'/main'}>
+        <img src={logoImg} alt="Logo" />
+      </Link>
       <figure className={cl.delivery_info}>
         <div>
           <h1>

@@ -1,0 +1,125 @@
+@use '../../../styles/_var' as var
+    
+.main_promotion 
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding-bottom: 25px
+
+.container
+    width: var.$section-width
+    margin-top: 134px
+
+    h1
+        font-size: 30px
+        font-weight: 700
+        color: var.$color-yellow
+
+
+.promotion_card_cont
+    margin-top: 25px
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 30px
+        
+        
+    .promotion_card
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        border-radius: 12px
+        box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06)
+    
+        &:hover
+            box-shadow: 0px 8px 24px 0px #00000035
+
+        .wrapper_card
+            padding: 13px 7px 20px 20px
+            
+            h2
+                font-size: 20px
+                font-weight: 700
+                line-height: 28px
+            
+            p
+                font-size: 13px
+                font-weight: 500
+                line-height: 20px
+                color: #797979
+                margin-top: 7px
+
+        .open_modal
+            width: 159px
+            height: 45px
+            background-color: var.$color-yellow
+            color: #473E43
+            font-size: 14px
+            font-weight: 700
+            border-radius: 8px
+            margin: 0 0 20px 20px
+
+            &:hover
+                box-shadow: 0px 0px 24px 0px #f7d22d4c
+
+.modal_card_cont_disable
+    display: none
+
+.modal_card_cont
+    position: fixed
+    width: 100%
+    height: 100%
+    // padding-bottom: 600px
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 1000
+    background: #F7D22D66
+
+
+    .modal_card
+        background-color: #FFF
+        padding: 30px
+        height: auto
+        margin-bottom: 250px
+        width: 500px
+        display: flex
+        flex-direction: column
+        border-radius: 20px
+        
+        .wrapper_card_modal
+            padding: 30px 20px 0 20px
+            display: flex
+            flex-direction: column
+            align-items: center
+            
+            h2
+                font-size: 25px
+                font-weight: 700
+                line-height: 28px
+                text-align: center
+            
+            p
+                font-size: 16px
+                font-weight: 500
+                line-height: 24px
+                color: #797979
+                margin-top: 15px
+            
+            .closed_modal
+                margin-top: 20px
+                width: 159px
+                height: 45px
+                background-color: var.$color-yellow
+                color: #473E43
+                font-size: 14px
+                font-weight: 700
+                border-radius: 8px
+
+                &:hover
+                    box-shadow: 0px 0px 24px 0px #f7d22d4c
+
+
+        
+        
+    

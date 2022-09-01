@@ -1,8 +1,6 @@
 import {
-  AnyAction,
   createAsyncThunk,
   createSlice,
-  PayloadAction,
 } from "@reduxjs/toolkit";
 import axios from "axios";
 
@@ -15,13 +13,13 @@ export type TNewPositionItem = {
 type TNewPositionList = {
   list: TNewPositionItem[];
   loading: boolean;
-  error: string | null;
+  error: string | undefined;
 };
 
 const initialState: TNewPositionList = {
   list: [],
   loading: false,
-  error: null,
+  error: undefined,
 };
 
 export const getNewPositionList = createAsyncThunk<
@@ -33,9 +31,10 @@ export const getNewPositionList = createAsyncThunk<
     const res = await axios.get<TNewPositionItem[]>(
       "http://localhost:4000/newPosition"
     );
+    console.log(res.data);
     return res.data;
   } catch (error) {
-    return rejectWithValue("Ошибка загрузки");
+    return rejectWithValue("Я нью позишн");
   }
 });
 
@@ -47,21 +46,21 @@ export const newPositionSlice = createSlice({
     builder
       .addCase(getNewPositionList.pending, (state) => {
         state.loading = true;
-        state.error = null;
+        state.error = undefined;
       })
       .addCase(getNewPositionList.fulfilled, (state, action) => {
         state.loading = false;
         state.list = action.payload;
       })
-      .addMatcher(isError, (state, action: PayloadAction<string>) => {
+      .addCase(getNewPositionList.rejected, (state, action) => {
         state.error = action.payload;
         state.loading = false;
       });
   },
 });
 
-function isError(action: AnyAction) {
-  return action.type.endsWith("rejected");
-}
+// function isError(action: AnyAction) {
+//   return action.type.endsWith("rejected");
+// }
 
 export default newPositionSlice.reducer;

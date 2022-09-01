@@ -1,7 +1,6 @@
 import React from "react";
 import cl from "../../assets/styles/footer/footer.module.sass";
 import { v4 as uuidv4 } from "uuid";
-import pizaPasta from '../../assets/image/footer-back.png'
 
 const FooterContact = () => {
   return (
@@ -18,7 +17,6 @@ const FooterContact = () => {
         <h1>8 499 391-84-49</h1>
         <button className={cl.call}>Заказать звонок</button>
       </div>
-      <img className={cl.pizaPasta} src={pizaPasta} alt="pizaPasta" />
     </section>
   );
 };

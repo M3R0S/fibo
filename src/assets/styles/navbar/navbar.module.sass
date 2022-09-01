@@ -1,4 +1,4 @@
-header 
+.header 
     width: 100%
     display: flex
     flex-direction: column
@@ -7,3 +7,30 @@ header
     background-color: #fff
     padding: 13px 0 15px 0
     z-index: 100
+    top: 0
+
+.entering
+    animation: slow_motion_down .5s forwards
+
+// .entered
+//     animation: slow_motion_down .5s forwards
+
+.exiting
+    animation: slow_motion_up .5s forwards
+
+// .exited
+//     animation: slow_motion_up .5s forwards
+
+@keyframes slow_motion_down
+    0%
+        transform: translate(0, 10px)
+    100%
+        transform: translate(0)
+
+@keyframes slow_motion_up
+    0%
+        transform: translate(0, -30px)
+    100% 
+        transform: translate(0)
+        
+        

@@ -1,51 +1,47 @@
-import React, { FC } from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { FC } from "react";
+import { NavLink } from "react-router-dom";
 import cl from "../../../assets/styles/navbar/navMenu.module.sass";
+import { v4 as uuidv4 } from "uuid";
 
-const links = [] //
-
-const NavMenu : FC = () => {
+const NavMenu: FC = () => {
   return (
     <section className={cl.container}>
-      <ul>
-        <li>
-          <NavLink to={"#"}>Пицца</NavLink>
-        </li>
-        <li>
-          <NavLink to={"#"}>Паста</NavLink>
-        </li>
-        <li>
-          <NavLink to={"#"}>Супы</NavLink>
-        </li>
-        <li>
-          <NavLink to={"#"}>Салаты</NavLink>
-        </li>
-        <li>
-          <NavLink to={"#"}>Напитки</NavLink>
-        </li>
-        <li>
-          <NavLink to={"#"}>Десерты</NavLink>
-        </li>
-        <li>
-          <NavLink to={"#"}>Бакалея</NavLink>
-        </li>
-        <li>
-          <NavLink to={"#"}>Антипасти</NavLink>
-        </li>
-        <li>
-          <NavLink to={"#"}>Акции</NavLink>
-        </li>
-        <li>
-          <NavLink to={"#"}>Комбо</NavLink>
-        </li>
-        <li>
-          <NavLink to={"#"}>Контакты</NavLink>
-        </li>
-      </ul>
-      <button type="button" className={cl.login}>Войти</button>
-      <button type="button" className={cl.basket}>Корзина | '1'</button>
+      <nav>
+        <ul>
+          {navLinks.map(({ to, title }) => (
+            <li key={uuidv4()}>
+              <NavLink
+                className={({ isActive }) => (isActive ? cl.active : cl.nav_disable)}
+                to={to}
+              >
+                {title}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <button type="button" className={cl.login}>
+        Войти
+      </button>
+      <button type="button" className={cl.basket}>
+        Корзина | '1'
+      </button>
     </section>
   );
-}
+};
 
-export default NavMenu
+export const navLinks = [
+  { to: "", title: "Пицца" },
+  { to: "", title: "Паста" },
+  { to: "", title: "Супы" },
+  { to: "", title: "Салаты" },
+  { to: "", title: "Напитки" },
+  { to: "", title: "Десерты" },
+  { to: "", title: "Бакалея" },
+  { to: "", title: "Антипасти" },
+  { to: "/promotion", title: "Акции" },
+  { to: "", title: "Комбо" },
+  { to: "/contact", title: "Контакты" },
+];
+
+export default NavMenu;

@@ -2,6 +2,7 @@
   "pizza": [
     {
       "id": 1,
+      "type": "pizza",
       "h2Text": "С креветками и трюфелями",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г ыавываываываываыва ыаываываы ываываываываыв ывавыаываыв ывваываыв ы ыаываываыв  ываываыва ывааываы в",
       "strongText": "от 600 ₽",
@@ -9,6 +10,7 @@
     },
     {
       "id": 2,
+      "type": "pizza",
       "h2Text": "С креветками и трюфелями",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
       "strongText": "от 600 ₽",
@@ -16,6 +18,7 @@
     },
     {
       "id": 3,
+      "type": "pizza",
       "h2Text": "С креветками и трюфелями",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г dfdfdffdffffffff gfdgdfgdfg dfgdfgdfgd dgdfgdfgdf df dfgdfgdfgdf dfggdfgdfgd df dfgdfgd drgdf ggfdg d gf Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г dfdfdffdffffffff gfdgdfgdfg dfgdfgdfgd dgdfgdfgdf df dfgdfgdfgdf dfggdfgdfgd df dfgdfgd drgdf ggfdg d gf",
       "strongText": "от 600 ₽",
@@ -23,6 +26,7 @@
     },
     {
       "id": 4,
+      "type": "pizza",
       "h2Text": "С креветками и трюфелями",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
       "strongText": "от 600 ₽",
@@ -30,6 +34,7 @@
     },
     {
       "id": 5,
+      "type": "pizza",
       "h2Text": "С креветками и трюфелями",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
       "strongText": "от 600 ₽",
@@ -37,6 +42,7 @@
     },
     {
       "id": 6,
+      "type": "pizza",
       "h2Text": "С креветками и трюфелями",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г dfdfdffdffffffff gfdgdfgdfg dfgdfgdfgd dgdfgdfgdf df dfgdfgdfgdf dfggdfgdfgd df dfgdfgd drgdf ggfdg d gf Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г dfdfdffdffffffff gfdgdfgdfg dfgdfgdfgd dgdfgdfgdf df dfgdfgdfgdf dfggdfgdfgd df dfgdfgd drgdf ggfdg d gf",
       "strongText": "от 600 ₽",
@@ -44,6 +50,7 @@
     },
     {
       "id": 7,
+      "type": "pizza",
       "h2Text": "С креветками и трюфелями",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
       "strongText": "от 600 ₽",
@@ -51,6 +58,7 @@
     },
     {
       "id": 8,
+      "type": "pizza",
       "h2Text": "С креветками и трюфелями",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
       "strongText": "от 600 ₽",
@@ -203,6 +211,80 @@
       "img": "/assets/image/mainProduct/image4.png"
     }
   ],
+  "pizza_modal": [
+    {
+      "id": 1,
+      "h1Text": "С креветками и трюфелями",
+      "weightProductSmall": 360,
+      "weightProductMedium": 450,
+      "weightProductBig": 600,
+      "img": "/assets/image/mainProduct/modal/img1.png",
+      "type": "pizza"
+    },
+    {
+      "id": 2,
+      "h1Text": "С креветками и трюфелям",
+      "weightProductSmall": 360,
+      "weightProductMedium": 450,
+      "weightProductBig": 600,
+      "img": "/assets/image/mainProduct/modal/img1.png",
+      "type": "pizza"
+    },
+    {
+      "id": 3,
+      "h1Text": "С креветками и трюфеля",
+      "weightProductSmall": 360,
+      "weightProductMedium": 450,
+      "weightProductBig": 600,
+      "img": "/assets/image/mainProduct/modal/img1.png",
+      "type": "pizza"
+    },
+    {
+      "id": 4,
+      "h1Text": "С креветками и трюфел",
+      "weightProductSmall": 360,
+      "weightProductMedium": 450,
+      "weightProductBig": 600,
+      "img": "/assets/image/mainProduct/modal/img1.png",
+      "type": "pizza"
+    },
+    {
+      "id": 5,
+      "h1Text": "С креветками и трюфе",
+      "weightProductSmall": 360,
+      "weightProductMedium": 450,
+      "weightProductBig": 600,
+      "img": "/assets/image/mainProduct/modal/img1.png",
+      "type": "pizza"
+    },
+    {
+      "id": 6,
+      "h1Text": "С креветками и трюф",
+      "weightProductSmall": 360,
+      "weightProductMedium": 450,
+      "weightProductBig": 600,
+      "img": "/assets/image/mainProduct/modal/img1.png",
+      "type": "pizza"
+    },
+    {
+      "id": 7,
+      "h1Text": "С креветками и трю",
+      "weightProductSmall": 360,
+      "weightProductMedium": 450,
+      "weightProductBig": 600,
+      "img": "/assets/image/mainProduct/modal/img1.png",
+      "type": "pizza"
+    },
+    {
+      "id": 8,
+      "h1Text": "С креветками и тр",
+      "weightProductSmall": 360,
+      "weightProductMedium": 450,
+      "weightProductBig": 600,
+      "img": "/assets/image/mainProduct/modal/img1.png",
+      "type": "pizza"
+    }
+  ],
   "newPosition": [
     {
       "h2Text": "Пицца Маргарита",
@@ -223,6 +305,136 @@
       "h2Text": "Паста Карбонара",
       "strongText": "от 120 ₽",
       "img": "assets/image/newPosition/news-assortment.png"
+    }
+  ],
+  "promotion_page": [
+    {
+      "id": 1,
+      "h2Text": "Дарим кибер-призы",
+      "pText": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня.",
+      "img": "/assets/image/promotionPage/1.png"
+    },
+    {
+      "id": 2,
+      "h2Text": "Дарим кибер-призы",
+      "pText": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня.",
+      "img": "/assets/image/promotionPage/2.png"
+    },
+    {
+      "id": 3,
+      "h2Text": "Дарим кибер-призы",
+      "pText": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня.",
+      "img": "/assets/image/promotionPage/3.png"
+    },
+    {
+      "id": 4,
+      "h2Text": "Дарим кибер-призы",
+      "pText": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня.",
+      "img": "/assets/image/promotionPage/4.png"
+    },
+    {
+      "id": 5,
+      "h2Text": "Дарим кибер-призы",
+      "pText": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня.",
+      "img": "/assets/image/promotionPage/5.png"
+    },
+    {
+      "id": 6,
+      "h2Text": "Дарим кибер-призы",
+      "pText": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня.",
+      "img": "/assets/image/promotionPage/6.png"
+    },
+    {
+      "id": 7,
+      "h2Text": "Дарим кибер-призы",
+      "pText": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня.",
+      "img": "/assets/image/promotionPage/7.png"
+    },
+    {
+      "id": 8,
+      "h2Text": "Дарим кибер-призы",
+      "pText": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня.",
+      "img": "/assets/image/promotionPage/8.png"
+    },
+    {
+      "id": 9,
+      "h2Text": "Дарим кибер-призы",
+      "pText": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня.",
+      "img": "/assets/image/promotionPage/9.png"
+    },
+    {
+      "id": 10,
+      "h2Text": "Дарим кибер-призы",
+      "pText": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня.",
+      "img": "/assets/image/promotionPage/10.png"
+    },
+    {
+      "id": 11,
+      "h2Text": "Дарим кибер-призы",
+      "pText": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня. Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня.",
+      "img": "/assets/image/promotionPage/11.png"
+    },
+    {
+      "id": 12,
+      "h2Text": "Дарим кибер-призы",
+      "pText": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня.",
+      "img": "/assets/image/promotionPage/12.png"
+    }
+  ],
+  "supplements_pizza": [
+    {
+      "id": 1,
+      "h1Text": "Острый халапеньо",
+      "img": "/assets/image/mainProduct/supplements/image1.png",
+      "strongText": "от 120 ₽"
+    },
+    {
+      "id": 2,
+      "h1Text": "Острый халапеньо",
+      "img": "/assets/image/mainProduct/supplements/image2.png",
+      "strongText": "от 120 ₽"
+    },
+    {
+      "id": 3,
+      "h1Text": "Острый халапеньо",
+      "img": "/assets/image/mainProduct/supplements/image3.png",
+      "strongText": "от 120 ₽"
+    },
+    {
+      "id": 4,
+      "h1Text": "Острый халапеньо",
+      "img": "/assets/image/mainProduct/supplements/image1.png",
+      "strongText": "от 120 ₽"
+    },
+    {
+      "id": 5,
+      "h1Text": "Острый халапеньо",
+      "img": "/assets/image/mainProduct/supplements/image2.png",
+      "strongText": "от 120 ₽"
+    },
+    {
+      "id": 6,
+      "h1Text": "Острый халапеньо",
+      "img": "/assets/image/mainProduct/supplements/image3.png",
+      "strongText": "от 120 ₽"
+    },
+    {
+      "id": 7,
+      "h1Text": "Острый халапеньо",
+      "img": "/assets/image/mainProduct/supplements/image1.png",
+      "strongText": "от 120 ₽"
+    },
+    {
+      "id": 8,
+      "h1Text": "Острый халапеньо",
+      "img": "/assets/image/mainProduct/supplements/image2.png",
+      "strongText": "от 120 ₽"
+    },
+    {
+      "id": 9,
+      "h1Text": "Острый халапеньо",
+      "img": "/assets/image/mainProduct/supplements/image3.png",
+      "strongText": "от 120 ₽"
     }
   ]
 }

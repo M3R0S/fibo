@@ -9,19 +9,44 @@
         width: 560px
         height: 322px
         // overflow: hidden
+
+    // .exited:nth-of-type(1)
+    //     animation: first_img_left_ 1s forwards
+    
+    // .exited:nth-of-type(2)
+    //     animation: two_img_left_end 1s forwards
+
+    // .exited:nth-of-type(3)
+    //     animation: three_img_left_end 1s forwards
+
+    // .exited:nth-of-type(4)
+    //     animation: four_img_left_end 1s forwards
+    
+    // .entered:nth-of-type(1)
+    //     animation: first_img_left_start 1s forwards
+    
+    // .entered:nth-of-type(2)
+    //     animation: two_img_left_start 1s forwards
+
+    // .entered:nth-of-type(3)
+    //     animation: three_img_left_start 1s forwards
+
+    // .entered:nth-of-type(4)
+    //     animation: four_img_left_start 1s forwards
+
     img:nth-of-type(1)
         position: absolute
         transform: translate(-470px)
         width: 478px
         height: 276px
-        opacity: 0.7
+        opacity: 0.7 
+
     img:nth-of-type(4)
         position: absolute
         transform: translate(1100px)
         width: 478px
         height: 276px
         opacity: 0.7
-    
 
 .left_point 
     width: 31px
@@ -56,3 +81,53 @@
     width: 10px
     height: 28px
     transform: translate(-4px, -6px)
+
+// @keyframes first_img_left_start
+//     0%
+//         transform: translate(-550px)
+//     100%
+//         transform: translate(-350px)
+        
+// @keyframes two_img_left_start
+//     0%
+//         transform: translate(-200px)
+//     100%
+//         transform: translate(0)
+
+// @keyframes three_img_left_start
+//     0%
+//         transform: translate(-200px)
+//     100%
+//         transform: translate(0)
+
+// @keyframes four_img_left_start
+//     0%
+//         transform: translate(1020px)
+//     100%
+//         transform: translate(1220px)
+
+
+
+// @keyframes first_img_left_end
+//     0%
+//         transform: translate(-350px)
+//     100%
+//         transform: translate(-550px)
+        
+// @keyframes two_img_left_end
+//     0%
+//         transform: translate(0)
+//     100%
+//         transform: translate(-200px)
+
+// @keyframes three_img_left_end
+//     0%
+//         transform: translate(0)
+//     100%
+//         transform: translate(-200px)
+
+// @keyframes four_img_left_end
+//     0%
+//         transform: translate(1020px)
+//     100%
+//         transform: translate(1220px)

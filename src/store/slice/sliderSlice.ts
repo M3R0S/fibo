@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import yellowPoster from "../../assets/image/interactive-card1.png";
 import blackPoster from "../../assets/image/interactive-card2.png";
 import yellowPosterRed from "../../assets/image/interactive-card3.png";

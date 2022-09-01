@@ -1,15 +1,19 @@
 import { configureStore } from "@reduxjs/toolkit";
-import mainPageSlice from "./slice/mainPageSlice";
+import mainProductItemSlice from "./slice/mainProductItemSlice";
+import mainProductSlice from "./slice/mainProductSlice";
 import newPositionSlice from "./slice/newPositionSlice";
 import promotionSlice from "./slice/promotionSlice";
 import sliderSlice from "./slice/sliderSlice";
+import supplementsSlice from "./slice/supplementsSlice";
 
 const store = configureStore({
   reducer: {
     slider: sliderSlice,
-    mainPage: mainPageSlice,
+    mainProduct: mainProductSlice,
+    mainProductItem: mainProductItemSlice,
     newPosition: newPositionSlice,
-    promotion: promotionSlice,
+    promotionPage: promotionSlice,
+    supplements: supplementsSlice,
   },
 });
 

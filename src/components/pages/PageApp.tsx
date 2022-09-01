@@ -1,16 +1,16 @@
 import React, { FC } from "react";
-import Slide from "./slider/Slide";
+import Slide from "./mainPage/slider/Slide";
 import cl from "../../assets/styles/pages/pageApp.module.sass";
-import NewPosition from "./newPosition/NewPositionList";
-import MainPagesListApp from "./mainPages/MainPagesListApp";
-import Promotion from "./promotion/Promotion";
-import Delivery from "./delivery/Delivery";
+import MainPagesListApp from "./mainPage/mainProduct/MainProductListApp";
+import Promotion from "./mainPage/promotion/Promotion";
+import Delivery from "./mainPage/delivery/Delivery";
+import NewPositionList from "./mainPage/newPosition/NewPositionList";
 
 const PageApp: FC = () => {
   return (
     <main className={cl.main}>
       <Slide></Slide>
-      <NewPosition></NewPosition>
+      <NewPositionList></NewPositionList>
       <MainPagesListApp></MainPagesListApp>
       <Promotion></Promotion>
       <Delivery></Delivery>
