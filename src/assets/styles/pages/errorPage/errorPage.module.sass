@@ -1,0 +1,45 @@
+@use '../../../styles/_var' as var
+
+.error
+    &_container
+        width: 100%
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+    
+    &_content
+        margin-top: 100px
+        width: 800px
+        height: 250px
+        border: 1px solid #00000021
+        box-shadow: 0px 0px 12px 0px #00000035
+        border-radius: 20px
+        display: flex
+        align-items: center
+        flex-direction: column
+
+        h1
+            font-size: 36px
+            color: var.$color-red
+            margin-top: 70px
+        
+        .button_block
+            margin-top: 50px
+            width: 80%
+            display: flex
+            justify-content: space-between
+        
+            button
+                width: 150px
+                height: 40px
+                background-color: var.$color-yellow
+                border-radius: 10px
+                font-size: 16px
+                font-weight: 600
+                
+                &:hover
+                    box-shadow: 0px 0px 12px 0px #00000035
+
+
+

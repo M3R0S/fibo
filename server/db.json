@@ -3,222 +3,243 @@
     {
       "id": 1,
       "type": "pizza",
-      "h2Text": "С креветками и трюфелями",
-      "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г ыавываываываываыва ыаываываы ываываываываыв ывавыаываыв ывваываыв ы ыаываываыв  ываываыва ывааываы в",
-      "strongText": "от 600 ₽",
-      "img": "/assets/image/mainProduct/image1.png"
+      "h2Text": "Пицца Гавайская",
+      "pText": "Пицца с ананасом, креветкой, куриным филе, сыром моцарелла, соус томатный.",
+      "strongText": "470 ₽",
+      "img": "/assets/image/mainProduct/pizza/pizza_gavaiskaya.jpg"
     },
     {
       "id": 2,
       "type": "pizza",
-      "h2Text": "С креветками и трюфелями",
-      "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "от 600 ₽",
-      "img": "/assets/image/mainProduct/image2.png"
+      "h2Text": "Пицца Карбонара",
+      "pText": "Бекон, яйцо, сыр моцарелла, соус бешамель.",
+      "strongText": "390 ₽",
+      "img": "/assets/image/mainProduct/pizza/pizza_carbonara.jpg"
     },
     {
       "id": 3,
       "type": "pizza",
-      "h2Text": "С креветками и трюфелями",
-      "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г dfdfdffdffffffff gfdgdfgdfg dfgdfgdfgd dgdfgdfgdf df dfgdfgdfgdf dfggdfgdfgd df dfgdfgd drgdf ggfdg d gf Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г dfdfdffdffffffff gfdgdfgdfg dfgdfgdfgd dgdfgdfgdf df dfgdfgdfgdf dfggdfgdfgd df dfgdfgd drgdf ggfdg d gf",
-      "strongText": "от 600 ₽",
-      "img": "/assets/image/mainProduct/image3.png"
+      "h2Text": "Пицца Грибная",
+      "pText": "Куриное филе, грибы шампиньоны, шиитаке, трюфельная паста, соус бешамель.",
+      "strongText": "460 ₽",
+      "img": "/assets/image/mainProduct/pizza/pizza_gribnaya.jpg"
     },
     {
       "id": 4,
       "type": "pizza",
-      "h2Text": "С креветками и трюфелями",
-      "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "от 600 ₽",
-      "img": "/assets/image/mainProduct/image4.png"
+      "h2Text": "Пицца 4 сыра",
+      "pText": "Сыр дор-блю, сыр пармезан, сыр моцарелла, сыр чизбургер, соус томатный.",
+      "strongText": "460 ₽",
+      "img": "/assets/image/mainProduct/pizza/pizza_four-chees.jpg"
     },
     {
       "id": 5,
       "type": "pizza",
-      "h2Text": "С креветками и трюфелями",
-      "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "от 600 ₽",
-      "img": "/assets/image/mainProduct/image1.png"
+      "h2Text": "Пицца Том-Ям",
+      "pText": "Тигровые креветки, куриное филе, шампиньоны, томаты черри, сыр моцарелла, соус том-ям.",
+      "strongText": "490 ₽",
+      "img": "/assets/image/mainProduct/pizza/pizza_tom-yam.jpg"
     },
     {
       "id": 6,
       "type": "pizza",
-      "h2Text": "С креветками и трюфелями",
-      "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г dfdfdffdffffffff gfdgdfgdfg dfgdfgdfgd dgdfgdfgdf df dfgdfgdfgdf dfggdfgdfgd df dfgdfgd drgdf ggfdg d gf Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г dfdfdffdffffffff gfdgdfgdfg dfgdfgdfgd dgdfgdfgdf df dfgdfgdfgdf dfggdfgdfgd df dfgdfgd drgdf ggfdg d gf",
-      "strongText": "от 600 ₽",
-      "img": "/assets/image/mainProduct/image2.png"
+      "h2Text": "Пицца 4 сезона",
+      "pText": "Куриное филе, бекон, ветчина, охотничьи колбаски, помидор, сыр моцарелла, соус томатный.",
+      "strongText": "470 ₽",
+      "img": "/assets/image/mainProduct/pizza/pizza_four-season.jpg"
     },
     {
       "id": 7,
       "type": "pizza",
-      "h2Text": "С креветками и трюфелями",
-      "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "от 600 ₽",
-      "img": "/assets/image/mainProduct/image3.png"
+      "h2Text": "Пицца Песто",
+      "pText": "Куриное филе, пепперони, сыр фета, соус \"Песто\", сыр Моцарела, соус Бешамель.",
+      "strongText": "430 ₽",
+      "img": "/assets/image/mainProduct/pizza/pizza_pesto.jpg"
     },
     {
       "id": 8,
       "type": "pizza",
-      "h2Text": "С креветками и трюфелями",
-      "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "от 600 ₽",
-      "img": "/assets/image/mainProduct/image4.png"
+      "h2Text": "Пицца 5 сыров",
+      "pText": "Сыр дор-блю, сыр моцарелла, сыр пармезан, сыр чизбургер, сыр фета, бекон, соус томатный.",
+      "strongText": "490 ₽",
+      "img": "/assets/image/mainProduct/pizza/pizza_five-chees.jpg"
     }
   ],
   "pasta": [
     {
       "id": 1,
-      "h2Text": "С креветками и трюфелями",
-      "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г dfdfdffdffffffff gfdgdfgdfg dfgdfgdfgd dgdfgdfgdf df dfgdfgdfgdf dfggdfgdfgd df dfgdfgd drgdf ggfdg d gf Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г dfdfdffdffffffff gfdgdfgdfg dfgdfgdfgd dgdfgdfgdf df dfgdfgdfgdf dfggdfgdfgd df dfgdfgd drgdf ggfdg d gf",
-      "strongText": "от 600 ₽",
+      "type": "pasta",
+      "h2Text": "Удон с морепродуктами",
+      "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г  ",
+      "strongText": "500 ₽",
       "img": "/assets/image/mainProduct/image1.png"
     },
     {
       "id": 2,
-      "h2Text": "С креветками и трюфелями",
+      "type": "pasta",
+      "h2Text": "Удон с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "от 600 ₽",
+      "strongText": "500 ₽",
       "img": "/assets/image/mainProduct/image2.png"
     },
     {
       "id": 3,
-      "h2Text": "С креветками и трюфелями",
+      "type": "pasta",
+      "h2Text": "Удон с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "от 600 ₽",
+      "strongText": "500 ₽",
       "img": "/assets/image/mainProduct/image3.png"
     },
     {
       "id": 4,
-      "h2Text": "С креветками и трюфелями",
+      "type": "pasta",
+      "h2Text": "Удон с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "от 600 ₽",
+      "strongText": "500 ₽",
       "img": "/assets/image/mainProduct/image4.png"
     },
     {
       "id": 5,
-      "h2Text": "С креветками и трюфелями",
+      "type": "pasta",
+      "h2Text": "Удон с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "от 600 ₽",
+      "strongText": "500 ₽",
       "img": "/assets/image/mainProduct/image1.png"
     },
     {
       "id": 6,
-      "h2Text": "С креветками и трюфелями",
+      "type": "pasta",
+      "h2Text": "Удон с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "от 600 ₽",
+      "strongText": "500 ₽",
       "img": "/assets/image/mainProduct/image2.png"
     },
     {
       "id": 7,
-      "h2Text": "С креветками и трюфелями",
+      "type": "pasta",
+      "h2Text": "Удон с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "от 600 ₽",
+      "strongText": "500 ₽",
       "img": "/assets/image/mainProduct/image3.png"
     },
     {
       "id": 8,
-      "h2Text": "С креветками и трюфелями",
+      "type": "pasta",
+      "h2Text": "Удон с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "от 600 ₽",
+      "strongText": "500 ₽",
       "img": "/assets/image/mainProduct/image4.png"
     }
   ],
   "soup": [
     {
       "id": 1,
-      "h2Text": "С ккккреветками и трюфелями",
+      "type": "soup",
+      "h2Text": "Том ям с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "от 600 ₽",
+      "strongText": "550 ₽",
       "img": "/assets/image/mainProduct/image1.png"
     },
     {
       "id": 2,
-      "h2Text": "С креветками и трюфелями",
+      "type": "soup",
+      "h2Text": "Том ям с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "от 600 ₽",
+      "strongText": "550 ₽",
       "img": "/assets/image/mainProduct/image2.png"
     },
     {
       "id": 3,
-      "h2Text": "С креветками и трюфелями",
+      "type": "soup",
+      "h2Text": "Том ям с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "от 600 ₽",
+      "strongText": "550 ₽",
       "img": "/assets/image/mainProduct/image3.png"
     },
     {
       "id": 4,
-      "h2Text": "С креветками и трюфелями",
+      "type": "soup",
+      "h2Text": "Том ям с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "от 600 ₽",
+      "strongText": "550 ₽",
       "img": "/assets/image/mainProduct/image4.png"
     },
     {
       "id": 5,
-      "h2Text": "С креветками и трюфелями",
+      "type": "soup",
+      "h2Text": "Том ям с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "от 600 ₽",
+      "strongText": "550 ₽",
       "img": "/assets/image/mainProduct/image1.png"
     },
     {
       "id": 6,
-      "h2Text": "С креветками и трюфелями",
+      "type": "soup",
+      "h2Text": "Том ям с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "от 600 ₽",
+      "strongText": "550 ₽",
       "img": "/assets/image/mainProduct/image2.png"
     },
     {
       "id": 7,
-      "h2Text": "С креветками и трюфелями",
+      "type": "soup",
+      "h2Text": "Том ям с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "от 600 ₽",
+      "strongText": "550 ₽",
       "img": "/assets/image/mainProduct/image3.png"
     },
     {
       "id": 8,
-      "h2Text": "С креветками и трюфелями",
+      "type": "soup",
+      "h2Text": "Том ям с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "от 600 ₽",
+      "strongText": "550 ₽",
       "img": "/assets/image/mainProduct/image4.png"
     }
   ],
   "salad": [
     {
       "id": 1,
-      "h2Text": "Сccc креветками и трюфелями",
+      "type": "salad",
+      "h2Text": "Цезарь",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "от 600 ₽",
+      "strongText": "300 ₽",
       "img": "/assets/image/mainProduct/image1.png"
     },
     {
       "id": 2,
-      "h2Text": "С креветками и трюфелями",
+      "type": "salad",
+      "h2Text": "Цезарь",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "от 600 ₽",
+      "strongText": "300 ₽",
       "img": "/assets/image/mainProduct/image2.png"
     },
     {
       "id": 3,
-      "h2Text": "С креветками и трюфелями",
+      "type": "salad",
+      "h2Text": "Цезарь",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "от 600 ₽",
+      "strongText": "300 ₽",
       "img": "/assets/image/mainProduct/image3.png"
     },
     {
       "id": 4,
-      "h2Text": "С креветками и трюфелями",
+      "type": "salad",
+      "h2Text": "Цезарь",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "от 600 ₽",
+      "strongText": "300 ₽",
       "img": "/assets/image/mainProduct/image4.png"
     }
   ],
   "pizza_modal": [
     {
       "id": 1,
-      "h1Text": "С креветками и трюфелями",
+      "h1Text": "Пицца Гавайская",
       "weightProductSmall": 360,
       "weightProductMedium": 450,
       "weightProductBig": 600,
-      "img": "/assets/image/mainProduct/modal/img1.png",
+      "img": "/assets/image/mainProduct/pizza/pizza_gavaiskaya.jpg",
+      "price": 600,
       "type": "pizza"
     },
     {
@@ -227,7 +248,8 @@
       "weightProductSmall": 360,
       "weightProductMedium": 450,
       "weightProductBig": 600,
-      "img": "/assets/image/mainProduct/modal/img1.png",
+      "img": "/assets/image/mainProduct/pizza/pizza_carbonara.jpg",
+      "price": 600,
       "type": "pizza"
     },
     {
@@ -236,7 +258,8 @@
       "weightProductSmall": 360,
       "weightProductMedium": 450,
       "weightProductBig": 600,
-      "img": "/assets/image/mainProduct/modal/img1.png",
+      "img": "/assets/image/mainProduct/pizza/pizza_gribnaya.jpg",
+      "price": 600,
       "type": "pizza"
     },
     {
@@ -245,7 +268,8 @@
       "weightProductSmall": 360,
       "weightProductMedium": 450,
       "weightProductBig": 600,
-      "img": "/assets/image/mainProduct/modal/img1.png",
+      "img": "/assets/image/mainProduct/pizza/pizza_four-chees.jpg",
+      "price": 600,
       "type": "pizza"
     },
     {
@@ -254,7 +278,8 @@
       "weightProductSmall": 360,
       "weightProductMedium": 450,
       "weightProductBig": 600,
-      "img": "/assets/image/mainProduct/modal/img1.png",
+      "img": "/assets/image/mainProduct/pizza/pizza_tom-yam.jpg",
+      "price": 600,
       "type": "pizza"
     },
     {
@@ -263,7 +288,8 @@
       "weightProductSmall": 360,
       "weightProductMedium": 450,
       "weightProductBig": 600,
-      "img": "/assets/image/mainProduct/modal/img1.png",
+      "img": "/assets/image/mainProduct/pizza/pizza_four-season.jpg",
+      "price": 600,
       "type": "pizza"
     },
     {
@@ -272,7 +298,8 @@
       "weightProductSmall": 360,
       "weightProductMedium": 450,
       "weightProductBig": 600,
-      "img": "/assets/image/mainProduct/modal/img1.png",
+      "img": "/assets/image/mainProduct/pizza/pizza_pesto.jpg",
+      "price": 600,
       "type": "pizza"
     },
     {
@@ -281,11 +308,178 @@
       "weightProductSmall": 360,
       "weightProductMedium": 450,
       "weightProductBig": 600,
-      "img": "/assets/image/mainProduct/modal/img1.png",
+      "img": "/assets/image/mainProduct/pizza/pizza_five-chees.jpg",
+      "price": 600,
       "type": "pizza"
     }
   ],
-  "newPosition": [
+  "pasta_modal": [
+    {
+      "id": 1,
+      "h1Text": "Удон с морепродуктами",
+      "weightProduct": 450,
+      "img": "/assets/image/mainProduct/modal/img1.png",
+      "price": 500,
+      "type": "pasta"
+    },
+    {
+      "id": 2,
+      "h1Text": "Удон с морепродуктами",
+      "weightProduct": 450,
+      "img": "/assets/image/mainProduct/modal/img1.png",
+      "price": 500,
+      "type": "pasta"
+    },
+    {
+      "id": 3,
+      "h1Text": "Удон с морепродуктами",
+      "weightProduct": 450,
+      "img": "/assets/image/mainProduct/modal/img1.png",
+      "price": 500,
+      "type": "pasta"
+    },
+    {
+      "id": 4,
+      "h1Text": "Удон с морепродуктами",
+      "weightProduct": 450,
+      "img": "/assets/image/mainProduct/modal/img1.png",
+      "price": 500,
+      "type": "pasta"
+    },
+    {
+      "id": 5,
+      "h1Text": "Удон с морепродуктами",
+      "weightProduct": 450,
+      "img": "/assets/image/mainProduct/modal/img1.png",
+      "price": 500,
+      "type": "pasta"
+    },
+    {
+      "id": 6,
+      "h1Text": "Удон с морепродуктами",
+      "weightProduct": 450,
+      "img": "/assets/image/mainProduct/modal/img1.png",
+      "price": 500,
+      "type": "pasta"
+    },
+    {
+      "id": 7,
+      "h1Text": "Удон с морепродуктами",
+      "weightProduct": 450,
+      "img": "/assets/image/mainProduct/modal/img1.png",
+      "price": 500,
+      "type": "pasta"
+    },
+    {
+      "id": 8,
+      "h1Text": "Удон с морепродуктами",
+      "weightProduct": 450,
+      "img": "/assets/image/mainProduct/modal/img1.png",
+      "price": 500,
+      "type": "pasta"
+    }
+  ],
+  "soup_modal": [
+    {
+      "id": 1,
+      "h1Text": "Том ям с морепродуктами",
+      "weightProduct": 450,
+      "img": "/assets/image/mainProduct/modal/img1.png",
+      "price": 550,
+      "type": "soup"
+    },
+    {
+      "id": 2,
+      "h1Text": "Том ям с морепродуктами",
+      "weightProduct": 450,
+      "img": "/assets/image/mainProduct/modal/img1.png",
+      "price": 550,
+      "type": "soup"
+    },
+    {
+      "id": 3,
+      "h1Text": "Том ям с морепродуктами",
+      "weightProduct": 450,
+      "img": "/assets/image/mainProduct/modal/img1.png",
+      "price": 550,
+      "type": "soup"
+    },
+    {
+      "id": 4,
+      "h1Text": "Том ям с морепродуктами",
+      "weightProduct": 450,
+      "img": "/assets/image/mainProduct/modal/img1.png",
+      "price": 550,
+      "type": "soup"
+    },
+    {
+      "id": 5,
+      "h1Text": "Том ям с морепродуктами",
+      "weightProduct": 450,
+      "img": "/assets/image/mainProduct/modal/img1.png",
+      "price": 550,
+      "type": "soup"
+    },
+    {
+      "id": 6,
+      "h1Text": "Том ям с морепродуктами",
+      "weightProduct": 450,
+      "img": "/assets/image/mainProduct/modal/img1.png",
+      "price": 550,
+      "type": "soup"
+    },
+    {
+      "id": 7,
+      "h1Text": "Том ям с морепродуктами",
+      "weightProduct": 450,
+      "img": "/assets/image/mainProduct/modal/img1.png",
+      "price": 550,
+      "type": "soup"
+    },
+    {
+      "id": 8,
+      "h1Text": "Том ям с морепродуктами",
+      "weightProduct": 450,
+      "img": "/assets/image/mainProduct/modal/img1.png",
+      "price": 550,
+      "type": "soup"
+    }
+  ],
+  "salad_modal": [
+    {
+      "id": 1,
+      "h1Text": "Цезарь",
+      "weightProduct": 450,
+      "img": "/assets/image/mainProduct/modal/img1.png",
+      "price": 300,
+      "type": "salad"
+    },
+    {
+      "id": 2,
+      "h1Text": "Цезарь",
+      "weightProduct": 450,
+      "img": "/assets/image/mainProduct/modal/img1.png",
+      "price": 300,
+      "type": "salad"
+    },
+    {
+      "id": 3,
+      "h1Text": "Цезарь",
+      "weightProduct": 450,
+      "img": "/assets/image/mainProduct/modal/img1.png",
+      "price": 300,
+      "type": "salad"
+    },
+    {
+      "id": 4,
+      "h1Text": "Цезарь",
+      "weightProduct": 450,
+      "img": "/assets/image/mainProduct/modal/img1.png",
+      "price": 300,
+      "type": "salad"
+    }
+  ],
+  "new_position": [
     {
       "h2Text": "Пицца Маргарита",
       "strongText": "от 120 ₽",
@@ -386,55 +580,223 @@
       "id": 1,
       "h1Text": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image1.png",
-      "strongText": "от 120 ₽"
+      "strongText": "120 ₽"
     },
     {
       "id": 2,
       "h1Text": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image2.png",
-      "strongText": "от 120 ₽"
+      "strongText": "120 ₽"
     },
     {
       "id": 3,
       "h1Text": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image3.png",
-      "strongText": "от 120 ₽"
+      "strongText": "120 ₽"
     },
     {
       "id": 4,
       "h1Text": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image1.png",
-      "strongText": "от 120 ₽"
+      "strongText": "120 ₽"
     },
     {
       "id": 5,
       "h1Text": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image2.png",
-      "strongText": "от 120 ₽"
+      "strongText": "120 ₽"
     },
     {
       "id": 6,
       "h1Text": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image3.png",
-      "strongText": "от 120 ₽"
+      "strongText": "120 ₽"
     },
     {
       "id": 7,
       "h1Text": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image1.png",
-      "strongText": "от 120 ₽"
+      "strongText": "120 ₽"
     },
     {
       "id": 8,
       "h1Text": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image2.png",
-      "strongText": "от 120 ₽"
+      "strongText": "120 ₽"
     },
     {
       "id": 9,
       "h1Text": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image3.png",
-      "strongText": "от 120 ₽"
+      "strongText": "120 ₽"
+    }
+  ],
+  "supplements_pasta": [
+    {
+      "id": 1,
+      "h1Text": "Грибы",
+      "img": "/assets/image/mainProduct/supplements/image1.png",
+      "strongText": "100 ₽"
+    },
+    {
+      "id": 2,
+      "h1Text": "Грибы",
+      "img": "/assets/image/mainProduct/supplements/image2.png",
+      "strongText": "100 ₽"
+    },
+    {
+      "id": 3,
+      "h1Text": "Грибы",
+      "img": "/assets/image/mainProduct/supplements/image3.png",
+      "strongText": "100 ₽"
+    },
+    {
+      "id": 4,
+      "h1Text": "Грибы",
+      "img": "/assets/image/mainProduct/supplements/image1.png",
+      "strongText": "100 ₽"
+    },
+    {
+      "id": 5,
+      "h1Text": "Грибы",
+      "img": "/assets/image/mainProduct/supplements/image2.png",
+      "strongText": "100 ₽"
+    },
+    {
+      "id": 6,
+      "h1Text": "Грибы",
+      "img": "/assets/image/mainProduct/supplements/image3.png",
+      "strongText": "100 ₽"
+    },
+    {
+      "id": 7,
+      "h1Text": "Грибы",
+      "img": "/assets/image/mainProduct/supplements/image1.png",
+      "strongText": "100 ₽"
+    },
+    {
+      "id": 8,
+      "h1Text": "Грибы",
+      "img": "/assets/image/mainProduct/supplements/image2.png",
+      "strongText": "100 ₽"
+    },
+    {
+      "id": 9,
+      "h1Text": "Грибы",
+      "img": "/assets/image/mainProduct/supplements/image3.png",
+      "strongText": "100 ₽"
+    }
+  ],
+  "supplements_soup": [
+    {
+      "id": 1,
+      "h1Text": "Сливки",
+      "img": "/assets/image/mainProduct/supplements/image1.png",
+      "strongText": "90 ₽"
+    },
+    {
+      "id": 2,
+      "h1Text": "Сливки",
+      "img": "/assets/image/mainProduct/supplements/image2.png",
+      "strongText": "90 ₽"
+    },
+    {
+      "id": 3,
+      "h1Text": "Сливки",
+      "img": "/assets/image/mainProduct/supplements/image3.png",
+      "strongText": "90 ₽"
+    },
+    {
+      "id": 4,
+      "h1Text": "Сливки",
+      "img": "/assets/image/mainProduct/supplements/image1.png",
+      "strongText": "90 ₽"
+    },
+    {
+      "id": 5,
+      "h1Text": "Сливки",
+      "img": "/assets/image/mainProduct/supplements/image2.png",
+      "strongText": "90 ₽"
+    },
+    {
+      "id": 6,
+      "h1Text": "Сливки",
+      "img": "/assets/image/mainProduct/supplements/image3.png",
+      "strongText": "90 ₽"
+    },
+    {
+      "id": 7,
+      "h1Text": "Сливки",
+      "img": "/assets/image/mainProduct/supplements/image1.png",
+      "strongText": "90 ₽"
+    },
+    {
+      "id": 8,
+      "h1Text": "Сливки",
+      "img": "/assets/image/mainProduct/supplements/image2.png",
+      "strongText": "90 ₽"
+    },
+    {
+      "id": 9,
+      "h1Text": "Сливки",
+      "img": "/assets/image/mainProduct/supplements/image3.png",
+      "strongText": "90 ₽"
+    }
+  ],
+  "supplements_salad": [
+    {
+      "id": 1,
+      "h1Text": "Огурец",
+      "img": "/assets/image/mainProduct/supplements/image1.png",
+      "strongText": "70 ₽"
+    },
+    {
+      "id": 2,
+      "h1Text": "Огурец",
+      "img": "/assets/image/mainProduct/supplements/image2.png",
+      "strongText": "70 ₽"
+    },
+    {
+      "id": 3,
+      "h1Text": "Огурец",
+      "img": "/assets/image/mainProduct/supplements/image3.png",
+      "strongText": "70 ₽"
+    },
+    {
+      "id": 4,
+      "h1Text": "Огурец",
+      "img": "/assets/image/mainProduct/supplements/image1.png",
+      "strongText": "70 ₽"
+    },
+    {
+      "id": 5,
+      "h1Text": "Огурец",
+      "img": "/assets/image/mainProduct/supplements/image2.png",
+      "strongText": "70 ₽"
+    },
+    {
+      "id": 6,
+      "h1Text": "Огурец",
+      "img": "/assets/image/mainProduct/supplements/image3.png",
+      "strongText": "70 ₽"
+    },
+    {
+      "id": 7,
+      "h1Text": "Огурец",
+      "img": "/assets/image/mainProduct/supplements/image1.png",
+      "strongText": "70 ₽"
+    },
+    {
+      "id": 8,
+      "h1Text": "Огурец",
+      "img": "/assets/image/mainProduct/supplements/image2.png",
+      "strongText": "70 ₽"
+    },
+    {
+      "id": 9,
+      "h1Text": "Огурец",
+      "img": "/assets/image/mainProduct/supplements/image3.png",
+      "strongText": "70 ₽"
     }
   ]
 }

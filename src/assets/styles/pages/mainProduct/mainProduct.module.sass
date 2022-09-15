@@ -38,13 +38,10 @@
             .main_info
                 display: flex
                 flex-direction: column
+                overflow: hidden
 
             &:hover
                 box-shadow: 0px 8px 24px 0px #00000035
-            
-            img 
-                width: 253px
-                height: 253px
 
             h2
                 margin-top: 8px
@@ -90,7 +87,16 @@
     display: flex
     justify-content: center
     align-items: flex-start
-   
+
+.loader_container 
+    width: 990px
+    height: 610px
+    margin-top: 90px
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 12px
+    background-color: #fff
 
 .modal_card_container_disable
     display: none
@@ -109,7 +115,7 @@
             margin: 25px 30px 0 0
 
         .main_pic
-            padding: 53px 30px
+            padding: 100px 0
     
 
     &_info
@@ -127,6 +133,23 @@
             line-height: 28px
             color: #686466
 
+        b
+            margin-top: 7px
+            font-weight: 600
+            font-size: 14px
+            line-height: 28px
+            color: #686466
+
+        h3
+            margin: 25px 0 10px 0
+            display: inline-block
+            width: 100%
+            background: #f7d22da4
+            text-align: center
+            vertical-align: bottom
+            padding: 20px 0
+            border-radius: 30px
+
         .pizza_size
             margin-top: 25px
             width: 100%
@@ -142,6 +165,9 @@
                 font-size: 11
                 font-weight: 600
                 border-radius: 8px
+                
+                &:hover
+                    box-shadow: 0px 0px 12px 0px #f7d22d6e
 
             .pizza_button_active
                 width: 110px
@@ -168,6 +194,9 @@
                 font-size: 11
                 font-weight: 600
                 border-radius: 8px
+            
+                &:hover
+                    box-shadow: 0px 0px 12px 0px #f7d22d6e
 
             .pizza_button_active
                 width: 169px
@@ -182,10 +211,13 @@
         .add_basket
             position: relative
             z-index: 10
-            width: 340px
+            width: 100%
             height: 59px
             background: var.$color-yellow
             border-radius: 8px
             color: #231F20
             font-size: 15px
             font-weight: 800
+        
+            &:hover
+                box-shadow: 0px 0px 12px 0px #00000035

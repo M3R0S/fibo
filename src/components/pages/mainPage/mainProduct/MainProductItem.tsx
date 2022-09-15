@@ -1,11 +1,9 @@
-import React, { FC, useEffect } from "react";
+import React, { FC } from "react";
 import cl from "../../../../assets/styles/pages/mainProduct/mainProduct.module.sass";
 import {
   useAppDispatch,
-  useAppSelector,
 } from "../../../../hook/storeHook/useStore";
 import {
-  getMainProductItem,
   SectionName,
   setOpenModal,
 } from "../../../../store/slice/mainProductItemSlice";

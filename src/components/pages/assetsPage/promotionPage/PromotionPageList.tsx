@@ -4,12 +4,14 @@ import {
   useAppDispatch,
   useAppSelector,
 } from "../../../../hook/storeHook/useStore";
-import { getPromotionItem, getPromotionList } from "../../../../store/slice/promotionSlice";
-import PromotionModal from "./PromotionModal"
+import { getPromotionItem } from "../../../../store/slice/promotionItemSlice";
+import { getPromotionList } from "../../../../store/slice/promotionSlice";
+import Loader from "../../../ui/loader/Loader";
+import PromotionModal from "./PromotionModal";
 import PromotionPageItem from "./PromotionPageItem";
 
 const PromotionPageList: FC = () => {
-  const { list, itemModal, idModal, openModal} = useAppSelector(
+  const { list, error, loading } = useAppSelector(
     (state) => state.promotionPage
   );
   const dispatch = useAppDispatch();
@@ -18,23 +20,25 @@ const PromotionPageList: FC = () => {
     dispatch(getPromotionList());
   }, []);
 
-  useEffect(() => {
-    dispatch(getPromotionItem(idModal));
-  }, [openModal]);
-
   return (
     <main className={cl.main_promotion}>
       <section className={cl.container}>
         <h1>Акции</h1>
-        <figure className={cl.promotion_card_cont}>
-          {list.map((list) => (
-            <PromotionPageItem {...list} key={list.id}></PromotionPageItem>
-          ))}
-        </figure>
+        {error ? (
+          <h1>{error}</h1>
+        ) : loading ? (
+          <div className={cl.loader_container}>
+            <Loader marginTop={200}></Loader>
+          </div>
+        ) : (
+          <figure className={cl.promotion_card_cont}>
+            {list.map((list) => (
+              <PromotionPageItem {...list} key={list.id}></PromotionPageItem>
+            ))}
+          </figure>
+        )}
       </section>
-      {itemModal.map((card) => (
-        <PromotionModal {...card} key={card.id}></PromotionModal>
-      ))}
+      <PromotionModal></PromotionModal>
     </main>
   );
 };

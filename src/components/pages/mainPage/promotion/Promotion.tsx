@@ -8,7 +8,7 @@ import promotion from "../../../../assets/image/promotion.png";
 import promotionMini from "../../../../assets/image/promotion-mini.png";
 import cl from "../../../../assets/styles/pages/promotion/promotion.module.sass";
 import { Link } from "react-router-dom";
-import modelWoman from '../../../../assets/image/model-woman.png'
+import modelWoman from "../../../../assets/image/model-woman.png";
 import { v4 as uuidv4 } from "uuid";
 
 const promoImg = [
@@ -28,7 +28,9 @@ const Promotion: FC = () => {
   // }, []);
   return (
     <section className={cl.container}>
-      <h1>Наши <span>акции</span></h1>
+      <h1>
+        Наши <span>акции</span>
+      </h1>
       <figure className={cl.promotion_cont}>
         {promoImg.map((img) => (
           <button className={cl.promotion_card} key={uuidv4()}>
@@ -36,8 +38,10 @@ const Promotion: FC = () => {
           </button>
         ))}
       </figure>
-        <Link className={cl.promotion_link} to="#">Все акции</Link>
-        <img src={modelWoman} alt="Model Woman" className={cl.modelWoman} />
+      <Link className={cl.promotion_link} to="/promotion">
+        Все акции
+      </Link>
+      <img src={modelWoman} alt="Model Woman" className={cl.modelWoman} />
     </section>
   );
 };

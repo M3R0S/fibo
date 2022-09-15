@@ -4,37 +4,39 @@ import {
   useAppDispatch,
   useAppSelector,
 } from "../../../../hook/storeHook/useStore";
-import {
-  getPromotionItem,
-  setClosedModal,
-  TPromotionItem,
-} from "../../../../store/slice/promotionSlice";
+import { getPromotionItem, setClosedModal } from "../../../../store/slice/promotionItemSlice";
+import Loader from "../../../ui/loader/Loader";
+import PromotionItemModal from "./PromotionItemModal";
 
-const PromotionModal: FC<TPromotionItem> = ({ id, h2Text, img, pText }) => {
-  const { openModal } = useAppSelector((state) => state.promotionPage);
+const PromotionModal: FC = () => {
+  const { openModal, error, loading, item, idModal } = useAppSelector(
+    (state) => state.promotionPageItem
+  );
   const dispatch = useAppDispatch();
 
+  useEffect(() => {
+    dispatch(getPromotionItem(idModal));
+  }, [openModal]);
+
   return (
-    <section
-      className={openModal ? cl.modal_card_cont : cl.modal_card_disable}
-      onClick={(e) =>{
-         dispatch(setClosedModal())
-      }}
-    >
-      <article className={cl.modal_card}>
-        <img src={img} alt={img} />
-        <div className={cl.wrapper_card_modal}>
-          <h2>{h2Text}</h2>
-          <p>{pText}</p>
-          <button
-            onClick={() => dispatch(setClosedModal())}
-            className={cl.closed_modal}
-          >
-            Закрыть
-          </button>
-        </div>
-      </article>
-    </section>
+      <section
+        className={openModal ? cl.modal_card_cont : cl.modal_card_disable}
+        onClick={(e) => {
+          dispatch(setClosedModal());
+        }}
+      >
+        {error ? (
+          <h1>{error}</h1>
+        ) : loading && openModal ? (
+          <div className={cl.loader_container}>
+            <Loader></Loader>
+          </div>
+        ) : openModal ? (
+          item.map((obj) => (
+            <PromotionItemModal {...obj} key={obj.id}></PromotionItemModal>
+          ))
+        ) : null}
+      </section>
   );
 };
 

@@ -1,14 +1,12 @@
-import {
-  createAsyncThunk,
-  createSlice,
-} from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import { sleep } from "../../helpers/sleep";
 
 export type SectionName = "pizza" | "pasta" | "soup" | "salad";
 
 type ResponsePoint = {
-  typeModal: SectionName,
-  idModal: number,
+  typeModal: SectionName;
+  idModal: number;
 };
 
 export type TMainProductItemModal = {
@@ -16,9 +14,11 @@ export type TMainProductItemModal = {
   type: SectionName;
   h1Text: string;
   img: string;
-  weightProductSmall: number;
-  weightProductMedium: number;
-  weightProductBig: number;
+  weightProductSmall?: number;
+  weightProductMedium?: number;
+  weightProductBig?: number;
+  weightProduct?: number;
+  price: number;
 };
 
 type TMainProductListModal = {
@@ -27,7 +27,7 @@ type TMainProductListModal = {
   error: string | undefined;
   openModal: boolean;
   idModal: number;
-  typeModal: SectionName
+  typeModal: SectionName;
 };
 
 const initialState: TMainProductListModal = {
@@ -45,13 +45,13 @@ export const getMainProductItem = createAsyncThunk<
   { rejectValue: string }
 >(
   "mainPage/getMainProductItem",
-  async ({typeModal, idModal} , { rejectWithValue }) => {
+  async ({ typeModal, idModal }, { rejectWithValue }) => {
     try {
       const res = await axios.get<TMainProductItemModal[]>(
         `http://localhost:4000/${typeModal}_modal?id=${idModal}`
       );
-      // console.log(res.data)
-      return res.data
+      await sleep(1000);
+      return res.data;
     } catch (error) {
       return rejectWithValue("Ошибка загрузки");
     }

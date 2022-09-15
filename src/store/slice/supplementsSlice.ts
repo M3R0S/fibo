@@ -3,6 +3,7 @@ import {
   createSlice,
 } from "@reduxjs/toolkit";
 import axios from "axios";
+import { sleep } from "../../helpers/sleep";
 
 export type SectionNameSupplements = "pizza" | "pasta" | "soup" | "salad";
 
@@ -34,6 +35,7 @@ export const getSupplementsList = createAsyncThunk<
     const res = await axios.get<TSupplementsItem[]>(
       `http://localhost:4000/supplements_${endpoint}`
     );
+    await sleep(1000)
     return res.data;
   } catch (error) {
     return rejectWithValue("Я супплиментс");

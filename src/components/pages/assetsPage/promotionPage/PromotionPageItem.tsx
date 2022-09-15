@@ -1,10 +1,10 @@
 import React, { FC } from "react";
 import {
-  setOpenModal,
   TPromotionItem,
 } from "../../../../store/slice/promotionSlice";
 import cl from "../../../../assets/styles/pages/promotion/promotionPage.module.sass";
 import { useAppDispatch } from "../../../../hook/storeHook/useStore";
+import { setOpenModal } from "../../../../store/slice/promotionItemSlice";
 
 const PromotionPageItem: FC<TPromotionItem> = ({ id, img, h2Text, pText }) => {
   const dispatch = useAppDispatch();

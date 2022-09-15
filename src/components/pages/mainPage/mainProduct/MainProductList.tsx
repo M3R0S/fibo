@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from "react";
+import React, { FC, useEffect, useState } from "react";
 import {
   useAppDispatch,
   useAppSelector,
@@ -6,54 +6,70 @@ import {
 import {
   getMainProduct,
   SectionName,
+  setLoadingTime,
 } from "../../../../store/slice/mainProductSlice";
 import cl from "../../../../assets/styles/pages/mainProduct/mainProduct.module.sass";
 import MainProductItem from "./MainProductItem";
-import MainProductModalApp from "./MainProductModalApp";
-import { getMainProductItem } from "../../../../store/slice/mainProductItemSlice";
+import * as Scroll from "react-scroll";
+import Loader from "../../../ui/loader/Loader";
 
 interface IMainProductListProps {
   endpoint: SectionName;
   title: string;
+  idEllement: string;
 }
 
-const MainProductList: FC<IMainProductListProps> = ({ endpoint, title }) => {
+const MainProductList: FC<IMainProductListProps> = ({
+  endpoint,
+  title,
+  idEllement,
+}) => {
   const { data, loading, error } = useAppSelector((state) => state.mainProduct);
   const list = data[endpoint];
   const dispatch = useAppDispatch();
-  const { item, typeModal, idModal, openModal } = useAppSelector(
-    (state) => state.mainProductItem
-  );
+  const Element = Scroll.Element;
+  const [localTimeLoading, setLocalTimeLoaing] = useState<number | null>(null);
 
   useEffect(() => {
+    setLocalTimeLoaing(Date.now());
     dispatch(getMainProduct(endpoint));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  useEffect(() => {
+    localTimeLoading && dispatch(setLoadingTime(Date.now() - localTimeLoading));
+  }, [loading]);
+
   return (
-    <section className={cl.group_card}>
-      { error ? 
-      <h1>{error}</h1> :
-      loading ? (
-        <h1>Загрузка</h1>
-      ) : (
-        <>
-          <h1>{title}</h1>
-          <figure className={cl.group_figure}>
-            {list.map(({ h2Text, pText, strongText, img, id, type }) => (
-              <MainProductItem
-                h2Text={h2Text}
-                pText={pText}
-                strongText={strongText}
-                img={img}
-                key={endpoint + id}
-                id={id}
-                type={type}
-              />
-            ))}
-          </figure>
-        </>
-      )}
-    </section>
+    <Element name={idEllement}>
+      <section className={cl.group_card}>
+        {error ? (
+          <h1>{error}</h1>
+        ) : loading ? (
+          <>
+            <h1>{title}</h1>
+            <Loader></Loader>
+          </>
+        ) : (
+          <>
+            <h1>{title}</h1>
+            <figure className={cl.group_figure}>
+              {list.map(({ h2Text, pText, strongText, img, id, type }) => (
+                <MainProductItem
+                  h2Text={h2Text}
+                  pText={pText}
+                  strongText={strongText}
+                  img={img}
+                  key={endpoint + id}
+                  id={id}
+                  type={type}
+                />
+              ))}
+            </figure>
+          </>
+        )}
+      </section>
+    </Element>
   );
 };
 

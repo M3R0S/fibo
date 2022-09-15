@@ -42,7 +42,7 @@ const Slide: FC = () => {
   const clickHandlerRight = () => {
     setTimeout(() => {
       dispatch(swipeRigth());
-    }, 1000);
+    }, 0);
     setClickSlide((prev) => !prev);
     removeAutoSlide();
   };
@@ -50,17 +50,17 @@ const Slide: FC = () => {
   const clickHandlerLeft = () => {
     setTimeout(() => {
       dispatch(swipeLeft());
-    }, 1000);
+    }, 0);
     setClickSlide((prev) => !prev);
     removeAutoSlide();
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", scrollHandler);
-    return () => {
-      window.removeEventListener("scroll", scrollHandler);
-    };
-  }, [scrollHandler]);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", scrollHandler);
+  //   return () => {
+  //     window.removeEventListener("scroll", scrollHandler);
+  //   };
+  // }, [scrollHandler]);
 
   useEffect(() => {
     // addAutoSlide()

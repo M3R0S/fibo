@@ -3,6 +3,7 @@ import {
   createSlice,
 } from "@reduxjs/toolkit";
 import axios from "axios";
+import { sleep } from "../../helpers/sleep";
 
 export type TNewPositionItem = {
   h2Text: string;
@@ -29,9 +30,9 @@ export const getNewPositionList = createAsyncThunk<
 >("newPosition/getNewPositionList", async (_, { rejectWithValue }) => {
   try {
     const res = await axios.get<TNewPositionItem[]>(
-      "http://localhost:4000/newPosition"
+      "http://localhost:4000/new_position"
     );
-    console.log(res.data);
+    await sleep(1000)
     return res.data;
   } catch (error) {
     return rejectWithValue("Я нью позишн");

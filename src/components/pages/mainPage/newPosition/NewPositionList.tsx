@@ -8,6 +8,7 @@ import {
 } from "../../../../hook/storeHook/useStore";
 import { getNewPositionList } from "../../../../store/slice/newPositionSlice";
 import { v4 as uuidv4 } from "uuid";
+import Loader from "../../../ui/loader/Loader";
 
 const NewPositionList: FC = () => {
   const { list, loading, error } = useAppSelector((state) => state.newPosition);
@@ -25,7 +26,7 @@ const NewPositionList: FC = () => {
         {error ? (
           <h1>{error}</h1>
         ) : loading ? (
-          <h1>Загрузка</h1>
+          <Loader></Loader>
         ) : (
           list.map((newPosItem) => (
             <NewPositionItem {...newPosItem} key={uuidv4()}></NewPositionItem>

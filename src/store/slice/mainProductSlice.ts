@@ -1,17 +1,14 @@
 import {
   createAsyncThunk,
   createSlice,
+  PayloadAction,
 } from "@reduxjs/toolkit";
 import axios from "axios";
+import { sleep } from "../../helpers/sleep";
 
 type DataResponse = { sectionName: SectionName; res: MainProductItemType[] };
 
 export type SectionName = "pizza" | "pasta" | "soup" | "salad";
-
-type ResponsePoint = {
-  endpoint: SectionName;
-  itemId: number;
-};
 
 type MainProductItemType = {
   id: number;
@@ -25,8 +22,9 @@ type MainProductItemType = {
 type MainProductListType = {
   data: Record<SectionName, MainProductItemType[]>;
   itemModal: MainProductItemType[];
-  loading: boolean;
+  loading: boolean | null;
   error: string | undefined;
+  loadingTime: number | null
 };
 
 const initialState: MainProductListType = {
@@ -37,8 +35,9 @@ const initialState: MainProductListType = {
     salad: [],
   },
   itemModal: [],
-  loading: false,
+  loading: null,
   error: undefined,
+  loadingTime : null
 };
 
 export const getMainProduct = createAsyncThunk<
@@ -46,35 +45,24 @@ export const getMainProduct = createAsyncThunk<
   SectionName,
   { rejectValue: string }
 >("mainPage/getMainProduct", async (endpoint, { rejectWithValue }) => {
-  try {
-    const res = await axios.get<MainProductItemType[]>(
-      `http://localhost:4000/${endpoint}`
-    );
-    return { sectionName: endpoint, res: res.data };
-  } catch (error) {
-    return rejectWithValue("Ошибка загрузки");
-  }
-});
-
-export const getMainProductItem = createAsyncThunk<
-  MainProductItemType[],
-  ResponsePoint,
-  { rejectValue: string }
->("mainPage/getMainProductItem", async ({ endpoint, itemId }, { rejectWithValue }) => {
-  try {
-    const res = await axios.get<MainProductItemType[]>(
-      `http://localhost:4000/${endpoint}?id=${itemId}`
-    );
-    return res.data;
-  } catch (error) {
-    return rejectWithValue("Ошибка загрузки");
-  }
+    try {
+      const res = await axios.get<MainProductItemType[]>(
+        `http://localhost:4000/${endpoint}`
+        );
+        await sleep(1000)
+        return { sectionName: endpoint, res: res.data };
+      } catch (error) {
+        return rejectWithValue("Ошибка загрузки");
+      }
 });
 
 export const mainProductSlice = createSlice({
   name: "mainProduct",
   initialState,
   reducers: {
+    setLoadingTime: (state, action) => {
+        state.loadingTime = action.payload
+    }
   },
   extraReducers: (builder) => {
     builder
@@ -97,6 +85,6 @@ export const mainProductSlice = createSlice({
 //   return action.type.endsWith("rejected");
 // }
 
-// export const {} = mainProductSlice.actions
+export const {setLoadingTime} = mainProductSlice.actions
 
 export default mainProductSlice.reducer;

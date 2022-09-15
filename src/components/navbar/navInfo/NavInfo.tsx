@@ -1,12 +1,24 @@
 import React, { FC } from "react";
 import cl from "../../../assets/styles/navbar/navInfo.module.sass";
 import logoImg from "../../../assets/image/header-logo.png";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import * as Scroll from "react-scroll";
+import { useAppDispatch } from "../../../hook/storeHook/useStore";
+import { setIdActive } from "../../../store/slice/navbarSlice";
 
 const NavInfo: FC = () => {
+  const scroll = Scroll.animateScroll;
+  const dispatch = useAppDispatch();
+
   return (
     <section className={cl.container}>
-      <Link to={'/main'}>
+      <Link
+        to={"/main"}
+        onClick={() => {
+          scroll.scrollToTop();
+          dispatch(setIdActive(null));
+        }}
+      >
         <img src={logoImg} alt="Logo" />
       </Link>
       <figure className={cl.delivery_info}>
