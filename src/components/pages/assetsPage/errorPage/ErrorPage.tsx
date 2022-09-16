@@ -19,7 +19,7 @@ const ErrorPage: FC = () => {
     <main className={cl.error_container}>
       <section className={cl.error_content}>
         <h1>К сожалению, страница недоступна</h1>
-        <div className={cl.button_block}> 
+        <div className={cl.button_block}>
           <button
             onClick={() => {
               navigate(-1);

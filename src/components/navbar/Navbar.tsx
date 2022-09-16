@@ -4,12 +4,12 @@ import NavMenu from "./navMenu/NavMenu";
 import cl from "../../assets/styles/navbar/navbar.module.sass";
 import { debounce } from "../../helpers/debounce";
 import { Transition } from "react-transition-group";
-import { useAppSelector } from "../../hook/storeHook/useStore";
 
 const Navbar: FC = () => {
   const [scrollY, setScrollY] = useState<number>(window.scrollY);
   const [scrollDown, setScrollDown] = useState<boolean>(false);
   
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const handleNavigation = useCallback(
     debounce(() => {
       if (scrollY > window.scrollY) {

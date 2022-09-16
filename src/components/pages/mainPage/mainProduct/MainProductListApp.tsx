@@ -1,16 +1,9 @@
-import { debounce } from "lodash";
-import React, { FC, useEffect, useCallback } from "react";
-import { useLocation } from "react-router-dom";
+import React, { FC } from "react";
 import { v4 as uuidv4 } from "uuid";
 import cl from "../../../../assets/styles/pages/mainProduct/mainProduct.module.sass";
 import {
-  useAppDispatch,
-  useAppSelector,
-} from "../../../../hook/storeHook/useStore";
-import {
   SectionName,
 } from "../../../../store/slice/mainProductSlice";
-import Loader from "../../../ui/loader/Loader";
 import MainProductList from "./MainProductList";
 import MainProductModalApp from "./MainProductModalApp";
 

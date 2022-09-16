@@ -4,7 +4,7 @@ import PromotionPageList from "../components/pages/assetsPage/promotionPage/Prom
 import PageApp from "../components/pages/PageApp";
 
 export const publicRoutes = [
-  { patch: "*", element: <PageApp /> },
+  { patch: "*", element: <ErrorPage /> },
   { patch: "/", element: <PageApp /> },
   { patch: "/main", element: <PageApp /> },
   { patch: "/contact", element: <Contact /> },

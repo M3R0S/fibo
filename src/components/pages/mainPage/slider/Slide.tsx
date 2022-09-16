@@ -1,4 +1,11 @@
-import React, { FC, ReactNode, useCallback, useEffect, useState } from "react";
+import React, {
+  FC,
+  ReactNode,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { v4 as uuidv4 } from "uuid";
 import { debounce } from "../../../../helpers/debounce";
 import {
@@ -8,14 +15,15 @@ import {
 import { swipeLeft, swipeRigth } from "../../../../store/slice/sliderSlice";
 import cl from "../../../../assets/styles/pages/slider/slide.module.sass";
 import { CSSTransition, Transition } from "react-transition-group";
+import useElementOnScreen from "../../../../hook/useElementOnScreen/useElementOnScreen";
 
 const Slide: FC = () => {
   const dispatch = useAppDispatch();
   const { list } = useAppSelector((state) => state.slider);
-
   const [autoSlideId, setAutoSlideID] = useState<NodeJS.Timer | null>(null);
   const [clickSlide, setClickSlide] = useState<boolean>(true);
   const [scrollY, setScrollY] = useState<number>(window.scrollY);
+  const containerRef = useElementOnScreen({ threshold: 1 }, null);
 
   const addAutoSlide = () => {
     const id = setInterval(() => dispatch(swipeRigth()), 3000);
@@ -62,15 +70,18 @@ const Slide: FC = () => {
   //   };
   // }, [scrollHandler]);
 
-  useEffect(() => {
-    // addAutoSlide()
-    return () => {
-      removeAutoSlide();
-    };
-  }, []);
+  // useEffect(() => {
+  //   // addAutoSlide()
+  //   return () => {
+  //     removeAutoSlide();
+  //   };
+  // }, []);
 
   return (
-    <section onMouseEnter={() => {}} className={cl.container}>
+    <section
+      className={cl.container}
+      ref={containerRef}
+    >
       <button
         type="button"
         onClick={() => clickHandlerLeft()}

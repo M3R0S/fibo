@@ -7,11 +7,7 @@ import {
 import {
   getMainProductItem,
   setClosedModal,
-  TMainProductItemModal,
 } from "../../../../store/slice/mainProductItemSlice";
-import PizzaModal from "./modalItem/PizzaModal";
-import close from "../../../../assets/image/main-product/close.png";
-import SupplementsList from "./supplements/SupplementsList";
 import Loader from "../../../ui/loader/Loader";
 import MainProductModalItem from "./MainProductModalItem";
 
@@ -20,6 +16,7 @@ const MainProductModalApp: FC = () => {
     useAppSelector((state) => state.mainProductItem);
   useEffect(() => {
     dispatch(getMainProductItem({ typeModal, idModal }));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [openModal]);
 
   const dispatch = useAppDispatch();

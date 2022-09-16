@@ -12,6 +12,7 @@ import cl from "../../../../assets/styles/pages/mainProduct/mainProduct.module.s
 import MainProductItem from "./MainProductItem";
 import * as Scroll from "react-scroll";
 import Loader from "../../../ui/loader/Loader";
+import useElementOnScreen from "../../../../hook/useElementOnScreen/useElementOnScreen";
 
 interface IMainProductListProps {
   endpoint: SectionName;
@@ -30,6 +31,11 @@ const MainProductList: FC<IMainProductListProps> = ({
   const Element = Scroll.Element;
   const [localTimeLoading, setLocalTimeLoaing] = useState<number | null>(null);
 
+  const containerRef = useElementOnScreen(
+    { threshold: 0.3, },
+    idEllement
+  );
+
   useEffect(() => {
     setLocalTimeLoaing(Date.now());
     dispatch(getMainProduct(endpoint));
@@ -38,6 +44,7 @@ const MainProductList: FC<IMainProductListProps> = ({
 
   useEffect(() => {
     localTimeLoading && dispatch(setLoadingTime(Date.now() - localTimeLoading));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loading]);
 
   return (
@@ -53,7 +60,7 @@ const MainProductList: FC<IMainProductListProps> = ({
         ) : (
           <>
             <h1>{title}</h1>
-            <figure className={cl.group_figure}>
+            <figure ref={containerRef} className={cl.group_figure}>
               {list.map(({ h2Text, pText, strongText, img, id, type }) => (
                 <MainProductItem
                   h2Text={h2Text}

@@ -1,5 +1,5 @@
 import React, { FC, useState, useEffect } from "react";
-import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import cl from "../../../assets/styles/navbar/navMenu.module.sass";
 import { v4 as uuidv4 } from "uuid";
 import * as Scroll from "react-scroll";
@@ -38,12 +38,19 @@ const NavMenu: FC<INavMenu> = ({ scrollDown }) => {
       });
       setLoadingActive(false);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loading]);
 
   useEffect(() => {
-    if (location.pathname === "/promotion") dispatch(setIdActive("Promotion"));
-    if (location.pathname === "/contact") dispatch(setIdActive("Contact"));
-    // if (location.pathname === "/combo") setIdActive("Combo");
+    if (location.pathname === "/promotion") {
+      dispatch(setIdActive("Promotion"));
+    }
+    if (location.pathname === "/contact") {
+      dispatch(setIdActive("Contact"));
+    }
+    if (location.pathname !== "/error" && idActive) {
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.pathname]);
 
   return (
@@ -175,7 +182,7 @@ export const navLinks = [
     idEllement: "Promotion",
   },
   {
-    to: "",
+    to: "/error",
     title: "Комбо",
     isAnchor: false,
     idEllement: "Combo",
