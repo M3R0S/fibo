@@ -1,29 +1,49 @@
 import React, { FC, useEffect, useState } from "react";
 import cl from "../../../../../assets/styles/pages/mainProduct/mainProduct.module.sass";
-import { useAppSelector } from "../../../../../hook/storeHook/useStore";
+import {
+  useAppDispatch,
+  useAppSelector,
+} from "../../../../../hook/storeHook/useStore";
 import { TMainProductItemModal } from "../../../../../store/slice/mainProductItemSlice";
+import {
+  setPizzaDough,
+  setPizzaSize,
+  setPizzaWeightProduct,
+  setPizzaPrice,
+} from "../../../../../store/slice/pizzaModalSlice";
 import Loader from "../../../../ui/loader/Loader";
+import ButtonPizzaModal from "./ButtonPizzaModal";
 
-interface IPizzaModal {
-  weightProductSmall: number | undefined;
-  weightProductBig: number | undefined;
-  weightProductMedium: number | undefined;
+export interface IPizzaModal {
+  weightProductSmall?: number;
+  weightProductBig?: number;
+  weightProductMedium?: number;
+  priceSmall?: number;
+  priceMedium?: number;
+  priceBig?: number;
 }
-
-export type TDoughInfo = "традиционное" | "тонкое";
-export type TPizzaSizeInfo = 25 | 31 | 40;
-export type TWeightProductInfo = "small" | "medium" | "big";
 
 const PizzaModal: FC<IPizzaModal> = ({
   weightProductSmall,
   weightProductBig,
   weightProductMedium,
+  priceSmall,
+  priceMedium,
+  priceBig,
 }) => {
-  const [pizzaSize, setPizzaSize] = useState<TPizzaSizeInfo>(25);
-  const [pizzaDough, setPizzaDough] = useState<TDoughInfo>("традиционное");
-  const [weightProduct, setWeightProduct] =
-    useState<TWeightProductInfo>("small");
+  const { pizzaDough, pizzaSize, pizzaWeightProduct } = useAppSelector(
+    (state) => state.pizzaModal
+  );
+  const dispatch = useAppDispatch();
+
   const { loading, error } = useAppSelector((state) => state.mainProductItem);
+
+  const buttonSizeArray = [];
+
+  useEffect(() => {
+    dispatch(setPizzaPrice(priceSmall));
+    dispatch(setPizzaWeightProduct(weightProductSmall));
+  }, []);
 
   return (
     <>
@@ -33,23 +53,37 @@ const PizzaModal: FC<IPizzaModal> = ({
         <Loader></Loader>
       ) : (
         <>
-          <h2>{`${pizzaSize} см, ${pizzaDough} тесто, ${
-            weightProduct === "small"
-              ? weightProductSmall
-              : weightProduct === "medium"
-              ? weightProductMedium
-              : weightProduct === "big"
-              ? weightProductBig
-              : ""
-          } г`}</h2>
+          <h2>{`${pizzaSize} см, ${pizzaDough} тесто, ${pizzaWeightProduct} г`}</h2>
           <div className={cl.pizza_size}>
-            <button
+            <ButtonPizzaModal
+              size={25}
+              price={priceSmall}
+              weightProduct={weightProductSmall}
+            >
+              Маленькая
+            </ButtonPizzaModal>
+            <ButtonPizzaModal
+              size={31}
+              price={priceMedium}
+              weightProduct={weightProductMedium}
+            >
+              Средняя
+            </ButtonPizzaModal>
+            <ButtonPizzaModal
+              size={40}
+              price={priceBig}
+              weightProduct={weightProductBig}
+            >
+              Большая
+            </ButtonPizzaModal>
+            {/* <button
               className={
                 pizzaSize === 25 ? cl.pizza_button_active : cl.pizza_button
               }
               onClick={() => {
-                setPizzaSize(25);
-                setWeightProduct("small");
+                dispatch(setPizzaSize(25));
+                dispatch(setPizzaWeightProduct(weightProductSmall));
+                dispatch(setPizzaPrice(priceSmall));
               }}
             >
               Маленькая
@@ -59,8 +93,9 @@ const PizzaModal: FC<IPizzaModal> = ({
                 pizzaSize === 31 ? cl.pizza_button_active : cl.pizza_button
               }
               onClick={() => {
-                setPizzaSize(31);
-                setWeightProduct("medium");
+                dispatch(setPizzaSize(31));
+                dispatch(setPizzaWeightProduct(weightProductMedium));
+                dispatch(setPizzaPrice(priceMedium));
               }}
             >
               Средняя
@@ -70,12 +105,13 @@ const PizzaModal: FC<IPizzaModal> = ({
                 pizzaSize === 40 ? cl.pizza_button_active : cl.pizza_button
               }
               onClick={() => {
-                setPizzaSize(40);
-                setWeightProduct("big");
+                dispatch(setPizzaSize(40));
+                dispatch(setPizzaWeightProduct(weightProductBig));
+                dispatch(setPizzaPrice(priceBig));
               }}
             >
               Большая
-            </button>
+            </button> */}
           </div>
           <div className={cl.pizza_dough}>
             <button
@@ -85,7 +121,7 @@ const PizzaModal: FC<IPizzaModal> = ({
                   : cl.pizza_button
               }
               onClick={() => {
-                setPizzaDough("традиционное");
+                dispatch(setPizzaDough("традиционное"));
               }}
             >
               Традиционное
@@ -97,7 +133,7 @@ const PizzaModal: FC<IPizzaModal> = ({
                   : cl.pizza_button
               }
               onClick={() => {
-                setPizzaDough("тонкое");
+                dispatch(setPizzaDough("тонкое"));
               }}
             >
               Тонкое

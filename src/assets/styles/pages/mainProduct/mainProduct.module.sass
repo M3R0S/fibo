@@ -2,7 +2,8 @@
 
 .container 
     z-index: 1
-    width: var.$section-width
+    // width: var.$section-width
+    width: 80%
     display: flex
     flex-direction: column
    
@@ -23,7 +24,8 @@
 
         &_figure
             display: grid
-            grid-template-columns: repeat(4, 266px)
+            grid-template-rows: auto 1fr
+            grid-template-columns: repeat( auto-fit, 266px)
             justify-content: space-between
         
         &_item
@@ -39,9 +41,15 @@
                 display: flex
                 flex-direction: column
                 overflow: hidden
+                width: 253px
+               
 
             &:hover
                 box-shadow: 0px 8px 24px 0px #00000035
+            
+            img
+                width: 253px
+                height: 253px
 
             h2
                 margin-top: 8px
@@ -181,6 +189,7 @@
         
         .pizza_dough
             margin-top: 12px
+            margin-bottom: 20px
             column-gap: 12px
             width: 100%
             display: flex

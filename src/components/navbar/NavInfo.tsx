@@ -1,10 +1,10 @@
 import React, { FC } from "react";
-import cl from "../../../assets/styles/navbar/navInfo.module.sass";
-import logoImg from "../../../assets/image/header-logo.png";
+import cl from "../../assets/styles/navbar/navInfo.module.sass";
+import logoImg from "../../assets/image/header-logo.png";
 import { Link } from "react-router-dom";
 import * as Scroll from "react-scroll";
-import { useAppDispatch } from "../../../hook/storeHook/useStore";
-import { setIdActive } from "../../../store/slice/navbarSlice";
+import { useAppDispatch } from "../../hook/storeHook/useStore";
+import { setIdActive } from "../../store/slice/navbarSlice";
 
 const NavInfo: FC = () => {
   const scroll = Scroll.animateScroll;

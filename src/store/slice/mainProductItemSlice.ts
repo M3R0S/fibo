@@ -12,13 +12,17 @@ type ResponsePoint = {
 export type TMainProductItemModal = {
   id: number;
   type: SectionName;
-  h1Text: string;
+  title: string;
+  pText: string;
   img: string;
   weightProductSmall?: number;
   weightProductMedium?: number;
   weightProductBig?: number;
   weightProduct?: number;
   price: number;
+  priceSmall?: number;
+  priceMedium?: number;
+  priceBig?: number;
 };
 
 type TMainProductListModal = {
@@ -50,7 +54,7 @@ export const getMainProductItem = createAsyncThunk<
       const res = await axios.get<TMainProductItemModal[]>(
         `http://localhost:4000/${typeModal}_modal?id=${idModal}`
       );
-      await sleep(1000);
+      // await sleep(1000);
       return res.data;
     } catch (error) {
       return rejectWithValue("Ошибка загрузки");

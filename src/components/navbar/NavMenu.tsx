@@ -1,17 +1,12 @@
 import React, { FC, useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import cl from "../../../assets/styles/navbar/navMenu.module.sass";
+import cl from "../../assets/styles/navbar/navMenu.module.sass";
 import { v4 as uuidv4 } from "uuid";
 import * as Scroll from "react-scroll";
-import logoImg from "../../../assets/image/header-logo.png";
-import {
-  useAppDispatch,
-  useAppSelector,
-} from "../../../hook/storeHook/useStore";
-import {
-  setIdActive,
-  setStaticScrollY,
-} from "../../../store/slice/navbarSlice";
+import logoImg from "../../assets/image/header-logo.png";
+import { useAppDispatch, useAppSelector } from "../../hook/storeHook/useStore";
+import { setIdActive, setStaticScrollY } from "../../store/slice/navbarSlice";
+import { getBasketTotalPrice } from "../../store/slice/basketPageSlice";
 
 interface INavMenu {
   scrollDown: boolean;
@@ -27,6 +22,7 @@ const NavMenu: FC<INavMenu> = ({ scrollDown }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const [loadingActive, setLoadingActive] = useState<boolean>(false);
+  const { list, totalPrice } = useAppSelector((state) => state.basketPage);
 
   useEffect(() => {
     if (loading === false && idActive && loadingActive) {
@@ -50,8 +46,19 @@ const NavMenu: FC<INavMenu> = ({ scrollDown }) => {
     }
     if (location.pathname !== "/error" && idActive) {
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.pathname]);
+
+  useEffect(() => {
+    localStorage.setItem("basketList", JSON.stringify(list));
+    localStorage.setItem(
+      "basketTotalPrice",
+      String(list.reduce((sum, item) => (sum += item.price), 0))
+    );
+    dispatch(
+      getBasketTotalPrice(Number(localStorage.getItem("basketTotalPrice")))
+    );
+  }, [list, totalPrice]);
 
   return (
     <section className={cl.container}>
@@ -111,8 +118,20 @@ const NavMenu: FC<INavMenu> = ({ scrollDown }) => {
           Войти
         </button>
       )}
-      <button type="button" className={cl.basket}>
-        Корзина | '1'
+      <button
+        type="button"
+        className={
+          scrollDown ? `${cl.basket} ${cl.basket_scroll_down}` : cl.basket
+        }
+        onClick={() => {
+          navigate("/basket");
+          dispatch(setIdActive(null));
+          animateScroll.scrollToTop({
+            duration: 0,
+          });
+        }}
+      >
+        {totalPrice ? `Корзина | ${totalPrice} ₽` : "Корзина"}
       </button>
     </section>
   );

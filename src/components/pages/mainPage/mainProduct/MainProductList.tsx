@@ -31,10 +31,7 @@ const MainProductList: FC<IMainProductListProps> = ({
   const Element = Scroll.Element;
   const [localTimeLoading, setLocalTimeLoaing] = useState<number | null>(null);
 
-  const containerRef = useElementOnScreen(
-    { threshold: 0.3, },
-    idEllement
-  );
+  const containerRef = useElementOnScreen({ threshold: 0.7 }, idEllement, 200);
 
   useEffect(() => {
     setLocalTimeLoaing(Date.now());
@@ -44,7 +41,7 @@ const MainProductList: FC<IMainProductListProps> = ({
 
   useEffect(() => {
     localTimeLoading && dispatch(setLoadingTime(Date.now() - localTimeLoading));
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loading]);
 
   return (
@@ -61,16 +58,8 @@ const MainProductList: FC<IMainProductListProps> = ({
           <>
             <h1>{title}</h1>
             <figure ref={containerRef} className={cl.group_figure}>
-              {list.map(({ h2Text, pText, strongText, img, id, type }) => (
-                <MainProductItem
-                  h2Text={h2Text}
-                  pText={pText}
-                  strongText={strongText}
-                  img={img}
-                  key={endpoint + id}
-                  id={id}
-                  type={type}
-                />
+              {list.map((obj) => (
+                <MainProductItem {...obj} key={obj.id} />
               ))}
             </figure>
           </>

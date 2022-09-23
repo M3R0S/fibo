@@ -32,7 +32,7 @@ export const getNewPositionList = createAsyncThunk<
     const res = await axios.get<TNewPositionItem[]>(
       "http://localhost:4000/new_position"
     );
-    await sleep(1000)
+    // await sleep(1000)
     return res.data;
   } catch (error) {
     return rejectWithValue("Я нью позишн");

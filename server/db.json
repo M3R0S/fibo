@@ -5,7 +5,7 @@
       "type": "pizza",
       "h2Text": "Пицца Гавайская",
       "pText": "Пицца с ананасом, креветкой, куриным филе, сыром моцарелла, соус томатный.",
-      "strongText": "470 ₽",
+      "price": 470,
       "img": "/assets/image/mainProduct/pizza/pizza_gavaiskaya.jpg"
     },
     {
@@ -13,7 +13,7 @@
       "type": "pizza",
       "h2Text": "Пицца Карбонара",
       "pText": "Бекон, яйцо, сыр моцарелла, соус бешамель.",
-      "strongText": "390 ₽",
+      "price": 390,
       "img": "/assets/image/mainProduct/pizza/pizza_carbonara.jpg"
     },
     {
@@ -21,7 +21,7 @@
       "type": "pizza",
       "h2Text": "Пицца Грибная",
       "pText": "Куриное филе, грибы шампиньоны, шиитаке, трюфельная паста, соус бешамель.",
-      "strongText": "460 ₽",
+      "price": 460,
       "img": "/assets/image/mainProduct/pizza/pizza_gribnaya.jpg"
     },
     {
@@ -29,7 +29,7 @@
       "type": "pizza",
       "h2Text": "Пицца 4 сыра",
       "pText": "Сыр дор-блю, сыр пармезан, сыр моцарелла, сыр чизбургер, соус томатный.",
-      "strongText": "460 ₽",
+      "price": 460,
       "img": "/assets/image/mainProduct/pizza/pizza_four-chees.jpg"
     },
     {
@@ -37,7 +37,7 @@
       "type": "pizza",
       "h2Text": "Пицца Том-Ям",
       "pText": "Тигровые креветки, куриное филе, шампиньоны, томаты черри, сыр моцарелла, соус том-ям.",
-      "strongText": "490 ₽",
+      "price": 490,
       "img": "/assets/image/mainProduct/pizza/pizza_tom-yam.jpg"
     },
     {
@@ -45,7 +45,7 @@
       "type": "pizza",
       "h2Text": "Пицца 4 сезона",
       "pText": "Куриное филе, бекон, ветчина, охотничьи колбаски, помидор, сыр моцарелла, соус томатный.",
-      "strongText": "470 ₽",
+      "price": 470,
       "img": "/assets/image/mainProduct/pizza/pizza_four-season.jpg"
     },
     {
@@ -53,7 +53,7 @@
       "type": "pizza",
       "h2Text": "Пицца Песто",
       "pText": "Куриное филе, пепперони, сыр фета, соус \"Песто\", сыр Моцарела, соус Бешамель.",
-      "strongText": "430 ₽",
+      "price": 430,
       "img": "/assets/image/mainProduct/pizza/pizza_pesto.jpg"
     },
     {
@@ -61,7 +61,7 @@
       "type": "pizza",
       "h2Text": "Пицца 5 сыров",
       "pText": "Сыр дор-блю, сыр моцарелла, сыр пармезан, сыр чизбургер, сыр фета, бекон, соус томатный.",
-      "strongText": "490 ₽",
+      "price": 490,
       "img": "/assets/image/mainProduct/pizza/pizza_five-chees.jpg"
     }
   ],
@@ -71,7 +71,7 @@
       "type": "pasta",
       "h2Text": "Удон с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г  ",
-      "strongText": "500 ₽",
+      "price": 500,
       "img": "/assets/image/mainProduct/image1.png"
     },
     {
@@ -79,7 +79,7 @@
       "type": "pasta",
       "h2Text": "Удон с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "500 ₽",
+      "price": 500,
       "img": "/assets/image/mainProduct/image2.png"
     },
     {
@@ -87,7 +87,7 @@
       "type": "pasta",
       "h2Text": "Удон с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "500 ₽",
+      "price": 500,
       "img": "/assets/image/mainProduct/image3.png"
     },
     {
@@ -95,7 +95,7 @@
       "type": "pasta",
       "h2Text": "Удон с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "500 ₽",
+      "price": 500,
       "img": "/assets/image/mainProduct/image4.png"
     },
     {
@@ -103,7 +103,7 @@
       "type": "pasta",
       "h2Text": "Удон с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "500 ₽",
+      "price": 500,
       "img": "/assets/image/mainProduct/image1.png"
     },
     {
@@ -111,7 +111,7 @@
       "type": "pasta",
       "h2Text": "Удон с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "500 ₽",
+      "price": 500,
       "img": "/assets/image/mainProduct/image2.png"
     },
     {
@@ -119,7 +119,7 @@
       "type": "pasta",
       "h2Text": "Удон с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "500 ₽",
+      "price": 500,
       "img": "/assets/image/mainProduct/image3.png"
     },
     {
@@ -127,7 +127,7 @@
       "type": "pasta",
       "h2Text": "Удон с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "500 ₽",
+      "price": 500,
       "img": "/assets/image/mainProduct/image4.png"
     }
   ],
@@ -137,7 +137,7 @@
       "type": "soup",
       "h2Text": "Том ям с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "550 ₽",
+      "price": 550,
       "img": "/assets/image/mainProduct/image1.png"
     },
     {
@@ -145,7 +145,7 @@
       "type": "soup",
       "h2Text": "Том ям с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "550 ₽",
+      "price": 550,
       "img": "/assets/image/mainProduct/image2.png"
     },
     {
@@ -153,7 +153,7 @@
       "type": "soup",
       "h2Text": "Том ям с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "550 ₽",
+      "price": 550,
       "img": "/assets/image/mainProduct/image3.png"
     },
     {
@@ -161,7 +161,7 @@
       "type": "soup",
       "h2Text": "Том ям с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "550 ₽",
+      "price": 550,
       "img": "/assets/image/mainProduct/image4.png"
     },
     {
@@ -169,7 +169,7 @@
       "type": "soup",
       "h2Text": "Том ям с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "550 ₽",
+      "price": 550,
       "img": "/assets/image/mainProduct/image1.png"
     },
     {
@@ -177,7 +177,7 @@
       "type": "soup",
       "h2Text": "Том ям с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "550 ₽",
+      "price": 550,
       "img": "/assets/image/mainProduct/image2.png"
     },
     {
@@ -185,7 +185,7 @@
       "type": "soup",
       "h2Text": "Том ям с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "550 ₽",
+      "price": 550,
       "img": "/assets/image/mainProduct/image3.png"
     },
     {
@@ -193,7 +193,7 @@
       "type": "soup",
       "h2Text": "Том ям с морепродуктами",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "550 ₽",
+      "price": 550,
       "img": "/assets/image/mainProduct/image4.png"
     }
   ],
@@ -203,7 +203,7 @@
       "type": "salad",
       "h2Text": "Цезарь",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "300 ₽",
+      "price": 300,
       "img": "/assets/image/mainProduct/image1.png"
     },
     {
@@ -211,7 +211,7 @@
       "type": "salad",
       "h2Text": "Цезарь",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "300 ₽",
+      "price": 300,
       "img": "/assets/image/mainProduct/image2.png"
     },
     {
@@ -219,7 +219,7 @@
       "type": "salad",
       "h2Text": "Цезарь",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "300 ₽",
+      "price": 300,
       "img": "/assets/image/mainProduct/image3.png"
     },
     {
@@ -227,96 +227,120 @@
       "type": "salad",
       "h2Text": "Цезарь",
       "pText": "Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное масло, черный перец, пармезан. 350г",
-      "strongText": "300 ₽",
+      "price": 300,
       "img": "/assets/image/mainProduct/image4.png"
     }
   ],
   "pizza_modal": [
     {
       "id": 1,
-      "h1Text": "Пицца Гавайская",
+      "title": "Пицца Гавайская",
+      "pText": "Пицца с ананасом, креветкой, куриным филе, сыром моцарелла, соус томатный.",
       "weightProductSmall": 360,
       "weightProductMedium": 450,
       "weightProductBig": 600,
       "img": "/assets/image/mainProduct/pizza/pizza_gavaiskaya.jpg",
-      "price": 600,
+      "priceSmall": 470,
+      "priceMedium": 520,
+      "priceBig": 570,
       "type": "pizza"
     },
     {
       "id": 2,
-      "h1Text": "С креветками и трюфелям",
+      "title": "Пицца Карбонара",
+      "pText": "Бекон, яйцо, сыр моцарелла, соус бешамель.",
       "weightProductSmall": 360,
       "weightProductMedium": 450,
       "weightProductBig": 600,
       "img": "/assets/image/mainProduct/pizza/pizza_carbonara.jpg",
-      "price": 600,
+      "priceSmall": 390,
+      "priceMedium": 440,
+      "priceBig": 490,
       "type": "pizza"
     },
     {
       "id": 3,
-      "h1Text": "С креветками и трюфеля",
+      "title": "Пицца Грибная",
+      "pText": "Куриное филе, грибы шампиньоны, шиитаке, трюфельная паста, соус бешамель.",
       "weightProductSmall": 360,
       "weightProductMedium": 450,
       "weightProductBig": 600,
       "img": "/assets/image/mainProduct/pizza/pizza_gribnaya.jpg",
-      "price": 600,
+      "priceSmall": 460,
+      "priceMedium": 510,
+      "priceBig": 560,
       "type": "pizza"
     },
     {
       "id": 4,
-      "h1Text": "С креветками и трюфел",
+      "title": "Пицца 4 сыра",
+      "pText": "Сыр дор-блю, сыр пармезан, сыр моцарелла, сыр чизбургер, соус томатный.",
       "weightProductSmall": 360,
       "weightProductMedium": 450,
       "weightProductBig": 600,
       "img": "/assets/image/mainProduct/pizza/pizza_four-chees.jpg",
-      "price": 600,
+      "priceSmall": 460,
+      "priceMedium": 510,
+      "priceBig": 560,
       "type": "pizza"
     },
     {
       "id": 5,
-      "h1Text": "С креветками и трюфе",
+      "title": "Пицца Том-Ям",
+      "pText": "Тигровые креветки, куриное филе, шампиньоны, томаты черри, сыр моцарелла, соус том-ям.",
       "weightProductSmall": 360,
       "weightProductMedium": 450,
       "weightProductBig": 600,
       "img": "/assets/image/mainProduct/pizza/pizza_tom-yam.jpg",
-      "price": 600,
+      "priceSmall": 490,
+      "priceMedium": 540,
+      "priceBig": 590,
       "type": "pizza"
     },
     {
       "id": 6,
-      "h1Text": "С креветками и трюф",
+      "title": "Пицца 4 сезона",
+      "pText": "Куриное филе, бекон, ветчина, охотничьи колбаски, помидор, сыр моцарелла, соус томатный.",
       "weightProductSmall": 360,
       "weightProductMedium": 450,
       "weightProductBig": 600,
       "img": "/assets/image/mainProduct/pizza/pizza_four-season.jpg",
-      "price": 600,
+      "priceSmall": 470,
+      "priceMedium": 520,
+      "priceBig": 570,
       "type": "pizza"
     },
     {
       "id": 7,
-      "h1Text": "С креветками и трю",
+      "title": "Пицца Песто",
+      "pText": "Куриное филе, пепперони, сыр фета, соус \"Песто\", сыр Моцарела, соус Бешамель.",
       "weightProductSmall": 360,
       "weightProductMedium": 450,
       "weightProductBig": 600,
       "img": "/assets/image/mainProduct/pizza/pizza_pesto.jpg",
-      "price": 600,
+      "priceSmall": 430,
+      "priceMedium": 480,
+      "priceBig": 530,
       "type": "pizza"
     },
     {
       "id": 8,
-      "h1Text": "С креветками и тр",
+      "title": "Пицца 5 сыров",
+      "pText": "Сыр дор-блю, сыр моцарелла, сыр пармезан, сыр чизбургер, сыр фета, бекон, соус томатный.",
       "weightProductSmall": 360,
       "weightProductMedium": 450,
       "weightProductBig": 600,
       "img": "/assets/image/mainProduct/pizza/pizza_five-chees.jpg",
-      "price": 600,
+      "priceSmall": 490,
+      "priceMedium": 540,
+      "priceBig": 590,
       "type": "pizza"
     }
   ],
   "pasta_modal": [
     {
       "id": 1,
-      "h1Text": "Удон с морепродуктами",
+      "title": "Удон с морепродуктами",
       "weightProduct": 450,
       "img": "/assets/image/mainProduct/modal/img1.png",
       "price": 500,
@@ -324,7 +348,7 @@
     },
     {
       "id": 2,
-      "h1Text": "Удон с морепродуктами",
+      "title": "Удон с морепродуктами",
       "weightProduct": 450,
       "img": "/assets/image/mainProduct/modal/img1.png",
       "price": 500,
@@ -332,7 +356,7 @@
     },
     {
       "id": 3,
-      "h1Text": "Удон с морепродуктами",
+      "title": "Удон с морепродуктами",
       "weightProduct": 450,
       "img": "/assets/image/mainProduct/modal/img1.png",
       "price": 500,
@@ -340,7 +364,7 @@
     },
     {
       "id": 4,
-      "h1Text": "Удон с морепродуктами",
+      "title": "Удон с морепродуктами",
       "weightProduct": 450,
       "img": "/assets/image/mainProduct/modal/img1.png",
       "price": 500,
@@ -348,7 +372,7 @@
     },
     {
       "id": 5,
-      "h1Text": "Удон с морепродуктами",
+      "title": "Удон с морепродуктами",
       "weightProduct": 450,
       "img": "/assets/image/mainProduct/modal/img1.png",
       "price": 500,
@@ -356,7 +380,7 @@
     },
     {
       "id": 6,
-      "h1Text": "Удон с морепродуктами",
+      "title": "Удон с морепродуктами",
       "weightProduct": 450,
       "img": "/assets/image/mainProduct/modal/img1.png",
       "price": 500,
@@ -364,7 +388,7 @@
     },
     {
       "id": 7,
-      "h1Text": "Удон с морепродуктами",
+      "title": "Удон с морепродуктами",
       "weightProduct": 450,
       "img": "/assets/image/mainProduct/modal/img1.png",
       "price": 500,
@@ -372,7 +396,7 @@
     },
     {
       "id": 8,
-      "h1Text": "Удон с морепродуктами",
+      "title": "Удон с морепродуктами",
       "weightProduct": 450,
       "img": "/assets/image/mainProduct/modal/img1.png",
       "price": 500,
@@ -382,7 +406,7 @@
   "soup_modal": [
     {
       "id": 1,
-      "h1Text": "Том ям с морепродуктами",
+      "title": "Том ям с морепродуктами",
       "weightProduct": 450,
       "img": "/assets/image/mainProduct/modal/img1.png",
       "price": 550,
@@ -390,7 +414,7 @@
     },
     {
       "id": 2,
-      "h1Text": "Том ям с морепродуктами",
+      "title": "Том ям с морепродуктами",
       "weightProduct": 450,
       "img": "/assets/image/mainProduct/modal/img1.png",
       "price": 550,
@@ -398,7 +422,7 @@
     },
     {
       "id": 3,
-      "h1Text": "Том ям с морепродуктами",
+      "title": "Том ям с морепродуктами",
       "weightProduct": 450,
       "img": "/assets/image/mainProduct/modal/img1.png",
       "price": 550,
@@ -406,7 +430,7 @@
     },
     {
       "id": 4,
-      "h1Text": "Том ям с морепродуктами",
+      "title": "Том ям с морепродуктами",
       "weightProduct": 450,
       "img": "/assets/image/mainProduct/modal/img1.png",
       "price": 550,
@@ -414,7 +438,7 @@
     },
     {
       "id": 5,
-      "h1Text": "Том ям с морепродуктами",
+      "title": "Том ям с морепродуктами",
       "weightProduct": 450,
       "img": "/assets/image/mainProduct/modal/img1.png",
       "price": 550,
@@ -422,7 +446,7 @@
     },
     {
       "id": 6,
-      "h1Text": "Том ям с морепродуктами",
+      "title": "Том ям с морепродуктами",
       "weightProduct": 450,
       "img": "/assets/image/mainProduct/modal/img1.png",
       "price": 550,
@@ -430,7 +454,7 @@
     },
     {
       "id": 7,
-      "h1Text": "Том ям с морепродуктами",
+      "title": "Том ям с морепродуктами",
       "weightProduct": 450,
       "img": "/assets/image/mainProduct/modal/img1.png",
       "price": 550,
@@ -438,7 +462,7 @@
     },
     {
       "id": 8,
-      "h1Text": "Том ям с морепродуктами",
+      "title": "Том ям с морепродуктами",
       "weightProduct": 450,
       "img": "/assets/image/mainProduct/modal/img1.png",
       "price": 550,
@@ -448,7 +472,7 @@
   "salad_modal": [
     {
       "id": 1,
-      "h1Text": "Цезарь",
+      "title": "Цезарь",
       "weightProduct": 450,
       "img": "/assets/image/mainProduct/modal/img1.png",
       "price": 300,
@@ -456,7 +480,7 @@
     },
     {
       "id": 2,
-      "h1Text": "Цезарь",
+      "title": "Цезарь",
       "weightProduct": 450,
       "img": "/assets/image/mainProduct/modal/img1.png",
       "price": 300,
@@ -464,7 +488,7 @@
     },
     {
       "id": 3,
-      "h1Text": "Цезарь",
+      "title": "Цезарь",
       "weightProduct": 450,
       "img": "/assets/image/mainProduct/modal/img1.png",
       "price": 300,
@@ -472,7 +496,7 @@
     },
     {
       "id": 4,
-      "h1Text": "Цезарь",
+      "title": "Цезарь",
       "weightProduct": 450,
       "img": "/assets/image/mainProduct/modal/img1.png",
       "price": 300,
@@ -482,22 +506,22 @@
   "new_position": [
     {
       "h2Text": "Пицца Маргарита",
-      "strongText": "от 120 ₽",
+      "price": 400,
       "img": "assets/image/newPosition/news-assortment.png"
     },
     {
       "h2Text": "Сырный суп",
-      "strongText": "от 120 ₽",
+      "price": 400,
       "img": "assets/image/newPosition/news-assortment.png"
     },
     {
       "h2Text": "Салат с креветкамии темпура",
-      "strongText": "от 120 ₽",
+      "price": 400,
       "img": "assets/image/newPosition/news-assortment.png"
     },
     {
       "h2Text": "Паста Карбонара",
-      "strongText": "от 120 ₽",
+      "price": 400,
       "img": "assets/image/newPosition/news-assortment.png"
     }
   ],
@@ -580,55 +604,55 @@
       "id": 1,
       "h1Text": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image1.png",
-      "strongText": "120 ₽"
+      "price": 120
     },
     {
       "id": 2,
       "h1Text": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image2.png",
-      "strongText": "120 ₽"
+      "price": 120
     },
     {
       "id": 3,
       "h1Text": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image3.png",
-      "strongText": "120 ₽"
+      "price": 120
     },
     {
       "id": 4,
       "h1Text": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image1.png",
-      "strongText": "120 ₽"
+      "price": 120
     },
     {
       "id": 5,
       "h1Text": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image2.png",
-      "strongText": "120 ₽"
+      "price": 120
     },
     {
       "id": 6,
       "h1Text": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image3.png",
-      "strongText": "120 ₽"
+      "price": 120
     },
     {
       "id": 7,
       "h1Text": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image1.png",
-      "strongText": "120 ₽"
+      "price": 120
     },
     {
       "id": 8,
       "h1Text": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image2.png",
-      "strongText": "120 ₽"
+      "price": 120
     },
     {
       "id": 9,
       "h1Text": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image3.png",
-      "strongText": "120 ₽"
+      "price": 120
     }
   ],
   "supplements_pasta": [
@@ -636,55 +660,55 @@
       "id": 1,
       "h1Text": "Грибы",
       "img": "/assets/image/mainProduct/supplements/image1.png",
-      "strongText": "100 ₽"
+      "price": 100
     },
     {
       "id": 2,
       "h1Text": "Грибы",
       "img": "/assets/image/mainProduct/supplements/image2.png",
-      "strongText": "100 ₽"
+      "price": 100
     },
     {
       "id": 3,
       "h1Text": "Грибы",
       "img": "/assets/image/mainProduct/supplements/image3.png",
-      "strongText": "100 ₽"
+      "price": 100
     },
     {
       "id": 4,
       "h1Text": "Грибы",
       "img": "/assets/image/mainProduct/supplements/image1.png",
-      "strongText": "100 ₽"
+      "price": 100
     },
     {
       "id": 5,
       "h1Text": "Грибы",
       "img": "/assets/image/mainProduct/supplements/image2.png",
-      "strongText": "100 ₽"
+      "price": 100
     },
     {
       "id": 6,
       "h1Text": "Грибы",
       "img": "/assets/image/mainProduct/supplements/image3.png",
-      "strongText": "100 ₽"
+      "price": 100
     },
     {
       "id": 7,
       "h1Text": "Грибы",
       "img": "/assets/image/mainProduct/supplements/image1.png",
-      "strongText": "100 ₽"
+      "price": 100
     },
     {
       "id": 8,
       "h1Text": "Грибы",
       "img": "/assets/image/mainProduct/supplements/image2.png",
-      "strongText": "100 ₽"
+      "price": 100
     },
     {
       "id": 9,
       "h1Text": "Грибы",
       "img": "/assets/image/mainProduct/supplements/image3.png",
-      "strongText": "100 ₽"
+      "price": 100
     }
   ],
   "supplements_soup": [
@@ -692,55 +716,55 @@
       "id": 1,
       "h1Text": "Сливки",
       "img": "/assets/image/mainProduct/supplements/image1.png",
-      "strongText": "90 ₽"
+      "price": 90
     },
     {
       "id": 2,
       "h1Text": "Сливки",
       "img": "/assets/image/mainProduct/supplements/image2.png",
-      "strongText": "90 ₽"
+      "price": 90
     },
     {
       "id": 3,
       "h1Text": "Сливки",
       "img": "/assets/image/mainProduct/supplements/image3.png",
-      "strongText": "90 ₽"
+      "price": 90
     },
     {
       "id": 4,
       "h1Text": "Сливки",
       "img": "/assets/image/mainProduct/supplements/image1.png",
-      "strongText": "90 ₽"
+      "price": 90
     },
     {
       "id": 5,
       "h1Text": "Сливки",
       "img": "/assets/image/mainProduct/supplements/image2.png",
-      "strongText": "90 ₽"
+      "price": 90
     },
     {
       "id": 6,
       "h1Text": "Сливки",
       "img": "/assets/image/mainProduct/supplements/image3.png",
-      "strongText": "90 ₽"
+      "price": 90
     },
     {
       "id": 7,
       "h1Text": "Сливки",
       "img": "/assets/image/mainProduct/supplements/image1.png",
-      "strongText": "90 ₽"
+      "price": 90
     },
     {
       "id": 8,
       "h1Text": "Сливки",
       "img": "/assets/image/mainProduct/supplements/image2.png",
-      "strongText": "90 ₽"
+      "price": 90
     },
     {
       "id": 9,
       "h1Text": "Сливки",
       "img": "/assets/image/mainProduct/supplements/image3.png",
-      "strongText": "90 ₽"
+      "price": 90
     }
   ],
   "supplements_salad": [
@@ -748,55 +772,58 @@
       "id": 1,
       "h1Text": "Огурец",
       "img": "/assets/image/mainProduct/supplements/image1.png",
-      "strongText": "70 ₽"
+      "price": 70
     },
     {
       "id": 2,
       "h1Text": "Огурец",
       "img": "/assets/image/mainProduct/supplements/image2.png",
-      "strongText": "70 ₽"
+      "price": 70
     },
     {
       "id": 3,
       "h1Text": "Огурец",
       "img": "/assets/image/mainProduct/supplements/image3.png",
-      "strongText": "70 ₽"
+      "price": 70
     },
     {
       "id": 4,
       "h1Text": "Огурец",
       "img": "/assets/image/mainProduct/supplements/image1.png",
-      "strongText": "70 ₽"
+      "price": 70
     },
     {
       "id": 5,
       "h1Text": "Огурец",
       "img": "/assets/image/mainProduct/supplements/image2.png",
-      "strongText": "70 ₽"
+      "price": 70
     },
     {
       "id": 6,
       "h1Text": "Огурец",
       "img": "/assets/image/mainProduct/supplements/image3.png",
-      "strongText": "70 ₽"
+      "price": 70
     },
     {
       "id": 7,
       "h1Text": "Огурец",
       "img": "/assets/image/mainProduct/supplements/image1.png",
-      "strongText": "70 ₽"
+      "price": 70
     },
     {
       "id": 8,
       "h1Text": "Огурец",
       "img": "/assets/image/mainProduct/supplements/image2.png",
-      "strongText": "70 ₽"
+      "price": 70
     },
     {
       "id": 9,
       "h1Text": "Огурец",
       "img": "/assets/image/mainProduct/supplements/image3.png",
-      "strongText": "70 ₽"
+      "price": 70
     }
+  ],
+  "basket": [
+    
   ]
 }

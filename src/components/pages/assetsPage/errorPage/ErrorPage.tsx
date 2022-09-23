@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, ReactNode, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import cl from "../../../../assets/styles/pages/errorPage/errorPage.module.sass";
 import * as Scroll from "react-scroll";

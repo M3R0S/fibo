@@ -15,7 +15,7 @@ type MainProductItemType = {
   type: SectionName;
   h2Text: string;
   pText: string;
-  strongText: string;
+  price: number;
   img: string;
 };
 
@@ -49,7 +49,7 @@ export const getMainProduct = createAsyncThunk<
       const res = await axios.get<MainProductItemType[]>(
         `http://localhost:4000/${endpoint}`
         );
-        await sleep(1000)
+        // await sleep(1000)
         return { sectionName: endpoint, res: res.data };
       } catch (error) {
         return rejectWithValue("Ошибка загрузки");

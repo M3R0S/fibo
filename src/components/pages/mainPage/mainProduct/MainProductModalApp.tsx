@@ -14,6 +14,7 @@ import MainProductModalItem from "./MainProductModalItem";
 const MainProductModalApp: FC = () => {
   const { openModal, idModal, typeModal, item, loading, error } =
     useAppSelector((state) => state.mainProductItem);
+    const {data} = useAppSelector((state) => state.mainProduct);
   useEffect(() => {
     dispatch(getMainProductItem({ typeModal, idModal }));
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -39,8 +40,9 @@ const MainProductModalApp: FC = () => {
           <Loader></Loader>
         </div>
       ) : (
-        item.map((itemObj) => (
-          <MainProductModalItem {...itemObj} key={itemObj.id}></MainProductModalItem>
+        item.map((itemObj, index) => (
+          <MainProductModalItem {...itemObj}
+           key={itemObj.id}></MainProductModalItem>
         ))
       )}
     </section>

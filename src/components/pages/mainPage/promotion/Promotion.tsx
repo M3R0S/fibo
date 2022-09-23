@@ -23,14 +23,14 @@ const Promotion: FC = () => {
       <h1>
         Наши <span>акции</span>
       </h1>
-      <figure className={cl.promotion_cont} ref={containerRef}>
+      <figure className={cl.promotion_cont}>
         {promoImg.map((img) => (
           <button className={cl.promotion_card} key={uuidv4()}>
             <img src={img} alt={img}></img>
           </button>
         ))}
       </figure>
-      <Link className={cl.promotion_link} to="/promotion">
+      <Link className={cl.promotion_link} to="/promotion" ref={containerRef}>
         Все акции
       </Link>
       <img src={modelWoman} alt="Model Woman" className={cl.modelWoman} />

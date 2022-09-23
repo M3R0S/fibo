@@ -1,8 +1,6 @@
 import React, { FC } from "react";
 import cl from "../../../../assets/styles/pages/mainProduct/mainProduct.module.sass";
-import {
-  useAppDispatch,
-} from "../../../../hook/storeHook/useStore";
+import { useAppDispatch } from "../../../../hook/storeHook/useStore";
 import {
   SectionName,
   setOpenModal,
@@ -11,19 +9,19 @@ import {
 interface IMainProductItemProps {
   h2Text: string;
   pText: string;
-  strongText: string;
+  price: number;
   img: string;
   id: number;
-  type: SectionName
+  type: SectionName;
 }
 
 const MainProductItem: FC<IMainProductItemProps> = ({
   h2Text,
   pText,
-  strongText,
+  price,
   img,
   id,
-  type
+  type,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -35,7 +33,7 @@ const MainProductItem: FC<IMainProductItemProps> = ({
         <p>{pText}</p>
       </div>
       <div className={cl.footer_info}>
-        <strong>{strongText}</strong>
+        <strong>от {price} ₽</strong>
         <button
           type="button"
           onClick={() => {

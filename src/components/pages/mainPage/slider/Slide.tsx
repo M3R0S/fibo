@@ -23,7 +23,6 @@ const Slide: FC = () => {
   const [autoSlideId, setAutoSlideID] = useState<NodeJS.Timer | null>(null);
   const [clickSlide, setClickSlide] = useState<boolean>(true);
   const [scrollY, setScrollY] = useState<number>(window.scrollY);
-  const containerRef = useElementOnScreen({ threshold: 1 }, null);
 
   const addAutoSlide = () => {
     const id = setInterval(() => dispatch(swipeRigth()), 3000);
@@ -78,10 +77,7 @@ const Slide: FC = () => {
   // }, []);
 
   return (
-    <section
-      className={cl.container}
-      ref={containerRef}
-    >
+    <section className={cl.container}>
       <button
         type="button"
         onClick={() => clickHandlerLeft()}

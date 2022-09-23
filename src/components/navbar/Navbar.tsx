@@ -1,6 +1,6 @@
 import React, { FC, useCallback, useEffect, useState } from "react";
-import NavInfo from "./navInfo/NavInfo";
-import NavMenu from "./navMenu/NavMenu";
+import NavInfo from "./NavInfo";
+import NavMenu from "./NavMenu";
 import cl from "../../assets/styles/navbar/navbar.module.sass";
 import { debounce } from "../../helpers/debounce";
 import { Transition } from "react-transition-group";
