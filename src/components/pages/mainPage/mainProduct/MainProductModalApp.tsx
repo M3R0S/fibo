@@ -8,7 +8,7 @@ import {
   getMainProductItem,
   setClosedModal,
 } from "../../../../store/slice/mainProductItemSlice";
-import Loader from "../../../ui/loader/Loader";
+import Loader from "../../../ui/assets/loader/Loader";
 import MainProductModalItem from "./MainProductModalItem";
 
 const MainProductModalApp: FC = () => {

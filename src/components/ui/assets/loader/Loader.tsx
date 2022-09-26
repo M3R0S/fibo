@@ -1,6 +1,6 @@
 import React, { FC } from "react";
-import loader from "../../../assets/image/loader.gif";
-import cl from "../../../assets/styles/ui/loader.module.sass";
+import loader from "../../../../assets/image/loader.gif";
+import cl from "../../../../assets/styles/ui/loader.module.sass";
 
 interface ILoader {
   marginTop?: number;

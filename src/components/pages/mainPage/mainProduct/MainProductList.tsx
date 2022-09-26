@@ -11,7 +11,7 @@ import {
 import cl from "../../../../assets/styles/pages/mainProduct/mainProduct.module.sass";
 import MainProductItem from "./MainProductItem";
 import * as Scroll from "react-scroll";
-import Loader from "../../../ui/loader/Loader";
+import Loader from "../../../ui/assets/loader/Loader";
 import useElementOnScreen from "../../../../hook/useElementOnScreen/useElementOnScreen";
 
 interface IMainProductListProps {

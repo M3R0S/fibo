@@ -5,63 +5,60 @@
     margin-top
     display: flex
     align-items: center
-    ul
-        display: flex
-        transform: translate(-5px)
-        .nav_disable
-            padding: 5px
-            margin-right: 6px
-            font-size: 15px
-            font-weight: 600
-            color: var.$color-black
-            border-radius: 10px
-            transition: all 0.2s linear
-            cursor: pointer
+    justify-content: space-between
 
-            &:hover
-                background-color: var.$color-yellow
-               
-        .nav_active
+    .navbar
+        width: 77%
+        transform: translate(-0.8rem)
+
+        ul
+            display: flex
+            justify-content: space-between
+
+            .nav
+                padding: 0.7rem
+                font-size: 1.5rem
+                font-weight: 600
+                color: var.$color-black
+                border-radius: 1.2rem
+                transition: all 0.2s linear
+                cursor: pointer
+
+                &:hover
+                    background-color: var.$color-yellow
+
+            .nav_active
+                color: var.$color-yellow
+
+    .logo_scroll
+        margin-right: 1rem
+
+    .login
+        padding: 0.6rem 1rem
+        font-size: 1.6rem
+        font-weight: 700
+        color: #696F7A
+        border-radius: 10px
+        transition: all 0.2s linear
+
+        &:hover
             color: var.$color-yellow
-            padding: 5px
-            border-radius: 10px
-            font-size: 15px
-            font-weight: 600
-            margin-right: 6px
-            cursor: pointer
+            background-color: #696f7a99
 
+    .basket
+        margin-left: 1.2rem
+        width: 160px
+        height: 42px
+        background-color: var.$color-yellow
+        border-radius: 0.8rem
+        font-weight: 700
+        font-size: 1.6rem
+        color: #231F20
+        transition: all 0.2s linear
 
-.logo_scroll
-    margin-right: 20px
+        &:hover
+            box-shadow: 0 0 0 0.2rem #0000001a
 
-.login 
-    padding: 5px 10px
-    font-size: 16px
-    font-weight: 700
-    color: #696F7A
-    border-radius: 10px
-    transition: all 0.2s linear
+// ! media screen
 
-    &:hover
-        color: var.$color-yellow
-        background-color: #696f7a99
-
-.basket 
-    margin-left: 20px
-    width: 160px
-    height: 42px
-    background-color: var.$color-yellow
-    border-radius: 8px
-    font-weight: 700
-    font-size: 16px
-    color: #231F20
-    
-    &:hover 
-        box-shadow: 0 3px 5px 1px
-
-.basket_scroll_down
-    margin-left: 0
-
-
-
-    
+@media screen and (max-width: 1200px)

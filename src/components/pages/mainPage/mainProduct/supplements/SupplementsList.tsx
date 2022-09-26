@@ -9,7 +9,7 @@ import {
 } from "../../../../../store/slice/supplementsSlice";
 import cl from "../../../../../assets/styles/pages/mainProduct/supplements.module.sass";
 import SupplementsItem from "./SupplementsItem";
-import Loader from "../../../../ui/loader/Loader";
+import Loader from "../../../../ui/assets/loader/Loader";
 
 interface ISectionNameSupplements {
   endpoint: "pizza" | "pasta" | "soup" | "salad";

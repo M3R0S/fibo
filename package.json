@@ -14,6 +14,7 @@
     "@types/react-transition-group": "^4.4.5",
     "@types/yandex-maps": "^2.1.26",
     "axios": "^0.27.2",
+    "json-server": "^0.17.0",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -24,14 +25,12 @@
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.7",
     "react-transition-group": "^4.4.5",
-    "react-yandex-maps": "file:../../types",
     "redux": "^4.2.0",
     "sass": "^1.54.4",
     "typescript": "^4.7.4",
     "uuid": "^8.3.2",
     "uuidv4": "^6.2.13",
-    "web-vitals": "^2.1.4",
-    "yandex-map-react": "^1.1.1"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run dev\"",

@@ -1,0 +1,106 @@
+@use '../../styles/_var' as var
+
+.container
+    display: flex
+    width: 95%
+    justify-content: space-between
+    align-items: center
+
+.navbar_info
+    display: flex
+    align-items: center
+
+.burger
+    background: url('../../icons/header/burger-button.png') no-repeat center center
+    width: 46px
+    height: 46px
+    margin-left: 2rem
+
+.burger_enter_active
+    transform: rotate(90deg)
+    transition: all 0.5s linear
+
+.burger_enter_done
+    transform: rotate(90deg)
+
+.burger_exit
+    transform: rotate(90deg)
+
+.burger_exit_active
+    transform: rotate(0)
+    transition: all 0.5s linear
+
+.navbar
+    position: absolute
+    right: 0
+    top: 0
+    width: 140px
+    background-color: #fff
+    box-shadow: 0 0.4rem 3.8rem rgba(0, 0, 0, 0.1)
+    margin-top: 9rem
+    margin-right: 2rem
+    border-radius: 0.5rem
+
+    ul
+        display: flex
+        flex-direction: column
+        padding: 2rem 2.5rem
+        justify-content: space-between
+        align-items: flex-start
+        row-gap: 0.2rem
+
+        .nav
+            display: block
+            padding: 0.5rem
+            font-size: 1.5rem
+            font-weight: 600
+            color: var.$color-black
+            border-radius: 1.2rem
+            transition: all 0.2s linear
+            cursor: pointer
+
+            &:hover
+                background-color: var.$color-yellow
+
+        .nav_active
+            color: var.$color-yellow
+
+    .login
+        padding: 0.5rem
+        font-weight: 800
+        margin-top: 0.5rem
+
+.navbar_enter
+    opacity: 0
+    transform: translate(0, -7rem)
+
+.navbar_enter_active
+    opacity: 1
+    transform: translate(0)
+    transition: all 0.5s linear
+
+.navbar_exit
+    opacity: 1
+    transform: translate(0)
+    transition: all 0.5s linear
+
+.navbar_exit_active
+    opacity: 0
+    transform: translate(0, -7rem)
+    transition: all 0.5s linear
+
+// ! Анимации для бургер кнопки
+
+@keyframes burger_open
+    0%
+        transform: rotate(0)
+    100%
+        transform: rotate(90deg)
+
+@keyframes burger_closed
+    0%
+        transform: rotate(90deg)
+    100%
+        transform: rotate(0)
+
+// ! Анимация для бургер меню

@@ -11,7 +11,7 @@ import {
   setPizzaWeightProduct,
   setPizzaPrice,
 } from "../../../../../store/slice/pizzaModalSlice";
-import Loader from "../../../../ui/loader/Loader";
+import Loader from "../../../../ui/assets/loader/Loader";
 import ButtonPizzaModal from "./ButtonPizzaModal";
 
 export interface IPizzaModal {

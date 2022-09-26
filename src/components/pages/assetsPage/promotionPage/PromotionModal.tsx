@@ -5,7 +5,7 @@ import {
   useAppSelector,
 } from "../../../../hook/storeHook/useStore";
 import { getPromotionItem, setClosedModal } from "../../../../store/slice/promotionItemSlice";
-import Loader from "../../../ui/loader/Loader";
+import Loader from "../../../ui/assets/loader/Loader";
 import PromotionItemModal from "./PromotionItemModal";
 
 const PromotionModal: FC = () => {
