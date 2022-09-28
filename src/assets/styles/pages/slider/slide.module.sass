@@ -1,133 +1,356 @@
 @use '../../../styles/_var' as var
-    
+
 .container
-    width: var.$section-width
-    padding-top: 120px
+    width: 1920px
+    padding-top: 130px
     display: flex
     align-items: center
-    img
-        width: 560px
-        height: 322px
-        // overflow: hidden
+    justify-content: center
 
-    // .exited:nth-of-type(1)
-    //     animation: first_img_left_ 1s forwards
-    
-    // .exited:nth-of-type(2)
-    //     animation: two_img_left_end 1s forwards
-
-    // .exited:nth-of-type(3)
-    //     animation: three_img_left_end 1s forwards
-
-    // .exited:nth-of-type(4)
-    //     animation: four_img_left_end 1s forwards
-    
-    // .entered:nth-of-type(1)
-    //     animation: first_img_left_start 1s forwards
-    
-    // .entered:nth-of-type(2)
-    //     animation: two_img_left_start 1s forwards
-
-    // .entered:nth-of-type(3)
-    //     animation: three_img_left_start 1s forwards
-
-    // .entered:nth-of-type(4)
-    //     animation: four_img_left_start 1s forwards
-
-    img:nth-of-type(1)
-        position: absolute
-        transform: translate(-470px)
-        width: 478px
-        height: 276px
-        opacity: 0.7 
-
-    img:nth-of-type(4)
-        position: absolute
-        transform: translate(1100px)
-        width: 478px
-        height: 276px
-        opacity: 0.7
-
-.left_point 
+.point
     width: 31px
     height: 31px
     background-color: var.$color-yellow
-    border-radius: 27px
+    border-radius: 2.7rem
     position: absolute
-    transform: translate(-60px)
     z-index: 10
-    
+
+.point::before
+    content: ""
+    position: absolute
+    width: 10px
+    height: 28px
+
+.left_point
+    transform: translate(-52.3rem)
+
 .left_point::before
     background: url('../../../icons/slider/left_point.png') no-repeat
-    content: ""
-    position: absolute
-    width: 10px
-    height: 28px
-    transform: translate(-4px, -6px)
+    transform: translate(-0.6rem, -0.6rem)
 
 .right_point
-    width: 31px
-    height: 31px
-    background-color: var.$color-yellow
-    border-radius: 27px
-    position: absolute
-    transform: translate(1140px)
-    z-index: 10
-    
+    transform: translate(52.3rem)
+
 .right_point::before
     background: url('../../../icons/slider/right_point.png') no-repeat
-    content: ""
-    position: absolute
-    width: 10px
-    height: 28px
-    transform: translate(-4px, -6px)
+    transform: translate(-0.4rem, -0.6rem)
 
-// @keyframes first_img_left_start
-//     0%
-//         transform: translate(-550px)
-//     100%
-//         transform: translate(-350px)
-        
-// @keyframes two_img_left_start
-//     0%
-//         transform: translate(-200px)
-//     100%
-//         transform: translate(0)
+@media screen and (max-width: 1200px)
 
-// @keyframes three_img_left_start
-//     0%
-//         transform: translate(-200px)
-//     100%
-//         transform: translate(0)
+    .container
+        width: 90%
+        font-size: 8px
+    
+    .left_point
+        transform: translate(0)
+        left: 5%
+    
+    .right_point
+        transform: translate(0)
+        right: 5%
 
-// @keyframes four_img_left_start
-//     0%
-//         transform: translate(1020px)
-//     100%
-//         transform: translate(1220px)
+@media screen and (max-width: 900px)
+
+    .container
+        width: 80%
+        font-size: 6px
+        justify-content: flex-start
+        transform: translate(-30rem)
+    
+    .left_point
+        transform: translate(30rem)
+        left: 0
+    
+    .right_point
+        transform: translate(30rem)
+        right: 0
+
+// ! Fake img
+
+.fake_img
+    display: none
+    width: 47.8em
+    height: 27.6em
+    opacity: 0.7
+
+.fake_img_enter
+    display: block
+    transform: translate(0)
+
+.fake_img_enter_active
+    transform: translate(-23em)
+    transition: all 0.5s linear
+
+.fake_img_enter_done
+    transform: translate(-23em)
+
+.fake_img_enter_left
+    display: block
+    transform: translate(0)
+
+.fake_img_enter_active_left
+    transform: translate(23em)
+    transition: all 0.5s linear
+
+.fake_img_enter_done_left
+    transform: translate(23em)
 
 
+// ! Swipe right
 
-// @keyframes first_img_left_end
-//     0%
-//         transform: translate(-350px)
-//     100%
-//         transform: translate(-550px)
-        
-// @keyframes two_img_left_end
-//     0%
-//         transform: translate(0)
-//     100%
-//         transform: translate(-200px)
+.img_enter_0
+    transform: translate(0)
+    width: 47.8em
+    height: 27.6em
+    opacity: 0.7
 
-// @keyframes three_img_left_end
-//     0%
-//         transform: translate(0)
-//     100%
-//         transform: translate(-200px)
+.img_enter_active_0
+    transform: translate(-23em)
+    width: 47.8em
+    height: 27.6em
+    transition: all 0.5s linear
 
-// @keyframes four_img_left_end
-//     0%
-//         transform: translate(1020px)
-//     100%
-//         transform: translate(1220px)
+.img_enter_done_0
+    transform: translate(-23em)
+    width: 47.8em
+    height: 27.6em
+    opacity: 0.7
+
+.img_exit_0
+    width: 47.8em
+    height: 27.6em
+    opacity: 0.7
+
+.img_exit_active_0
+    transition: all 0.5s linear
+    width: 47.8em
+    height: 27.6em
+    opacity: 0.7
+
+.img_exit_done_0
+    width: 47.8em
+    height: 27.6em
+    opacity: 0.7
+
+.img_enter_1
+    transform: translate(0)
+    width: 56em
+    height: 32.2em
+
+.img_enter_active_1
+    transform: translate(-23em)
+    transition: all 0.5s linear
+    width: 47.8em
+    height: 27.6em
+    opacity: 0.7
+
+.img_enter_done_1
+    transform: translate(-23em)
+    width: 47.8em
+    height: 27.6em
+    opacity: 0.7
+
+.img_exit_1
+    width: 56em
+    height: 32.2em
+
+.img_exit_active_1
+    width: 56em
+    height: 32.2em
+
+.img_exit_done_1
+    width: 56em
+    height: 32.2em
+
+.img_enter_2
+    transform: translate(0)
+    width: 56em
+    height: 32.2em
+
+.img_enter_active_2
+    transform: translate(-23em)
+    transition: all 0.5s linear
+    width: 56em
+    height: 32.2em
+
+.img_enter_done_2
+    transform: translate(-23em)
+    width: 56em
+    height: 32.2em
+
+.img_exit_2
+    width: 56em
+    height: 32.2em
+
+.img_exit_active_2
+    width: 56em
+    height: 32.2em
+
+.img_exit_done_2
+    width: 56em
+    height: 32.2em
+
+.img_enter_3
+    transform: translate(0)
+    opacity: 0.7
+    width: 47.8em
+    height: 27.6em
+    opacity: 0.7
+
+.img_enter_active_3
+    transform: translate(-23em)
+    width: 56em
+    height: 32.2em
+    opacity: 1
+    transition: all 0.5s linear
+    
+.img_enter_done_3
+    transform: translate(-23em)
+    width: 56em
+    height: 32.2em
+    opacity: 1
+
+.img_exit_3
+    width: 47.8em
+    height: 27.6em
+    opacity: 0.7
+
+.img_exit_active_3
+    transition: all 0.5s linear
+    width: 47.8em
+    height: 27.6em
+    opacity: 0.7
+
+.img_exit_done_3
+    width: 47.8em
+    height: 27.6em
+    opacity: 0.7
+       
+// ! Swipe Left
+
+.img_enter_left_0
+    transform: translate(0)
+    width: 47.8em
+    height: 27.6em
+    opacity: 0.7
+
+.img_enter_active_left_0
+    transform: translate(23em)
+    width: 56em
+    height: 32.2em
+    opacity: 1
+    transition: all 0.5s linear
+
+.img_enter_done_left_0
+    transform: translate(23em)
+    width: 56em
+    height: 32.2em
+    opacity: 1
+
+.img_exit_left_0
+    width: 47.8em
+    height: 27.6em
+    opacity: 0.7
+
+.img_exit_active_left_0
+    transition: all 0.5s linear
+    width: 47.8em
+    height: 27.6em
+    opacity: 0.7
+
+.img_exit_done_left_0
+    width: 47.8em
+    height: 27.6em
+    opacity: 0.7
+
+.img_enter_left_1
+    transform: translate(0)
+    width: 56em
+    height: 32.2em
+
+.img_enter_active_left_1
+    transform: translate(23em)
+    width: 56em
+    height: 32.2em
+    transition: all 0.5s linear
+
+.img_enter_done_left_1
+    width: 56em
+    height: 32.2em
+    transform: translate(23em)
+
+.img_exit_left_1
+    width: 56em
+    height: 32.2em
+
+.img_exit_active_left_1
+    width: 56em
+    height: 32.2em
+
+.img_exit_done_left_1
+    width: 56em
+    height: 32.2em
+
+.img_enter_left_2
+    transform: translate(0)
+    width: 56em
+    height: 32.2em
+    opacity: 1
+
+.img_enter_active_left_2
+    transform: translate(23em)
+    width: 47.8em
+    height: 27.6em
+    opacity: 0.7
+    transition: all 0.5s linear
+
+.img_enter_done_left_2
+    transform: translate(23em)
+    width: 47.8em
+    height: 27.6em
+    opacity: 0.7
+
+.img_exit_left_2
+    width: 56em
+    height: 32.2em
+
+.img_exit_active_left_2
+    width: 56em
+    height: 32.2em
+
+.img_exit_done_left_2
+    width: 56em
+    height: 32.2em
+
+.img_enter_left_3
+    transform: translate(0)
+    opacity: 0.7
+    width: 47.8em
+    height: 27.6em
+    opacity: 0.7
+
+.img_enter_active_left_3
+    transform: translate(23em)
+    transition: all 0.5s linear
+    
+.img_enter_done_left_3
+    transform: translate(23em)
+    width: 47.8em
+    height: 27.6em
+    opacity: 0.7
+
+.img_exit_left_3
+    width: 47.8em
+    height: 27.6em
+    opacity: 0.7
+
+.img_exit_active_left_3
+    transition: all 0.5s linear
+    width: 47.8em
+    height: 27.6em
+    opacity: 0.7
+
+.img_exit_done_left_3
+    width: 47.8em
+    height: 27.6em
+    opacity: 0.7

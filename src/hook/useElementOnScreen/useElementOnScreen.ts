@@ -12,7 +12,9 @@ interface IOption {
 const useElementOnScreen = (
   option: IOption,
   idEllement: string | null,
-  debounceTime?: number
+  isIntersecting: Function,
+  notIsIntersecting: Function
+
 ) => {
   const containerRef = useRef(null);
   const dispatch = useAppDispatch();
@@ -22,16 +24,15 @@ const useElementOnScreen = (
   const callback = useCallback(
     debounce((entries: Array<any>, observer: any) => {
       entries.forEach((entr: any) => {
-        // console.log(entr.isIntersecting);
         if (idEllement || idActive) {
           if (entr.isIntersecting) {
-            dispatch(setIdActive(idEllement));
-          }
+            isIntersecting()
+          } 
         } else {
-          dispatch(setIdActive(null));
+          notIsIntersecting()
         }
       });
-    }, debounceTime ?? 200),
+    }, 200),
     []
   );
   useEffect(() => {

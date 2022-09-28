@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useEffect, useState, useCallback } from "react";
 import {
   useAppDispatch,
   useAppSelector,
@@ -13,6 +13,8 @@ import MainProductItem from "./MainProductItem";
 import * as Scroll from "react-scroll";
 import Loader from "../../../ui/assets/loader/Loader";
 import useElementOnScreen from "../../../../hook/useElementOnScreen/useElementOnScreen";
+import { debounce } from "lodash";
+import { setIdActive } from "../../../../store/slice/navbarSlice";
 
 interface IMainProductListProps {
   endpoint: SectionName;
@@ -26,12 +28,18 @@ const MainProductList: FC<IMainProductListProps> = ({
   idEllement,
 }) => {
   const { data, loading, error } = useAppSelector((state) => state.mainProduct);
+  const { idActive } = useAppSelector((state) => state.navbar);
   const list = data[endpoint];
   const dispatch = useAppDispatch();
   const Element = Scroll.Element;
   const [localTimeLoading, setLocalTimeLoaing] = useState<number | null>(null);
 
-  const containerRef = useElementOnScreen({ threshold: 0.7 }, idEllement, 200);
+  const containerRef = useElementOnScreen(
+    { threshold: 0.7 },
+    idEllement,
+    () => dispatch(setIdActive(idEllement)),
+    () => dispatch(setIdActive(null))
+  );
 
   useEffect(() => {
     setLocalTimeLoaing(Date.now());

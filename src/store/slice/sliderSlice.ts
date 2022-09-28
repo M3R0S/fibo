@@ -4,12 +4,22 @@ import blackPoster from "../../assets/image/interactive-card2.png";
 import yellowPosterRed from "../../assets/image/interactive-card3.png";
 import blackPosterRed from "../../assets/image/interactive-card4.png";
 
-type SlideList = {
-  list: string[];
+type TSliderItem = {
+    id: number
+    src: string
+}
+
+type TSlideList = {
+  list: TSliderItem[]
 };
 
-const initialState: SlideList = {
-  list: [blackPosterRed, yellowPoster, blackPoster, yellowPosterRed],
+const initialState: TSlideList = {
+  list: [
+    {id: 1, src: blackPosterRed}, 
+    {id: 2, src: yellowPoster}, 
+    {id: 3, src: blackPoster}, 
+    {id: 4, src: yellowPosterRed}
+  ],
 };
 
 // export const getSlide = createAsyncThunk

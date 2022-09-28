@@ -6,6 +6,7 @@ import Promotion from "./promotion/Promotion";
 import Delivery from "./delivery/Delivery";
 import NewPositionList from "./newPosition/NewPositionList";
 
+
 const PageApp: FC = () => {
   return (
     <main className={cl.main}>

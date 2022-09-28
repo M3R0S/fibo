@@ -1,11 +1,4 @@
-import React, {
-  FC,
-  ReactNode,
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { FC, useCallback, useEffect, useRef, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { debounce } from "../../../../helpers/debounce";
 import {
@@ -14,91 +7,161 @@ import {
 } from "../../../../hook/storeHook/useStore";
 import { swipeLeft, swipeRigth } from "../../../../store/slice/sliderSlice";
 import cl from "../../../../assets/styles/pages/slider/slide.module.sass";
-import { CSSTransition, Transition } from "react-transition-group";
-import useElementOnScreen from "../../../../hook/useElementOnScreen/useElementOnScreen";
+import { CSSTransition } from "react-transition-group";
 
 const Slide: FC = () => {
   const dispatch = useAppDispatch();
   const { list } = useAppSelector((state) => state.slider);
-  const [autoSlideId, setAutoSlideID] = useState<NodeJS.Timer | null>(null);
+  const [autoSlideId, setAutoSlideId] = useState<NodeJS.Timer | null>(null);
+  const [autoSlide, setAutoSlide] = useState<boolean>(false);
   const [clickSlide, setClickSlide] = useState<boolean>(true);
+  const [swipeRighted, setSwipeRighted] = useState<boolean>(true);
   const [scrollY, setScrollY] = useState<number>(window.scrollY);
 
   const addAutoSlide = () => {
-    const id = setInterval(() => dispatch(swipeRigth()), 3000);
-    setAutoSlideID(id);
+    const id = setInterval(() => {
+      setClickSlide(!clickSlide);
+    }, 6000);
+    setAutoSlideId(id);
   };
 
   const removeAutoSlide = () => {
     autoSlideId && clearInterval(autoSlideId);
-    setAutoSlideID(null);
+    setAutoSlideId(null);
   };
 
-  const scrollHandler = debounce(() => {
-    if (scrollY > window.scrollY) {
-      !autoSlideId && addAutoSlide();
-      // console.log("top");
-    }
-    if (scrollY < window.scrollY) {
+  useEffect(() => {
+    setClickSlide(!clickSlide);
+    addAutoSlide();
+    setAutoSlide(true)
+    return () => {
       removeAutoSlide();
-      // console.log("down");
+    };
+  }, [autoSlide]);
+
+  const scrollHandler = debounce(() => {
+    if (scrollY === 0) {
+      !autoSlideId && addAutoSlide();
+    }
+    if (scrollY > 300) {
+      removeAutoSlide();
     }
     setScrollY(window.scrollY);
-  });
+  }, 100);
 
   const clickHandlerRight = () => {
-    setTimeout(() => {
-      dispatch(swipeRigth());
-    }, 0);
-    setClickSlide((prev) => !prev);
+    setSwipeRighted(true);
+    setClickSlide(!clickSlide);
     removeAutoSlide();
   };
 
   const clickHandlerLeft = () => {
-    setTimeout(() => {
-      dispatch(swipeLeft());
-    }, 0);
-    setClickSlide((prev) => !prev);
+    setSwipeRighted(false);
+    setClickSlide(!clickSlide);
     removeAutoSlide();
   };
 
-  // useEffect(() => {
-  //   window.addEventListener("scroll", scrollHandler);
-  //   return () => {
-  //     window.removeEventListener("scroll", scrollHandler);
-  //   };
-  // }, [scrollHandler]);
-
-  // useEffect(() => {
-  //   // addAutoSlide()
-  //   return () => {
-  //     removeAutoSlide();
-  //   };
-  // }, []);
+  useEffect(() => {
+    window.addEventListener("scroll", scrollHandler);
+    return () => {
+      window.removeEventListener("scroll", scrollHandler);
+    };
+  }, [scrollHandler]);
 
   return (
     <section className={cl.container}>
       <button
         type="button"
         onClick={() => clickHandlerLeft()}
-        className={cl.left_point}
+        className={[cl.point, cl.left_point].join(' ')}
       ></button>
-      <Transition in={clickSlide} timeout={100} key={uuidv4()}>
-        {(state) =>
-          list.map((i) => (
-            <img
-              className={`${cl[state]}`}
-              src={i}
-              alt={i}
-              key={uuidv4()}
-            ></img>
-          ))
+      <CSSTransition
+        in={clickSlide}
+        timeout={500}
+        classNames={
+          !swipeRighted
+            ? {
+                enter: cl.fake_img_enter_left,
+                enterActive: cl.fake_img_enter_active_left,
+                enterDone: cl.fake_img_enter_done_left,
+                exit: cl.fake_img_exit_left,
+                exitActive: cl.fake_img_exit_active_left,
+                exitDone: cl.fake_img_exit_done_left,
+              }
+            : {}
         }
-      </Transition>
+      >
+        <img
+          className={cl.fake_img}
+          src={list[list.length - 1].src}
+          alt=""
+          width={560}
+          height={320}
+        />
+      </CSSTransition>
+      {list.map(({ id, src }, index) => {
+        return (
+          <CSSTransition
+            key={id}
+            in={clickSlide}
+            onEntered={() => {
+              index === 0 && swipeRighted && dispatch(swipeRigth());
+              index === 0 && !swipeRighted && dispatch(swipeLeft());
+              index === 0 && setClickSlide(!clickSlide);
+            }}
+            timeout={500}
+            classNames={
+              swipeRighted
+                ? {
+                    enter: cl[`img_enter_${index}`],
+                    enterActive: cl[`img_enter_active_${index}`],
+                    enterDone: cl[`img_enter_done_${index}`],
+                    exit: cl[`img_exit_${index}`],
+                    exitActive: cl[`img_exit_active_${index}`],
+                    exitDone: cl[`img_exit_done_${index}`],
+                  }
+                : {
+                    enter: cl[`img_enter_left_${index}`],
+                    enterActive: cl[`img_enter_active_left_${index}`],
+                    enterDone: cl[`img_enter_done_left_${index}`],
+                    exit: cl[`img_exit_left_${index}`],
+                    exitActive: cl[`img_exit_active_left_${index}`],
+                    exitDone: cl[`img_exit_done_left_${index}`],
+                  }
+            }
+          >
+            <img src={src} alt="" width={560} height={320} />
+          </CSSTransition>
+        );
+      })}
+      <CSSTransition
+        in={clickSlide}
+        timeout={500}
+        classNames={
+          swipeRighted
+            ? {
+                enter: cl.fake_img_enter,
+                enterActive: cl.fake_img_enter_active,
+                enterDone: cl.fake_img_enter_done,
+                exit: cl.fake_img_exit,
+                exitActive: cl.fake_img_exit_active,
+                exitDone: cl.fake_img_exit_done,
+              }
+            : {}
+        }
+      >
+        <img
+          className={cl.fake_img}
+          src={list[0].src}
+          alt=""
+          width={560}
+          height={320}
+        />
+      </CSSTransition>
       <button
         type="button"
         onClick={() => clickHandlerRight()}
-        className={cl.right_point}
+        className={[cl.point, cl.right_point].join(' ')}
       ></button>
     </section>
   );

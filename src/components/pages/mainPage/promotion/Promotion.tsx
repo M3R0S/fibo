@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import modelWoman from "../../../../assets/image/model-woman.png";
 import { v4 as uuidv4 } from "uuid";
 import useElementOnScreen from "../../../../hook/useElementOnScreen/useElementOnScreen";
+import { setIdActive } from "../../../../store/slice/navbarSlice";
+import { useAppDispatch } from "../../../../hook/storeHook/useStore";
 
 const promoImg = [
   promotion,
@@ -16,7 +18,8 @@ const promoImg = [
 ];
 
 const Promotion: FC = () => {
-  const containerRef = useElementOnScreen({ threshold: 0.9 }, null);
+  const dispatch = useAppDispatch()
+  const containerRef = useElementOnScreen({ threshold: 0.9 }, null, () => {}, () => dispatch(setIdActive(null)) );
 
   return (
     <section className={cl.container}>
