@@ -7,8 +7,8 @@ import {
 } from "../../../../store/slice/mainProductItemSlice";
 
 interface IMainProductItemProps {
-  h2Text: string;
-  pText: string;
+  title: string;
+  info: string;
   price: number;
   img: string;
   id: number;
@@ -16,8 +16,8 @@ interface IMainProductItemProps {
 }
 
 const MainProductItem: FC<IMainProductItemProps> = ({
-  h2Text,
-  pText,
+  title,
+  info,
   price,
   img,
   id,
@@ -27,10 +27,12 @@ const MainProductItem: FC<IMainProductItemProps> = ({
 
   return (
     <article className={cl.group_item}>
-      <div className={cl.main_info}>
+      <div className={cl.header_info}>
         <img src={img} alt="pizza" />
-        <h2>{h2Text}</h2>
-        <p>{pText}</p>
+        <div className={cl.header_title}>
+          <h2>{title}</h2>
+        </div>
+        <p>{info.length > 100 ? info.substring(0, 100) + "..." : info}</p>
       </div>
       <div className={cl.footer_info}>
         <strong>от {price} ₽</strong>

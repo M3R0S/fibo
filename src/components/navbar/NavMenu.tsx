@@ -1,10 +1,5 @@
-import React, { FC, useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import React, { FC } from "react";
 import cl from "../../assets/styles/navbar/navMenu.module.sass";
-import * as Scroll from "react-scroll";
-import { useAppDispatch, useAppSelector } from "../../hook/storeHook/useStore";
-import { setIdActive } from "../../store/slice/navbarSlice";
-import { getBasketTotalPrice } from "../../store/slice/basketPageSlice";
 import ButtonHome from "../ui/Button/buttonHome/ButtonHome";
 import LogoImg from "../ui/assets/loader/logoImg/LogoImg";
 import NavMenuItem from "./NavMenuItem";

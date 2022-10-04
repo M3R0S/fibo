@@ -12,7 +12,7 @@ import {
 import { useLocation } from "react-router-dom";
 import { setIdActive } from "../../store/slice/navbarSlice";
 import { getBasketTotalPrice } from "../../store/slice/basketPageSlice";
-import NavbarMedia1200 from "./NavbarMedia1200";
+import NavbarMedia1200 from "./navbarMedia/NavbarMedia1200";
 
 const Navbar: FC = () => {
   const scroller = Scroll.scroller;
@@ -87,7 +87,7 @@ const Navbar: FC = () => {
         smooth: true,
         delay: 300,
         duration: 700,
-        offset: -110,
+        offset: -80,
       });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

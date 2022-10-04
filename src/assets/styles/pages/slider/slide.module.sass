@@ -14,26 +14,29 @@
     border-radius: 2.7rem
     position: absolute
     z-index: 10
+    display: flex
+    justify-content: center
+    align-items: center
 
 .point::before
     content: ""
     position: absolute
-    width: 10px
-    height: 28px
+    width: 9px
+    height: 14px
 
 .left_point
     transform: translate(-52.3rem)
 
 .left_point::before
     background: url('../../../icons/slider/left_point.png') no-repeat
-    transform: translate(-0.6rem, -0.6rem)
+    transform: translate(-1px, -1px)
 
 .right_point
     transform: translate(52.3rem)
 
 .right_point::before
     background: url('../../../icons/slider/right_point.png') no-repeat
-    transform: translate(-0.4rem, -0.6rem)
+    transform: translate(1px, 0)
 
 @media screen and (max-width: 1200px)
 
@@ -52,18 +55,28 @@
 @media screen and (max-width: 900px)
 
     .container
-        width: 80%
         font-size: 6px
         justify-content: flex-start
-        transform: translate(-30rem)
+        transform: translate(-300px)
     
     .left_point
-        transform: translate(30rem)
+        transform: translate(300px)
         left: 0
     
     .right_point
-        transform: translate(30rem)
+        transform: translate(300px)
         right: 0
+
+@media screen and (max-width: 700px)
+    .container
+        font-size: 5px
+        transform: translate(-250px)
+    
+    .left_point
+        transform: translate(250px)
+    
+    .right_point
+        transform: translate(250px)
 
 // ! Fake img
 
@@ -78,22 +91,22 @@
     transform: translate(0)
 
 .fake_img_enter_active
-    transform: translate(-23em)
+    transform: translate(-230px)
     transition: all 0.5s linear
 
 .fake_img_enter_done
-    transform: translate(-23em)
+    transform: translate(-230px)
 
 .fake_img_enter_left
     display: block
     transform: translate(0)
 
 .fake_img_enter_active_left
-    transform: translate(23em)
+    transform: translate(230px)
     transition: all 0.5s linear
 
 .fake_img_enter_done_left
-    transform: translate(23em)
+    transform: translate(230px)
 
 
 // ! Swipe right
@@ -105,13 +118,13 @@
     opacity: 0.7
 
 .img_enter_active_0
-    transform: translate(-23em)
+    transform: translate(-230px)
     width: 47.8em
     height: 27.6em
     transition: all 0.5s linear
 
 .img_enter_done_0
-    transform: translate(-23em)
+    transform: translate(-230px)
     width: 47.8em
     height: 27.6em
     opacity: 0.7
@@ -138,14 +151,14 @@
     height: 32.2em
 
 .img_enter_active_1
-    transform: translate(-23em)
+    transform: translate(-230px)
     transition: all 0.5s linear
     width: 47.8em
     height: 27.6em
     opacity: 0.7
 
 .img_enter_done_1
-    transform: translate(-23em)
+    transform: translate(-230px)
     width: 47.8em
     height: 27.6em
     opacity: 0.7
@@ -168,13 +181,13 @@
     height: 32.2em
 
 .img_enter_active_2
-    transform: translate(-23em)
+    transform: translate(-230px)
     transition: all 0.5s linear
     width: 56em
     height: 32.2em
 
 .img_enter_done_2
-    transform: translate(-23em)
+    transform: translate(-230px)
     width: 56em
     height: 32.2em
 
@@ -198,14 +211,14 @@
     opacity: 0.7
 
 .img_enter_active_3
-    transform: translate(-23em)
+    transform: translate(-230px)
     width: 56em
     height: 32.2em
     opacity: 1
     transition: all 0.5s linear
     
 .img_enter_done_3
-    transform: translate(-23em)
+    transform: translate(-230px)
     width: 56em
     height: 32.2em
     opacity: 1
@@ -235,14 +248,14 @@
     opacity: 0.7
 
 .img_enter_active_left_0
-    transform: translate(23em)
+    transform: translate(230px)
     width: 56em
     height: 32.2em
     opacity: 1
     transition: all 0.5s linear
 
 .img_enter_done_left_0
-    transform: translate(23em)
+    transform: translate(230px)
     width: 56em
     height: 32.2em
     opacity: 1
@@ -269,7 +282,7 @@
     height: 32.2em
 
 .img_enter_active_left_1
-    transform: translate(23em)
+    transform: translate(230px)
     width: 56em
     height: 32.2em
     transition: all 0.5s linear
@@ -277,7 +290,7 @@
 .img_enter_done_left_1
     width: 56em
     height: 32.2em
-    transform: translate(23em)
+    transform: translate(230px)
 
 .img_exit_left_1
     width: 56em
@@ -298,14 +311,14 @@
     opacity: 1
 
 .img_enter_active_left_2
-    transform: translate(23em)
+    transform: translate(230px)
     width: 47.8em
     height: 27.6em
     opacity: 0.7
     transition: all 0.5s linear
 
 .img_enter_done_left_2
-    transform: translate(23em)
+    transform: translate(230px)
     width: 47.8em
     height: 27.6em
     opacity: 0.7
@@ -330,11 +343,11 @@
     opacity: 0.7
 
 .img_enter_active_left_3
-    transform: translate(23em)
+    transform: translate(230px)
     transition: all 0.5s linear
     
 .img_enter_done_left_3
-    transform: translate(23em)
+    transform: translate(230px)
     width: 47.8em
     height: 27.6em
     opacity: 0.7

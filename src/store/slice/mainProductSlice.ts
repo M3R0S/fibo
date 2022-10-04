@@ -13,8 +13,8 @@ export type SectionName = "pizza" | "pasta" | "soup" | "salad";
 type MainProductItemType = {
   id: number;
   type: SectionName;
-  h2Text: string;
-  pText: string;
+  title: string;
+  info: string;
   price: number;
   img: string;
 };

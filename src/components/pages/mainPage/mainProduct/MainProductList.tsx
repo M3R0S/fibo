@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState, useCallback } from "react";
+import React, { FC, useEffect, useState} from "react";
 import {
   useAppDispatch,
   useAppSelector,
@@ -13,7 +13,6 @@ import MainProductItem from "./MainProductItem";
 import * as Scroll from "react-scroll";
 import Loader from "../../../ui/assets/loader/Loader";
 import useElementOnScreen from "../../../../hook/useElementOnScreen/useElementOnScreen";
-import { debounce } from "lodash";
 import { setIdActive } from "../../../../store/slice/navbarSlice";
 
 interface IMainProductListProps {
@@ -28,11 +27,10 @@ const MainProductList: FC<IMainProductListProps> = ({
   idEllement,
 }) => {
   const { data, loading, error } = useAppSelector((state) => state.mainProduct);
-  const { idActive } = useAppSelector((state) => state.navbar);
   const list = data[endpoint];
   const dispatch = useAppDispatch();
   const Element = Scroll.Element;
-  const [localTimeLoading, setLocalTimeLoaing] = useState<number | null>(null);
+  const [localTimeLoading, setLocalTimeLoading] = useState<number | null>(null);
 
   const containerRef = useElementOnScreen(
     { threshold: 0.7 },
@@ -42,7 +40,7 @@ const MainProductList: FC<IMainProductListProps> = ({
   );
 
   useEffect(() => {
-    setLocalTimeLoaing(Date.now());
+    setLocalTimeLoading(Date.now());
     dispatch(getMainProduct(endpoint));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -64,8 +62,8 @@ const MainProductList: FC<IMainProductListProps> = ({
           </>
         ) : (
           <>
-            <h1>{title}</h1>
-            <figure ref={containerRef} className={cl.group_figure}>
+            <h1 ref={containerRef}>{title}</h1>
+            <figure className={cl.group_items}>
               {list.map((obj) => (
                 <MainProductItem {...obj} key={obj.id} />
               ))}

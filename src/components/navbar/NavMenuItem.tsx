@@ -33,7 +33,7 @@ const NavMenuItem: FC<INavMenuItem> = ({
           to={idEllement}
           smooth={true}
           duration={700}
-          offset={-110}
+          offset={-80}
           className={
             idActive === idEllement
               ? `${clNavLink} ${clNavLinkActive}`

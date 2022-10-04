@@ -17,7 +17,7 @@ import PizzaModal from "./modalItem/PizzaModal";
 
 const MainProductModalItem: FC<TMainProductItemModal> = ({
   title,
-  pText,
+  info,
   id,
   img,
   price,
@@ -62,7 +62,7 @@ const MainProductModalItem: FC<TMainProductItemModal> = ({
                   typeProduct: type,
                   idProduct: id,
                   title,
-                  pText,
+                  info,
                   img,
                   pizzaDough,
                   pizzaSize,
@@ -83,7 +83,7 @@ const MainProductModalItem: FC<TMainProductItemModal> = ({
                   typeProduct: type,
                   idProduct: id,
                   title,
-                  pText,
+                  info,
                   img,
                   price: price,
                   id: id

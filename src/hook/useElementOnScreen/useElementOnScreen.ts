@@ -1,7 +1,6 @@
 import { useCallback, useRef, useEffect } from "react";
 import { debounce } from "../../helpers/debounce";
-import { setIdActive } from "../../store/slice/navbarSlice";
-import { useAppDispatch, useAppSelector } from "../storeHook/useStore";
+import { useAppSelector } from "../storeHook/useStore";
 
 interface IOption {
   threshold: number[] | number;
@@ -17,7 +16,6 @@ const useElementOnScreen = (
 
 ) => {
   const containerRef = useRef(null);
-  const dispatch = useAppDispatch();
   const { idActive } = useAppSelector((state) => state.navbar);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -27,9 +25,11 @@ const useElementOnScreen = (
         if (idEllement || idActive) {
           if (entr.isIntersecting) {
             isIntersecting()
+            // console.log('Сработало');
           } 
         } else {
           notIsIntersecting()
+          // console.log('Не Сработало');
         }
       });
     }, 200),
@@ -39,7 +39,7 @@ const useElementOnScreen = (
     const observer = new IntersectionObserver(callback, option);
     const temp = containerRef.current;
     if (temp) observer.observe(temp);
-  }, [containerRef.current]);
+  }, [containerRef.current, callback]);
 
   return containerRef;
 };

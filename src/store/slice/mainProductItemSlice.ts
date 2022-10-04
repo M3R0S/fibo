@@ -13,13 +13,13 @@ export type TMainProductItemModal = {
   id: number;
   type: SectionName;
   title: string;
-  pText: string;
+  info: string;
   img: string;
+  price: number;
   weightProductSmall?: number;
   weightProductMedium?: number;
   weightProductBig?: number;
   weightProduct?: number;
-  price: number;
   priceSmall?: number;
   priceMedium?: number;
   priceBig?: number;
@@ -52,7 +52,7 @@ export const getMainProductItem = createAsyncThunk<
   async ({ typeModal, idModal }, { rejectWithValue }) => {
     try {
       const res = await axios.get<TMainProductItemModal[]>(
-        `http://localhost:4000/${typeModal}_modal?id=${idModal}`
+        `http://localhost:4000/${typeModal}?id=${idModal}`
       );
       // await sleep(1000);
       return res.data;
