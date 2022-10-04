@@ -13,6 +13,7 @@ interface IMainProductItemProps {
   img: string;
   id: number;
   type: SectionName;
+  weightProduct: number;
 }
 
 const MainProductItem: FC<IMainProductItemProps> = ({
@@ -22,17 +23,21 @@ const MainProductItem: FC<IMainProductItemProps> = ({
   img,
   id,
   type,
+  weightProduct,
 }) => {
   const dispatch = useAppDispatch();
 
   return (
     <article className={cl.group_item}>
       <div className={cl.header_info}>
-        <img src={img} alt="pizza" />
+        <img src={img} alt="product card" />
         <div className={cl.header_title}>
           <h2>{title}</h2>
         </div>
-        <p>{info.length > 100 ? info.substring(0, 100) + "..." : info}</p>
+        <p>
+          {info.length > 150 ? info.substring(0, 150) + "..." : info}{" "}
+          {type !== "pizza" ? weightProduct + "г." : ""}
+        </p>
       </div>
       <div className={cl.footer_info}>
         <strong>от {price} ₽</strong>

@@ -1,5 +1,5 @@
 import React, { FC, useEffect } from "react";
-import cl from "../../../../assets/styles/pages/mainProduct/mainProduct.module.sass";
+import cl from "../../../../assets/styles/pages/mainProduct/mainProductModal.module.sass";
 import {
   useAppDispatch,
   useAppSelector,
@@ -14,7 +14,6 @@ import MainProductModalItem from "./MainProductModalItem";
 const MainProductModalApp: FC = () => {
   const { openModal, idModal, typeModal, item, loading, error } =
     useAppSelector((state) => state.mainProductItem);
-    const {data} = useAppSelector((state) => state.mainProduct);
   useEffect(() => {
     dispatch(getMainProductItem({ typeModal, idModal }));
   // eslint-disable-next-line react-hooks/exhaustive-deps

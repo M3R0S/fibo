@@ -6,8 +6,8 @@ export type SectionNameSupplements = "pizza" | "pasta" | "soup" | "salad";
 
 export type TSupplementsItem = {
   id: number;
-  h1Text: string;
-  strongText: string;
+  title: string;
+  price: number;
   img: string;
 };
 

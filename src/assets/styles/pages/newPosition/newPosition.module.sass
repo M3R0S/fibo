@@ -2,7 +2,7 @@
 
 .container
     font-size: 10px
-    width: 70%
+    width: var.$section_width
     display: flex
     flex-direction: column
     z-index: 1
@@ -36,7 +36,6 @@
             row-gap: 3rem
 
         &_card
-            margin: auto
             flex-basis: 20%
             min-height: 100px
             min-width: 300px
@@ -77,6 +76,10 @@
     .container
         width: 90%
         align-items: center
+
+        .new_position
+            &_cont
+                justify-content: space-evenly
 
     .model_man
         opacity: 0.3

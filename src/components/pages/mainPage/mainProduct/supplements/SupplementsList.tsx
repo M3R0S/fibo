@@ -5,7 +5,6 @@ import {
 } from "../../../../../hook/storeHook/useStore";
 import {
   getSupplementsList,
-  SectionNameSupplements,
 } from "../../../../../store/slice/supplementsSlice";
 import cl from "../../../../../assets/styles/pages/mainProduct/supplements.module.sass";
 import SupplementsItem from "./SupplementsItem";
@@ -21,7 +20,7 @@ const SupplementsList: FC<ISectionNameSupplements> = ({ endpoint }) => {
 
   useEffect(() => {
     dispatch(getSupplementsList(endpoint));
-  }, [endpoint]);
+  }, [dispatch, endpoint]);
 
   return error ? (
     <h1>{error}</h1>

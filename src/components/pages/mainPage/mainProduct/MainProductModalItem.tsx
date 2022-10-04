@@ -1,9 +1,9 @@
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import {
   setClosedModal,
   TMainProductItemModal,
 } from "../../../../store/slice/mainProductItemSlice";
-import cl from "../../../../assets/styles/pages/mainProduct/mainProduct.module.sass";
+import cl from "../../../../assets/styles/pages/mainProduct/mainProductModal.module.sass";
 import {
   useAppDispatch,
   useAppSelector,
@@ -12,7 +12,6 @@ import close from "../../../../assets/image/main-product/close.png";
 
 import SupplementsList from "./supplements/SupplementsList";
 import { postBasketItem } from "../../../../store/slice/basketPageSlice";
-import axios from "axios";
 import PizzaModal from "./modalItem/PizzaModal";
 
 const MainProductModalItem: FC<TMainProductItemModal> = ({
@@ -46,14 +45,14 @@ const MainProductModalItem: FC<TMainProductItemModal> = ({
             priceBig={priceBig}
             priceMedium={priceMedium}
             priceSmall={priceSmall}
+            info={info}
           ></PizzaModal>
         ) : (
-          <div className={cl.supplements_title}>
-            <b>{`Выход продукта: ${weightProduct} г`}</b>
-            <h3>Добавку не желаете?</h3>
+          <div className={cl.product_info}>
+            <p>{info + " " + weightProduct + " г."}</p>
           </div>
         )}
-        <SupplementsList endpoint={type}></SupplementsList>
+        {/* <SupplementsList endpoint={type}></SupplementsList> */}
         {type === "pizza" ? (
           <button
             onClick={() => {
@@ -86,7 +85,7 @@ const MainProductModalItem: FC<TMainProductItemModal> = ({
                   info,
                   img,
                   price: price,
-                  id: id
+                  id: id,
                 })
               );
             }}

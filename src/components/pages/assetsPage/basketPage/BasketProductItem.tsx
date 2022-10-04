@@ -9,7 +9,7 @@ import {
 const BasketProductItem: FC<TPostBasketItem> = ({
   title,
   img,
-  pText,
+  info,
   price,
   pizzaDough,
   pizzaSize,
@@ -40,7 +40,7 @@ const BasketProductItem: FC<TPostBasketItem> = ({
         <img src={img} alt="Продукция" />
         <div className={cl.info}>
           <h2>{title}</h2>
-          <p>{`${pText} ${pizzaDough} тесто. ${pizzaWeightProduct} г.`}</p>
+          <p>{`${info} ${pizzaDough} тесто. ${pizzaWeightProduct} г.`}</p>
         </div>
         <strong className={cl.price}>{price} ₽</strong>
         <div className={cl.quantity}>
@@ -50,7 +50,14 @@ const BasketProductItem: FC<TPostBasketItem> = ({
         </div>
         <button
           onClick={() => {
-            dispatch(deleteBasketItem({ idProduct, typeProduct }));
+            dispatch(
+              deleteBasketItem({
+                idProduct,
+                typeProduct,
+                pizzaSize,
+                pizzaDough,
+              })
+            );
           }}
           className={cl.delete}
         ></button>

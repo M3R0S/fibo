@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import {
   useAppDispatch,
   useAppSelector,
@@ -8,7 +8,7 @@ import {
   setPizzaSize,
   setPizzaWeightProduct,
 } from "../../../../../store/slice/pizzaModalSlice";
-import cl from "../../../../../assets/styles/pages/mainProduct/mainProduct.module.sass";
+import cl from "../../../../../assets/styles/pages/mainProduct/mainProductModal.module.sass";
 
 interface IButtonPizzaModal {
   weightProduct?: number;
@@ -25,7 +25,7 @@ const ButtonPizzaModal: FC<IButtonPizzaModal> = ({
   children,
 }) => {
   const dispatch = useAppDispatch();
-  const { pizzaDough, pizzaSize, pizzaWeightProduct } = useAppSelector(
+  const { pizzaSize } = useAppSelector(
     (state) => state.pizzaModal
   );
   return (
@@ -35,7 +35,7 @@ const ButtonPizzaModal: FC<IButtonPizzaModal> = ({
         dispatch(setPizzaWeightProduct(weightProduct));
         dispatch(setPizzaPrice(price));
       }}
-      className={size === pizzaSize ? cl.pizza_button_active : cl.pizza_button}
+      className={size === pizzaSize ? [cl.pizza_button_active, cl.pizza_button].join(' ') : cl.pizza_button}
     >
       {children}
     </button>

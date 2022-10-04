@@ -398,55 +398,55 @@
   "supplements_pizza": [
     {
       "id": 1,
-      "h1Text": "Острый халапеньо",
+      "title": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image1.png",
       "price": 120
     },
     {
       "id": 2,
-      "h1Text": "Острый халапеньо",
+      "title": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image2.png",
       "price": 120
     },
     {
       "id": 3,
-      "h1Text": "Острый халапеньо",
+      "title": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image3.png",
       "price": 120
     },
     {
       "id": 4,
-      "h1Text": "Острый халапеньо",
+      "title": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image1.png",
       "price": 120
     },
     {
       "id": 5,
-      "h1Text": "Острый халапеньо",
+      "title": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image2.png",
       "price": 120
     },
     {
       "id": 6,
-      "h1Text": "Острый халапеньо",
+      "title": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image3.png",
       "price": 120
     },
     {
       "id": 7,
-      "h1Text": "Острый халапеньо",
+      "title": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image1.png",
       "price": 120
     },
     {
       "id": 8,
-      "h1Text": "Острый халапеньо",
+      "title": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image2.png",
       "price": 120
     },
     {
       "id": 9,
-      "h1Text": "Острый халапеньо",
+      "title": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image3.png",
       "price": 120
     }
@@ -454,55 +454,55 @@
   "supplements_pasta": [
     {
       "id": 1,
-      "h1Text": "Грибы",
+      "title": "Грибы",
       "img": "/assets/image/mainProduct/supplements/image1.png",
       "price": 100
     },
     {
       "id": 2,
-      "h1Text": "Грибы",
+      "title": "Грибы",
       "img": "/assets/image/mainProduct/supplements/image2.png",
       "price": 100
     },
     {
       "id": 3,
-      "h1Text": "Грибы",
+      "title": "Грибы",
       "img": "/assets/image/mainProduct/supplements/image3.png",
       "price": 100
     },
     {
       "id": 4,
-      "h1Text": "Грибы",
+      "title": "Грибы",
       "img": "/assets/image/mainProduct/supplements/image1.png",
       "price": 100
     },
     {
       "id": 5,
-      "h1Text": "Грибы",
+      "title": "Грибы",
       "img": "/assets/image/mainProduct/supplements/image2.png",
       "price": 100
     },
     {
       "id": 6,
-      "h1Text": "Грибы",
+      "title": "Грибы",
       "img": "/assets/image/mainProduct/supplements/image3.png",
       "price": 100
     },
     {
       "id": 7,
-      "h1Text": "Грибы",
+      "title": "Грибы",
       "img": "/assets/image/mainProduct/supplements/image1.png",
       "price": 100
     },
     {
       "id": 8,
-      "h1Text": "Грибы",
+      "title": "Грибы",
       "img": "/assets/image/mainProduct/supplements/image2.png",
       "price": 100
     },
     {
       "id": 9,
-      "h1Text": "Грибы",
+      "title": "Грибы",
       "img": "/assets/image/mainProduct/supplements/image3.png",
       "price": 100
     }
@@ -510,55 +510,55 @@
   "supplements_soup": [
     {
       "id": 1,
-      "h1Text": "Сливки",
+      "title": "Сливки",
       "img": "/assets/image/mainProduct/supplements/image1.png",
       "price": 90
     },
     {
       "id": 2,
-      "h1Text": "Сливки",
+      "title": "Сливки",
       "img": "/assets/image/mainProduct/supplements/image2.png",
       "price": 90
     },
     {
       "id": 3,
-      "h1Text": "Сливки",
+      "title": "Сливки",
       "img": "/assets/image/mainProduct/supplements/image3.png",
       "price": 90
     },
     {
       "id": 4,
-      "h1Text": "Сливки",
+      "title": "Сливки",
       "img": "/assets/image/mainProduct/supplements/image1.png",
       "price": 90
     },
     {
       "id": 5,
-      "h1Text": "Сливки",
+      "title": "Сливки",
       "img": "/assets/image/mainProduct/supplements/image2.png",
       "price": 90
     },
     {
       "id": 6,
-      "h1Text": "Сливки",
+      "title": "Сливки",
       "img": "/assets/image/mainProduct/supplements/image3.png",
       "price": 90
     },
     {
       "id": 7,
-      "h1Text": "Сливки",
+      "title": "Сливки",
       "img": "/assets/image/mainProduct/supplements/image1.png",
       "price": 90
     },
     {
       "id": 8,
-      "h1Text": "Сливки",
+      "title": "Сливки",
       "img": "/assets/image/mainProduct/supplements/image2.png",
       "price": 90
     },
     {
       "id": 9,
-      "h1Text": "Сливки",
+      "title": "Сливки",
       "img": "/assets/image/mainProduct/supplements/image3.png",
       "price": 90
     }
@@ -566,55 +566,55 @@
   "supplements_salad": [
     {
       "id": 1,
-      "h1Text": "Огурец",
+      "title": "Огурец",
       "img": "/assets/image/mainProduct/supplements/image1.png",
       "price": 70
     },
     {
       "id": 2,
-      "h1Text": "Огурец",
+      "title": "Огурец",
       "img": "/assets/image/mainProduct/supplements/image2.png",
       "price": 70
     },
     {
       "id": 3,
-      "h1Text": "Огурец",
+      "title": "Огурец",
       "img": "/assets/image/mainProduct/supplements/image3.png",
       "price": 70
     },
     {
       "id": 4,
-      "h1Text": "Огурец",
+      "title": "Огурец",
       "img": "/assets/image/mainProduct/supplements/image1.png",
       "price": 70
     },
     {
       "id": 5,
-      "h1Text": "Огурец",
+      "title": "Огурец",
       "img": "/assets/image/mainProduct/supplements/image2.png",
       "price": 70
     },
     {
       "id": 6,
-      "h1Text": "Огурец",
+      "title": "Огурец",
       "img": "/assets/image/mainProduct/supplements/image3.png",
       "price": 70
     },
     {
       "id": 7,
-      "h1Text": "Огурец",
+      "title": "Огурец",
       "img": "/assets/image/mainProduct/supplements/image1.png",
       "price": 70
     },
     {
       "id": 8,
-      "h1Text": "Огурец",
+      "title": "Огурец",
       "img": "/assets/image/mainProduct/supplements/image2.png",
       "price": 70
     },
     {
       "id": 9,
-      "h1Text": "Огурец",
+      "title": "Огурец",
       "img": "/assets/image/mainProduct/supplements/image3.png",
       "price": 70
     }

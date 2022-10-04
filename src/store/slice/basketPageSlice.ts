@@ -8,13 +8,15 @@ import {
 type TDeleteBasketItem = {
   typeProduct: string;
   idProduct: number;
+  pizzaSize?: number;
+  pizzaDough?: TPizzaDoughInfo
 };
 
 export type TPostBasketItem = {
   typeProduct: string;
   idProduct: number;
   title: string;
-  pText: string;
+  info: string;
   price: number;
   img: string;
   pizzaDough?: TPizzaDoughInfo;
@@ -43,8 +45,13 @@ export const basketPageSlice = createSlice({
       state.list = state.list.filter(
         (item) =>
           !(
+            action.payload.typeProduct === 'pizza' ? 
             item.typeProduct === action.payload.typeProduct &&
-            item.idProduct === action.payload.idProduct
+            item.idProduct === action.payload.idProduct &&
+            item.pizzaSize === action.payload.pizzaSize &&
+            item.pizzaDough === action.payload.pizzaDough : 
+            item.typeProduct === action.payload.typeProduct &&
+            item.idProduct === action.payload.idProduct 
           )
       );
     },

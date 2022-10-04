@@ -17,6 +17,7 @@ type MainProductItemType = {
   info: string;
   price: number;
   img: string;
+  weightProduct: number
 };
 
 type MainProductListType = {

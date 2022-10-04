@@ -3,7 +3,7 @@
 .container
     margin-top: 3rem
     z-index: 1
-    width: 70%
+    width: var.$section-width
     display: flex
     flex-direction: column
 
@@ -95,146 +95,32 @@
             &:hover
                 box-shadow: 0 0.8rem 2.4rem 0 #00000035
 
-.modal_card_container_enable
-    width: 100%
-    min-height: 100%
-    position: fixed
-    background-color: var.$background-modal
-    z-index: 1001
-    display: flex
-    justify-content: center
-    align-items: flex-start
+@media screen and ( max-width: 1200px )
+    .container
+        width: 90%
 
-.loader_container
-    width: 990px
-    height: 610px
-    margin-top: 90px
-    display: flex
-    justify-content: center
-    align-items: center
-    border-radius: 12px
-    background-color: #fff
+        .group
+            &_card
+                h1
+                    text-align: center
 
-.modal_card_container_disable
-    display: none
+@media screen and (max-width: 900px)
+    .container
+        .group
+            &_items
+                grid-template-columns: repeat(auto-fit , minmax(220px, 1fr))
 
-.card
-    &_content
-        margin-top: 90px
-        background-color: #fff
-        box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.08)
-        border-radius: 12px
-        display: flex
+            &_item
+                .footer_info
+                    strong
+                        font-size: 2rem
 
-        .close
-            width: 40px
-            height: 40px
-            margin: 25px 30px 0 0
-
-        .main_pic
-            padding: 100px 0
-
-    &_info
-        padding: 30px 0 40px 0
-
-        h1
-            font-weight: 800
-            font-size: 20px
-            line-height: 28px
-
-        h2
-            margin-top: 7px
-            font-weight: 600
-            font-size: 14px
-            line-height: 28px
-            color: #686466
-
-        b
-            margin-top: 7px
-            font-weight: 600
-            font-size: 14px
-            line-height: 28px
-            color: #686466
-
-        h3
-            margin: 25px 0 10px 0
-            display: inline-block
-            width: 100%
-            background: #f7d22da4
-            text-align: center
-            vertical-align: bottom
-            padding: 20px 0
-            border-radius: 30px
-
-        .pizza_size
-            margin-top: 25px
-            width: 100%
-            column-gap: 13px
-            display: flex
-            flex-wrap: nowrap
-
-            .pizza_button
-                width: 110px
-                height: 34px
-                background: #F3F3F7
-                color: #828792
-                font-size: 11
-                font-weight: 600
-                border-radius: 8px
-
-                &:hover
-                    box-shadow: 0px 0px 12px 0px #f7d22d6e
-
-            .pizza_button_active
-                width: 110px
-                height: 34px
-                background: var.$color-yellow
-                color: #231F20
-                font-size: 11
-                font-weight: 700
-                opacity: 0.9
-                border-radius: 8px
-
-        .pizza_dough
-            margin-top: 12px
-            margin-bottom: 20px
-            column-gap: 12px
-            width: 100%
-            display: flex
-            flex-wrap: nowrap
-
-            .pizza_button
-                width: 169px
-                height: 34px
-                background: #F3F3F7
-                color: #828792
-                font-size: 11
-                font-weight: 600
-                border-radius: 8px
-
-                &:hover
-                    box-shadow: 0px 0px 12px 0px #f7d22d6e
-
-            .pizza_button_active
-                width: 169px
-                height: 34px
-                background: var.$color-yellow
-                color: #231F20
-                font-size: 11
-                font-weight: 700
-                opacity: 0.9
-                border-radius: 8px
-
-        .add_basket
-            position: relative
-            z-index: 10
-            width: 100%
-            height: 59px
-            background: var.$color-yellow
-            border-radius: 8px
-            color: #231F20
-            font-size: 15px
-            font-weight: 800
-
-            &:hover
-                box-shadow: 0px 0px 12px 0px #00000035
+@media screen and ( max-width: 555px )
+    .container
+        .group
+            &_item
+                .header
+                    &_info
+                        img
+                            max-width: 50%
+                            align-self: center
