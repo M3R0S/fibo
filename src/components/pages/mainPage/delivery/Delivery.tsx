@@ -21,11 +21,11 @@ const Delivery: FC = () => {
           ))}
         </figure>
         <div className={cl.yandex_map}>
-          <Iframe
+          <iframe
             className={cl.yandex_map}
-            url="https://yandex.ru/map-widget/v1/?um=constructor%3A6dd7492e275800bb695cf9b202e9f42dc8a6c7071e85355a5ffeeb23eae28624&amp;source=constructor"
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A6dd7492e275800bb695cf9b202e9f42dc8a6c7071e85355a5ffeeb23eae28624&amp;source=constructor"
             title="map"
-          ></Iframe>
+          ></iframe>
         </div>
       </div>
     </section>
