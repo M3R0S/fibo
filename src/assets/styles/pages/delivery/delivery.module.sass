@@ -1,6 +1,6 @@
 @use '../../../styles/_var' as var
 
-.container 
+.container
     width: 100%
     background-color: #E3ECF5
     display: flex
@@ -13,27 +13,28 @@
             display: flex
             flex-direction: column
             align-items: center
-            padding-bottom: 75px
-        
+            padding-bottom: 7.5rem
+
             h1
-                font-size: 30px
+                font-size: 3rem
                 font-weight: 800
                 color: var.$color-yellow
-                margin-top: 56px
-        
+                margin-top: 5.6rem
+
         &_cards
             width: 100%
             display: flex
-            justify-content: space-between
-            margin-top: 63px
+            column-gap: 5%
+            margin-top: 6.3rem
 
         &_card
             width: 255px
             background-color: #fff
-            border-radius: 14px
+            border-radius: 1.4rem
             display: flex
             flex-direction: column
             align-items: center
+            position: relative
 
             .rectangle_icon
                 width: 77px
@@ -45,9 +46,8 @@
                 display: flex
                 justify-content: center
                 align-items: center
-            
-                span
-                    display: block
+
+                div
                     width: 100%
                     height: 100%
 
@@ -65,15 +65,46 @@
             height: 100%
             display: flex
             align-items: center
-            padding: 40px 20px 20px 20px
-                    
+            padding: 5rem 2rem 2rem 2rem
+
             h2
-                font-size: 14px
+                font-size: 1.4rem
                 font-weight: 700
-                line-height: 22px
+                line-height: 2.2rem
                 text-align: center
                 justify-items: center
-        
-    .yandex_map 
-        margin-top: 32px
-        border-radius: 14px
+
+    .yandex_map
+        margin-top: 3.2rem
+        border-radius: 1.4rem
+        width: 100%
+        height: 322px
+
+@media screen and ( max-width: 1200px )
+    .container
+        .delivery
+            &_content
+                width: 90%
+
+@media screen and ( max-width: 900px )
+    .container
+        .delivery
+            &_cards
+                flex-wrap: wrap
+                justify-content: space-evenly
+                row-gap: 8%
+
+        .yandex_map
+            margin-top: 6rem
+
+@media screen and ( max-width: 600px )
+    .container
+        .delivery
+            &_cards
+                row-gap: 6%
+
+            &_card
+                width: 400px
+
+        .yandex_map
+            margin-top: 10rem

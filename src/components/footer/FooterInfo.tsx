@@ -2,16 +2,20 @@ import React from "react";
 import logo from "../../assets/image/header-logo.png";
 import cl from "../../assets/styles/footer/footer.module.sass";
 import { v4 as uuidv4 } from "uuid";
+import ButtonHome from "../ui/Button/buttonHome/ButtonHome";
+import LogoImg from "../ui/assets/loader/logoImg/LogoImg";
 
 const FooterInfo = () => {
   return (
     <section className={cl.footer_info_cont}>
-      <img src={logo} alt="Logo" />
-      <div className={cl.group_h1}>
+      <ButtonHome className={cl.button_home}>
+        <LogoImg></LogoImg>
+      </ButtonHome>
+      <div className={cl.group_title}>
         <h1>Калорийность и состав</h1>
         <h1>Правовая информация</h1>
       </div>
-      <h1 className={cl.i_social}>Мы в соцсетях:</h1>
+      <h1 className={cl.social_title}>Мы в соцсетях:</h1>
       <figure>
         <div className={cl.group_contact}>
           {socialNetwork.map(({ link, name }) => (
@@ -19,7 +23,6 @@ const FooterInfo = () => {
               {name}
             </a>
           ))}
-          {/* <p>Москва ул. Проспект Вернадского 86В</p> */}
         </div>
         <div className={cl.grop_footer}>
           <b>Fibo Все праав защищены © 2022</b>
@@ -35,13 +38,13 @@ const FooterInfo = () => {
   );
 };
 
-const paymentSystems = [
+export const paymentSystems = [
   "https://www.visa.com.ru/",
   "https://www.paypal.com/ru/home",
   "https://www.mastercard.ru/ru-ru.html",
 ];
 
-const socialNetwork = [
+export const socialNetwork = [
   { name: "YouTube", link: "https://www.youtube.com/" },
   { name: "Facebook", link: "https://facebook.com/" },
   { name: "Instagram", link: "https://instagram.com/" },

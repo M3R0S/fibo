@@ -1,6 +1,8 @@
 import React from "react";
 import cl from "../../assets/styles/footer/footer.module.sass";
 import { v4 as uuidv4 } from "uuid";
+import ButtonCallNumber from "../ui/Button/buttonCallNumber/ButtonCallNumber";
+import ButtonOrderCall from "../ui/Button/buttonOrderCall/ButtonOrderCall";
 
 const FooterContact = () => {
   return (
@@ -13,14 +15,14 @@ const FooterContact = () => {
         ))}
         <button className={cl.tell}>Написать нам</button>
       </figure>
-      <div>
-        <h1>8 499 391-84-49</h1>
-        <button className={cl.call}>Заказать звонок</button>
+      <div className={cl.info_cont}>
+        <ButtonCallNumber className={cl.call_number}></ButtonCallNumber>
+        <ButtonOrderCall className={cl.order_call}></ButtonOrderCall>
       </div>
     </section>
   );
 };
 
-const linkContacts = ["https://www.visa.com.ru/", "#", "#", "#", "#", "#"];
+export const linkContacts = ["https://www.visa.com.ru/", "2", "3", "4", "5", "6"];
 
 export default FooterContact;

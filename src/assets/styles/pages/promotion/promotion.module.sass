@@ -5,71 +5,88 @@
     display: flex
     align-items: center
     flex-direction: column
-    margin-top: 64px
-    padding-bottom: 62px
+    margin-top: 6.4rem
+    padding-bottom: 6.2rem
 
     h1
-        font-size: 44px
+        font-size: 4.4rem
         font-weight: 800
         color: #0E0C0D
 
         span
             color: var.$color-yellow
 
-    .modelWoman
+    .model_woman
         position: absolute
         right: 0
-        transform: translate(0, 300px)
+        transform: translate(0, 50%)
         z-index: 0
-        
 
 .promotion
 
     &_cont
-        margin-top: 47px
+        width: 100%
+        margin-top: 4.7rem
         display: grid
         grid-template-areas: "A A B C" "A A D E"
-        column-gap: 29px
-        row-gap: 29px
-        
+        column-gap: 3%
+        row-gap: 7%
+        z-index: 1
 
     &_card
-        border-radius: 20px
+        border-radius: 2rem
         transition: all 0.1s linear
 
         &:hover
-            box-shadow: 0px 8px 24px 0px #00000035
+            box-shadow: 0 0.8rem 2.4rem 0 #00000035
 
         &:nth-of-type(1)
             grid-area: A
-            width: 535px
-            height: 400px
+
+            img
+                width: 100%
+
         &:nth-of-type(2)
             grid-area: B
+
         &:nth-of-type(3)
             grid-area: C
+
         &:nth-of-type(4)
             grid-area: D
+
         &:nth-of-type(5)
             grid-area: E
 
         &:nth-of-type(2),&:nth-of-type(3),&:nth-of-type(4),&:nth-of-type(5)
-            width: 250px
-            height: 185px
-            
-    
+            img
+                width: 100%
+
     &_link
-        margin-top: 48px
-        padding: 10px 34px
+        margin-top: 4.8rem
+        padding: 1rem 3.4rem
         background-color: var.$color-yellow
         color: #fff
-        border-radius: 23px
-        font-size: 14px
+        border-radius: 2.3rem
+        font-size: 1.4rem
         font-weight: 700
-        line-height: 28px
+        line-height: 2.8rem
         text-align: center
         transition: all 0.1s linear
-        
+
         &:hover
-            box-shadow: 0px 8px 24px 0px #00000035
+            box-shadow: 0 0.8rem 2.4rem 0 #00000035
             color: #000
+
+@media screen and ( max-width: 1600px )
+    .container
+        .model_woman
+            opacity: 0.2
+            z-index: 0
+
+@media screen and ( max-width: 1200px )
+    .container
+        width: 90%
+
+        h1
+            font-size: 4rem

@@ -18,8 +18,13 @@ const promoImg = [
 ];
 
 const Promotion: FC = () => {
-  const dispatch = useAppDispatch()
-  const containerRef = useElementOnScreen({ threshold: 0.9 }, null, () => {}, () => dispatch(setIdActive(null)) );
+  const dispatch = useAppDispatch();
+  const containerRef = useElementOnScreen(
+    { threshold: 0.9 },
+    null,
+    () => {},
+    () => dispatch(setIdActive(null))
+  );
 
   return (
     <section className={cl.container}>
@@ -28,15 +33,15 @@ const Promotion: FC = () => {
       </h1>
       <figure className={cl.promotion_cont}>
         {promoImg.map((img) => (
-          <button className={cl.promotion_card} key={uuidv4()}>
+          <div className={cl.promotion_card} key={uuidv4()}>
             <img src={img} alt={img}></img>
-          </button>
+          </div>
         ))}
       </figure>
       <Link className={cl.promotion_link} to="/promotion" ref={containerRef}>
         Все акции
       </Link>
-      <img src={modelWoman} alt="Model Woman" className={cl.modelWoman} />
+      <img src={modelWoman} alt="Model Woman" className={cl.model_woman} />
     </section>
   );
 };

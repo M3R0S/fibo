@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { sleep } from "../../helpers/sleep";
+// import { sleep } from "../../helpers/sleep";
 import {
   TPizzaDoughInfo,
   TPizzaSizeInfo,

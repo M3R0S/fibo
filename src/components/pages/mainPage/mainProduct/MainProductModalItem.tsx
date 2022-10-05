@@ -10,7 +10,7 @@ import {
 } from "../../../../hook/storeHook/useStore";
 import close from "../../../../assets/image/main-product/close.png";
 
-import SupplementsList from "./supplements/SupplementsList";
+// import SupplementsList from "./supplements/SupplementsList";
 import { postBasketItem } from "../../../../store/slice/basketPageSlice";
 import PizzaModal from "./modalItem/PizzaModal";
 

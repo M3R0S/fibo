@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useState } from "react";
 import cl from "../../../../assets/styles/pages/basket/basketProductItem.module.sass";
 import { useAppDispatch } from "../../../../hook/storeHook/useStore";
 import {

@@ -1,15 +1,13 @@
-import React, { FC, useEffect } from "react";
+import React, { FC } from "react";
 import { Link } from "react-router-dom";
 import cl from "../../../../assets/styles/pages/basket/basketPage.module.sass";
 import {
-  useAppDispatch,
   useAppSelector,
 } from "../../../../hook/storeHook/useStore";
 import BasketProductItem from "./BasketProductItem";
 import { v4 as uuidv4 } from "uuid";
 
 const BasketPageList: FC = () => {
-  const dispatch = useAppDispatch();
   const { list, totalPrice } = useAppSelector((state) => state.basketPage);
 
   return (
