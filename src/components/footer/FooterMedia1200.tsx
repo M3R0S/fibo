@@ -11,23 +11,31 @@ import { paymentSystems, socialNetwork } from "./FooterInfo";
 const FooterMedia1200: FC = () => {
   return (
     <section className={cl.container}>
-      <ButtonHome>
-        <LogoImg></LogoImg>
-      </ButtonHome>
-      <div className={cl.group_title}>
-        <h1>Калорийность и состав</h1>
-        <h1>Правовая информация</h1>
-      </div>
-      <h1 className={cl.social_title}>Мы в соцсетях:</h1>
-      <figure>
-        <div className={cl.group_contact}>
-          {socialNetwork.map(({ link, name }) => (
-            <a href={link} key={uuid()}>
-              {name}
-            </a>
-          ))}
+      <div className={cl.media_cont}>
+        <ButtonHome>
+          <LogoImg></LogoImg>
+        </ButtonHome>
+        <div className={cl.group_title}>
+          <div className={cl.group_title_top}>
+            <a href="/">Калорийность и состав</a>
+            <a href="/">Правовая информация</a>
+          </div>
+          <div className={cl.group_title_bottom}>
+            <h1 className={cl.social_title}>Мы в соцсетях:</h1>
+          </div>
+          <figure className={cl.group_contact}>
+            {socialNetwork.map(({ link, name }) => (
+              <a href={link} key={uuid()}>
+                {name}
+              </a>
+            ))}
+            <div className={cl.social_addres}>
+                <a href="https://yandex.ru/maps/">Москва ул. Проспект</a>
+                <a href="https://yandex.ru/maps/">Вернадского 86В</a>
+            </div>
+          </figure>
         </div>
-      </figure>
+      </div>
       <div className={cl.contacts_cont}>
         <strong>Остались вопросы? А мы всегда на связи:</strong>
         <figure className={cl.contacts}>

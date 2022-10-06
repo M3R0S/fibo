@@ -5,6 +5,7 @@ footer
     overflow: hidden
     display: flex
     justify-content: center
+    font-size: 10px
 
 .wrapper
     width: var.$section-width
@@ -24,52 +25,52 @@ footer
     display: flex
     flex-direction: column
     justify-content: flex-end
-    padding-bottom: 5rem
+    padding-bottom: 5em
 
     .button_home
         width: 90px
         height: 66px
-        margin-top: 5.5rem
+        margin-top: 5.5em
 
     .group_title
         display: flex
         flex-wrap: nowrap
-        margin-top: 3.3rem
+        margin-top: 3.3em
 
-        h1:nth-of-type(2)
-            margin-left: 5rem
-    h1
-        font-size: 1.6rem
+        a:nth-of-type(2)
+            margin-left: 5em
+    h1, a
+        font-size: 1.6em
         font-weight: 700
-        line-height: 2.8rem
+        line-height: 2.8em
 
     .social_title
-        margin-top: 2.3rem
+        margin-top: 2.3em
 
     .group_contact
-        margin-top: 1.5rem
+        margin-top: 1.5em
         display: grid
         grid-template-areas: "A B C" "D F C"
         column-gap: 70px
         row-gap: 7px
 
         a
-            font-size: 1.6rem
+            font-size: 1.6em
             font-weight: 600
             transition: all 0.1s linear
 
         a:hover
-            filter: drop-shadow(0 0.3rem 0.5rem #00000031)
+            filter: drop-shadow(0 0.3em 0.5em #00000031)
             color: var.$color-yellow
 
         a:nth-of-type(5)
             grid-area: C
-            line-height: 3.3rem
+            line-height: 3.3em
 
     .grop_footer
         display: flex
         justify-content: space-between
-        margin-top: 5.3rem
+        margin-top: 5.3em
 
         .payment_systems
             transform: translate(50px, -10px)
@@ -80,14 +81,14 @@ footer
                 height: 45px
 
             a:hover
-                filter: drop-shadow(0 0.3rem 0.3rem #0000008e)
+                filter: drop-shadow(0 0.3em 0.3em #0000008e)
 
             a:nth-of-type(1)
                 background: url('../../icons/footer/visa.png') no-repeat
-                margin-right: 2.5rem
+                margin-right: 2.5em
             a:nth-of-type(2)
                 background: url('../../icons/footer/paypal.png') no-repeat
-                margin-right: 2rem
+                margin-right: 2em
             a:nth-of-type(3)
                 background: url('../../icons/footer/mc.png') no-repeat
 
@@ -95,31 +96,31 @@ footer
     width: 455px
     display: flex
     flex-direction: column
-    margin-left: 10rem
+    margin-left: 10em
     overflow: hidden
-    padding-left: 2rem
-    padding-right: 2rem
+    padding-left: 2em
+    padding-right: 2em
     transform: translate(20px)
-    padding-bottom: 5rem
+    padding-bottom: 5em
 
     strong
-        font-size: 1.4rem
+        font-size: 1.4em
         font-weight: 700px
-        margin-top: 8rem
+        margin-top: 8em
 
     .contacts
         display: flex
         flex-wrap: wrap
         gap: 13px
-        margin-top: 3.3rem
+        margin-top: 3.3em
 
         a
             display: block
             max-width: 100px
             min-width: 100px
             height: 52px
-            border: 0.2rem solid #E3ECF5
-            border-radius: 1.3rem
+            border: 0.2em solid #E3ECF5
+            border-radius: 1.3em
             transition: all 0.1s linear
 
         a:nth-of-type(1)
@@ -138,14 +139,14 @@ footer
         .tell
             width: 220px
             height: 52px
-            border: 0.2rem solid #E3ECF5
-            border-radius: 1.3rem
-            font-size: 1.3rem
+            border: 0.2em solid #E3ECF5
+            border-radius: 1.3em
+            font-size: 1.3em
             font-weight: 700
             transition: all 0.1s linear
 
         a:hover, .tell:hover
-            box-shadow: 0 0.8rem 2.4rem 0 #00000035
+            box-shadow: 0 0.8em 2.4em 0 #00000035
 
     .info_cont
         display: flex
@@ -153,9 +154,14 @@ footer
         align-items: flex-start
 
         .call_number
-            font-size: 3rem
-            margin-top: 2.5rem
-            transform: translate(-1.5rem)
+            font-size: 3em
+            margin-top: 2.5em
+            transform: translate(-1.5em)
 
         .order_call
-            margin-top: 1rem
+            margin-top: 1em
+
+@media screen and ( max-width: 1200px )
+    .wrapper
+        width: 95%
+    

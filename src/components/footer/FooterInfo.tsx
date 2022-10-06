@@ -12,8 +12,8 @@ const FooterInfo = () => {
         <LogoImg></LogoImg>
       </ButtonHome>
       <div className={cl.group_title}>
-        <h1>Калорийность и состав</h1>
-        <h1>Правовая информация</h1>
+        <a href='/'>Правовая информация</a>
+        <a href='/'>Калорийность и состав</a>
       </div>
       <h1 className={cl.social_title}>Мы в соцсетях:</h1>
       <figure>
@@ -49,10 +49,10 @@ export const socialNetwork = [
   { name: "Facebook", link: "https://facebook.com/" },
   { name: "Instagram", link: "https://instagram.com/" },
   { name: "ВКонтакте", link: "https://vk.com/" },
-  {
-    name: "Москва ул. Проспект Вернадского 86В",
-    link: "https://yandex.ru/maps/",
-  },
+  // {
+  //   name: "Москва ул. Проспект Вернадского 86В",
+  //   link: "https://yandex.ru/maps/",
+  // },
 ];
 
 export default FooterInfo;
