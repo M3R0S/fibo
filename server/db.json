@@ -301,21 +301,29 @@
   ],
   "new_position": [
     {
+      "type" : "pizza",
+      "id": 1,
       "title": "Пицца Гавайская",
       "img": "/assets/image/mainProduct/pizza/pizza_gavaiskaya.jpg",
       "price": 470
     },
     {
+      "type": "pasta",
+      "id": 8,
       "title": "Жареный рис \"Том-Ям\"",
       "img": "/assets/image/mainProduct/pasta/jareniy_ris_tom_yam.jpg",
       "price": 390
     },
     {
+      "type": "soup",
+      "id": 6,
       "title": "Суп Том-ям с морепродуктами",
       "img": "/assets/image/mainProduct/soup/tom-yam-moreproducti.jpg",
       "price": 460
     },
     {
+      "type": "salad",
+      "id": 1,
       "title": "\"Греческий\" салат",
       "img": "/assets/image/mainProduct/salad/grecheskiy.jpg",
       "price": 390

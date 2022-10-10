@@ -6,6 +6,8 @@ import axios from "axios";
 import { sleep } from "../../helpers/sleep";
 
 export type TNewPositionItem = {
+  type: string
+  id: number
   title: string;
   price: string;
   img: string;
