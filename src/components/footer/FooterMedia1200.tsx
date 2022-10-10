@@ -12,7 +12,7 @@ const FooterMedia1200: FC = () => {
   return (
     <section className={cl.container}>
       <div className={cl.media_cont}>
-        <ButtonHome>
+        <ButtonHome className={cl.button_home}>
           <LogoImg></LogoImg>
         </ButtonHome>
         <div className={cl.group_title}>
@@ -29,10 +29,6 @@ const FooterMedia1200: FC = () => {
                 {name}
               </a>
             ))}
-            <div className={cl.social_addres}>
-                <a href="https://yandex.ru/maps/">Москва ул. Проспект</a>
-                <a href="https://yandex.ru/maps/">Вернадского 86В</a>
-            </div>
           </figure>
         </div>
       </div>

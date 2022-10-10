@@ -5,11 +5,15 @@
     display: flex
     flex-direction: column
     padding-top: 5em
+    padding-bottom: 3em
 
 .media_cont
     width: 100%
     display: flex
     // align-items: center
+
+    .button_home
+        align-self: flex-start
 
     .group
         &_title
@@ -22,6 +26,10 @@
             h1, a
                 font-size: 1.6em
                 font-weight: 700
+                transition: all 0.1s linear
+
+            a:hover
+                color: var.$color-yellow
 
             &_top
                 width: 100%
@@ -38,18 +46,99 @@
             display: grid
             grid-template-areas: "A B C" "D F C"
             column-gap: 70px
-            row-gap: 7px
 
             a
                 font-size: 1.6em
                 font-weight: 600
                 transition: all 0.1s linear
+                line-height: 2.5em
 
                 &:hover
-                    filter: drop-shadow(0 0.3em 0.5em #00000031)
                     color: var.$color-yellow
 
-            .social_addres
-                grid-area: C
-                // line-height: 2em
-                width: 200px
+                &:nth-of-type(5)
+                    grid-area: C
+                    width: 200px
+
+.contacts_cont
+    display: flex
+    flex-direction: column
+    margin-top: 3.5em
+
+    strong
+        font-size: 1.4em
+        font-weight: 700
+
+    .contacts
+        margin-top: 2.2em
+        display: flex
+        justify-content: space-between
+        column-gap: 1em
+
+        a
+            display: block
+            width: 72px
+            height: 52px
+            border: 0.2em solid #E3ECF5
+            border-radius: 1.3em
+            transition: all 0.1s linear
+
+            &:nth-of-type(1)
+                background: url('../../icons/footer/icon1.png') no-repeat 50% 50%
+            &:nth-of-type(2)
+                background: url('../../icons/footer/icon2.png') no-repeat 50% 50%
+            &:nth-of-type(3)
+                background: url('../../icons/footer/icon3.png') no-repeat 50% 50%
+            &:nth-of-type(4)
+                background: url('../../icons/footer/icon4.png') no-repeat 50% 50%
+            &:nth-of-type(5)
+                background: url('../../icons/footer/icon5.png') no-repeat 50% 50%
+            &:nth-of-type(6)
+                background: url('../../icons/footer/icon6.png') no-repeat 50% 50%
+
+        .tell
+            width: 200px
+            height: 52px
+            border: 0.2em solid #E3ECF5
+            border-radius: 1.3em
+            font-size: 1.3em
+            font-weight: 700
+            transition: all 0.1s linear
+
+        a:hover, .tell:hover
+            border: 2px solid var.$color-yellow
+
+.info_cont
+    margin-top: 3em
+    display: flex
+    justify-content: space-between
+
+    .call_number
+        transform: translate(-0.3em)
+
+    .payment_systems
+        display: flex
+        flex-wrap: nowrap
+        column-gap: 1.5em
+
+        a
+            display: inline-block
+            width: 45px
+            height: 45px
+
+            &:hover
+                filter: drop-shadow(0 0.3em 0.3em #0000008e)
+
+            &:nth-of-type(1)
+                background: url('../../icons/footer/visa.png') no-repeat center center
+            &:nth-of-type(2)
+                background: url('../../icons/footer/paypal.png') no-repeat center center
+            &:nth-of-type(3)
+                background: url('../../icons/footer/mc.png') no-repeat center center
+
+.grop_footer
+    margin-top: 2em
+
+    b
+        font-size: 1.4em
+        font-weight: 600

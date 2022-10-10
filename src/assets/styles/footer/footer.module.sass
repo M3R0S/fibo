@@ -13,7 +13,7 @@ footer
     justify-content: space-between
     position: relative
 
-    .piza_pasta
+    .pizza_pasta
         position: absolute
         right: 0
         bottom: 0
@@ -24,73 +24,80 @@ footer
     width: 505px
     display: flex
     flex-direction: column
-    justify-content: flex-end
     padding-bottom: 5em
 
     .button_home
         width: 90px
         height: 66px
-        margin-top: 5.5em
+        margin-top: 6em
 
     .group_title
         display: flex
+        flex-direction: column
         flex-wrap: nowrap
         margin-top: 3.3em
 
-        a:nth-of-type(2)
-            margin-left: 5em
-    h1, a
-        font-size: 1.6em
-        font-weight: 700
-        line-height: 2.8em
+        &_top
 
-    .social_title
-        margin-top: 2.3em
+            a:nth-of-type(2)
+                margin-left: 5em
+
+            a
+                transition: all 0.1s linear
+
+        &_bottom
+            margin-top: 4em
+
+        a:hover
+            color: var.$color-yellow
+
+        h1, a
+            font-size: 1.6em
+            font-weight: 700
 
     .group_contact
-        margin-top: 1.5em
+        margin-top: 2em
         display: grid
         grid-template-areas: "A B C" "D F C"
         column-gap: 70px
-        row-gap: 7px
 
         a
             font-size: 1.6em
             font-weight: 600
+            line-height: 3.3em
             transition: all 0.1s linear
 
-        a:hover
-            filter: drop-shadow(0 0.3em 0.5em #00000031)
-            color: var.$color-yellow
+            &:nth-of-type(5)
+                grid-area: C
 
-        a:nth-of-type(5)
-            grid-area: C
-            line-height: 3.3em
+            &:hover
+                color: var.$color-yellow
 
     .grop_footer
         display: flex
         justify-content: space-between
-        margin-top: 5.3em
+        align-items: center
+        margin-top: 2em
 
         .payment_systems
-            transform: translate(50px, -10px)
+            transform: translate(50px, 0px)
 
             a
                 display: inline-block
                 width: 45px
                 height: 45px
 
-            a:hover
-                filter: drop-shadow(0 0.3em 0.3em #0000008e)
+                &:hover
+                    filter: drop-shadow(0 0.3em 0.3em #0000008e)
 
-            a:nth-of-type(1)
-                background: url('../../icons/footer/visa.png') no-repeat
-                margin-right: 2.5em
-            a:nth-of-type(2)
-                background: url('../../icons/footer/paypal.png') no-repeat
-                margin-right: 2em
-            a:nth-of-type(3)
-                background: url('../../icons/footer/mc.png') no-repeat
+                &:nth-of-type(1)
+                    background: url('../../icons/footer/visa.png') no-repeat
+                    margin-right: 2.5em
+                &:nth-of-type(2)
+                    background: url('../../icons/footer/paypal.png') no-repeat
+                    margin-right: 2em
+                &:nth-of-type(3)
+                    background: url('../../icons/footer/mc.png') no-repeat
 
 .footer_contact_cont
     width: 455px
@@ -123,18 +130,18 @@ footer
             border-radius: 1.3em
             transition: all 0.1s linear
 
-        a:nth-of-type(1)
-            background: url('../../icons/footer/icon1.png') no-repeat 50% 50%
-        a:nth-of-type(2)
-            background: url('../../icons/footer/icon2.png') no-repeat 50% 50%
-        a:nth-of-type(3)
-            background: url('../../icons/footer/icon3.png') no-repeat 50% 50%
-        a:nth-of-type(4)
-            background: url('../../icons/footer/icon4.png') no-repeat 50% 50%
-        a:nth-of-type(5)
-            background: url('../../icons/footer/icon5.png') no-repeat 50% 50%
-        a:nth-of-type(6)
-            background: url('../../icons/footer/icon6.png') no-repeat 50% 50%
+            &:nth-of-type(1)
+                background: url('../../icons/footer/icon1.png') no-repeat 50% 50%
+            &:nth-of-type(2)
+                background: url('../../icons/footer/icon2.png') no-repeat 50% 50%
+            &:nth-of-type(3)
+                background: url('../../icons/footer/icon3.png') no-repeat 50% 50%
+            &:nth-of-type(4)
+                background: url('../../icons/footer/icon4.png') no-repeat 50% 50%
+            &:nth-of-type(5)
+                background: url('../../icons/footer/icon5.png') no-repeat 50% 50%
+            &:nth-of-type(6)
+                background: url('../../icons/footer/icon6.png') no-repeat 50% 50%
 
         .tell
             width: 220px
@@ -146,7 +153,7 @@ footer
             transition: all 0.1s linear
 
         a:hover, .tell:hover
-            box-shadow: 0 0.8em 2.4em 0 #00000035
+            border: 2px solid var.$color-yellow
 
     .info_cont
         display: flex
@@ -155,13 +162,23 @@ footer
 
         .call_number
             font-size: 3em
-            margin-top: 2.5em
-            transform: translate(-1.5em)
+            margin-top: 1.5em
+            transform: translate(-0.2em)
 
         .order_call
-            margin-top: 1em
+            margin-top: 1.5em
 
 @media screen and ( max-width: 1200px )
     .wrapper
         width: 95%
-    
+
+        .pizza_pasta
+            transform: translate(-100px)
+            width: 176px
+
+@media screen and (max-width: 700px)
+    .wrapper
+        width: 90%
+
+        .pizza_pasta
+            display: none

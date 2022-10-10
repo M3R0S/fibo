@@ -12,10 +12,14 @@ const FooterInfo = () => {
         <LogoImg></LogoImg>
       </ButtonHome>
       <div className={cl.group_title}>
-        <a href='/'>Правовая информация</a>
-        <a href='/'>Калорийность и состав</a>
+        <div className={cl.group_title_top}>
+          <a href="/">Калорийность и состав</a>
+          <a href="/">Правовая информация</a>
+        </div>
+        <div className={cl.group_title_bottom}>
+          <h1 className={cl.social_title}>Мы в соцсетях:</h1>
+        </div>
       </div>
-      <h1 className={cl.social_title}>Мы в соцсетях:</h1>
       <figure>
         <div className={cl.group_contact}>
           {socialNetwork.map(({ link, name }) => (
@@ -29,7 +33,12 @@ const FooterInfo = () => {
           <div className={cl.payment_systems}>
             {paymentSystems.map((paySys) => (
               // eslint-disable-next-line jsx-a11y/anchor-has-content
-              <a href={paySys} target="_blank" rel="noreferrer" key={uuidv4()}></a>
+              <a
+                href={paySys}
+                target="_blank"
+                rel="noreferrer"
+                key={uuidv4()}
+              ></a>
             ))}
           </div>
         </div>
@@ -49,10 +58,10 @@ export const socialNetwork = [
   { name: "Facebook", link: "https://facebook.com/" },
   { name: "Instagram", link: "https://instagram.com/" },
   { name: "ВКонтакте", link: "https://vk.com/" },
-  // {
-  //   name: "Москва ул. Проспект Вернадского 86В",
-  //   link: "https://yandex.ru/maps/",
-  // },
+  {
+    name: "Москва ул. Проспект Вернадского 86В",
+    link: "https://yandex.ru/maps/",
+  },
 ];
 
 export default FooterInfo;
