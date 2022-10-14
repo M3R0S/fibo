@@ -4,7 +4,6 @@ import {
   useAppDispatch,
   useAppSelector,
 } from "../../../../hook/storeHook/useStore";
-import { getPromotionItem } from "../../../../store/slice/promotionItemSlice";
 import { getPromotionList } from "../../../../store/slice/promotionSlice";
 import Loader from "../../../ui/assets/loader/Loader";
 import PromotionModal from "./PromotionModal";

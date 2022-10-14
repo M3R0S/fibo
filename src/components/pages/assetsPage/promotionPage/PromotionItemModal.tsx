@@ -5,7 +5,7 @@ import { useAppDispatch } from '../../../../hook/storeHook/useStore';
 
 const PromotionItemModal: FC<TPromotionItem> = ({h2Text, img, pText}) => {
 
-    const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch()
 
   return (
     <article className={cl.modal_card}>

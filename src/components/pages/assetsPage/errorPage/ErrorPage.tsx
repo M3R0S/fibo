@@ -1,5 +1,5 @@
-import React, { FC, ReactNode, useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import React, { FC } from "react";
+import { useNavigate } from "react-router-dom";
 import cl from "../../../../assets/styles/pages/errorPage/errorPage.module.sass";
 import * as Scroll from "react-scroll";
 import { useAppSelector } from "../../../../hook/storeHook/useStore";
@@ -8,11 +8,9 @@ import { useDispatch } from "react-redux";
 
 const ErrorPage: FC = () => {
   const animateScroll = Scroll.animateScroll;
-  const scroller = Scroll.scroller;
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { pathname } = useLocation();
-  const { staticScrollY, idActive } = useAppSelector((state) => state.navbar);
+  const { staticScrollY} = useAppSelector((state) => state.navbar);
   const { loadingTime } = useAppSelector((state) => state.mainProduct);
 
   return (

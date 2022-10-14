@@ -2,7 +2,11 @@ import React, { FC } from "react";
 import * as Scroll from "react-scroll";
 import { useAppDispatch, useAppSelector } from "../../hook/storeHook/useStore";
 import { Link, useNavigate } from "react-router-dom";
-import { setIdActive, setOpenModalBurger, setStaticScrollY } from "../../store/slice/navbarSlice";
+import {
+  setIdActive,
+  setOpenModalBurger,
+  setStaticScrollY,
+} from "../../store/slice/navbarSlice";
 
 interface INavMenuItem {
   isAnchor: boolean;
@@ -22,8 +26,9 @@ const NavMenuItem: FC<INavMenuItem> = ({
   clNavLinkActive,
 }) => {
   const ScrollLink = Scroll.Link;
+  const animateScroll = Scroll.animateScroll;
   const dispatch = useAppDispatch();
-  const { idActive} = useAppSelector((state) => state.navbar);
+  const { idActive } = useAppSelector((state) => state.navbar);
   const navigate = useNavigate();
 
   return (
@@ -57,6 +62,7 @@ const NavMenuItem: FC<INavMenuItem> = ({
           }
           to={to}
           onClick={() => {
+            animateScroll.scrollToTop();
             dispatch(setIdActive(idEllement));
             dispatch(setStaticScrollY(window.scrollY));
             dispatch(setOpenModalBurger(false));

@@ -34,7 +34,7 @@ export const getPromotionItem = createAsyncThunk<
     const res = await axios.get<TPromotionItem[]>(
       `http://localhost:4000/promotion_page?id=${itemId}`
     );
-    // await sleep(1000);
+    await sleep(1000);
     return res.data;
   } catch (error) {
     return rejectWithValue("Ошибка загрузки");

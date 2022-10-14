@@ -16,6 +16,7 @@ const PromotionModal: FC = () => {
 
   useEffect(() => {
     dispatch(getPromotionItem(idModal));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [openModal]);
 
   return (
