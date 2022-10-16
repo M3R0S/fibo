@@ -12,7 +12,8 @@
 
     &_content
         width: 800px
-        height: 250px
+        min-height: 250px
+        padding: 3rem
         border: 0.1rem solid #00000021
         box-shadow: 0 0 1.2rem 0 #00000035
         border-radius: 2rem
@@ -22,8 +23,12 @@
 
         h1
             font-size: 3.6rem
+            font-weight: 700
+            line-height: 5rem
             color: var.$color-red
-            margin-top: 7rem
+            margin-top: 5rem
+            text-align: center
+            padding: 0 5rem
 
         .button_block
             margin-top: 5rem
@@ -40,4 +45,30 @@
                 font-weight: 600
 
                 &:hover
-                    border: 2px solid #000
+                    border: 0.2rem solid #000
+
+@media screen and ( max-width: 1200px )
+
+    .error
+        &_container
+            margin-top: 15rem
+
+        &_content
+            width: 70%
+
+            h1
+                font-size: 3rem
+
+@media screen and ( max-width: 600px )
+
+    .error
+        &_content
+            h1
+                margin-top: 0
+                font-size: 2.6rem
+                
+            .button_block
+                margin-top: 3rem
+                flex-direction: column
+                align-items: center
+                height: 100px

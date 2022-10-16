@@ -37,30 +37,34 @@ const BasketProductItem: FC<TPostBasketItem> = ({
   return (
     <section className={cl.container}>
       <figure className={cl.content}>
-        <img src={img} alt="Продукция" />
-        <div className={cl.info}>
-          <h2>{title}</h2>
-          <p>{`${info} ${pizzaDough} тесто. ${pizzaWeightProduct} г.`}</p>
+        <div className={cl.content_left}>
+          <img src={img} alt="Продукция" />
+          <div className={cl.info}>
+            <h2>{title}</h2>
+            <p>{`${info} ${pizzaDough} тесто. ${pizzaWeightProduct} г.`}</p>
+          </div>
         </div>
-        <strong className={cl.price}>{price} ₽</strong>
-        <div className={cl.quantity}>
-          <button onClick={decrement}>-</button>
-          <p>{count}</p>
-          <button onClick={increment}>+</button>
+        <div className={cl.content_right}>
+          <strong className={cl.price}>{price} ₽</strong>
+          <div className={cl.quantity}>
+            <button onClick={decrement}>-</button>
+            <p>{count}</p>
+            <button onClick={increment}>+</button>
+          </div>
+          <button
+            onClick={() => {
+              dispatch(
+                deleteBasketItem({
+                  idProduct,
+                  typeProduct,
+                  pizzaSize,
+                  pizzaDough,
+                })
+              );
+            }}
+            className={cl.delete}
+          ></button>
         </div>
-        <button
-          onClick={() => {
-            dispatch(
-              deleteBasketItem({
-                idProduct,
-                typeProduct,
-                pizzaSize,
-                pizzaDough,
-              })
-            );
-          }}
-          className={cl.delete}
-        ></button>
       </figure>
     </section>
   );
