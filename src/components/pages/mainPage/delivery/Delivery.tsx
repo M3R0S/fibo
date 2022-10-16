@@ -1,7 +1,6 @@
 import React, { FC } from "react";
 import cl from "../../../../assets/styles/pages/delivery/delivery.module.sass";
 import { v4 as uuidv4 } from "uuid";
-import Iframe from "react-iframe";
 
 const Delivery: FC = () => {
   return (
