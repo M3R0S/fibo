@@ -6,9 +6,7 @@ import * as Scroll from "react-scroll";
 import { debounce } from "../../helpers/debounce";
 import { Transition } from "react-transition-group";
 import { useAppDispatch, useAppSelector } from "../../hook/storeHook/useStore";
-import {
-  setScreenWidth,
-} from "../../store/slice/navbarSlice";
+import { setScreenWidth } from "../../store/slice/navbarSlice";
 import { useLocation } from "react-router-dom";
 import { setIdActive } from "../../store/slice/navbarSlice";
 import { getBasketTotalPrice } from "../../store/slice/basketPageSlice";
@@ -18,9 +16,7 @@ const Navbar: FC = () => {
   const scroller = Scroll.scroller;
   const [scrollY, setScrollY] = useState<number>(window.scrollY);
   const [scrollDown, setScrollDown] = useState<boolean>(false);
-  const { screenWidth, idActive} = useAppSelector(
-    (state) => state.navbar
-  );
+  const { screenWidth, idActive } = useAppSelector((state) => state.navbar);
   const { list, totalPrice } = useAppSelector((state) => state.basketPage);
   const { loading } = useAppSelector(({ mainProduct }) => mainProduct);
   const dispatch = useAppDispatch();
@@ -73,7 +69,7 @@ const Navbar: FC = () => {
     localStorage.setItem("basketList", JSON.stringify(list));
     localStorage.setItem(
       "basketTotalPrice",
-      String(list.reduce((sum, item) => (sum += item.price), 0))
+      String(list.reduce((sum, item) => (sum += item.price * item.quantity), 0))
     );
     dispatch(
       getBasketTotalPrice(Number(localStorage.getItem("basketTotalPrice")))

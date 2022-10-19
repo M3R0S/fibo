@@ -1,11 +1,11 @@
-import React, { FC } from "react";
+import React, { FC, useMemo } from "react";
 import { Link } from "react-router-dom";
 import cl from "../../../../assets/styles/pages/basket/basketPage.module.sass";
-import {
-  useAppSelector,
-} from "../../../../hook/storeHook/useStore";
+import { useAppSelector } from "../../../../hook/storeHook/useStore";
 import BasketProductItem from "./BasketProductItem";
-import { v4 as uuidv4 } from "uuid";
+import { v4 as uuid } from "uuid";
+import ButtonHome from "../../../ui/Button/buttonHome/ButtonHome";
+import CountUp from "react-countup";
 
 const BasketPageList: FC = () => {
   const { list, totalPrice } = useAppSelector((state) => state.basketPage);
@@ -14,9 +14,18 @@ const BasketPageList: FC = () => {
     <main className={cl.basket}>
       <section className={cl.container}>
         <h1>Корзина</h1>
-        {list.map((obj) => (
-          <BasketProductItem {...obj} key={uuidv4()}></BasketProductItem>
-        ))}
+        {list.length !== 0 ? (
+          list.map((obj) => (
+            <BasketProductItem {...obj} key={uuid()}></BasketProductItem>
+          ))
+        ) : (
+          <h2 className={cl.clear_basket}>
+            Корзина пуста.{" "}
+            <ButtonHome className={cl.button_home}>
+              Желаете добавить?
+            </ButtonHome>
+          </h2>
+        )}
         <div className={cl.footer}>
           <h3>Промокод</h3>
           <div className={cl.footer_content}>
@@ -28,10 +37,16 @@ const BasketPageList: FC = () => {
               />
               <button className={cl.promo_enter}>Применить</button>
             </div>
-            <strong className={cl.summary}>
+            <span className={cl.summary}>
               Сумма заказа:
-              <span>{totalPrice} ₽</span>
-            </strong>
+              <CountUp
+                separator=" "
+                preserveValue={true}
+                end={totalPrice}
+                duration={0.5}
+                suffix={" ₽"}
+              ></CountUp>
+            </span>
           </div>
           <div className={cl.footer_navigation}>
             <Link to={"/main"} className={cl.back}>

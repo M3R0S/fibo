@@ -63,6 +63,7 @@ const MainProductModalItem: FC<TMainProductItemModal> = ({
                   title,
                   info,
                   img,
+                  quantity: 1,
                   pizzaDough,
                   pizzaSize,
                   pizzaWeightProduct,
@@ -84,6 +85,8 @@ const MainProductModalItem: FC<TMainProductItemModal> = ({
                   title,
                   info,
                   img,
+                  quantity: 1,
+                  weightProduct,
                   price: price,
                   id: id,
                 })
