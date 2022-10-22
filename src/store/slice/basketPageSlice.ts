@@ -13,13 +13,13 @@ type TDeleteBasketItem = {
 };
 
 export type TPostBasketItem = {
+  id: string;
   typeProduct: string;
   idProduct: number;
   quantity: number;
   title: string;
   info: string;
   price: number;
-  localTotalPrice: number;
   img: string;
   weightProduct: number;
   pizzaDough?: TPizzaDoughInfo;
@@ -61,12 +61,10 @@ export const basketPageSlice = createSlice({
     incrementQuantityItem: (state, action) => {
      const target = filterItems(state.list, action.payload, true)
      target[0].quantity += 1
-     target[0].localTotalPrice = target[0].quantity * target[0].price
     },
     decrementQuantityItem: (state, action) => {
       const target = filterItems(state.list, action.payload, true)
       target[0].quantity -= 1
-      target[0].localTotalPrice = target[0].quantity * target[0].price
      }
   },
 });

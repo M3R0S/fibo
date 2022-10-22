@@ -1,9 +1,8 @@
-import React, { FC, useMemo } from "react";
+import React, { FC } from "react";
 import { Link } from "react-router-dom";
 import cl from "../../../../assets/styles/pages/basket/basketPage.module.sass";
 import { useAppSelector } from "../../../../hook/storeHook/useStore";
 import BasketProductItem from "./BasketProductItem";
-import { v4 as uuid } from "uuid";
 import ButtonHome from "../../../ui/Button/buttonHome/ButtonHome";
 import CountUp from "react-countup";
 
@@ -16,7 +15,7 @@ const BasketPageList: FC = () => {
         <h1>Корзина</h1>
         {list.length !== 0 ? (
           list.map((obj) => (
-            <BasketProductItem {...obj} key={uuid()}></BasketProductItem>
+            <BasketProductItem {...obj} key={obj.id}></BasketProductItem>
           ))
         ) : (
           <h2 className={cl.clear_basket}>

@@ -13,6 +13,7 @@ import close from "../../../../assets/image/main-product/close.png";
 // import SupplementsList from "./supplements/SupplementsList";
 import { postBasketItem } from "../../../../store/slice/basketPageSlice";
 import PizzaModal from "./modalItem/PizzaModal";
+import { v4 as uuid } from "uuid";
 
 const MainProductModalItem: FC<TMainProductItemModal> = ({
   title,
@@ -58,6 +59,7 @@ const MainProductModalItem: FC<TMainProductItemModal> = ({
             onClick={() => {
               dispatch(
                 postBasketItem({
+                  id: uuid(),
                   typeProduct: type,
                   idProduct: id,
                   title,
@@ -80,6 +82,7 @@ const MainProductModalItem: FC<TMainProductItemModal> = ({
             onClick={() => {
               dispatch(
                 postBasketItem({
+                  id: uuid(),
                   typeProduct: type,
                   idProduct: id,
                   title,
@@ -88,7 +91,6 @@ const MainProductModalItem: FC<TMainProductItemModal> = ({
                   quantity: 1,
                   weightProduct,
                   price: price,
-                  id: id,
                 })
               );
             }}

@@ -37,7 +37,7 @@ const NavMenu: FC<INavMenu> = ({ scrollDown}) => {
   );
 };
 
-export default NavMenu;
+export default React.memo(NavMenu);
 
 export const navLinks = [
   {

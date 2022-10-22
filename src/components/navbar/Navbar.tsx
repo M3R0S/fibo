@@ -95,20 +95,14 @@ const Navbar: FC = () => {
         <Transition in={scrollDown} timeout={500}>
           {(state) => (
             <header className={`${cl.header} ${cl[state]}`}>
-              {scrollDown ? (
-                <NavMenu scrollDown={scrollDown}></NavMenu>
-              ) : (
-                <>
-                  <NavInfo></NavInfo>
-                  <NavMenu scrollDown={scrollDown}></NavMenu>
-                </>
-              )}
+              {!scrollDown && <NavInfo />}
+              <NavMenu scrollDown={scrollDown} />
             </header>
           )}
         </Transition>
       ) : (
         <header className={cl.header}>
-          <NavbarMedia1200></NavbarMedia1200>
+          <NavbarMedia1200 />
         </header>
       )}
     </>
