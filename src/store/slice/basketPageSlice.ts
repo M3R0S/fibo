@@ -30,11 +30,13 @@ export type TPostBasketItem = {
 type TPostBasketList = {
   list: TPostBasketItem[];
   totalPrice: number;
+  promoCodeRatio: number;
 };
 
 const initialState: TPostBasketList = {
-  list: JSON.parse(localStorage.getItem("basketList") || "[]"),
+  list: JSON.parse(localStorage.getItem("basketList") || "[]"), 
   totalPrice: 0,
+  promoCodeRatio: 1,
 };
 
 export const basketPageSlice = createSlice({
@@ -49,14 +51,15 @@ export const basketPageSlice = createSlice({
       } else {
         filterItems(state.list, action.payload, true)[0].quantity += 1
       }
-      // state.list[state.list.length - 1].quantity ? state.list[state.list.length - 1].quantity += 1 : state.list[state.list.length - 1].quantity = 1
-      // state.list[state.list.length - 1].quantity = 1
     },
     deleteBasketItem: (state, action: PayloadAction<TDeleteBasketItem>) => {
       state.list = filterItems(state.list, action.payload, false)
     },
-    getBasketTotalPrice: (state, action) => {
+    setBasketTotalPrice: (state, action) => {
       state.totalPrice = action.payload
+    },
+    changePromoCodeRatio: (state, action : PayloadAction<number>) => {
+     state.promoCodeRatio = action.payload
     },
     incrementQuantityItem: (state, action) => {
      const target = filterItems(state.list, action.payload, true)
@@ -96,4 +99,4 @@ function filterItems (list : TPostBasketItem[], action: TDeleteBasketItem, isAll
 
 export default basketPageSlice.reducer;
 
-export const { postBasketItem, deleteBasketItem, getBasketTotalPrice, incrementQuantityItem, decrementQuantityItem } = basketPageSlice.actions;
+export const { postBasketItem, deleteBasketItem, setBasketTotalPrice, changePromoCodeRatio, incrementQuantityItem, decrementQuantityItem } = basketPageSlice.actions;

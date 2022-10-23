@@ -9,7 +9,7 @@ import { useAppDispatch, useAppSelector } from "../../hook/storeHook/useStore";
 import { setScreenWidth } from "../../store/slice/navbarSlice";
 import { useLocation } from "react-router-dom";
 import { setIdActive } from "../../store/slice/navbarSlice";
-import { getBasketTotalPrice } from "../../store/slice/basketPageSlice";
+import { setBasketTotalPrice } from "../../store/slice/basketPageSlice";
 import NavbarMedia1200 from "./navbarMedia/NavbarMedia1200";
 
 const Navbar: FC = () => {
@@ -17,7 +17,7 @@ const Navbar: FC = () => {
   const [scrollY, setScrollY] = useState<number>(window.scrollY);
   const [scrollDown, setScrollDown] = useState<boolean>(false);
   const { screenWidth, idActive } = useAppSelector((state) => state.navbar);
-  const { list, totalPrice } = useAppSelector((state) => state.basketPage);
+  const { list, totalPrice, promoCodeRatio } = useAppSelector((state) => state.basketPage);
   const { loading } = useAppSelector(({ mainProduct }) => mainProduct);
   const dispatch = useAppDispatch();
   const location = useLocation();
@@ -67,15 +67,19 @@ const Navbar: FC = () => {
 
   useEffect(() => {
     localStorage.setItem("basketList", JSON.stringify(list));
-    localStorage.setItem(
-      "basketTotalPrice",
-      String(list.reduce((sum, item) => (sum += item.price * item.quantity), 0))
-    );
+    // localStorage.setItem(
+    //   "basketTotalPrice",
+    //   JSON.stringify(
+    //     list.reduce((sum, item) => (sum += item.price * item.quantity), 0)
+    //   )
+    // );
+    // console.log(localStorage.getItem('basketTotalPrice'))
     dispatch(
-      getBasketTotalPrice(Number(localStorage.getItem("basketTotalPrice")))
+      setBasketTotalPrice(list.reduce((sum, item) => (sum += item.price * item.quantity), 0) * promoCodeRatio)
     );
+    // console.log("ef");
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [list, totalPrice]);
+  }, [list, totalPrice, promoCodeRatio]);
 
   useEffect(() => {
     if (loading === false && idActive) {
