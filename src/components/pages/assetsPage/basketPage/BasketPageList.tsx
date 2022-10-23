@@ -8,10 +8,10 @@ import {
 import BasketProductItem from "./BasketProductItem";
 import ButtonHome from "../../../ui/Button/buttonHome/ButtonHome";
 import CountUp from "react-countup";
-import { changePromoCodeRatio } from "../../../../store/slice/basketPageSlice";
+import { changePromoCodeRatio, setPromoCodeActive } from "../../../../store/slice/basketPageSlice";
 
 const BasketPageList: FC = () => {
-  const { list, totalPrice } = useAppSelector((state) => state.basketPage);
+  const { list, totalPrice, promoCodeActive } = useAppSelector((state) => state.basketPage);
   const dispatch = useAppDispatch();
   const [promoCode, setPromoCode] = useState<string>("");
   // const [promoCodeInfo, setPromoCodeInfo] = useState<boolean | null>(null);
@@ -21,16 +21,19 @@ const BasketPageList: FC = () => {
     switch (promoCode) {
       case "киса":
         dispatch(changePromoCodeRatio(0.9));
-        setInUsePromoCode(true);
+        // setInUsePromoCode(true);
         // setPromoCodeInfo(true)
+        dispatch(setPromoCodeActive(true))
         break;
       case "котёнок":
         dispatch(changePromoCodeRatio(0.8));
-        setInUsePromoCode(true);
+        // setInUsePromoCode(true);
         // setPromoCodeInfo(true)
+        dispatch(setPromoCodeActive(true))
         break;
       default:
-        setInUsePromoCode(false);
+        // setInUsePromoCode(false);
+        dispatch(setPromoCodeActive(false))
     }
   }
 
@@ -59,7 +62,7 @@ const BasketPageList: FC = () => {
                   type="text"
                   placeholder="Введите промокод"
                   className={
-                    inUsePromoCode
+                    promoCodeActive
                       ? [cl.promo_check, cl.promo_check_disabled].join(" ")
                       : cl.promo_check
                   }
@@ -68,7 +71,7 @@ const BasketPageList: FC = () => {
                 <button
                   onClick={getPromoCode}
                   className={
-                    inUsePromoCode
+                    promoCodeActive
                       ? [cl.promo_enter, cl.promo_enter_disabled].join(" ")
                       : cl.promo_enter
                   }
@@ -84,7 +87,7 @@ const BasketPageList: FC = () => {
                 ))} */}
               <b
                 className={
-                  inUsePromoCode
+                  promoCodeActive
                     ? [cl.promo_code_result, cl.promo_code_result_success].join(
                         " "
                       )
@@ -93,9 +96,9 @@ const BasketPageList: FC = () => {
                       )
                 }
               >
-                {inUsePromoCode !== null &&
-                  (inUsePromoCode
-                    ? "Промокод успешно введён!"
+                {promoCodeActive !== null &&
+                  (promoCodeActive
+                    ? "Промокод успешно применён!"
                     : "Не верный промокод!")}
               </b>
             </div>
