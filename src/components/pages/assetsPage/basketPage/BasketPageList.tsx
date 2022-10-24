@@ -8,32 +8,33 @@ import {
 import BasketProductItem from "./BasketProductItem";
 import ButtonHome from "../../../ui/Button/buttonHome/ButtonHome";
 import CountUp from "react-countup";
-import { changePromoCodeRatio, setPromoCodeActive } from "../../../../store/slice/basketPageSlice";
+import {
+  changePromoCodeRatio,
+  setPromoCodeActive,
+} from "../../../../store/slice/basketPageSlice";
 
 const BasketPageList: FC = () => {
-  const { list, totalPrice, promoCodeActive } = useAppSelector((state) => state.basketPage);
+  const { list, totalPrice, promoCodeActive } = useAppSelector(
+    (state) => state.basketPage
+  );
   const dispatch = useAppDispatch();
   const [promoCode, setPromoCode] = useState<string>("");
-  // const [promoCodeInfo, setPromoCodeInfo] = useState<boolean | null>(null);
-  const [inUsePromoCode, setInUsePromoCode] = useState<boolean | null>(null);
 
   function getPromoCode() {
     switch (promoCode) {
       case "киса":
         dispatch(changePromoCodeRatio(0.9));
-        // setInUsePromoCode(true);
-        // setPromoCodeInfo(true)
-        dispatch(setPromoCodeActive(true))
+        dispatch(setPromoCodeActive(true));
+        // setCorrectPromoCode(true);
         break;
       case "котёнок":
-        dispatch(changePromoCodeRatio(0.8));
-        // setInUsePromoCode(true);
-        // setPromoCodeInfo(true)
-        dispatch(setPromoCodeActive(true))
+        dispatch(changePromoCodeRatio(0.5));
+        dispatch(setPromoCodeActive(true));
+        // setCorrectPromoCode(true);
         break;
       default:
-        // setInUsePromoCode(false);
-        dispatch(setPromoCodeActive(false))
+        dispatch(setPromoCodeActive(false));
+      // setCorrectPromoCode(false);
     }
   }
 
@@ -60,31 +61,31 @@ const BasketPageList: FC = () => {
               <div className={cl.promo_code_info}>
                 <input
                   type="text"
-                  placeholder="Введите промокод"
+                  placeholder={
+                    promoCodeActive ? "Промокод введён" : "Введите промокод"
+                  }
                   className={
-                    promoCodeActive
+                    promoCodeActive === null
+                      ? cl.promo_check
+                      : promoCodeActive
                       ? [cl.promo_check, cl.promo_check_disabled].join(" ")
-                      : cl.promo_check
+                      : [cl.promo_check, cl.promo_check_warning].join(" ")
                   }
                   onChange={(e) => setPromoCode(e.target.value)}
                 />
                 <button
                   onClick={getPromoCode}
                   className={
-                    promoCodeActive
+                    promoCodeActive === null
+                      ? cl.promo_enter
+                      : promoCodeActive
                       ? [cl.promo_enter, cl.promo_enter_disabled].join(" ")
-                      : cl.promo_enter
+                      : [cl.promo_enter, cl.promo_enter_warning].join(" ")
                   }
                 >
                   Применить
                 </button>
               </div>
-              {/* {inUsePromoCode !== null &&
-                (inUsePromoCode ? (
-                  <b>Промокод успешно введён!</b>
-                ) : (
-                  <b>Не верный промокод!</b>
-                ))} */}
               <b
                 className={
                   promoCodeActive
@@ -99,19 +100,19 @@ const BasketPageList: FC = () => {
                 {promoCodeActive !== null &&
                   (promoCodeActive
                     ? "Промокод успешно применён!"
-                    : "Не верный промокод!")}
+                    : "Неверный промокод!")}
               </b>
             </div>
-            <span className={cl.summary}>
-              Сумма заказа:
+            <strong className={cl.summary}>
+              Сумма заказа:{" "}
               <CountUp
                 separator=" "
                 preserveValue={true}
                 end={totalPrice}
                 duration={0.5}
                 suffix={" ₽"}
-              ></CountUp>
-            </span>
+              ></CountUp>{" "}
+            </strong>
           </div>
           <div className={cl.footer_navigation}>
             <Link to={"/main"} className={cl.back}>

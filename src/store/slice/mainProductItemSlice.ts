@@ -51,10 +51,10 @@ export const getMainProductItem = createAsyncThunk<
   "mainPage/getMainProductItem",
   async ({ typeModal, idModal }, { rejectWithValue }) => {
     try {
+      // await sleep(3000);
       const res = await axios.get<TMainProductItemModal[]>(
         `http://localhost:4000/${typeModal}?id=${idModal}`
       );
-      // await sleep(1000);
       return res.data;
     } catch (error) {
       return rejectWithValue("Ошибка загрузки");

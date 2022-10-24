@@ -33,9 +33,13 @@ const PromotionModal: FC = () => {
             <Loader></Loader>
           </div>
         ) : openModal ? (
-          item.map((obj) => (
-            <PromotionItemModal {...obj} key={obj.id}></PromotionItemModal>
-          ))
+          // item.map((obj) => (
+            <PromotionItemModal
+              {...item[0]}
+            //  {...obj} 
+            //  key={obj.id}
+             ></PromotionItemModal>
+          // ))
         ) : null}
       </section>
   );

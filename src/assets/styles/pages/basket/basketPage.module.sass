@@ -84,6 +84,14 @@
         &_check_disabled
             pointer-events: none
 
+        &_check_warning
+            border: 0.15rem solid var.$color-red
+            border-right: none
+
+            &:focus
+                border: 0.15rem solid var.$color-red
+                border-right: none
+
         &_enter
             width: 133px
             height: 43px
@@ -96,6 +104,10 @@
         &_enter_disabled
             pointer-events: none
             background-color: #F3F3F7
+
+        &_enter_warning
+            border: 0.15rem solid var.$color-red
+            border-left: none
 
     .summary
         font-size: 2.4rem
