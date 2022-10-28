@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { v4 as uuid } from "uuid";
 import cl from "../../assets/styles/footer/footerMedia1200.module.sass";
-import LogoImg from "../ui/assets/loader/logoImg/LogoImg";
+import LogoImg from "../ui/assets/logoImg/LogoImg";
 import ButtonCallNumber from "../ui/Button/buttonCallNumber/ButtonCallNumber";
 import ButtonHome from "../ui/Button/buttonHome/ButtonHome";
 import ButtonOrderCall from "../ui/Button/buttonOrderCall/ButtonOrderCall";

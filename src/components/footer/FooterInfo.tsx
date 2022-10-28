@@ -3,7 +3,7 @@ import logo from "../../assets/image/header-logo.png";
 import cl from "../../assets/styles/footer/footer.module.sass";
 import { v4 as uuidv4 } from "uuid";
 import ButtonHome from "../ui/Button/buttonHome/ButtonHome";
-import LogoImg from "../ui/assets/loader/logoImg/LogoImg";
+import LogoImg from "../ui/assets/logoImg/LogoImg";
 
 const FooterInfo = () => {
   return (

@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import cl from "../../assets/styles/navbar/navInfo.module.sass";
 import ButtonHome from "../ui/Button/buttonHome/ButtonHome";
 import LinkBlank from "../ui/link/linkBlank/LinkBlank";
-import LogoImg from "../ui/assets/loader/logoImg/LogoImg";
+import LogoImg from "../ui/assets/logoImg/LogoImg";
 import ButtonOrderCall from "../ui/Button/buttonOrderCall/ButtonOrderCall";
 import ButtonCallNumber from "../ui/Button/buttonCallNumber/ButtonCallNumber";
 

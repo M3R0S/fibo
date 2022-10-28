@@ -1,188 +1,188 @@
 {
   "pizza": [
     {
-      "id": 1,
+      "type": "pizza",
+      "id": "1",
+      "img": "/assets/image/mainProduct/pizza/pizza_gavaiskaya.jpg",
       "title": "Пицца Гавайская",
       "info": "Пицца с ананасом, креветкой, куриным филе, сыром моцарелла, соус томатный.",
+      "price": 470,
       "weightProductSmall": 360,
       "weightProductMedium": 450,
       "weightProductBig": 600,
-      "img": "/assets/image/mainProduct/pizza/pizza_gavaiskaya.jpg",
-      "price": 470,
       "priceSmall": 470,
       "priceMedium": 520,
-      "priceBig": 570,
-      "type": "pizza"
+      "priceBig": 570
     },
     {
-      "id": 2,
+      "type": "pizza",
+      "id": "2",
+      "img": "/assets/image/mainProduct/pizza/pizza_carbonara.jpg",
       "title": "Пицца Карбонара",
       "info": "Бекон, яйцо, сыр моцарелла, соус бешамель.",
+      "price": 390,
       "weightProductSmall": 360,
       "weightProductMedium": 450,
       "weightProductBig": 600,
-      "img": "/assets/image/mainProduct/pizza/pizza_carbonara.jpg",
-      "price": 390,
       "priceSmall": 390,
       "priceMedium": 440,
-      "priceBig": 490,
-      "type": "pizza"
+      "priceBig": 490
     },
     {
-      "id": 3,
+      "type": "pizza",
+      "id": "3",
+      "img": "/assets/image/mainProduct/pizza/pizza_gribnaya.jpg",
       "title": "Пицца Грибная",
       "info": "Куриное филе, грибы шампиньоны, шиитаке, трюфельная паста, соус бешамель.",
+      "price": 460,
       "weightProductSmall": 360,
       "weightProductMedium": 450,
       "weightProductBig": 600,
-      "img": "/assets/image/mainProduct/pizza/pizza_gribnaya.jpg",
-      "price": 460,
       "priceSmall": 460,
       "priceMedium": 510,
-      "priceBig": 560,
-      "type": "pizza"
+      "priceBig": 560
     },
     {
-      "id": 4,
+      "type": "pizza",
+      "id": "4",
+      "img": "/assets/image/mainProduct/pizza/pizza_four-chees.jpg",
       "title": "Пицца 4 сыра",
       "info": "Сыр дор-блю, сыр пармезан, сыр моцарелла, сыр чизбургер, соус томатный.",
+      "price": 460,
       "weightProductSmall": 360,
       "weightProductMedium": 450,
       "weightProductBig": 600,
-      "img": "/assets/image/mainProduct/pizza/pizza_four-chees.jpg",
-      "price": 460,
       "priceSmall": 460,
       "priceMedium": 510,
-      "priceBig": 560,
-      "type": "pizza"
+      "priceBig": 560
     },
     {
-      "id": 5,
+      "type": "pizza",
+      "id": "5",
+      "img": "/assets/image/mainProduct/pizza/pizza_tom-yam.jpg",
       "title": "Пицца Том-Ям",
       "info": "Тигровые креветки, куриное филе, шампиньоны, томаты черри, сыр моцарелла, соус том-ям.",
+      "price": 490,
       "weightProductSmall": 360,
       "weightProductMedium": 450,
       "weightProductBig": 600,
-      "img": "/assets/image/mainProduct/pizza/pizza_tom-yam.jpg",
-      "price": 490,
       "priceSmall": 490,
       "priceMedium": 540,
-      "priceBig": 590,
-      "type": "pizza"
+      "priceBig": 590
     },
     {
-      "id": 6,
+      "type": "pizza",
+      "id": "6",
+      "img": "/assets/image/mainProduct/pizza/pizza_four-season.jpg",
       "title": "Пицца 4 сезона",
       "info": "Куриное филе, бекон, ветчина, охотничьи колбаски, помидор, сыр моцарелла, соус томатный.",
+      "price": 470,
       "weightProductSmall": 360,
       "weightProductMedium": 450,
       "weightProductBig": 600,
-      "img": "/assets/image/mainProduct/pizza/pizza_four-season.jpg",
-      "price": 470,
       "priceSmall": 470,
       "priceMedium": 520,
-      "priceBig": 570,
-      "type": "pizza"
+      "priceBig": 570
     },
     {
-      "id": 7,
+      "type": "pizza",
+      "id": "7",
+      "img": "/assets/image/mainProduct/pizza/pizza_pesto.jpg",
       "title": "Пицца Песто",
       "info": "Куриное филе, пепперони, сыр фета, соус \"Песто\", сыр Моцарела, соус Бешамель.",
+      "price": 430,
       "weightProductSmall": 360,
       "weightProductMedium": 450,
       "weightProductBig": 600,
-      "img": "/assets/image/mainProduct/pizza/pizza_pesto.jpg",
-      "price": 430,
       "priceSmall": 430,
       "priceMedium": 480,
-      "priceBig": 530,
-      "type": "pizza"
+      "priceBig": 530
     },
     {
-      "id": 8,
+      "type": "pizza",
+      "id": "8",
+      "img": "/assets/image/mainProduct/pizza/pizza_five-chees.jpg",
       "title": "Пицца 5 сыров",
       "info": "Сыр дор-блю, сыр моцарелла, сыр пармезан, сыр чизбургер, сыр фета, бекон, соус томатный.",
+      "price": 490,
       "weightProductSmall": 360,
       "weightProductMedium": 450,
       "weightProductBig": 600,
-      "img": "/assets/image/mainProduct/pizza/pizza_five-chees.jpg",
-      "price": 490,
       "priceSmall": 490,
       "priceMedium": 540,
-      "priceBig": 590,
-      "type": "pizza"
+      "priceBig": 590
     }
   ],
   "pasta": [
     {
       "type": "pasta",
-      "id": 1,
+      "id": "1",
+      "img": "/assets/image/mainProduct/pasta/pasta_govyadina_po.jpg",
       "title": "Говядина \"По\"",
       "info": "Нежнейшее филе телятины с лапшой соба, под сырно-сливочным соусом Дор-блю с помидором. Зеленый лук. ",
-      "img": "/assets/image/mainProduct/pasta/pasta_govyadina_po.jpg",
       "price": 490,
       "weightProduct": 300
     },
     {
       "type": "pasta",
-      "id": 2,
+      "id": "2",
+      "img": "/assets/image/mainProduct/pasta/pasta_kuriza_ostroe.jpg",
       "title": "Курица \"Острое\"",
       "info": "Нежнейшее филе курицы в сочетании с рисом и томленой стручковой фасолью и добавлением острого Тайского соуса Ким-чи с ялтинским луком и грибами.",
-      "img": "/assets/image/mainProduct/pasta/pasta_kuriza_ostroe.jpg",
       "price": 360,
       "weightProduct": 345
     },
     {
       "type": "pasta",
-      "id": 3,
+      "id": "3",
+      "img": "/assets/image/mainProduct/pasta/kuriza_svit_chili.jpg",
       "title": "Курица SWIT чили",
       "info": "Куриное филе в панировке с ананасом, болгарским перцем и соусом СвитЧили.",
-      "img": "/assets/image/mainProduct/pasta/kuriza_svit_chili.jpg",
       "price": 460,
       "weightProduct": 300
     },
     {
       "type": "pasta",
-      "id": 4,
+      "id": "4",
+      "img": "/assets/image/mainProduct/pasta/slivochnii_udon_kuriza.jpg",
       "title": "Сливочный удон с курицей",
       "info": "Лапша удон с маринованным куриным филе под фирменным сливочным соусом, шампиньонами, репчатым луком и икрой масаго.",
-      "img": "/assets/image/mainProduct/pasta/slivochnii_udon_kuriza.jpg",
       "price": 390,
       "weightProduct": 350
     },
     {
       "type": "pasta",
-      "id": 5,
+      "id": "5",
+      "img": "/assets/image/mainProduct/pasta/udon_goviadina_gribnoy_sous.jpg",
       "title": "Удон с говядиной в грибном соусе",
       "info": "Лапша Удон, филе говядины, лук ялтинский, гриб шиитаке, соус грибной.",
-      "img": "/assets/image/mainProduct/pasta/udon_goviadina_gribnoy_sous.jpg",
       "price": 490,
       "weightProduct": 350
     },
     {
       "type": "pasta",
-      "id": 6,
+      "id": "6",
+      "img": "/assets/image/mainProduct/pasta/soba_kuriza.jpg",
       "title": "Соба с курицей",
       "info": "Гречневая лапша, курица, грибы, лук ялтинский, перец болгарский, помидор черри, имбирь.",
-      "img": "/assets/image/mainProduct/pasta/soba_kuriza.jpg",
       "price": 360,
       "weightProduct": 350
     },
     {
       "type": "pasta",
-      "id": 7,
+      "id": "7",
+      "img": "/assets/image/mainProduct/pasta/slivochnii_udon_kuriza.jpg",
       "title": "Сливочный удон с морепродуктами",
       "info": "Лапша удон с коктейлем из морепродуктов под фирменным сливочным соусом, шампиньонами, лаймом и репчатым луком.",
-      "img": "/assets/image/mainProduct/pasta/slivochnii_udon_kuriza.jpg",
       "price": 540,
       "weightProduct": 350
     },
     {
       "type": "pasta",
-      "id": 8,
+      "id": "8",
+      "img": "/assets/image/mainProduct/pasta/jareniy_ris_tom_yam.jpg",
       "title": "Жареный рис \"Том-Ям\"",
       "info": "Креветка тигровая, куриное филе, рис,корень имбиря, молоко кокосовое, лук зеленый, кунжут, лайм.",
-      "img": "/assets/image/mainProduct/pasta/jareniy_ris_tom_yam.jpg",
       "price": 390,
       "weightProduct": 374
     }
@@ -190,73 +190,73 @@
   "soup": [
     {
       "type": "soup",
-      "id": 1,
+      "id": "1",
+      "img": "/assets/image/mainProduct/soup/tom-yam-kuriza.jpg",
       "title": "Суп Том-Ям с курицей",
       "info": "Жгучий тайский суп с пикантным кисло-сладким вкусом и отличным сочетанием тайских специй, мяса курицы и грибов.",
-      "img": "/assets/image/mainProduct/soup/tom-yam-kuriza.jpg",
       "price": 460,
       "weightProduct": 400
     },
     {
       "type": "soup",
-      "id": 2,
+      "id": "2",
+      "img": "/assets/image/mainProduct/soup/tom-yam-losos.jpg",
       "title": "Суп Том-Ям с лососем ",
       "info": "Бульон \"Том-Ям\", лосось, кокосовое молоко, черри, шампиньоны, лемонграсс, лист кафрского лайма, имбирь, лук зеленый, кинза, кунжут.",
-      "img": "/assets/image/mainProduct/soup/tom-yam-losos.jpg",
       "price": 590,
       "weightProduct": 400
     },
     {
       "type": "soup",
-      "id": 3,
+      "id": "3",
+      "img": "/assets/image/mainProduct/soup/miso-losos.jpg",
       "title": "Мисо-суп с лососем",
       "info": "Традиционный японский суп с лапшой удон(острый), филе лосося и водорослями \"Вакаме\".",
-      "img": "/assets/image/mainProduct/soup/miso-losos.jpg",
       "price": 390,
       "weightProduct": 330
     },
     {
       "type": "soup",
-      "id": 4,
+      "id": "4",
+      "img": "/assets/image/mainProduct/soup/ramen-kuriza.jpg",
       "title": "Рамен с курицей",
       "info": "Насыщенный мясной бульон с запеченным куриным филе, яичной лапшой, маринованным дайконом, ростками сои,куриным яйцом, водорослями нори, кунжутом, кинзой и перцем чили.",
-      "img": "/assets/image/mainProduct/soup/ramen-kuriza.jpg",
       "price": 410,
       "weightProduct": 400
     },
     {
       "type": "soup",
-      "id": 5,
+      "id": "5",
+      "img": "/assets/image/mainProduct/soup/taiskii-kuriza.jpg",
       "title": "Тайский суп с курицей",
       "info": "Ножка куриная, лапша удон, корень имбиря, кунжут, зелень.",
-      "img": "/assets/image/mainProduct/soup/taiskii-kuriza.jpg",
       "price": 390,
       "weightProduct": 400
     },
     {
       "type": "soup",
-      "id": 6,
+      "id": "6",
+      "img": "/assets/image/mainProduct/soup/tom-yam-moreproducti.jpg",
       "title": "Суп Том-ям с морепродуктами",
       "info": "Знаменитый тайский суп с тигровыми креветками, кальмарами и мидиями на основе куриного бульона с добавлением лемонграсса, кафир-лайма и кокосового молока. Добавляем томаты черри, кинзу и грибы шампиньоны.",
-      "img": "/assets/image/mainProduct/soup/tom-yam-moreproducti.jpg",
       "price": 460,
       "weightProduct": 400
     },
     {
       "type": "soup",
-      "id": 7,
+      "id": "7",
+      "img": "/assets/image/mainProduct/soup/tom-kha.jpg",
       "title": "Суп Том-Кха",
       "info": "Куриное филе, шиитаке, помидоры черри, шпинат, молоко кокосовое, сливки, кунжут, зелень.",
-      "img": "/assets/image/mainProduct/soup/tom-kha.jpg",
       "price": 450,
       "weightProduct": 400
     },
     {
       "type": "soup",
-      "id": 8,
+      "id": "8",
+      "img": "/assets/image/mainProduct/soup/slivochnii-losos.jpg",
       "title": "Суп сливочный с лососем",
       "info": "Наш фирменный суп от Шефа с филе лосося , легким сливочным вкусом и луком порей.",
-      "img": "/assets/image/mainProduct/soup/slivochnii-losos.jpg",
       "price": 490,
       "weightProduct": 300
     }
@@ -264,37 +264,37 @@
   "salad": [
     {
       "type": "salad",
-      "id": 1,
+      "id": "1",
+      "img": "/assets/image/mainProduct/salad/grecheskiy.jpg",
       "title": "\"Греческий\" салат",
       "info": "Свежий  болгарский перец, томаты, огурец, ялтинский лук, маслины, оливки, сыр фета, микс салатов Радиччио, Латука, листьев Мангольда, Лола-россо, Айсберга, заправленный заправкой \"винегар\"( бальзамический уксус, оливковое масло, прованские травы, специи).",
-      "img": "/assets/image/mainProduct/salad/grecheskiy.jpg",
       "price": 390,
       "weightProduct": 200
     },
     {
       "type": "salad",
-      "id": 2,
+      "id": "2",
+      "img": "/assets/image/mainProduct/salad/tepliy-fresh.jpg",
       "title": "Тёплый Фреш салат",
       "info": "Тигровая креветка, новозеландская мидия и кальмар под соусом \"Тар-тар\" в сочетании с миксом салата и помидорами черри. Вес может отличаться +-20г.",
-      "img": "/assets/image/mainProduct/salad/tepliy-fresh.jpg",
       "price": 460,
       "weightProduct": 220
     },
     {
       "type": "salad",
-      "id": 3,
+      "id": "3",
+      "img": "/assets/image/mainProduct/salad/cesar-krevetka.jpg",
       "title": "Цезраь с креветкой",
       "info": "Микс салат с тигровыми креветками, пармезаном, перепелиным яйцом, хрустящими гренками под фирменным соусом , со сладкими помидорами черри.",
-      "img": "/assets/image/mainProduct/salad/cesar-krevetka.jpg",
       "price": 460,
       "weightProduct": 180
     },
     {
       "type": "salad",
-      "id": 4,
+      "id": "4",
+      "img": "/assets/image/mainProduct/salad/cesar-kuriza.jpg",
       "title": "Цезарь с курицей",
       "info": "Микс салат с куриным филе, пармезаном, перепелиным яйцом, беконом, хрустящими гренками под фирменным соусом , со сладкими помидорами черри",
-      "img": "/assets/image/mainProduct/salad/cesar-kuriza.jpg",
       "price": 420,
       "weightProduct": 220
     }
@@ -302,158 +302,158 @@
   "new_position": [
     {
       "type" : "pizza",
-      "id": 1,
-      "title": "Пицца Гавайская",
+      "id": "1",
       "img": "/assets/image/mainProduct/pizza/pizza_gavaiskaya.jpg",
+      "title": "Пицца Гавайская",
       "price": 470
     },
     {
       "type": "pasta",
-      "id": 8,
-      "title": "Жареный рис \"Том-Ям\"",
+      "id": "8",
       "img": "/assets/image/mainProduct/pasta/jareniy_ris_tom_yam.jpg",
+      "title": "Жареный рис \"Том-Ям\"",
       "price": 390
     },
     {
       "type": "soup",
-      "id": 6,
-      "title": "Суп Том-ям с морепродуктами",
+      "id": "6",
       "img": "/assets/image/mainProduct/soup/tom-yam-moreproducti.jpg",
+      "title": "Суп Том-ям с морепродуктами",
       "price": 460
     },
     {
       "type": "salad",
-      "id": 1,
-      "title": "\"Греческий\" салат",
+      "id": "1",
       "img": "/assets/image/mainProduct/salad/grecheskiy.jpg",
+      "title": "\"Греческий\" салат",
       "price": 390
     }
   ],
   "promotion_page": [
     {
-      "id": 1,
-      "h2Text": "Дарим кибер-призы",
-      "pText": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня.",
-      "img": "/assets/image/promotionPage/1.png"
+      "id": "1",
+      "img": "/assets/image/promotionPage/1.png",      
+      "title": "Дарим кибер-призы",
+      "info": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня."
     },
     {
-      "id": 2,
-      "h2Text": "Дарим кибер-призы",
-      "pText": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня.",
-      "img": "/assets/image/promotionPage/2.png"
+      "id": "2",
+      "img": "/assets/image/promotionPage/2.png",      
+      "title": "Дарим кибер-призы",
+      "info": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня."
     },
     {
-      "id": 3,
-      "h2Text": "Дарим кибер-призы",
-      "pText": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня.",
-      "img": "/assets/image/promotionPage/3.png"
+      "id": "3",
+      "img": "/assets/image/promotionPage/3.png",      
+      "title": "Дарим кибер-призы",
+      "info": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня."
     },
     {
-      "id": 4,
-      "h2Text": "Дарим кибер-призы",
-      "pText": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня.",
-      "img": "/assets/image/promotionPage/4.png"
+      "id": "4",
+      "img": "/assets/image/promotionPage/4.png",      
+      "title": "Дарим кибер-призы",
+      "info": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня."
     },
     {
-      "id": 5,
-      "h2Text": "Дарим кибер-призы",
-      "pText": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня.",
-      "img": "/assets/image/promotionPage/5.png"
+      "id": "5",
+      "img": "/assets/image/promotionPage/5.png",      
+      "title": "Дарим кибер-призы",
+      "info": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня."
     },
     {
-      "id": 6,
-      "h2Text": "Дарим кибер-призы",
-      "pText": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня.",
-      "img": "/assets/image/promotionPage/6.png"
+      "id": "6",
+      "img": "/assets/image/promotionPage/6.png",      
+      "title": "Дарим кибер-призы",
+      "info": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня."
     },
     {
-      "id": 7,
-      "h2Text": "Дарим кибер-призы",
-      "pText": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня.",
-      "img": "/assets/image/promotionPage/7.png"
+      "id": "7",
+      "img": "/assets/image/promotionPage/7.png",      
+      "title": "Дарим кибер-призы",
+      "info": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня."
     },
     {
-      "id": 8,
-      "h2Text": "Дарим кибер-призы",
-      "pText": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня.",
-      "img": "/assets/image/promotionPage/8.png"
+      "id": "8",
+      "img": "/assets/image/promotionPage/8.png",      
+      "title": "Дарим кибер-призы",
+      "info": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня."
     },
     {
-      "id": 9,
-      "h2Text": "Дарим кибер-призы",
-      "pText": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня.",
-      "img": "/assets/image/promotionPage/9.png"
+      "id": "9",
+      "img": "/assets/image/promotionPage/9.png",
+      "title": "Дарим кибер-призы",
+      "info": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня."
     },
     {
-      "id": 10,
-      "h2Text": "Дарим кибер-призы",
-      "pText": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня.",
-      "img": "/assets/image/promotionPage/10.png"
+      "id": "10",
+      "img": "/assets/image/promotionPage/10.png",
+      "title": "Дарим кибер-призы",
+      "info": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня."
     },
     {
-      "id": 11,
-      "h2Text": "Дарим кибер-призы",
-      "pText": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня. Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня.",
-      "img": "/assets/image/promotionPage/11.png"
+      "id": "11",
+      "img": "/assets/image/promotionPage/11.png",
+      "title": "Дарим кибер-призы",
+      "info": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня. Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня."
     },
     {
-      "id": 12,
-      "h2Text": "Дарим кибер-призы",
-      "pText": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня.",
-      "img": "/assets/image/promotionPage/12.png"
+      "id": "12",
+      "img": "/assets/image/promotionPage/12.png",
+      "title": "Дарим кибер-призы",
+      "info": "Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня."
     }
   ],
   "supplements_pizza": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image1.png",
       "price": 120
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image2.png",
       "price": 120
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image3.png",
       "price": 120
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image1.png",
       "price": 120
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image2.png",
       "price": 120
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image3.png",
       "price": 120
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image1.png",
       "price": 120
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image2.png",
       "price": 120
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "Острый халапеньо",
       "img": "/assets/image/mainProduct/supplements/image3.png",
       "price": 120
@@ -461,55 +461,55 @@
   ],
   "supplements_pasta": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Грибы",
       "img": "/assets/image/mainProduct/supplements/image1.png",
       "price": 100
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Грибы",
       "img": "/assets/image/mainProduct/supplements/image2.png",
       "price": 100
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Грибы",
       "img": "/assets/image/mainProduct/supplements/image3.png",
       "price": 100
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Грибы",
       "img": "/assets/image/mainProduct/supplements/image1.png",
       "price": 100
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Грибы",
       "img": "/assets/image/mainProduct/supplements/image2.png",
       "price": 100
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Грибы",
       "img": "/assets/image/mainProduct/supplements/image3.png",
       "price": 100
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Грибы",
       "img": "/assets/image/mainProduct/supplements/image1.png",
       "price": 100
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Грибы",
       "img": "/assets/image/mainProduct/supplements/image2.png",
       "price": 100
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "Грибы",
       "img": "/assets/image/mainProduct/supplements/image3.png",
       "price": 100
@@ -517,55 +517,55 @@
   ],
   "supplements_soup": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Сливки",
       "img": "/assets/image/mainProduct/supplements/image1.png",
       "price": 90
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Сливки",
       "img": "/assets/image/mainProduct/supplements/image2.png",
       "price": 90
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Сливки",
       "img": "/assets/image/mainProduct/supplements/image3.png",
       "price": 90
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Сливки",
       "img": "/assets/image/mainProduct/supplements/image1.png",
       "price": 90
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Сливки",
       "img": "/assets/image/mainProduct/supplements/image2.png",
       "price": 90
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Сливки",
       "img": "/assets/image/mainProduct/supplements/image3.png",
       "price": 90
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Сливки",
       "img": "/assets/image/mainProduct/supplements/image1.png",
       "price": 90
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Сливки",
       "img": "/assets/image/mainProduct/supplements/image2.png",
       "price": 90
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "Сливки",
       "img": "/assets/image/mainProduct/supplements/image3.png",
       "price": 90
@@ -573,61 +573,58 @@
   ],
   "supplements_salad": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Огурец",
       "img": "/assets/image/mainProduct/supplements/image1.png",
       "price": 70
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Огурец",
       "img": "/assets/image/mainProduct/supplements/image2.png",
       "price": 70
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Огурец",
       "img": "/assets/image/mainProduct/supplements/image3.png",
       "price": 70
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Огурец",
       "img": "/assets/image/mainProduct/supplements/image1.png",
       "price": 70
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Огурец",
       "img": "/assets/image/mainProduct/supplements/image2.png",
       "price": 70
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Огурец",
       "img": "/assets/image/mainProduct/supplements/image3.png",
       "price": 70
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Огурец",
       "img": "/assets/image/mainProduct/supplements/image1.png",
       "price": 70
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Огурец",
       "img": "/assets/image/mainProduct/supplements/image2.png",
       "price": 70
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "Огурец",
       "img": "/assets/image/mainProduct/supplements/image3.png",
       "price": 70
     }
-  ],
-  "basket": [
-    
   ]
 }

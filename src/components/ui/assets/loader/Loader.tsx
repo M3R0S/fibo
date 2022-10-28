@@ -1,18 +1,17 @@
 import React, { FC } from "react";
 import loader from "../../../../assets/image/loader.gif";
-import cl from "../../../../assets/styles/ui/loader.module.sass";
+import cl from "./loader.module.sass";
 
 interface ILoader {
-  marginTop?: number;
+  className?: string;
 }
 
-const Loader: FC<ILoader> = ({ marginTop }) => {
+const Loader: FC<ILoader> = ({className}) => {
   return (
     <div
-      className={cl.loader_container}
-      style={{ marginTop: marginTop + "px" }}
+      className={[cl.loader_container_root, className].join(' ')}
     >
-        <img src={loader} alt="Загрузка" />
+      <img className={cl.loader_root} src={loader} alt="Загрузка" />
     </div>
   );
 };

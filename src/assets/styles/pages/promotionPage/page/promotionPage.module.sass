@@ -1,0 +1,84 @@
+@use '../../../../styles/_var' as var
+
+.main_promotion
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding-bottom: 2.5rem
+    position: relative
+
+.container
+    width: var.$section-width
+    margin-top: 12.5rem
+    padding: 1rem 0
+    display: flex
+    flex-direction: column
+
+    h1
+        font-size: 3rem
+        font-weight: 700
+        color: var.$color-yellow
+
+    .loader
+        width: 100%
+        height: 100%
+        margin-top: 10%
+
+.promotion_card_cont
+    width: 100%
+    margin-top: 2.5rem
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+    justify-content: space-between
+    gap: 3rem
+
+    .promotion_card
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        border-radius: 1.2rem
+        box-shadow: 0 0.4rem 2.4rem rgba(0, 0, 0, 0.06)
+
+        &:hover
+            box-shadow: 0 0.8rem 2.4rem 0 #00000035
+
+        .wrapper_card
+            padding: 1.3rem 0.7rem 2rem 2rem
+
+            h2
+                font-size: 2rem
+                font-weight: 700
+                line-height: 2.8rem
+
+            p
+                font-size: 1.3rem
+                font-weight: 500
+                line-height: 2rem
+                color: #797979
+                margin-top: 0.7rem
+
+        .open_modal
+            width: 159px
+            height: 45px
+            background-color: var.$color-yellow
+            color: #473E43
+            font-size: 1.4rem
+            font-weight: 700
+            border-radius: 0.8rem
+            margin: 0 0 2rem 2rem
+            outline: none
+
+            &:hover
+                box-shadow: 0 0 2.4rem 0 #f7d22d4c
+
+@media screen and (max-width: 1200px )
+    .container
+        width: 90%
+
+@media screen and (max-width: 700px )
+    .container
+        align-items: center
+
+    .promotion_card_cont
+        max-width: 80%

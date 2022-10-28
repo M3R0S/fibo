@@ -1,6 +1,6 @@
 import React from "react";
 import cl from "../../../assets/styles/navbar/navbarMedia1200.module.sass";
-import LogoImg from "../../ui/assets/loader/logoImg/LogoImg";
+import LogoImg from "../../ui/assets/logoImg/LogoImg";
 import ButtonBasket from "../../ui/Button/buttonBasket/ButtonBasket";
 import ButtonCallNumber from "../../ui/Button/buttonCallNumber/ButtonCallNumber";
 import ButtonHome from "../../ui/Button/buttonHome/ButtonHome";

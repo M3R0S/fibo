@@ -3,7 +3,7 @@ import { CSSTransition } from "react-transition-group";
 import cl from "../../../assets/styles/navbar/navbarMedia1200.module.sass";
 import { useAppDispatch } from "../../../hook/storeHook/useStore";
 import { setOpenModalBurger } from "../../../store/slice/navbarSlice";
-import LogoImg from "../../ui/assets/loader/logoImg/LogoImg";
+import LogoImg from "../../ui/assets/logoImg/LogoImg";
 import ButtonBasket from "../../ui/Button/buttonBasket/ButtonBasket";
 import ButtonCallNumber from "../../ui/Button/buttonCallNumber/ButtonCallNumber";
 import ButtonHome from "../../ui/Button/buttonHome/ButtonHome";
@@ -53,10 +53,12 @@ const NavbarBurgerNavAlternative: FC<INavbarBurgerNavAlternative> = ({
                 {...link}
                 key={link.id}
               ></NavMenuItem>
-              ))}
-              <ButtonLogin className={cl.button_login}></ButtonLogin>
-              <ButtonCallNumber className={cl.button_call_number}></ButtonCallNumber>
-              <ButtonBasket className={cl.button_basket}></ButtonBasket>
+            ))}
+            <ButtonLogin className={cl.button_login}></ButtonLogin>
+            <ButtonCallNumber
+              className={cl.button_call_number}
+            ></ButtonCallNumber>
+            <ButtonBasket className={cl.button_basket}></ButtonBasket>
           </ul>
         </nav>
       </section>

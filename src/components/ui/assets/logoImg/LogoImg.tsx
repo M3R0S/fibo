@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import logoImg from "../../../../../assets/image/header-logo.png";
+import logoImg from "../../../../assets/image/header-logo.png";
 
 interface ILogoImg {
     className? : string

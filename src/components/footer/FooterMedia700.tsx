@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { v4 as uuid } from "uuid";
 import cl from "../../assets/styles/footer/footerMedia700.module.sass";
-import LogoImg from "../ui/assets/loader/logoImg/LogoImg";
+import LogoImg from "../ui/assets/logoImg/LogoImg";
 import ButtonCallNumber from "../ui/Button/buttonCallNumber/ButtonCallNumber";
 import ButtonHome from "../ui/Button/buttonHome/ButtonHome";
 import ButtonOrderCall from "../ui/Button/buttonOrderCall/ButtonOrderCall";
@@ -40,10 +40,10 @@ const FooterMedia700: FC = () => {
         <strong>Остались вопросы? А мы всегда на связи:</strong>
         <figure className={cl.contacts}>
           {/* <div className={cl.contacts_links}> */}
-            {linkContacts.map((linkContact) => (
-              // eslint-disable-next-line jsx-a11y/anchor-has-content
-              <a href={linkContact} key={uuid()}></a>
-            ))}
+          {linkContacts.map((linkContact) => (
+            // eslint-disable-next-line jsx-a11y/anchor-has-content
+            <a href={linkContact} key={uuid()}></a>
+          ))}
           {/* </div> */}
         </figure>
         <button className={cl.tell}>Написать нам</button>
