@@ -1,9 +1,9 @@
 import React from "react";
 import cl from "../../../assets/styles/navbar/navbarMedia1200.module.sass";
 import LogoImg from "../../ui/assets/logoImg/LogoImg";
-import ButtonBasket from "../../ui/Button/buttonBasket/ButtonBasket";
-import ButtonCallNumber from "../../ui/Button/buttonCallNumber/ButtonCallNumber";
-import ButtonHome from "../../ui/Button/buttonHome/ButtonHome";
+import ButtonBasket from "../../ui/components/button/buttonBasket/ButtonBasket";
+import ButtonCallNumber from "../../ui/components/button/buttonCallNumber/ButtonCallNumber";
+import ButtonHome from "../../ui/components/button/buttonHome/ButtonHome";
 import NavbarBurger from "./NavbarBurger";
 
 const NavbarMedia1200 = () => {

@@ -6,7 +6,7 @@ const AppRouter: FC = () => {
   return (
     <Routes>
       {publicRoutes.map(({ patch, element }) => (
-        <Route key={patch} path={patch} element={element}></Route>
+        <Route key={patch} path={patch} element={element} />
       ))}
     </Routes>
   );

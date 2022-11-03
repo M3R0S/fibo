@@ -1,8 +1,8 @@
 import React from "react";
 import cl from "../../assets/styles/footer/footer.module.sass";
 import { v4 as uuidv4 } from "uuid";
-import ButtonCallNumber from "../ui/Button/buttonCallNumber/ButtonCallNumber";
-import ButtonOrderCall from "../ui/Button/buttonOrderCall/ButtonOrderCall";
+import ButtonCallNumber from "../ui/components/button/buttonCallNumber/ButtonCallNumber";
+import ButtonOrderCall from "../ui/components/button/buttonOrderCall/ButtonOrderCall";
 
 const FooterContact = () => {
   return (
@@ -23,6 +23,13 @@ const FooterContact = () => {
   );
 };
 
-export const linkContacts = ["https://www.visa.com.ru/", "2", "3", "4", "5", "6"];
+export const linkContacts = [
+  "https://www.visa.com.ru/",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+];
 
 export default FooterContact;

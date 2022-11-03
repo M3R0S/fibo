@@ -1,10 +1,10 @@
 import React, { FC } from "react";
 import cl from "../../assets/styles/navbar/navInfo.module.sass";
-import ButtonHome from "../ui/Button/buttonHome/ButtonHome";
-import LinkBlank from "../ui/link/linkBlank/LinkBlank";
+import ButtonHome from "../ui/components/button/buttonHome/ButtonHome";
+import LinkBlank from "../ui/components/link/linkBlank/LinkBlank";
 import LogoImg from "../ui/assets/logoImg/LogoImg";
-import ButtonOrderCall from "../ui/Button/buttonOrderCall/ButtonOrderCall";
-import ButtonCallNumber from "../ui/Button/buttonCallNumber/ButtonCallNumber";
+import ButtonOrderCall from "../ui/components/button/buttonOrderCall/ButtonOrderCall";
+import ButtonCallNumber from "../ui/components/button/buttonCallNumber/ButtonCallNumber";
 
 const NavInfo: FC = () => {
   return (

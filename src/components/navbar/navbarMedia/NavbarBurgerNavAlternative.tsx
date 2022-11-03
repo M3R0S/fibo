@@ -4,10 +4,10 @@ import cl from "../../../assets/styles/navbar/navbarMedia1200.module.sass";
 import { useAppDispatch } from "../../../hook/storeHook/useStore";
 import { setOpenModalBurger } from "../../../store/slice/navbarSlice";
 import LogoImg from "../../ui/assets/logoImg/LogoImg";
-import ButtonBasket from "../../ui/Button/buttonBasket/ButtonBasket";
-import ButtonCallNumber from "../../ui/Button/buttonCallNumber/ButtonCallNumber";
-import ButtonHome from "../../ui/Button/buttonHome/ButtonHome";
-import ButtonLogin from "../../ui/Button/buttonLogin/ButtonLogin";
+import ButtonBasket from "../../ui/components/button/buttonBasket/ButtonBasket";
+import ButtonCallNumber from "../../ui/components/button/buttonCallNumber/ButtonCallNumber";
+import ButtonHome from "../../ui/components/button/buttonHome/ButtonHome";
+import ButtonLogin from "../../ui/components/button/buttonLogin/ButtonLogin";
 import { navLinks } from "../NavMenu";
 import NavMenuItem from "../NavMenuItem";
 

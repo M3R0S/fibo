@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import promotion from "../../../../assets/image/promotion.png";
 import promotionMini from "../../../../assets/image/promotion-mini.png";
-import cl from "../../../../assets/styles/pages/promotion/promotion.module.sass";
+import cl from "../../../../assets/styles/pages/promotionPage/promotion.module.sass";
 import { Link } from "react-router-dom";
 import modelWoman from "../../../../assets/image/model-woman.png";
 import { v4 as uuidv4 } from "uuid";

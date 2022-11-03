@@ -1,10 +1,10 @@
 import React, { FC } from "react";
 import cl from "../../assets/styles/navbar/navMenu.module.sass";
-import ButtonHome from "../ui/Button/buttonHome/ButtonHome";
+import ButtonHome from "../ui/components/button/buttonHome/ButtonHome";
 import LogoImg from "../ui/assets/logoImg/LogoImg";
 import NavMenuItem from "./NavMenuItem";
-import ButtonBasket from "../ui/Button/buttonBasket/ButtonBasket";
-import ButtonLogin from "../ui/Button/buttonLogin/ButtonLogin";
+import ButtonBasket from "../ui/components/button/buttonBasket/ButtonBasket";
+import ButtonLogin from "../ui/components/button/buttonLogin/ButtonLogin";
 
 interface INavMenu {
   scrollDown: boolean;

@@ -2,9 +2,9 @@ import React, { FC } from "react";
 import { v4 as uuid } from "uuid";
 import cl from "../../assets/styles/footer/footerMedia1200.module.sass";
 import LogoImg from "../ui/assets/logoImg/LogoImg";
-import ButtonCallNumber from "../ui/Button/buttonCallNumber/ButtonCallNumber";
-import ButtonHome from "../ui/Button/buttonHome/ButtonHome";
-import ButtonOrderCall from "../ui/Button/buttonOrderCall/ButtonOrderCall";
+import ButtonCallNumber from "../ui/components/button/buttonCallNumber/ButtonCallNumber";
+import ButtonHome from "../ui/components/button/buttonHome/ButtonHome";
+import ButtonOrderCall from "../ui/components/button/buttonOrderCall/ButtonOrderCall";
 import { linkContacts } from "./FooterContact";
 import { paymentSystems, socialNetwork } from "./FooterInfo";
 
