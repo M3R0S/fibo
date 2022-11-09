@@ -1,9 +1,9 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import basketPageSlice from "./slice/basketPageSlice";
-import mainPositionApi from "./slice/mainPosition/mainPositionApi";
-import mainPositionSlice from "./slice/mainPosition/mainPositionSlice";
+import mainProductApi from "./slice/mainProduct/mainProductApi";
+import mainProductSlice from "./slice/mainProduct/mainProductSlice";
 import mainProductItemSlice from "./slice/mainProductItemSlice";
-import mainProductSlice from "./slice/mainProductSlice";
+// import mainProductSlice from "./slice/mainProductSlice";
 import navbarSlice from "./slice/navbarSlice";
 import newPositionSlice from "./slice/newPositionSlice";
 import pizzaModalSlice from "./slice/pizzaModalSlice";
@@ -20,8 +20,8 @@ const rootReducer = combineReducers({
   pizzaModal: pizzaModalSlice,
   basketPage: basketPageSlice,
   newPosition: newPositionSlice,
-  mainPositionSlice,
-  [mainPositionApi.reducerPath]: mainPositionApi.reducer,
+  mainProductSlice,
+  [mainProductApi.reducerPath]: mainProductApi.reducer,
   [promotionApi.reducerPath]: promotionApi.reducer,
 })
 
@@ -30,7 +30,7 @@ const store = configureStore({
   middleware: (getDefaultMiddleware) => 
     getDefaultMiddleware()
     .concat(promotionApi.middleware)
-    .concat(mainPositionApi.middleware)
+    .concat(mainProductApi.middleware)
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

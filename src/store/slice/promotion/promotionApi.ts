@@ -1,5 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/dist/query/react";
-import { TPromotionContent, TPromotionQueryParams } from "./types/promotionTypes";
+import { TPopupQueryParams } from "../../types/globalStoreSliceType";
+import { TPromotionContent } from "./types/promotionTypes";
 
  const promotionApi = createApi({
     reducerPath: 'promotionApi',
@@ -10,13 +11,16 @@ import { TPromotionContent, TPromotionQueryParams } from "./types/promotionTypes
     endpoints: (build) => ({
       getPromotionPageList: build.query<TPromotionContent[], null>({
         query: () => ({
-          url: 'promotion_page/'
+          url: 'promotion_page'
         }),
         providesTags: (result) => ['promotionApi']
       }),
-      getPromotionModalItem: build.query<TPromotionContent, TPromotionQueryParams >({
+      getPromotionModalItem: build.query<TPromotionContent[], TPopupQueryParams >({
         query: ({popupId}) => ({
-          url: `promotion_page/${popupId}`,
+          url: 'promotion_page',
+          params: {
+            id: popupId
+          }
         }),
         providesTags: (result) => ['promotionApi']
       })

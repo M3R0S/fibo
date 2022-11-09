@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { v4 as uuid } from "uuid";
 import cl from "../../assets/styles/footer/footerMedia700.module.sass";
 import LogoImg from "../ui/assets/logoImg/LogoImg";

@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC, useEffect } from "react";
 import promotion from "../../../../assets/image/promotion.png";
 import promotionMini from "../../../../assets/image/promotion-mini.png";
 import cl from "../../../../assets/styles/pages/promotionPage/promotion.module.sass";
@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import modelWoman from "../../../../assets/image/model-woman.png";
 import { v4 as uuidv4 } from "uuid";
 import useElementOnScreen from "../../../../hook/useElementOnScreen/useElementOnScreen";
-import { setIdActive } from "../../../../store/slice/navbarSlice";
+import { setLinkActive } from "../../../../store/slice/navbarSlice";
 import { useAppDispatch } from "../../../../hook/storeHook/useStore";
 
 const promoImg = [
@@ -19,12 +19,14 @@ const promoImg = [
 
 const Promotion: FC = () => {
   const dispatch = useAppDispatch();
-  const containerRef = useElementOnScreen(
-    { threshold: 0.9 },
-    null,
-    () => {},
-    () => dispatch(setIdActive(null))
-  );
+  const { containerRef, isIntersecting } = useElementOnScreen({
+    threshold: 0.7,
+  });
+
+  useEffect(() => {
+    if (isIntersecting) dispatch(setLinkActive(null));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isIntersecting]);
 
   return (
     <section className={cl.container}>

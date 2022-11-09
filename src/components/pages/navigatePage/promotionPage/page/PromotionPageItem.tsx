@@ -1,4 +1,4 @@
-import React, { FC, memo } from "react";
+import { FC, memo } from "react";
 import { useNavigate } from "react-router-dom";
 import cl from "../../../../../assets/styles/pages/promotionPage/page/promotionPage.module.sass";
 import { TPromotionContent } from "../../../../../store/slice/promotion/types/promotionTypes";

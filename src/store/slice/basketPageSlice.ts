@@ -1,30 +1,27 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { TPizzaDough, TPizzaSize } from "./mainProduct/types/mainProductTypes";
 // import { sleep } from "../../helpers/sleep";
-import {
-  TPizzaDoughInfo,
-  TPizzaSizeInfo,
-} from "./pizzaModalSlice";
+
 
 type TDeleteBasketItem = {
   typeProduct: string;
-  idProduct: number;
-  pizzaSize?: number;
-  pizzaDough?: TPizzaDoughInfo
+  idProduct: string;
+  size?: string;
+  dough?: string
 };
 
 export type TPostBasketItem = {
   id: string;
   typeProduct: string;
-  idProduct: number;
+  idProduct: string;
   quantity: number;
   title: string;
   info: string;
-  price: number;
+  price: string;
   img: string;
-  weightProduct: number;
-  pizzaDough?: TPizzaDoughInfo;
-  pizzaSize?: TPizzaSizeInfo;
-  pizzaWeightProduct?: number;
+  weight: string;
+  dough?: string;
+  size?: string;
 };
 
 type TPostBasketList = {
@@ -85,8 +82,8 @@ function filterItems (list : TPostBasketItem[], action: TDeleteBasketItem, isAll
       action.typeProduct === 'pizza' ? 
       item.typeProduct === action.typeProduct &&
       item.idProduct === action.idProduct &&
-      item.pizzaSize === action.pizzaSize &&
-      item.pizzaDough === action.pizzaDough : 
+      item.size === action.size &&
+      item.dough === action.dough : 
       item.typeProduct === action.typeProduct &&
       item.idProduct === action.idProduct 
     ) :
@@ -94,8 +91,8 @@ function filterItems (list : TPostBasketItem[], action: TDeleteBasketItem, isAll
         action.typeProduct === 'pizza' ? 
         item.typeProduct === action.typeProduct &&
         item.idProduct === action.idProduct &&
-        item.pizzaSize === action.pizzaSize &&
-        item.pizzaDough === action.pizzaDough : 
+        item.size === action.size &&
+        item.dough === action.dough : 
         item.typeProduct === action.typeProduct &&
         item.idProduct === action.idProduct 
       )

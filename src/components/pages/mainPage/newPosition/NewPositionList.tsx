@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from "react";
+import { FC, useEffect } from "react";
 import modelMen from "../../../../assets/image/model-man.png";
 import cl from "../../../../assets/styles/pages/newPosition/newPosition.module.sass";
 import NewPositionItem from "./NewPositionItem";

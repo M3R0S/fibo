@@ -1,4 +1,4 @@
-import React, { FC, memo } from "react";
+import { FC, memo } from "react";
 import cl from "../../../../../assets/styles/pages/promotionPage/page/promotionPage.module.sass";
 import { useGetPromotionPageListQuery } from "../../../../../store/slice/promotion/promotionApi";
 import Loader from "../../../../ui/assets/loader/Loader";

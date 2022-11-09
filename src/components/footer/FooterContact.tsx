@@ -1,10 +1,10 @@
-import React from "react";
+import { FC } from "react";
 import cl from "../../assets/styles/footer/footer.module.sass";
 import { v4 as uuidv4 } from "uuid";
 import ButtonCallNumber from "../ui/components/button/buttonCallNumber/ButtonCallNumber";
 import ButtonOrderCall from "../ui/components/button/buttonOrderCall/ButtonOrderCall";
 
-const FooterContact = () => {
+const FooterContact: FC = () => {
   return (
     <section className={cl.footer_contact_cont}>
       <strong>Остались вопросы? А мы всегда на связи:</strong>

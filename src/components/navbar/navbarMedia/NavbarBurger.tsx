@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { CSSTransition } from "react-transition-group";
 import cl from "../../../assets/styles/navbar/navbarMedia1200.module.sass";
 import {

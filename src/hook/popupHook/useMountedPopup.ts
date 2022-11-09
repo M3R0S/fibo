@@ -1,9 +1,5 @@
 import { useState, useEffect } from 'react';
 
-// interface IuseModalMountedPromotion {
-//     isOpened: boolean
-// }
-
 const useMountedPopup = (isOpened : boolean) => {
 
     const [isMounted, setIsMounted] = useState<boolean>(false);
@@ -16,8 +12,7 @@ const useMountedPopup = (isOpened : boolean) => {
             setIsMounted(false);
           }, 500);
         }
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-      }, [isOpened]);
+      }, [isOpened, isMounted]);
 
       return isMounted
 }

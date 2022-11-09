@@ -1,4 +1,4 @@
-import React from "react";
+import {FC} from "react";
 import cl from "../../../assets/styles/navbar/navbarMedia1200.module.sass";
 import LogoImg from "../../ui/assets/logoImg/LogoImg";
 import ButtonBasket from "../../ui/components/button/buttonBasket/ButtonBasket";
@@ -6,7 +6,7 @@ import ButtonCallNumber from "../../ui/components/button/buttonCallNumber/Button
 import ButtonHome from "../../ui/components/button/buttonHome/ButtonHome";
 import NavbarBurger from "./NavbarBurger";
 
-const NavbarMedia1200 = () => {
+const NavbarMedia1200 : FC = () => {
   return (
     <section className={cl.container}>
       <ButtonHome>

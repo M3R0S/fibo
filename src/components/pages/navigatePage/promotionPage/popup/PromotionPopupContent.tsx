@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import cl from "../../../../../assets/styles/pages/promotionPage/popup/promotionPopup.module.sass";
 import { TPromotionContent } from "../../../../../store/slice/promotion/types/promotionTypes";
 
@@ -13,7 +13,7 @@ const PromotionPopupContent: FC<TPromotionContent & IPromotionPopupContent> = ({
   onClose,
 }) => {
   return (
-    <div className={cl.card}>
+    <>
       <img className={cl.header_img} src={img} alt="Изображение акции" />
       <div className={cl.card_content}>
         <h2>{title}</h2>
@@ -22,7 +22,7 @@ const PromotionPopupContent: FC<TPromotionContent & IPromotionPopupContent> = ({
           Закрыть
         </button>
       </div>
-    </div>
+    </>
   );
 };
 

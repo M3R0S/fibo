@@ -1,6 +1,5 @@
-import { useCallback, useRef, useEffect } from "react";
-import { debounce } from "../../helpers/debounce";
-import { useAppSelector } from "../storeHook/useStore";
+import { useRef, useEffect, useState, useCallback } from "react";
+import { useAppSelector } from './../storeHook/useStore';
 
 interface IOption {
   threshold: number[] | number;
@@ -9,39 +8,37 @@ interface IOption {
 }
 
 const useElementOnScreen = (
-  option: IOption,
-  idEllement: string | null,
-  isIntersecting: Function,
-  notIsIntersecting: Function
-
-) => {
+  option : IOption) => {
   const containerRef = useRef(null);
-  const { idActive } = useAppSelector((state) => state.navbar);
+  const { globalIsIntersecting } = useAppSelector(state => state.navbar)
+  const [isIntersecting, setIsIntersecting] = useState<boolean>(false)
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const callback = useCallback(
-    debounce((entries: Array<any>, observer: any) => {
-      entries.forEach((entr: any) => {
-        if (idEllement || idActive) {
-          if (entr.isIntersecting) {
-            isIntersecting()
-            // console.log('Сработало');
-          } 
-        } else {
-          notIsIntersecting()
-          // console.log('Не Сработало');
-        }
-      });
-    }, 200),
-    []
-  );
+  const callback = useCallback((entries : IntersectionObserverEntry[]) => {
+    const [ entry ] = entries
+    if (entry.isIntersecting && globalIsIntersecting ) {
+      setIsIntersecting(true)
+    }
+    else {
+      setIsIntersecting(false)
+    }
+  }, [globalIsIntersecting])
+
+
   useEffect(() => {
     const observer = new IntersectionObserver(callback, option);
-    const temp = containerRef.current;
-    if (temp) observer.observe(temp);
-  }, [containerRef.current, callback]);
+    const temp = containerRef.current
+    if (temp) {
+      observer.observe(temp);
+    }
 
-  return containerRef;
+    return () => {
+      if (temp) {
+        observer.unobserve(temp);
+      }
+    }
+  }, [option, callback]);
+
+  return { containerRef, isIntersecting };
 };
 
 export default useElementOnScreen;

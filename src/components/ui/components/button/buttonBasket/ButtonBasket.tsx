@@ -1,11 +1,11 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   useAppDispatch,
   useAppSelector,
 } from "../../../../../hook/storeHook/useStore";
 import * as Scroll from "react-scroll";
-import { setIdActive } from "../../../../../store/slice/navbarSlice";
+import { setLinkActive } from "../../../../../store/slice/navbarSlice";
 import cl from "./buttonBasket.module.sass";
 import CountUp from "react-countup";
 
@@ -25,24 +25,25 @@ const ButtonBasket: FC<IButtonBasket> = ({ className }) => {
       className={`${cl.basket_root} ${className}`}
       onClick={() => {
         navigate("/basket");
-        dispatch(setIdActive(null));
+        dispatch(setLinkActive(null));
         animateScroll.scrollToTop({
           duration: 0,
         });
       }}
     >
-      {totalPrice ?
-      <CountUp
-        className={cl.price}
-        separator=" "
-        preserveValue={true}
-        end={totalPrice}
-        duration={0.5}
-        suffix={" ₽"}
-        prefix={"Корзина | "}
-      />
-      : "Корзина"
-}
+      {totalPrice ? (
+        <CountUp
+          className={cl.price}
+          separator=" "
+          preserveValue={true}
+          end={totalPrice}
+          duration={0.5}
+          suffix={" ₽"}
+          prefix={"Корзина | "}
+        />
+      ) : (
+        "Корзина"
+      )}
     </button>
   );
 };

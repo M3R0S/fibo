@@ -1,14 +1,13 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import cl from "../../../../../assets/styles/pages/promotionPage/page/promotionPage.module.sass";
 import PromotionPopupApp from "../popup/PromotionPopupApp";
 import PromotionPageList from "./PromotionPageList";
 
 interface IPromotionPageApp {
-  isOpenPopup: boolean;
+  isOpenPopup?: boolean;
 }
 
-const PromotionPageApp: FC<IPromotionPageApp> = ({ isOpenPopup}) => {
-
+const PromotionPageApp: FC<IPromotionPageApp> = ({ isOpenPopup = false }) => {
   return (
     <main className={cl.container}>
       <PromotionPageList />

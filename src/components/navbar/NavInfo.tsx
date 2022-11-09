@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import cl from "../../assets/styles/navbar/navInfo.module.sass";
 import ButtonHome from "../ui/components/button/buttonHome/ButtonHome";
 import LinkBlank from "../ui/components/link/linkBlank/LinkBlank";

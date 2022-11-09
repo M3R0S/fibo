@@ -1,5 +1,5 @@
-import React, { FC } from "react";
-import cl from './buttonLogin.module.sass'
+import { FC } from "react";
+import cl from "./buttonLogin.module.sass";
 
 interface IButtonLogin {
   className?: string;

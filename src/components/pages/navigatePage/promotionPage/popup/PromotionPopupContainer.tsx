@@ -1,45 +1,46 @@
-import React, { FC } from "react";
+import { FC } from "react";
+import cl from "../../../../../assets/styles/pages/promotionPage/popup/promotionPopup.module.sass";
 import { useGetPromotionModalItemQuery } from "../../../../../store/slice/promotion/promotionApi";
-import { TPromotionQueryParams } from "../../../../../store/slice/promotion/types/promotionTypes";
+import { TPopupQueryParams } from "../../../../../store/types/globalStoreSliceType";
 import Error from "../../../../ui/assets/error/Error";
 import Loader from "../../../../ui/assets/loader/Loader";
-import animation from "../../../../ui/components/popup/popup.module.sass";
-import cl from "../../../../../assets/styles/pages/promotionPage/popup/promotionPopup.module.sass";
 import PromotionPopupContent from "./PromotionPopupContent";
 
 interface IPromotionPopupContainer {
   isOpened: boolean;
   onClose: () => void;
-  endpoints: TPromotionQueryParams;
+  params: TPopupQueryParams;
 }
 
 const PromotionPopupContainer: FC<IPromotionPopupContainer> = ({
   isOpened,
   onClose,
-  endpoints,
+  params,
 }) => {
   const {
-    data: content,
+    data: content = [],
     isLoading,
     isError,
-  } = useGetPromotionModalItemQuery(endpoints);
+  } = useGetPromotionModalItemQuery(params);
 
   function selectClassName(): string {
-    if (!isOpened) return [cl.content, animation.content_disabled].join(" ");
-    if (isLoading) return [cl.content, animation.content_loading].join(" ");
-    if (content) return [cl.content, animation.content_enabled].join(" ");
+    if (!isOpened) return [cl.content, cl.content_disabled].join(" ");
+    if (isLoading) return [cl.content, cl.content_loading].join(" ");
+    if (content.length > 0) return [cl.content, cl.content_enabled].join(" ");
     return cl.content;
   }
 
   return (
     <article className={selectClassName()}>
       {isError && (
-        <Error className={cl.Error} isPopup={true} onClose={onClose}>
+        <Error className={cl.error} isPopup={true} onClose={onClose}>
           Ошибка загрузки информации
         </Error>
       )}
       {isLoading && <Loader className={cl.loader} />}
-      {content && <PromotionPopupContent {...content} onClose={onClose} />}
+      {content.length > 0 && (
+        <PromotionPopupContent {...content[0]} onClose={onClose} />
+      )}
     </article>
   );
 };

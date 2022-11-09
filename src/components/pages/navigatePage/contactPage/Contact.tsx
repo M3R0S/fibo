@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import cl from "../../../../assets/styles/pages/contact/contact.module.sass";
 import ButtonCallNumber from "../../../ui/components/button/buttonCallNumber/ButtonCallNumber";
 

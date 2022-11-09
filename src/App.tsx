@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { BrowserRouter } from "react-router-dom";
 import FooterApp from "./components/footer/FooterApp";
 import Navbar from "./components/navbar/Navbar";

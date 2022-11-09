@@ -13,4 +13,5 @@ export type TPromotionSlice = {
 
 export type TPromotionQueryParams = {
   popupId: string
+  popupType?: string
 }

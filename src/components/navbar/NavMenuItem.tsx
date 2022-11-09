@@ -1,16 +1,18 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import * as Scroll from "react-scroll";
 import { useAppDispatch, useAppSelector } from "../../hook/storeHook/useStore";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
-  setIdActive,
+  setEndLoadingProduct,
+  setGlobalIsIntersecting,
+  setLinkActive,
   setOpenModalBurger,
   setStaticScrollY,
 } from "../../store/slice/navbarSlice";
 
 interface INavMenuItem {
   isAnchor: boolean;
-  idEllement: string;
+  endpoint: string;
   title: string;
   to: string;
   clNavLink: string;
@@ -18,7 +20,7 @@ interface INavMenuItem {
 }
 
 const NavMenuItem: FC<INavMenuItem> = ({
-  idEllement,
+  endpoint,
   isAnchor,
   title,
   to,
@@ -28,27 +30,36 @@ const NavMenuItem: FC<INavMenuItem> = ({
   const ScrollLink = Scroll.Link;
   const animateScroll = Scroll.animateScroll;
   const dispatch = useAppDispatch();
-  const { idActive } = useAppSelector((state) => state.navbar);
+  const { linkActive, endLoadingProduct } = useAppSelector(
+    (state) => state.navbar
+  );
   const navigate = useNavigate();
+  const location = useLocation()
 
+  const { pasta, pizza, salad, soup } = endLoadingProduct;
+
+  
   return (
     <li>
       {isAnchor ? (
+      // todo Переделать СкролЛинк. Убрать ошибку о ненайденом элементе
         <ScrollLink
-          to={idEllement}
-          smooth={true}
+          to={location.pathname === '/main' ? endpoint : ''}
+          smooth={pasta && pizza && salad && soup ? true : false}
           duration={700}
-          offset={-80}
+          offset={-95}
           className={
-            idActive === idEllement
+            linkActive === endpoint
               ? `${clNavLink} ${clNavLinkActive}`
               : clNavLink
           }
           onClick={() => {
             navigate("/main");
-            dispatch(setIdActive(idEllement));
+            dispatch(setLinkActive(endpoint));
             dispatch(setStaticScrollY(window.scrollY));
             dispatch(setOpenModalBurger(false));
+            dispatch(setGlobalIsIntersecting(false));
+            setTimeout(() => dispatch(setGlobalIsIntersecting(true)), 700);
           }}
         >
           {title}
@@ -56,14 +67,14 @@ const NavMenuItem: FC<INavMenuItem> = ({
       ) : (
         <Link
           className={
-            idActive === idEllement
+            linkActive === endpoint
               ? `${clNavLink} ${clNavLinkActive}`
               : clNavLink
           }
           to={to}
           onClick={() => {
             animateScroll.scrollToTop();
-            dispatch(setIdActive(idEllement));
+            dispatch(setLinkActive(endpoint));
             dispatch(setStaticScrollY(window.scrollY));
             dispatch(setOpenModalBurger(false));
           }}

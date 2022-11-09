@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC, memo } from "react";
 import cl from "../../assets/styles/navbar/navMenu.module.sass";
 import ButtonHome from "../ui/components/button/buttonHome/ButtonHome";
 import LogoImg from "../ui/assets/logoImg/LogoImg";
@@ -36,7 +36,7 @@ const NavMenu: FC<INavMenu> = ({ scrollDown }) => {
   );
 };
 
-export default React.memo(NavMenu);
+export default memo(NavMenu);
 
 export const navLinks = [
   {
@@ -44,76 +44,76 @@ export const navLinks = [
     to: "/main",
     title: "Пицца",
     isAnchor: true,
-    idEllement: "mainProductSectionPizza",
+    endpoint: "pizza",
   },
   {
     id: 2,
     to: "/main",
     title: "Паста",
     isAnchor: true,
-    idEllement: "mainProductSectionPasta",
+    endpoint: "pasta",
   },
   {
     id: 3,
     to: "/main",
     title: "Супы",
     isAnchor: true,
-    idEllement: "mainProductSectionSoup",
+    endpoint: "soup",
   },
   {
     id: 4,
     to: "/main",
     title: "Салаты",
     isAnchor: true,
-    idEllement: "mainProductSectionSalad",
+    endpoint: "salad",
   },
   {
     id: 5,
     to: "/error",
     title: "Напитки",
     isAnchor: false,
-    idEllement: "mainProductSectionWater",
+    endpoint: "water",
   },
   {
     id: 6,
     to: "/error",
     title: "Десерты",
     isAnchor: false,
-    idEllement: "mainProductSectionDesert",
+    endpoint: "desert",
   },
   {
     id: 7,
     to: "/error",
     title: "Бакалея",
     isAnchor: false,
-    idEllement: "mainProductSectionBakaly",
+    endpoint: "bakaly",
   },
   {
     id: 8,
     to: "/error",
     title: "Антипасти",
     isAnchor: false,
-    idEllement: "mainProductSectionAntipasty",
+    endpoint: "antipasty",
   },
   {
     id: 9,
     to: "/promotion",
     title: "Акции",
     isAnchor: false,
-    idEllement: "Promotion",
+    endpoint: "promotion",
   },
   {
     id: 10,
     to: "/error",
     title: "Комбо",
     isAnchor: false,
-    idEllement: "Combo",
+    endpoint: "combo",
   },
   {
     id: 11,
     to: "/contact",
     title: "Контакты",
     isAnchor: false,
-    idEllement: "Contact",
+    endpoint: "contact",
   },
 ];

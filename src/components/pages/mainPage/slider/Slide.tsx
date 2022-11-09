@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { debounce } from "../../../../helpers/debounce";
 import {
   useAppDispatch,
@@ -32,7 +32,7 @@ const Slide: FC = () => {
   useEffect(() => {
     setClickSlide(!clickSlide);
     addAutoSlide();
-    setAutoSlide(true)
+    setAutoSlide(true);
     return () => {
       removeAutoSlide();
     };
@@ -72,7 +72,7 @@ const Slide: FC = () => {
       <button
         type="button"
         onClick={() => clickHandlerLeft()}
-        className={[cl.point, cl.left_point].join(' ')}
+        className={[cl.point, cl.left_point].join(" ")}
       ></button>
       <CSSTransition
         in={clickSlide}
@@ -160,7 +160,7 @@ const Slide: FC = () => {
       <button
         type="button"
         onClick={() => clickHandlerRight()}
-        className={[cl.point, cl.right_point].join(' ')}
+        className={[cl.point, cl.right_point].join(" ")}
       ></button>
     </section>
   );

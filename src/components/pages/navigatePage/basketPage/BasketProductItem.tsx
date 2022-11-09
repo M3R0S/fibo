@@ -19,12 +19,11 @@ const BasketProductItem: FC<TPostBasketItem> = ({
   quantity,
   info,
   price,
-  pizzaDough,
-  pizzaSize,
-  pizzaWeightProduct,
+  dough,
+  size,
+  weight,
   idProduct,
   typeProduct,
-  weightProduct,
 }) => {
   const [targetAnimation, setTargetAnimation] = useState<boolean>();
   const [isFullInfo, setIsFullInfo] = useState<boolean>(false);
@@ -39,8 +38,8 @@ const BasketProductItem: FC<TPostBasketItem> = ({
         incrementQuantityItem({
           idProduct,
           typeProduct,
-          pizzaSize,
-          pizzaDough,
+          size,
+          dough,
         })
       );
     }
@@ -52,8 +51,8 @@ const BasketProductItem: FC<TPostBasketItem> = ({
         decrementQuantityItem({
           idProduct,
           typeProduct,
-          pizzaSize,
-          pizzaDough,
+          size,
+          dough,
         })
       );
     }
@@ -68,9 +67,7 @@ const BasketProductItem: FC<TPostBasketItem> = ({
       }}
       exit={false}
       onEntered={() =>
-        dispatch(
-          deleteBasketItem({ idProduct, typeProduct, pizzaDough, pizzaSize })
-        )
+        dispatch(deleteBasketItem({ idProduct, typeProduct, dough, size }))
       }
     >
       <section className={cl.container}>
@@ -132,8 +129,8 @@ const BasketProductItem: FC<TPostBasketItem> = ({
               )}
               <p className={cl.p_active}>
                 {typeProduct === "pizza"
-                  ? `${pizzaDough} тесто. ${pizzaWeightProduct} г.`
-                  : `${weightProduct} г.`}
+                  ? `${dough} тесто. ${weight} г.`
+                  : `${weight} г.`}
               </p>
             </div>
           </div>
@@ -142,7 +139,7 @@ const BasketProductItem: FC<TPostBasketItem> = ({
               className={cl.price}
               separator=" "
               preserveValue={true}
-              end={price * quantity}
+              end={Number(price) * quantity}
               duration={0.5}
               suffix={" ₽"}
             ></CountUp>

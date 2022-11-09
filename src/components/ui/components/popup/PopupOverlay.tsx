@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from "react";
+import { FC, useEffect } from "react";
 import cl from "./popup.module.sass";
 
 export interface IPopupOverlay {

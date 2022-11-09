@@ -1,0 +1,134 @@
+@use '../../../../../styles/_var' as var
+
+.container
+    margin-top: 20rem
+    z-index: 1
+    width: var.$section-width
+    display: flex
+    flex-direction: column
+
+    .group
+        &_card
+            margin-top: 2rem
+            display: flex
+            flex-direction: column
+
+            h1
+                margin-top: 1.5rem
+                margin-bottom: 1.5rem
+                color: var.$color-yellow
+                font-size: 3.2rem
+                font-weight: 800
+                background-color: #fff
+                border-radius: 1rem
+
+            .loader
+                margin-top: 25rem
+
+        &_items
+            min-height: 1000px
+            margin-top: 3rem
+            display: grid
+            grid-template-columns: repeat(auto-fit , minmax(270px, 1fr))
+            column-gap: 5rem
+            row-gap: 3rem
+            cursor: pointer
+
+        &_item
+            display: flex
+            flex-direction: column
+            border-radius: 1.2rem
+            transition: all 0.1s linear
+            padding: 1rem
+            justify-content: space-between
+
+            .header
+                &_info
+                    display: flex
+                    flex-direction: column
+
+                    img
+                        max-width: 100%
+
+                    p
+                        margin-top: 1.5rem
+                        min-height: 4.5rem
+                        font-size: 1.5rem
+                        font-weight: 500
+                        line-height: 2rem
+                        color: #686466
+
+                &_title
+                    display: flex
+                    align-items: center
+                    margin-top: 0.5rem
+                    min-height: 6rem
+
+                    h2
+                        font-size: 2.5rem
+                        line-height: 3rem
+                        font-weight: 800
+                        color: #797979
+
+            .footer_info
+                margin-top: 2rem
+                display: flex
+                align-items: center
+                justify-content: space-between
+
+                strong
+                    font-size: 2.2rem
+                    font-weight: 700
+                    color: #231F20
+
+                .basket
+                    width: 126px
+                    height: 36px
+                    background-color: var.$color-yellow
+                    color: #FFF
+                    border-radius: 0.8rem
+                    font-weight: 700
+                    font-size: 1.4rem
+                    transition: all 0.1s linear
+
+                    &:hover
+                        color: #000
+
+                .basket_disabled
+                    background-color: lightgray
+                    color: #000
+                    cursor: not-allowed
+
+
+            &:hover
+                box-shadow: 0 0.8rem 2.4rem 0 #00000035
+
+@media screen and ( max-width: 1200px )
+    .container
+        width: 90%
+
+        .group
+            &_card
+                h1
+                    text-align: center
+
+@media screen and (max-width: 900px)
+    .container
+        .group
+            &_items
+                grid-template-columns: repeat(auto-fit , minmax(220px, 1fr))
+
+            &_item
+                .footer_info
+                    strong
+                        font-size: 2rem
+
+@media screen and ( max-width: 555px )
+    .container
+        .group
+            &_item
+                .header
+                    &_info
+                        img
+                            max-width: 50%
+                            align-self: center
