@@ -1,6 +1,6 @@
 import { FC, memo } from "react";
 import cl from "../../../../../assets/styles/pages/promotionPage/page/promotionPage.module.sass";
-import { useGetPromotionPageListQuery } from "../../../../../store/slice/promotion/promotionApi";
+import { useGetPromotionPageListQuery } from "../../../../../store/slice/promotionPage/promotionPageApi";
 import Loader from "../../../../ui/assets/loader/Loader";
 import PromotionPageItem from "./PromotionPageItem";
 

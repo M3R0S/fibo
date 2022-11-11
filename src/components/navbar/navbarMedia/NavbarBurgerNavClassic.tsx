@@ -12,6 +12,7 @@ interface INavbarBurgerNavClassic {
 const NavbarBurgerNavClassic: FC<INavbarBurgerNavClassic> = ({
   openModalBurger,
 }) => {
+
   return (
     <>
       <CSSTransition
@@ -31,8 +32,6 @@ const NavbarBurgerNavClassic: FC<INavbarBurgerNavClassic> = ({
           <ul>
             {navLinks.map((obj) => (
               <NavMenuItem
-                clNavLink={cl.nav}
-                clNavLinkActive={cl.nav_active}
                 {...obj}
                 key={obj.id}
               ></NavMenuItem>

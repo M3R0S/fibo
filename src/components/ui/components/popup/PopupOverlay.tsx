@@ -1,4 +1,4 @@
-import { FC, useEffect } from "react";
+import { FC, useEffect, useCallback } from "react";
 import cl from "./popup.module.sass";
 
 export interface IPopupOverlay {
@@ -7,24 +7,23 @@ export interface IPopupOverlay {
 }
 
 const PopupOverlay: FC<IPopupOverlay> = ({ isOpened, onClose }) => {
-  function eventEscape(e: KeyboardEvent) {
-    if (e.code === "Escape") {
-      onClose();
-    }
-  }
+  const eventEscape = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.code === "Escape") {
+        onClose();
+      }
+    },
+    [onClose]
+  );
 
   useEffect(() => {
     if (isOpened) {
       document.addEventListener("keydown", eventEscape);
     }
     return () => {
-      if (isOpened) {
-        // onClose();
-      }
       document.removeEventListener("keydown", eventEscape);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isOpened]);
+  }, [eventEscape, isOpened]);
 
   return (
     <div

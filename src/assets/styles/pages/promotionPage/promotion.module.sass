@@ -23,8 +23,7 @@
         z-index: 0
 
 .promotion
-
-    &_cont
+    &_content
         width: 100%
         margin-top: 4.7rem
         display: grid
@@ -34,17 +33,8 @@
         z-index: 1
 
     &_card
-        border-radius: 2rem
-        transition: all 0.1s linear
-
-        &:hover
-            box-shadow: 0 0.8rem 2.4rem 0 #00000035
-
         &:nth-of-type(1)
             grid-area: A
-
-            img
-                width: 100%
 
         &:nth-of-type(2)
             grid-area: B
@@ -58,10 +48,13 @@
         &:nth-of-type(5)
             grid-area: E
 
-        &:nth-of-type(2),&:nth-of-type(3),&:nth-of-type(4),&:nth-of-type(5)
-            img
-                width: 100%
+        img
+            border-radius: 2rem
+            transition: all 0.1s linear
+            cursor: pointer
 
+            &:hover
+                box-shadow: 0 0 2.4rem 0 #00000035
     &_link
         margin-top: 4.8rem
         padding: 1rem 3.4rem
@@ -71,8 +64,8 @@
         font-size: 1.4rem
         font-weight: 700
         line-height: 2.8rem
-        text-align: center
         transition: all 0.1s linear
+        z-index: 1
 
         &:hover
             box-shadow: 0 0.8rem 2.4rem 0 #00000035
@@ -82,11 +75,26 @@
     .container
         .model_woman
             opacity: 0.2
-            z-index: 0
 
 @media screen and ( max-width: 1200px )
     .container
-        width: 90%
+        width: auto
 
         h1
             font-size: 4rem
+    .promotion
+        &_content
+            grid-template-areas: "A A" "A A" "B C" "D E"
+            row-gap: 3%
+
+        &_link
+            margin-top: 10rem
+
+@media screen and ( max-width: 600px )
+    .container
+        width: 90%
+
+    .promotion
+        &_card
+            img
+                width: 100%

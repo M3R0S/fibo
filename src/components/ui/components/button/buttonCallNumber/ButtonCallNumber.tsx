@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useState, memo } from "react";
 import cl from "./buttonCallNumber.module.sass";
 
 interface IButtonCallNumber {
@@ -6,21 +6,25 @@ interface IButtonCallNumber {
 }
 
 const ButtonCallNumber: FC<IButtonCallNumber> = ({ className }) => {
-  const [text, setText] = useState("7 978 779-08-23");
+  const number = "7 978 779-08-23";
+  const [text, setText] = useState(number);
+
+  function clickHandlerText() {
+    navigator.clipboard.writeText("79787790823");
+    setText("Номер скопирован");
+    setTimeout(() => {
+      setText(number);
+    }, 3000);
+  }
+
   return (
     <button
-      onClick={(e) => {
-        navigator.clipboard.writeText("79787790823");
-        setText("Номер скопирован");
-        setTimeout(() => {
-          setText("7 978 779-08-23");
-        }, 3000);
-      }}
-      className={`${cl.call_number_root} ${className}`}
+      onClick={clickHandlerText}
+      className={[cl.call_number_root, className].join(" ")}
     >
       {text}
     </button>
   );
 };
 
-export default ButtonCallNumber;
+export default memo(ButtonCallNumber);

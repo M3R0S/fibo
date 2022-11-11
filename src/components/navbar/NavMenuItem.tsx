@@ -1,9 +1,9 @@
-import { FC } from "react";
+import { FC, useState, useEffect } from "react";
+import cl from "../../assets/styles/navbar/navMenu.module.sass";
 import * as Scroll from "react-scroll";
 import { useAppDispatch, useAppSelector } from "../../hook/storeHook/useStore";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
-  setEndLoadingProduct,
   setGlobalIsIntersecting,
   setLinkActive,
   setOpenModalBurger,
@@ -15,8 +15,6 @@ interface INavMenuItem {
   endpoint: string;
   title: string;
   to: string;
-  clNavLink: string;
-  clNavLinkActive: string;
 }
 
 const NavMenuItem: FC<INavMenuItem> = ({
@@ -24,34 +22,26 @@ const NavMenuItem: FC<INavMenuItem> = ({
   isAnchor,
   title,
   to,
-  clNavLink,
-  clNavLinkActive,
 }) => {
   const ScrollLink = Scroll.Link;
   const animateScroll = Scroll.animateScroll;
   const dispatch = useAppDispatch();
-  const { linkActive, endLoadingProduct } = useAppSelector(
-    (state) => state.navbar
-  );
   const navigate = useNavigate();
-  const location = useLocation()
+  const location = useLocation();
 
-  const { pasta, pizza, salad, soup } = endLoadingProduct;
+  const { linkActive, isEndLoadingProduct } = useAppSelector((state) => state.navbar);
 
-  
   return (
     <li>
       {isAnchor ? (
-      // todo Переделать СкролЛинк. Убрать ошибку о ненайденом элементе
+        // todo Переделать СкролЛинк. Убрать ошибку о ненайденом элементе
         <ScrollLink
-          to={location.pathname === '/main' ? endpoint : ''}
-          smooth={pasta && pizza && salad && soup ? true : false}
+          to={location.pathname === "/main" ? endpoint : ""}
+          smooth={isEndLoadingProduct ? true : false}
           duration={700}
           offset={-95}
           className={
-            linkActive === endpoint
-              ? `${clNavLink} ${clNavLinkActive}`
-              : clNavLink
+            linkActive === endpoint ? [cl.nav, cl.nav_active].join(" ") : cl.nav
           }
           onClick={() => {
             navigate("/main");
@@ -67,9 +57,7 @@ const NavMenuItem: FC<INavMenuItem> = ({
       ) : (
         <Link
           className={
-            linkActive === endpoint
-              ? `${clNavLink} ${clNavLinkActive}`
-              : clNavLink
+            linkActive === endpoint ? [cl.nav, cl.nav_active].join(" ") : cl.nav
           }
           to={to}
           onClick={() => {

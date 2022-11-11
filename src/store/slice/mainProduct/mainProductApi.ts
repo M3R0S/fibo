@@ -1,6 +1,6 @@
-import { TMainProductItem, TMainProductList} from './types/mainProductTypes';
+import { TMainProductItem, TMainProductList, TMainProductQueryParams} from './types/mainProductTypes';
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/dist/query/react';
-import { TPopupQueryParams } from '../../types/globalStoreSliceType';
+import { TPopupQueryParams } from '../../globalTypes/globalStoreSliceType';
 
 
 const mainProductApi = createApi({
@@ -10,18 +10,18 @@ const mainProductApi = createApi({
     }),
     tagTypes: ['mainProductApi'],
     endpoints: (build) => ({
-        getMainProductList: build.query<TMainProductList[], string>({
-            query: (type) => ({
-                url: 'main_position',
+        getMainProductList: build.query<TMainProductList[], TMainProductQueryParams>({
+            query: ({type}) => ({
+                url: 'main_product',
                 params: {
                     type,
                 }
             }),
             providesTags: (result) => ['mainProductApi']
         }),
-        getMainProductPopupDefault: build.query<TMainProductItem[], TPopupQueryParams >({
+        getMainProductPopupDefault: build.query<TMainProductItem[], TPopupQueryParams>({
             query: ({popupType, popupId}) => ({
-                url: 'main_position',
+                url: 'main_product',
                 params: {
                     type: popupType,
                     id: popupId,

@@ -10,6 +10,7 @@ export type TEndLoadingProduct = {
 
 type TNavbarItem = {
   endLoadingProduct: TEndLoadingProduct
+  isEndLoadingProduct: boolean
   globalIsIntersecting: boolean
   linkActive: string | null
   staticScrollY: number | null
@@ -24,6 +25,7 @@ const initialState: TNavbarItem = {
     soup: false,
     salad: false
   },
+  isEndLoadingProduct: false,
   globalIsIntersecting: true,
   linkActive: null,
   staticScrollY: null,
@@ -37,6 +39,9 @@ export const navbarSlice = createSlice({
   reducers: {
     setEndLoadingProduct: (state, action: PayloadAction<{endpoint: TSectionName, result: boolean}>) => {
       state.endLoadingProduct[action.payload.endpoint] = action.payload.result
+    },
+    setIsEndLoadingProduct: (state, action: PayloadAction<boolean>) => {
+      state.isEndLoadingProduct = action.payload
     },
     setGlobalIsIntersecting: (state, action: PayloadAction<boolean>) => {
       state.globalIsIntersecting = action.payload
@@ -57,6 +62,6 @@ export const navbarSlice = createSlice({
   },
 });
 
-export const { setEndLoadingProduct, setGlobalIsIntersecting, setStaticScrollY, setScreenWidth, setOpenModalBurger, setLinkActive} = navbarSlice.actions;
+export const { setEndLoadingProduct, setIsEndLoadingProduct, setGlobalIsIntersecting, setStaticScrollY, setScreenWidth, setOpenModalBurger, setLinkActive} = navbarSlice.actions;
 
 export default navbarSlice.reducer

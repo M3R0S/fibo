@@ -6,7 +6,7 @@ interface ILogoImg {
 }
 
 const LogoImg: FC<ILogoImg> = ({ className }) => {
-  return <img src={logoImg} alt="Логотип" className={className} />;
+  return <img src={logoImg} alt="Фибо" className={className} />;
 };
 
 export default LogoImg;

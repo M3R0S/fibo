@@ -1,10 +1,10 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   useAppDispatch,
   useAppSelector,
 } from "../../../../../hook/storeHook/useStore";
-import * as Scroll from "react-scroll";
+import { animateScroll } from "react-scroll";
 import { setLinkActive } from "../../../../../store/slice/navbarSlice";
 import cl from "./buttonBasket.module.sass";
 import CountUp from "react-countup";
@@ -16,20 +16,21 @@ interface IButtonBasket {
 const ButtonBasket: FC<IButtonBasket> = ({ className }) => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
-  const animateScroll = Scroll.animateScroll;
   const { totalPrice } = useAppSelector((state) => state.basketPage);
+
+  function clickHandlerGoBasket() {
+    navigate("/basket");
+    dispatch(setLinkActive(null));
+    animateScroll.scrollToTop({
+      duration: 0,
+    });
+  }
 
   return (
     <button
       type="button"
-      className={`${cl.basket_root} ${className}`}
-      onClick={() => {
-        navigate("/basket");
-        dispatch(setLinkActive(null));
-        animateScroll.scrollToTop({
-          duration: 0,
-        });
-      }}
+      className={[cl.basket_root, className].join(" ")}
+      onClick={clickHandlerGoBasket}
     >
       {totalPrice ? (
         <CountUp
@@ -48,4 +49,4 @@ const ButtonBasket: FC<IButtonBasket> = ({ className }) => {
   );
 };
 
-export default ButtonBasket;
+export default memo(ButtonBasket);

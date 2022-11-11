@@ -1,16 +1,32 @@
-import { FC, memo } from "react";
+import { FC, memo, useEffect } from "react";
 import cl from "../../assets/styles/navbar/navMenu.module.sass";
 import ButtonHome from "../ui/components/button/buttonHome/ButtonHome";
 import LogoImg from "../ui/assets/logoImg/LogoImg";
 import NavMenuItem from "./NavMenuItem";
 import ButtonBasket from "../ui/components/button/buttonBasket/ButtonBasket";
 import ButtonLogin from "../ui/components/button/buttonLogin/ButtonLogin";
+import { useAppDispatch, useAppSelector } from "../../hook/storeHook/useStore";
+import { setIsEndLoadingProduct } from "../../store/slice/navbarSlice";
 
 interface INavMenu {
   scrollDown: boolean;
 }
 
 const NavMenu: FC<INavMenu> = ({ scrollDown }) => {
+
+  const dispatch = useAppDispatch()
+  const { endLoadingProduct } = useAppSelector((state) => state.navbar);
+  const { pasta, pizza, salad, soup } = endLoadingProduct;
+
+  useEffect(() => {
+    if (pasta && pizza && salad && soup) {
+      dispatch(setIsEndLoadingProduct(true))
+    }
+    return () => {
+      dispatch(setIsEndLoadingProduct(false))
+    };
+  }, [pasta, pizza, salad, soup, dispatch]);
+
   return (
     <section className={cl.container}>
       {scrollDown && (
@@ -23,8 +39,6 @@ const NavMenu: FC<INavMenu> = ({ scrollDown }) => {
           {navLinks.map((obj) => (
             <NavMenuItem
               {...obj}
-              clNavLink={cl.nav}
-              clNavLinkActive={cl.nav_active}
               key={obj.id}
             ></NavMenuItem>
           ))}

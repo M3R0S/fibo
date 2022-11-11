@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState, useCallback } from "react";
-import { useAppSelector } from './../storeHook/useStore';
+import { useAppSelector } from '../storeHook/useStore';
 
 interface IOption {
   threshold: number[] | number;

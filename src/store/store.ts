@@ -1,36 +1,31 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import basketPageSlice from "./slice/basketPageSlice";
 import mainProductApi from "./slice/mainProduct/mainProductApi";
-import mainProductSlice from "./slice/mainProduct/mainProductSlice";
-import mainProductItemSlice from "./slice/mainProductItemSlice";
-// import mainProductSlice from "./slice/mainProductSlice";
 import navbarSlice from "./slice/navbarSlice";
-import newPositionSlice from "./slice/newPositionSlice";
+import newProductApi from "./slice/newProduct/newProductApi";
 import pizzaModalSlice from "./slice/pizzaModalSlice";
-import promotionApi from "./slice/promotion/promotionApi";
+import promotionPageApi from "./slice/promotionPage/promotionPageApi";
 import sliderSlice from "./slice/sliderSlice";
 import supplementsSlice from "./slice/supplementsSlice";
 
 const rootReducer = combineReducers({
   slider: sliderSlice,
-  mainProduct: mainProductSlice,
-  mainProductItem: mainProductItemSlice,
   supplements: supplementsSlice,
   navbar: navbarSlice,
   pizzaModal: pizzaModalSlice,
   basketPage: basketPageSlice,
-  newPosition: newPositionSlice,
-  mainProductSlice,
+  [newProductApi.reducerPath]: newProductApi.reducer,
   [mainProductApi.reducerPath]: mainProductApi.reducer,
-  [promotionApi.reducerPath]: promotionApi.reducer,
+  [promotionPageApi.reducerPath]: promotionPageApi.reducer,
 })
 
 const store = configureStore({
   reducer: rootReducer,
   middleware: (getDefaultMiddleware) => 
     getDefaultMiddleware()
-    .concat(promotionApi.middleware)
+    .concat(promotionPageApi.middleware)
     .concat(mainProductApi.middleware)
+    .concat(newProductApi.middleware)
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

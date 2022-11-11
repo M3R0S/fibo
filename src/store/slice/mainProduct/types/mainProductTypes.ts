@@ -9,7 +9,6 @@ export type TMainProductGalleries = {
   id: string;
   title: string;
   endpoint: TSectionName;
-  // idEllement: string;
 }
 
 export type TMainProductItem = {
@@ -45,12 +44,6 @@ export type TMainProductSlice = {
   loadingTime: number | null
 };
 
-export type TMainProductModalItemQuery = {
-  type: string,
-  id: string
-}
-
 export type TMainProductQueryParams = {
-  popupId: string
-  popupType: string
+  type: string
 }

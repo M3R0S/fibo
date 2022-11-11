@@ -2,12 +2,10 @@ import { FC } from "react";
 import Slide from "./slider/Slide";
 import cl from "../../../assets/styles/pages/pageApp.module.sass";
 import MainProductApp from "./mainProduct/page/MainProductApp";
-import Promotion from "./promotion/Promotion";
-import Delivery from "./delivery/Delivery";
-import NewPositionList from "./newPosition/NewPositionList";
-import {
-  useAppDispatch,
-} from "../../../hook/storeHook/useStore";
+import Promotion from "./promotion/PromotionList";
+import Delivery from "./delivery/DeliveryApp";
+import NewPositionList from "./newProduct/NewProductList";
+import { useAppDispatch } from "../../../hook/storeHook/useStore";
 import { setOpenModalBurger } from "../../../store/slice/navbarSlice";
 import MainProductPopupApp from "./mainProduct/popup/MainProductPopupApp";
 

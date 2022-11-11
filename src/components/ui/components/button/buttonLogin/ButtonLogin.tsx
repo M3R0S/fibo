@@ -7,7 +7,7 @@ interface IButtonLogin {
 
 const ButtonLogin: FC<IButtonLogin> = ({ className }) => {
   return (
-    <button type="button" className={`${cl.login_root} ${className}`}>
+    <button type="button" className={[cl.login_root, className].join(" ")}>
       Войти
     </button>
   );

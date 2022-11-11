@@ -1,6 +1,5 @@
 {
-  "main_position": [
-      
+  "main_product": [
         {
           "type": "pizza",
           "id": "1",
@@ -318,34 +317,34 @@
           "weight": "220"
         }
       ],
-  "new_position": [
+  "new_product": [
     {
       "type" : "pizza",
       "id": "1",
       "img": "/assets/image/mainProduct/pizza/pizza_gavaiskaya.jpg",
       "title": "Пицца Гавайская",
-      "price": 470
+      "price": "470"
     },
     {
       "type": "pasta",
       "id": "8",
       "img": "/assets/image/mainProduct/pasta/jareniy_ris_tom_yam.jpg",
       "title": "Жареный рис \"Том-Ям\"",
-      "price": 390
+      "price": "390"
     },
     {
       "type": "soup",
       "id": "6",
       "img": "/assets/image/mainProduct/soup/tom-yam-moreproducti.jpg",
       "title": "Суп Том-ям с морепродуктами",
-      "price": 460
+      "price": "460"
     },
     {
       "type": "salad",
       "id": "1",
       "img": "/assets/image/mainProduct/salad/grecheskiy.jpg",
       "title": "\"Греческий\" салат",
-      "price": 390
+      "price": "390"
     }
   ],
   "promotion_page": [

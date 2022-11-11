@@ -17,8 +17,7 @@ const PopupPortal: FC<IPopupPortal> = ({ children }) => {
     return () => {
       document.body.removeChild(container);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [container]);
 
   return ReactDOM.createPortal(children, container);
 };

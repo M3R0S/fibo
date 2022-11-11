@@ -1,9 +1,8 @@
-import { TPopupQueryParams } from './../../store/types/globalStoreSliceType';
+import { TPopupQueryParams } from '../../store/globalTypes/globalStoreSliceType';
 import { useState, useEffect } from 'react';
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const useGetParamsPopup = () : TPopupQueryParams => {
-    const location = useLocation();
     const { id, type } = useParams()
     const [params, setParams] = useState<TPopupQueryParams>({popupId: null, popupType: null});
 

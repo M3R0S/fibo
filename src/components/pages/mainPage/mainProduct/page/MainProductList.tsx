@@ -5,7 +5,7 @@ import { Element } from "react-scroll";
 import { TMainProductGalleries } from "../../../../../store/slice/mainProduct/types/mainProductTypes";
 import { useLazyGetMainProductListQuery } from "../../../../../store/slice/mainProduct/mainProductApi";
 import { useAppDispatch } from "../../../../../hook/storeHook/useStore";
-import useElementOnScreen from "../../../../../hook/useElementOnScreen/useElementOnScreen";
+import useElementOnScreen from "../../../../../hook/elementOnScreenHook/useElementOnScreen";
 import {
   setEndLoadingProduct,
   setLinkActive,
@@ -24,7 +24,8 @@ const MainProductList: FC<TMainProductGalleries> = ({ endpoint, title }) => {
 
   const onIntersecting = useCallback(() => {
     dispatch(setLinkActive(endpoint));
-    trigger(endpoint);
+    trigger({ type: endpoint });
+    dispatch(setEndLoadingProduct({ endpoint, result: true }));
   }, [dispatch, endpoint, trigger]);
 
   useEffect(() => {
@@ -32,22 +33,6 @@ const MainProductList: FC<TMainProductGalleries> = ({ endpoint, title }) => {
       onIntersecting();
     }
   }, [isIntersecting, onIntersecting]);
-
-  const onSetEndLoadingProduct = useCallback(
-    (result: boolean) => {
-      dispatch(setEndLoadingProduct({ endpoint, result }));
-    },
-    [dispatch, endpoint]
-  );
-
-  useEffect(() => {
-    if (list.length > 0) {
-      onSetEndLoadingProduct(true);
-    }
-    return () => {
-      onSetEndLoadingProduct(false);
-    };
-  }, [list, onSetEndLoadingProduct]);
 
   return (
     <Element name={endpoint}>

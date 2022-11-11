@@ -1,7 +1,7 @@
 import { FC } from "react";
 import cl from "../../../../../assets/styles/pages/promotionPage/popup/promotionPopup.module.sass";
-import { useGetPromotionModalItemQuery } from "../../../../../store/slice/promotion/promotionApi";
-import { TPopupQueryParams } from "../../../../../store/types/globalStoreSliceType";
+import { useGetPromotionModalItemQuery } from "../../../../../store/slice/promotionPage/promotionPageApi";
+import { TPopupQueryParams } from "../../../../../store/globalTypes/globalStoreSliceType";
 import Error from "../../../../ui/assets/error/Error";
 import Loader from "../../../../ui/assets/loader/Loader";
 import PromotionPopupContent from "./PromotionPopupContent";

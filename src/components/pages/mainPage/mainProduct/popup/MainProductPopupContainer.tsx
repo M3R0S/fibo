@@ -4,7 +4,7 @@ import Loader from "../../../../ui/assets/loader/Loader";
 import Error from "../../../../ui/assets/error/Error";
 import MainProductPopupContent from "./MainProductPopupContent";
 import { useGetMainProductPopupDefaultQuery } from "../../../../../store/slice/mainProduct/mainProductApi";
-import { TPopupQueryParams } from "../../../../../store/types/globalStoreSliceType";
+import { TPopupQueryParams } from "../../../../../store/globalTypes/globalStoreSliceType";
 
 interface IMainProductPopupContainer {
   onClose: () => void;

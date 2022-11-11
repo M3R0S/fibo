@@ -19,6 +19,7 @@ const NavbarBurgerNavAlternative: FC<INavbarBurgerNavAlternative> = ({
   openModalBurger,
 }) => {
   const dispatch = useAppDispatch();
+
   return (
     <CSSTransition
       in={openModalBurger}
@@ -48,8 +49,6 @@ const NavbarBurgerNavAlternative: FC<INavbarBurgerNavAlternative> = ({
           <ul>
             {navLinks.map((link) => (
               <NavMenuItem
-                clNavLink={cl.nav}
-                clNavLinkActive={cl.nav_active}
                 {...link}
                 key={link.id}
               ></NavMenuItem>

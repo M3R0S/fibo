@@ -1,6 +1,6 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import cl from "../../../../../assets/styles/pages/promotionPage/popup/promotionPopup.module.sass";
-import { TPromotionContent } from "../../../../../store/slice/promotion/types/promotionTypes";
+import { TPromotionContent } from "../../../../../store/slice/promotionPage/types/promotionTypes";
 
 interface IPromotionPopupContent {
   onClose: () => void;
@@ -26,4 +26,4 @@ const PromotionPopupContent: FC<TPromotionContent & IPromotionPopupContent> = ({
   );
 };
 
-export default PromotionPopupContent;
+export default memo(PromotionPopupContent);

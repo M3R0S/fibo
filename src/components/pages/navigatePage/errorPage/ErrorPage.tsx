@@ -11,7 +11,8 @@ const ErrorPage: FC = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { staticScrollY } = useAppSelector((state) => state.navbar);
-  const { loadingTime } = useAppSelector((state) => state.mainProduct);
+
+  // todo Возвращение на место перехода
 
   return (
     <main className={cl.error_container}>
@@ -23,7 +24,6 @@ const ErrorPage: FC = () => {
               navigate(-1);
               animateScroll.scrollMore(staticScrollY ? staticScrollY : 0, {
                 duration: 300,
-                delay: loadingTime,
               });
             }}
           >

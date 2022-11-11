@@ -7,7 +7,7 @@ interface IButtonOrderCall {
 
 const ButtonOrderCall: FC<IButtonOrderCall> = ({ className }) => {
   return (
-    <button className={`${cl.order_call_root} ${className}`} type="button">
+    <button className={[cl.order_call_root, className].join(" ")} type="button">
       Заказать звонок
     </button>
   );
