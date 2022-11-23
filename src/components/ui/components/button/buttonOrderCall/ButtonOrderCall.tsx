@@ -1,9 +1,6 @@
 import { FC } from "react";
 import cl from "./buttonOrderCall.module.sass";
-
-interface IButtonOrderCall {
-  className?: string;
-}
+import { IButtonOrderCall } from "./types";
 
 const ButtonOrderCall: FC<IButtonOrderCall> = ({ className }) => {
   return (

@@ -1,0 +1,74 @@
+@use '/src/app/sass/_var.sass' as var
+
+.delivery
+    &_info
+        margin-left: 5rem
+        display: flex
+        flex-direction: column
+
+        h1
+            font-size: 1.7rem
+            font-weight: 600
+            color: #231F20
+
+            span
+                color: var.$color-yellow
+                margin-left: 0.6rem
+
+    &_yandex
+        margin-top: 0.9rem
+
+        b, a
+            font-size: 1.3rem
+            padding: 0.6rem 0.5rem
+            font-weight: 700
+            color: #231F20
+            transition: all 0.2s linear
+            border-radius: 1rem
+
+        a
+            span
+                &:nth-of-type(1)
+                    margin-left: 2rem
+
+                    &::before
+                        background: url('./icons/yandex-delivery.png') no-repeat 50% 50%
+                        position: absolute
+                        transform: translate(-2.5rem, -0.1rem)
+                        width: 18px
+                        height: 20px
+                        content: ""
+
+                &:nth-of-type(2)
+                    margin-left: 2rem
+
+                    &::before
+                        background: url('./icons/red-ellipse.png') no-repeat 50% 50%
+                        position: absolute
+                        transform: translate(-1.1rem, -0.2rem)
+                        width: 4px
+                        height: 20px
+                        content: ""
+
+                    &::after
+                        background: url('./icons/star.png') no-repeat 50% 50%
+                        position: absolute
+                        transform: translate(0.5rem, -0.2rem)
+                        width: 14px
+                        height: 20px
+                        content: ""
+
+        b
+            &:nth-of-type(1)
+                margin-left: 1.5rem
+
+            &:nth-of-type(2)
+                margin-left: 1rem
+
+            &:nth-of-type(2)::before
+                background: url('./icons/red-ellipse.png') no-repeat 0 60%
+                position: absolute
+                transform: translate(-1.1rem, -0.2rem)
+                width: 4px
+                height: 20px
+                content: ""

@@ -1,9 +1,6 @@
 import { FC } from "react";
 import cl from "./buttonLogin.module.sass";
-
-interface IButtonLogin {
-  className?: string;
-}
+import { IButtonLogin } from "./types";
 
 const ButtonLogin: FC<IButtonLogin> = ({ className }) => {
   return (

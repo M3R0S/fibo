@@ -1,9 +1,9 @@
 import { Navigate } from "react-router-dom";
-import MainPageApp from "../components/pages/mainPage/MainPageApp";
-import BasketPageList from "../components/pages/navigatePage/basketPage/BasketPageList";
-import Contact from "../components/pages/navigatePage/contactPage/Contact";
+import MainPageApp from "../components/pages/mainPage/app/MainPageApp";
+import BasketPageApp from "../components/pages/navigatePage/basketPage/app/BasketPageApp";
+import ContactPage from "../components/pages/navigatePage/contactPage/ContactPage";
 import ErrorPage from "../components/pages/navigatePage/errorPage/ErrorPage";
-import PromotionPageApp from "../components/pages/navigatePage/promotionPage/page/PromotionPageApp";
+import PromotionPageApp from "../components/pages/navigatePage/promotionPage/page/app/PromotionPageApp";
 
 export interface IRoutes {
   patch: string;
@@ -33,7 +33,7 @@ export const publicRoutes: IRoutes[] = [
     patch: RoutesName.APP_PAGE_POPUP,
     element: <MainPageApp isOpenPopup={true} />,
   },
-  { patch: RoutesName.CONTACT_PAGE, element: <Contact /> },
+  { patch: RoutesName.CONTACT_PAGE, element: <ContactPage /> },
   {
     patch: RoutesName.PROMOTION_PAGE,
     element: <PromotionPageApp />,
@@ -43,5 +43,5 @@ export const publicRoutes: IRoutes[] = [
     element: <PromotionPageApp isOpenPopup={true} />,
   },
   { patch: RoutesName.ERROR_PAGE, element: <ErrorPage /> },
-  { patch: RoutesName.BASKET_PAGE, element: <BasketPageList /> },
+  { patch: RoutesName.BASKET_PAGE, element: <BasketPageApp /> },
 ];

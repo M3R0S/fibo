@@ -1,13 +1,9 @@
 import { FC } from "react";
+import { ILinkBlank } from "./types";
 
-interface ILinkBlank {
-  href: string;
-  children?: string | number;
-}
-
-const LinkBlank: FC<ILinkBlank> = ({ href, children }) => {
+const LinkBlank: FC<ILinkBlank> = ({ href, children, className }) => {
   return (
-    <a href={href} target="_blank" rel="noreferrer">
+    <a href={href} className={className} target="_blank" rel="noreferrer">
       {children}
     </a>
   );

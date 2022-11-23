@@ -1,43 +1,16 @@
 import { FC } from "react";
-import { useNavigate } from "react-router-dom";
-import cl from "../../../../assets/styles/pages/errorPage/errorPage.module.sass";
-import * as Scroll from "react-scroll";
-import { useAppSelector } from "../../../../hook/storeHook/useStore";
-import { setLinkActive } from "../../../../store/slice/navbarSlice";
-import { useDispatch } from "react-redux";
+import cl from "./errorPage.module.sass";
+import ButtonHome from "components/ui/components/button/buttonHome/ButtonHome";
+import ButtonBack from "components/ui/components/button/buttonBack/ButtonBack";
 
 const ErrorPage: FC = () => {
-  const animateScroll = Scroll.animateScroll;
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const { staticScrollY } = useAppSelector((state) => state.navbar);
-
-  // todo Возвращение на место перехода
-
   return (
-    <main className={cl.error_container}>
-      <section className={cl.error_content}>
+    <main className={cl.page}>
+      <section className={cl.container}>
         <h1>К сожалению, страница недоступна</h1>
-        <div className={cl.button_block}>
-          <button
-            onClick={() => {
-              navigate(-1);
-              animateScroll.scrollMore(staticScrollY ? staticScrollY : 0, {
-                duration: 300,
-              });
-            }}
-          >
-            Назад
-          </button>
-          <button
-            onClick={() => {
-              navigate("/main");
-              animateScroll.scrollToTop();
-              dispatch(setLinkActive(null));
-            }}
-          >
-            На главную
-          </button>
+        <div className={cl.control}>
+          <ButtonBack className={cl.back}>Назад</ButtonBack>
+          <ButtonHome className={cl.home}>На главную</ButtonHome>
         </div>
       </section>
     </main>

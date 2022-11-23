@@ -1,32 +1,32 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/dist/query/react";
-import { TPopupQueryParams } from "../../globalTypes/globalStoreSliceType";
-import { TPromotionContent } from "./types/promotionTypes";
+import { IPopupQueryParams } from "../global/globalTypes";
+import { IPromotionContent } from "./types";
 
- const promotionPageApi = createApi({
-    reducerPath: 'promotionPageApi',
-    baseQuery: fetchBaseQuery({
-      baseUrl: 'http://localhost:4000/' 
-    }),
-    tagTypes: ['promotionPageApi'],
-    endpoints: (build) => ({
-      getPromotionPageList: build.query<TPromotionContent[], null>({
-        query: () => ({
-          url: 'promotion_page'
-        }),
-        providesTags: (result) => ['promotionPageApi']
+const promotionPageApi = createApi({
+  reducerPath: "promotionPageApi",
+  baseQuery: fetchBaseQuery({
+    baseUrl: "http://localhost:4000/",
+  }),
+  tagTypes: ["promotionPageApi"],
+  endpoints: (build) => ({
+    getPromotionPageList: build.query<IPromotionContent[], null>({
+      query: () => ({
+        url: "promotion_page",
       }),
-      getPromotionModalItem: build.query<TPromotionContent[], TPopupQueryParams >({
-        query: ({popupId}) => ({
-          url: 'promotion_page',
-          params: {
-            id: popupId
-          }
-        }),
-        providesTags: (result) => ['promotionPageApi']
-      })
-    })
-  })
+      providesTags: (result) => ["promotionPageApi"],
+    }),
+    getPromotionModalItem: build.query<IPromotionContent[], IPopupQueryParams>({
+      query: ({ popupId }) => ({
+        url: "promotion_page",
+        params: {
+          id: popupId,
+        },
+      }),
+      providesTags: (result) => ["promotionPageApi"],
+    }),
+  }),
+});
 
-export const {useGetPromotionPageListQuery, useGetPromotionModalItemQuery} = promotionPageApi
+export const { useGetPromotionPageListQuery, useGetPromotionModalItemQuery } = promotionPageApi;
 
-export default promotionPageApi
+export default promotionPageApi;

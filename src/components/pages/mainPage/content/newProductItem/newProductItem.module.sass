@@ -1,0 +1,42 @@
+@use '/src/app/sass/_var.sass' as var
+
+.card
+    flex-basis: 25%
+    min-height: 100px
+    min-width: 300px
+    padding: 1.4rem 1.7rem
+    display: flex
+    align-items: center
+    box-shadow: 0 0 1.4rem 0.5rem #0000000F
+    border-radius: 1.2rem
+    cursor: pointer
+    transition: all 0.1s linear
+    background: #fff
+
+    &:hover
+        box-shadow: 0 0 1rem 1rem #0000000F
+
+    img
+        width: 70px
+        transform: scale(1.5)
+
+    .info
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        margin-left: 2.5rem
+
+        h2
+            font-size: 1.8rem
+            font-weight: 700
+            line-height: 2.7rem
+
+        strong
+            font-size: 1.6rem
+            font-weight: 800
+            color: var.$color-yellow
+            line-height: 2.3rem
+
+@media screen and ( max-width: 1200px )
+    .card
+        min-width: 270px

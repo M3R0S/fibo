@@ -1,0 +1,12 @@
+@use '/src/app/sass/_var.sass' as var
+
+.galleries_container
+    margin-top: 7rem
+    z-index: 1
+    width: var.$section-width
+    display: flex
+    flex-direction: column
+
+@media screen and ( max-width: 1200px )
+    .galleries_container
+        width: 90%

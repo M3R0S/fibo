@@ -1,0 +1,24 @@
+@use '/src/app/sass/_var.sass' as var
+
+.title
+    margin-top: 4rem
+    font-size: 1.6rem
+    font-weight: 700
+
+.link
+    font-size: 1.6rem
+    font-weight: 600
+    line-height: 3.3rem
+    transition: all 0.1s linear
+
+    &:nth-of-type(5)
+        grid-area: C
+        width: 200px
+
+    &:hover
+        color: var.$color-yellow
+
+@media screen and ( max-width: 450px )
+    .link
+        &:nth-of-type(5)
+            width: 150px

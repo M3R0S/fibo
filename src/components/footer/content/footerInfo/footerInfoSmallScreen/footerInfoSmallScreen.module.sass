@@ -1,0 +1,26 @@
+@use '/src/app/sass/_var.sass' as var
+
+.container
+    width: 100%
+    display: flex
+
+    .button_home
+        align-self: flex-start
+
+    .content
+        width: 100%
+        display: flex
+        flex-direction: column
+        margin-top: 3rem
+        margin-left: 3rem
+
+        .title
+            display: flex
+            justify-content: space-between
+            width: 80%
+
+    .social_network
+        margin-top: 1.5rem
+        display: grid
+        grid-template-areas: "A B C" "D F C"
+        column-gap: 7rem

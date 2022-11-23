@@ -1,12 +1,6 @@
 import { FC } from "react";
 import cl from "./error.module.sass";
-
-interface IError {
-  className?: string;
-  children?: string;
-  isPopup?: boolean;
-  onClose?: () => void;
-}
+import { IError } from "./types";
 
 const Error: FC<IError> = ({
   className,

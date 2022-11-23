@@ -1,25 +1,29 @@
-import { useCallback, useEffect, useMemo } from 'react';
-import { useAppDispatch } from './../storeHook/useStore';
-import { setScreenWidth } from '../../store/slice/navbarSlice';
-import { debounce } from 'lodash'
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { debounce } from "lodash";
 
 const useScreenSize = () => {
-    const dispatch = useAppDispatch()
+  const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
+  const [screenHeight, setScreenHeight] = useState<number>(window.innerHeight);
 
-    const debounceResize = useMemo(() => 
-        debounce(() => {
-            dispatch(setScreenWidth(window.innerWidth));
-            }, 200), 
-        [dispatch])
+  const debounceResize = useMemo(
+    () =>
+      debounce(() => {
+        setScreenWidth(window.innerWidth);
+        setScreenHeight(window.innerHeight);
+      }, 200),
+    []
+  );
 
-    const resize = useCallback(debounceResize, [debounceResize]);
-    
-      useEffect(() => {
-        window.addEventListener("resize", resize);
-        return () => {
-            window.removeEventListener("resize", resize);
-        }
-      }, [dispatch, resize]);
-}
+  const resize = useCallback(debounceResize, [debounceResize]);
 
-export default useScreenSize
+  useEffect(() => {
+    window.addEventListener("resize", resize);
+    return () => {
+      window.removeEventListener("resize", resize);
+    };
+  }, [resize]);
+
+  return { screenWidth, screenHeight };
+};
+
+export default useScreenSize;

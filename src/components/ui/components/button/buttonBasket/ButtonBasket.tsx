@@ -1,30 +1,13 @@
 import { FC, memo } from "react";
-import { useNavigate } from "react-router-dom";
-import {
-  useAppDispatch,
-  useAppSelector,
-} from "../../../../../hook/storeHook/useStore";
-import { animateScroll } from "react-scroll";
-import { setLinkActive } from "../../../../../store/slice/navbarSlice";
+import { useAppSelector } from "../../../../../hook/useStore/useStore";
 import cl from "./buttonBasket.module.sass";
 import CountUp from "react-countup";
-
-interface IButtonBasket {
-  className?: string;
-}
+import { IButtonBasket } from "./types";
+import useButtonBasket from "./useButtonBasket";
 
 const ButtonBasket: FC<IButtonBasket> = ({ className }) => {
-  const navigate = useNavigate();
-  const dispatch = useAppDispatch();
   const { totalPrice } = useAppSelector((state) => state.basketPage);
-
-  function clickHandlerGoBasket() {
-    navigate("/basket");
-    dispatch(setLinkActive(null));
-    animateScroll.scrollToTop({
-      duration: 0,
-    });
-  }
+  const { clickHandlerGoBasket } = useButtonBasket();
 
   return (
     <button

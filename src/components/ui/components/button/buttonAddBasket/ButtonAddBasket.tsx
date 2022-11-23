@@ -1,25 +1,10 @@
-import { FC, memo, useState } from "react";
-import { useAppDispatch } from "../../../../../hook/storeHook/useStore";
-import { postBasketItem } from "../../../../../store/slice/basketPageSlice";
+import { FC, memo } from "react";
 import cl from "./buttonAddBasket.module.sass";
 import CountUp from "react-countup";
-import { v4 as uuid } from "uuid";
+import { IButtonAddBasket } from "./types";
+import useButtonAddBasket from "./useButtonAddBasket";
 
-interface ITMainProductItemModal {
-  type: string;
-  id: string;
-  title: string;
-  info: string;
-  img: string;
-  weight: string;
-  price: string;
-  dough?: string;
-  size?: string;
-  className?: string;
-  onClose: () => void;
-}
-
-const ButtonAddBasket: FC<ITMainProductItemModal> = ({
+const ButtonAddBasket: FC<IButtonAddBasket> = ({
   id,
   img,
   info,
@@ -32,39 +17,21 @@ const ButtonAddBasket: FC<ITMainProductItemModal> = ({
   className,
   onClose,
 }) => {
-  const dispatch = useAppDispatch();
-  const [productAdd, setProductAdd] = useState<boolean>(false);
-
-  function onSetProductAdd() {
-    setProductAdd(true);
-    setTimeout(() => setProductAdd(false), 3000);
-  }
-
-  function setPostBasketItem() {
-    dispatch(
-      postBasketItem({
-        id: uuid(),
-        typeProduct: type,
-        idProduct: id,
-        title,
-        info,
-        img,
-        dough,
-        size,
-        weight,
-        price,
-        quantity: 1,
-      })
-    );
-    onSetProductAdd();
-    onClose();
-  }
+  const { productAdd, setPostBasketItem } = useButtonAddBasket({
+    id,
+    img,
+    info,
+    onClose,
+    price,
+    title,
+    type,
+    weight,
+    dough,
+    size,
+  });
 
   return (
-    <button
-      onClick={setPostBasketItem}
-      className={[cl.add_basket_root, className].join(" ")}
-    >
+    <button onClick={setPostBasketItem} className={[cl.add_basket_root, className].join(" ")}>
       {productAdd ? (
         "Товар успешно добавлен!"
       ) : (

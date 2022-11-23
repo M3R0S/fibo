@@ -1,0 +1,34 @@
+@use '/src/app/sass/_var.sass' as var
+
+.card
+    width: 255px
+    background-color: #fff
+    border-radius: 1.4rem
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: relative
+
+    .rectangle_icon
+        width: 77px
+        height: 77px
+        border-radius: 50%
+        background-color: #fff
+        position: absolute
+        transform: translate(0, -3rem)
+        display: flex
+        justify-content: center
+        align-items: center
+
+    .info
+        padding: 5rem 2rem 2rem 2rem
+
+        h2
+            font-size: 1.4rem
+            font-weight: 700
+            line-height: 2.2rem
+            text-align: center
+
+@media screen and ( max-width: 600px )
+    .card
+        width: 400px

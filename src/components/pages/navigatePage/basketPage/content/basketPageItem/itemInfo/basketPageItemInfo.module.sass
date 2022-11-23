@@ -1,0 +1,48 @@
+@use '/src/app/sass/_var.sass' as var
+
+.container
+    display: flex
+    align-items: center
+    flex-basis: 60%
+
+    img
+        width: 90px
+
+.info
+    padding: 1rem 0
+    margin-left: 2.5rem
+
+    h2
+        font-size: 1.9rem
+        font-weight: 700
+        line-height: 3rem
+
+    p
+        margin-top: 0.9rem
+        font-size: 1.3rem
+        font-weight: 500
+        line-height: 1.9rem
+
+    span
+        display: inline-block
+        margin-top: 1rem
+        font-size: 1.3rem
+        line-height: 1.9rem
+        font-weight: 500
+        color: var.$color-yellow
+        cursor: pointer
+
+@media screen and ( max-width: 900px )
+    .container
+        flex-basis: 60%
+
+@media screen and ( max-width: 500px )
+    .container
+        img
+            width: 70px
+
+    .info
+        margin-left: 0.5rem
+
+        h2
+            font-size: 1.4rem

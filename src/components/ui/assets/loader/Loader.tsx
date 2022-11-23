@@ -1,10 +1,7 @@
 import { FC } from "react";
-import loader from "../../../../assets/image/loader.gif";
+import loader from "./image/loader.gif";
 import cl from "./loader.module.sass";
-
-interface ILoader {
-  className?: string;
-}
+import { ILoader } from "./types";
 
 const Loader: FC<ILoader> = ({ className }) => {
   return (

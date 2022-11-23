@@ -1,0 +1,28 @@
+@use '/src/app/sass/_var.sass' as var
+
+.list
+    margin-top: 3rem
+    display: flex
+    flex-direction: column
+
+.basket_void
+    margin: 20rem 0
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    row-gap: 2rem
+
+    h2
+        font-weight: 800
+        font-size: 3.6rem
+        color: var.$color-red
+
+    .button_home
+        margin-left: 1rem
+        font-weight: 800
+        font-size: 3.6rem
+        color: var.$color-yellow
+
+@media screen and ( max-width: 1200px )
+    .basket_void
+        margin: 10rem 0

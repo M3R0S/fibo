@@ -1,0 +1,34 @@
+@use '/src/app/sass/_var.sass' as var
+
+.link
+    padding: 0.7rem
+    font-size: 1.5rem
+    font-weight: 600
+    color: var.$color-black
+    border-radius: 1.2rem
+    transition: all 0.2s linear
+    cursor: pointer
+
+    &:hover
+        background-color: var.$color-yellow
+
+    &_active
+        color: var.$color-yellow
+
+        &:hover
+            background-color: #fff
+
+@media screen and ( max-width: 530px )
+    .link
+        color: var.$color-black
+        background-color: var.$color-yellow
+        font-size: 1.9rem
+
+        &:hover
+            background-color: #fff
+
+        &_active
+            color: #fff
+
+            &:hover
+                background-color: var.$color-yellow
