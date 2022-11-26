@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import cl from "./promotionPopupContainer.module.sass";
 import { useGetPromotionModalItemQuery } from "store/slice/promotionPage/promotionPageApi";
 import Error from "components/ui/assets/error/Error";
@@ -7,13 +7,21 @@ import PromotionPopupContent from "../content/PromotionPopupContent";
 import { IPromotionPopupContainer } from "./types";
 import useSelectClassNamePromotionPopup from "./useSelectClassNamePromotionPopup";
 
-const PromotionPopupContainer: FC<IPromotionPopupContainer> = ({ isOpened, onClose, params }) => {
-  const { data: content = [], isLoading, isError } = useGetPromotionModalItemQuery(params);
+const PromotionPopupContainer: FC<IPromotionPopupContainer> = ({ onClose, params, isOpened }) => {
+  const {
+    data: content = [],
+    isError,
+    isFetching,
+  } = useGetPromotionModalItemQuery(params);
   const { selectClassName } = useSelectClassNamePromotionPopup({
     contentLenght: content.length,
-    isLoading,
     isOpened,
+    isFetching,
   });
+
+  useEffect(() => {
+    console.log(isFetching);
+  }, [isFetching]);
 
   return (
     <article className={selectClassName()}>
@@ -22,7 +30,7 @@ const PromotionPopupContainer: FC<IPromotionPopupContainer> = ({ isOpened, onClo
           Ошибка загрузки информации
         </Error>
       )}
-      {isLoading && <Loader className={cl.loader} />}
+      {isFetching && <Loader className={cl.loader} />}
       {content.length > 0 && <PromotionPopupContent {...content[0]} onClose={onClose} />}
     </article>
   );

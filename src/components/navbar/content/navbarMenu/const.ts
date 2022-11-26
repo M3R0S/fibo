@@ -31,10 +31,10 @@ export const navLinks: INavLink[] = [
     },
     {
       id: "5",
-      to: "/water",
+      to: "/drink",
       title: "Напитки",
       isAnchor: false,
-      endpoint: "water",
+      endpoint: "drink",
     },
     {
       id: "6",

@@ -1,18 +1,18 @@
 import { FC } from "react";
-import cl from "./promotionPageApp.module.sass";
-import PromotionPageList from "../container/PromotionPageList";
+import cl from "./contactPage.module.sass";
 import useLocationLinkActive from "hook/useLocationLinkActive/useLocationLinkActive";
 import { Outlet } from "react-router-dom";
+import ContactPageContent from "../content/ContactPageContent";
 
-const PromotionPageApp: FC = () => {
+const ContactPageApp: FC = () => {
   useLocationLinkActive();
 
   return (
     <main className={cl.page}>
-      <PromotionPageList />
+      <ContactPageContent />
       <Outlet />
     </main>
   );
 };
 
-export default PromotionPageApp;
+export default ContactPageApp;

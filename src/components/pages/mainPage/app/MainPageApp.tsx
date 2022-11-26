@@ -8,6 +8,7 @@ import NewProductList from "../container/newProduct/NewProductList";
 import { IMainPageApp } from "./types";
 import useMainPageApp from "./useMainPageApp";
 import Slider from "../container/slider/Slider";
+import { Outlet } from "react-router-dom";
 
 const MainPageApp: FC<IMainPageApp> = ({ isOpenPopup = false }) => {
   const { onCloseNavbarBurger } = useMainPageApp();
@@ -20,6 +21,7 @@ const MainPageApp: FC<IMainPageApp> = ({ isOpenPopup = false }) => {
       <MainProductPopupApp isOpened={isOpenPopup} />
       <PromotionList />
       <DeliveryApp />
+      <Outlet />
     </main>
   );
 };

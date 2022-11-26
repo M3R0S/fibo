@@ -15,6 +15,21 @@ const useLocationLinkActive = () => {
     if (path === "/contact") {
       dispatch(setLinkActive("contact"));
     }
+    if (path === "/drink") {
+      dispatch(setLinkActive("drink"));
+    }
+    if (path === "/desert") {
+      dispatch(setLinkActive("desert"));
+    }
+    if (path === "/bakaly") {
+      dispatch(setLinkActive("bakaly"));
+    }
+    if (path === "/antipasty") {
+      dispatch(setLinkActive("antipasty"));
+    }
+    if (path === "/combo") {
+      dispatch(setLinkActive("combo"));
+    }
     if (path === "/error") {
       dispatch(setLinkActive(null));
     }

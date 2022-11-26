@@ -4,6 +4,7 @@ export interface IPopupQueryParams {
 }
 
 export interface IGlobalSlice {
+  isOpenedLoginPopup: boolean;
   globalIsIntersecting: boolean;
   screenWidth: number | null;
 }

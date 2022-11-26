@@ -8,6 +8,6 @@ export interface IPromotionPopupContainer {
 
 export interface IUseSelectClassNamePromotionPopup {
   isOpened: boolean;
-  isLoading: boolean;
   contentLenght: number;
+  isFetching: boolean
 }

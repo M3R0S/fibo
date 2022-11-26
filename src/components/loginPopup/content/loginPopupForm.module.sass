@@ -1,0 +1,69 @@
+@use '/src/app/sass/_var.sass' as var
+
+.form
+    width: 100%
+    margin-top: 8rem
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    h1
+        font-size: 2.6rem
+        font-weight: 800
+        color: var.$color_yellow
+
+    .email, .password
+        width: 70%
+        height: 3.5rem
+        border: 0.15rem solid var.$color_lightgray
+        padding-left: 2.4rem
+        border-radius: 0.8rem
+        outline: none
+        font-family: caption
+        letter-spacing: 0.1rem
+
+        &_warning
+            border: 0.15rem solid var.$color_red
+
+        &_focus
+            border: 0.15rem solid var.$color_yellow
+
+    .email
+        margin-top: 4rem
+
+    .password
+
+    .validation_info
+        display: flex
+        align-items: center
+        width: 70%
+        height: 3rem
+
+        b
+            font-size: 1.2rem
+            font-weight: 600
+            color: var.$color_red
+
+    .login
+        padding: 1rem 3rem
+        margin-top: 1rem
+        font-size: 1.8rem
+        font-weight: 600
+        background: var.$color_yellow
+        border-radius: 0.8rem
+        transition: all 0.2s linear
+
+        &:hover
+            color: #fff
+
+    p
+        font-size: 1.4rem
+        margin-top: 1.5rem
+        font-weight: 500
+
+        span
+            margin-left: 1rem
+            font-size: 1.5rem
+            font-weight: 600
+            color: var.$color_yellow
+            cursor: pointer
