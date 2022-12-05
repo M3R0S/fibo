@@ -1,10 +1,14 @@
-import { FC, FormEvent } from "react";
+import Error from "components/ui/assets/error/Error";
+import Loader from "components/ui/assets/loader/Loader";
+import { useAppSelector } from "hook/useStore/useStore";
+import { FC } from "react";
 import cl from "./loginPopupForm.module.sass";
+import { ILoginPopupForm } from "./type";
 import useIsLogin from "./useIsLogin";
 import useValidationEmail from "./useValidationEmail";
 import useValidationPassword from "./useValidationPassword";
 
-const LoginPopupForm: FC = () => {
+const LoginPopupForm: FC<ILoginPopupForm> = ({ onClose }) => {
   const {
     emailClassName,
     emailValidation,
@@ -23,14 +27,30 @@ const LoginPopupForm: FC = () => {
     passwordClassName,
     passwordValidation,
     passwordValue,
+    setPasswordClassName,
+    setPasswordValidation,
   } = useValidationPassword();
 
-  const { isLogin, onSetIsLogin, onSubmit } = useIsLogin({
-    email: emailValue,
-    password: passwordValue,
-    setEmailValidation,
-    setEmailClassName,
-  });
+  const { isLogin, onsetIsAuthorized, onSubmit, isError, isFetching, isLoading, isBlockedUpdate } =
+    useIsLogin({
+      email: emailValue,
+      password: passwordValue,
+      setEmailValidation,
+      setEmailClassName,
+      setPasswordClassName,
+      setPasswordValidation,
+      onClose,
+    });
+
+  const { isAuthorized } = useAppSelector((state) => state.user);
+
+  if (isFetching || isLoading || (!isFetching && !isLoading && !isAuthorized && isBlockedUpdate)) {
+    return <Loader className={cl.loader} />;
+  }
+
+  if (isError) {
+    return <Error />;
+  }
 
   return (
     <form action="" onSubmit={onSubmit} className={cl.form}>
@@ -66,7 +86,7 @@ const LoginPopupForm: FC = () => {
       </button>
       <p>
         {isLogin ? "Нет аккаунта?" : "Есть аккаунт?"}
-        <span onClick={onSetIsLogin}>{isLogin ? "Зарегистрироваться" : "Войти"}</span>
+        <span onClick={onsetIsAuthorized}>{isLogin ? "Зарегистрироваться" : "Войти"}</span>
       </p>
     </form>
   );

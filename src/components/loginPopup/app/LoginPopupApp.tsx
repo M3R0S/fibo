@@ -10,7 +10,7 @@ const LoginPopupApp: FC = () => {
   return (
     <PopupPortal>
       <PopupOverlay isOpened={isOpened} onClose={closePopup} />
-      <LoginPopupContainer onClose={closePopup} />
+      <LoginPopupContainer isOpened={isOpened} onClose={closePopup} />
     </PopupPortal>
   );
 };

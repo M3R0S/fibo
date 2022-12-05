@@ -1,11 +1,10 @@
-import { FC, useEffect } from "react";
+import { FC } from "react";
 import cl from "./promotionPopupContainer.module.sass";
 import { useGetPromotionModalItemQuery } from "store/slice/promotionPage/promotionPageApi";
 import Error from "components/ui/assets/error/Error";
 import Loader from "components/ui/assets/loader/Loader";
 import PromotionPopupContent from "../content/PromotionPopupContent";
 import { IPromotionPopupContainer } from "./types";
-import useSelectClassNamePromotionPopup from "./useSelectClassNamePromotionPopup";
 
 const PromotionPopupContainer: FC<IPromotionPopupContainer> = ({ onClose, params, isOpened }) => {
   const {
@@ -13,15 +12,12 @@ const PromotionPopupContainer: FC<IPromotionPopupContainer> = ({ onClose, params
     isError,
     isFetching,
   } = useGetPromotionModalItemQuery(params);
-  const { selectClassName } = useSelectClassNamePromotionPopup({
-    contentLenght: content.length,
-    isOpened,
-    isFetching,
-  });
 
-  useEffect(() => {
-    console.log(isFetching);
-  }, [isFetching]);
+  function selectClassName(): string | undefined {
+    if (!isOpened) return [cl.content, cl.content_disabled].join(" ");
+    if (isFetching) return [cl.content, cl.content_loading].join(" ");
+    if (content.length > 0) return [cl.content, cl.content_enabled].join(" ");
+  }
 
   return (
     <article className={selectClassName()}>

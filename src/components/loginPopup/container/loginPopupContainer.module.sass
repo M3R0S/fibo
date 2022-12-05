@@ -3,13 +3,28 @@
 .container
     position: relative
     width: 50%
+    height: 40rem
     background: #fff
     border-radius: 1.2rem
     display: flex
+    align-items: center
     z-index: 1
-    padding-bottom: 6rem
+
+    &_disabled
+        animation: disabledContainer 0.5s ease
+
+    &_enabled
+        animation: enabledContainer 0.5s ease
 
 .close
     position: absolute
-    top: 1rem
-    right: 1rem
+    top: 1.5rem
+    right: 1.5rem
+
+@keyframes enabledContainer
+    0%
+        opacity: 0
+
+@keyframes disabledContainer
+    100%
+        opacity: 0

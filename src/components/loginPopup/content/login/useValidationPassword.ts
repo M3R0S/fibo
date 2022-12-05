@@ -47,6 +47,8 @@ const useValidationPassword = () => {
     passwordValidation,
     onFocusPassword,
     onBlurPassword,
+    setPasswordValidation,
+    setPasswordClassName,
   };
 };
 

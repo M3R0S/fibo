@@ -9,6 +9,6 @@ export interface ILoginUserQuery {
 }
 
 export interface IUserSlice {
-  isLogin: boolean;
+  isAuthorized: boolean
   user: IUser;
 }
