@@ -1,8 +1,8 @@
 import { useRef, useEffect, useState, useCallback } from "react";
-import { useAppSelector } from "../useStore/useStore";
-import { IOption } from "./types";
+import { useAppSelector } from "store";
+import { IOption } from "../types";
 
-const useElementOnScreen = (option: IOption) => {
+export const useElementOnScreen = (option: IOption) => {
   const containerRef = useRef(null);
   const { globalIsIntersecting } = useAppSelector((state) => state.global);
   const [isIntersecting, setIsIntersecting] = useState<boolean>(false);
@@ -35,5 +35,3 @@ const useElementOnScreen = (option: IOption) => {
 
   return { containerRef, isIntersecting };
 };
-
-export default useElementOnScreen;

@@ -1,0 +1,26 @@
+@use "styles/_var.module.scss" as *;
+
+.container {
+    width: 455px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    overflow: hidden;
+    padding-left: 2rem;
+    z-index: 1;
+
+    .link_contacts_wrapper {
+        margin-top: 4rem;
+    }
+
+    .call_number {
+        align-self: flex-start;
+        font-size: 3rem;
+        margin-top: 1rem;
+        transform: translate(-1rem);
+    }
+
+    .order_call {
+        margin-top: 2rem;
+    }
+}

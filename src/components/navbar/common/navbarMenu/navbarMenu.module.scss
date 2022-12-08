@@ -1,0 +1,14 @@
+@use "styles/_var.module.scss" as *;
+
+.container {
+    padding: 0.5rem 0;
+    width: $section-width;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav {
+    transform: translate(-0.8rem);
+    display: flex;
+    justify-content: space-between;
+}

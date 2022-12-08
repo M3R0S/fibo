@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { debounce } from "lodash";
 
-const useScreenSize = () => {
+export const useScreenSize = () => {
   const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
   const [screenHeight, setScreenHeight] = useState<number>(window.innerHeight);
 
@@ -25,5 +25,3 @@ const useScreenSize = () => {
 
   return { screenWidth, screenHeight };
 };
-
-export default useScreenSize;

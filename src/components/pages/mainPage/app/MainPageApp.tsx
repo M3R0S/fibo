@@ -1,5 +1,5 @@
 import { FC } from "react";
-import cl from "./mainPageApp.module.sass";
+import cl from "./mainPageApp.module.scss";
 import DeliveryApp from "../container/delivery/deliveryApp/DeliveryApp";
 import PromotionList from "../container/promotion/PromotionList";
 import MainProductApp from "../container/mainProduct/page/mainProductApp/MainProductApp";
@@ -11,19 +11,19 @@ import Slider from "../container/slider/Slider";
 import { Outlet } from "react-router-dom";
 
 const MainPageApp: FC<IMainPageApp> = ({ isOpenPopup = false }) => {
-  const { onCloseNavbarBurger } = useMainPageApp();
+    const { onCloseNavbarBurger } = useMainPageApp();
 
-  return (
-    <main onClick={onCloseNavbarBurger} className={cl.main}>
-      <Slider />
-      <NewProductList />
-      <MainProductApp />
-      <MainProductPopupApp isOpened={isOpenPopup} />
-      <PromotionList />
-      <DeliveryApp />
-      <Outlet />
-    </main>
-  );
+    return (
+        <main onClick={onCloseNavbarBurger} className={cl.main}>
+            <Slider />
+            <NewProductList />
+            <MainProductApp />
+            <MainProductPopupApp isOpened={isOpenPopup} />
+            <PromotionList />
+            <DeliveryApp />
+            <Outlet />
+        </main>
+    );
 };
 
 export default MainPageApp;

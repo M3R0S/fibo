@@ -1,0 +1,16 @@
+@use "styles/_var.module.scss" as *;
+
+.basket_root {
+    width: 160px;
+    height: 42px;
+    background-color: $color-yellow;
+    border-radius: 0.8em;
+    font-weight: 700;
+    font-size: 1.6em;
+    color: #231f20;
+    transition: all 0.2s linear;
+
+    &:hover {
+        box-shadow: 0 0 0 0.2em #0000001a;
+    }
+}

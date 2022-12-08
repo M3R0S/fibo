@@ -1,0 +1,40 @@
+@use "styles/_var.module.scss" as *;
+
+.container {
+    width: $section-width;
+    display: flex;
+    flex-direction: column;
+
+    .yandex_map {
+        border-radius: 1.4rem;
+
+        iframe {
+            width: 100%;
+            height: 322px;
+        }
+    }
+    .call_number {
+        align-self: flex-start;
+        margin-top: 4rem;
+        font-size: 3.8rem;
+        transform: translate(-0.3em);
+    }
+
+    h1 {
+        font-weight: 700;
+        font-size: 2.6rem;
+        margin-top: 1.8rem;
+    }
+
+    p {
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+}

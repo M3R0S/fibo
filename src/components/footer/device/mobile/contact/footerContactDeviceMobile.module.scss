@@ -1,0 +1,26 @@
+@use "styles/_var.module.scss" as *;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+
+    .link_contacts {
+        margin-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .copyright {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .payment_systems {
+        display: flex;
+        flex-wrap: nowrap;
+        column-gap: 1.5rem;
+    }
+}

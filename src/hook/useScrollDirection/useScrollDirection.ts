@@ -1,17 +1,17 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { debounce } from "lodash";
 
-const useScrollDirection = () => {
+export const useScrollDirection = () => {
   const [scrollY, setScrollY] = useState<number>(window.scrollY);
-  const [scrollDown, setScrollDown] = useState<boolean>(false);
+  const [isScrollDown, setIsScrollDown] = useState<boolean>(false);
 
   const handleDirectionDebounce = useMemo(
     () =>
       debounce(() => {
         if (scrollY > window.scrollY) {
-          setScrollDown(false);
+          setIsScrollDown(false);
         } else if (scrollY < window.scrollY) {
-          setScrollDown(true);
+          setIsScrollDown(true);
         }
         setScrollY(window.scrollY);
       }, 50),
@@ -27,7 +27,5 @@ const useScrollDirection = () => {
     };
   }, [handleDirection]);
 
-  return { scrollDown, scrollY };
+  return { isScrollDown, scrollY };
 };
-
-export default useScrollDirection;

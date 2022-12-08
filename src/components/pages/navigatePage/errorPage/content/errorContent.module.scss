@@ -1,0 +1,72 @@
+@use "styles/_var.module.scss" as *;
+
+.container {
+    width: 800px;
+    min-height: 250px;
+    padding: 3rem;
+    border: 0.1rem solid #00000021;
+    box-shadow: 0 0 1.2rem 0 #00000035;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+        font-size: 3.6rem;
+        font-weight: 700;
+        line-height: 5rem;
+        color: $color-red;
+        margin-top: 5rem;
+        text-align: center;
+        padding: 0 5rem;
+    }
+
+    .control {
+        margin-top: 5rem;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+
+        .back,
+        .home {
+            width: 150px;
+            height: 40px;
+            background-color: $color-yellow;
+            border-radius: 1rem;
+            font-size: 1.6rem;
+            font-weight: 600;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                box-shadow: 0 0 2rem 0.5rem #f5ce2175;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 70%;
+
+        h1 {
+            font-size: 3rem;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        h1 {
+            margin-top: 0;
+            font-size: 2.6rem;
+        }
+
+        .control {
+            margin-top: 3rem;
+            flex-direction: column;
+            align-items: center;
+            height: 100px;
+        }
+    }
+}

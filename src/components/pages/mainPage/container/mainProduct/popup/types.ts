@@ -1,17 +1,17 @@
-import { IPopupQueryParams } from "store/slice/global/globalTypes";
+import { IPopupQueryParams } from "store";
 
 export interface IMainProductPopupApp {
-  isOpened: boolean;
+    isOpened: boolean;
 }
 
 export interface IUseMainProductPopupContainer {
-  isOpened: boolean;
-  isLoading: boolean;
-  contentLenght: number;
+    isOpened: boolean;
+    isLoading: boolean;
+    contentLenght: number;
 }
 
 export interface IMainProductPopupContainer {
-  onClose: () => void;
-  params: IPopupQueryParams;
-  isOpened: boolean;
+    onClose: () => void;
+    params: IPopupQueryParams;
+    isOpened: boolean;
 }

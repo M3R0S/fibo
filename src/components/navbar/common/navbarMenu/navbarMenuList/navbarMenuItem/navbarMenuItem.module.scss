@@ -1,0 +1,43 @@
+@use "styles/_var.module.scss" as *;
+
+.link {
+    padding: 0.7rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $color-black;
+    border-radius: 1.2rem;
+    transition: all 0.2s linear;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-yellow;
+    }
+
+    &_active {
+        color: $color-yellow;
+
+        &:hover {
+            background-color: #fff;
+        }
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .link {
+        color: $color-black;
+        background-color: $color-yellow;
+        font-size: 1.9rem;
+
+        &:hover {
+            background-color: #fff;
+        }
+
+        &_active {
+            color: #fff;
+
+            &:hover {
+                background-color: $color-yellow;
+            }
+        }
+    }
+}

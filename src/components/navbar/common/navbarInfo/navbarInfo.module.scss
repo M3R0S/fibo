@@ -1,0 +1,21 @@
+@use "styles/_var.module.scss" as *;
+
+.container {
+    width: $section-width;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+.control {
+    display: flex;
+    align-items: center;
+}
+
+.call_number {
+    transform: translate(1rem);
+}

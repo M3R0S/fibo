@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { IBasketItem, IBasketPageSlice } from "./types";
+import { IBasketItem, IBasketPageSlice } from "../types";
 
 const initialState: IBasketPageSlice = {
   list: JSON.parse(localStorage.getItem("basketList") || "[]"),
@@ -98,8 +98,6 @@ function filterItems(list: IBasketItem[], id: string, findOneItem: boolean = tru
   }
 }
 
-export default basketPageSlice.reducer;
-
 export const {
   setPromoCodeActive,
   postBasketItem,
@@ -110,3 +108,5 @@ export const {
   setQuantityItem,
   clearBasket,
 } = basketPageSlice.actions;
+
+export const basketPageReducer = basketPageSlice.reducer;

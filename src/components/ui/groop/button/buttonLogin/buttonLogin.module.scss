@@ -1,0 +1,16 @@
+@use "styles/_var.module.scss" as *;
+
+.login_root {
+    padding: 0.6rem 1rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #696f7a;
+    border-radius: 1rem;
+    transition: all 0.2s linear;
+    background-color: inherit;
+
+    &:hover {
+        color: $color-yellow;
+        background-color: #696f7a99;
+    }
+}

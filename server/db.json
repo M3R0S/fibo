@@ -423,29 +423,9 @@
   ],
   "users": [
     {
-      "id": "33dba671-5d27-49c5-8e9f-aa5bcccf44f7",
-      "email": "123456@mail.ru",
-      "password": "12345656"
-    },
-    {
-      "id": "fbdd9ea3-1948-4d13-a560-fc3460e5455e",
-      "email": "1234567@mail.ru",
-      "password": "12345656"
-    },
-    {
-      "id": "c78d34e5-fe04-4e8d-9114-b3fd03da3dbf",
-      "email": "12345678@mail.ru",
-      "password": "12345656gfd"
-    },
-    {
-      "id": "6338346d-3ebe-47c9-aaad-ce4529177a26",
-      "email": "12345689@mail.ru",
-      "password": "12345656"
-    },
-    {
-      "id": "dda15faf-7c75-40e6-bfe5-f0d877c66c6b",
-      "email": "12345689fghf@mail.ru",
-      "password": "12345656"
+      "id": "2f1a1251-b71f-470c-8eb1-740c2c2ec37b",
+      "email": "kisa@mail.ru",
+      "password": "12345678"
     }
   ]
 }

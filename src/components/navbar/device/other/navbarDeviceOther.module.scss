@@ -1,0 +1,47 @@
+@use "styles/_var.module.scss" as *;
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    background-color: #fff;
+    padding: 1.5rem 0;
+    z-index: 100;
+    top: 0;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.control {
+    display: flex;
+    align-items: center;
+}
+
+.basket {
+    margin-left: 1.2em;
+}
+
+@media screen and (max-width: 700px) {
+    .call_number {
+        font-size: 1.8rem;
+    }
+
+    .basket {
+        margin-left: 0.5rem;
+    }
+
+    .burger {
+        margin-left: 0.5rem;
+    }
+}
+@media screen and (max-width: 530px) {
+    .call_number {
+        display: none;
+    }
+}

@@ -1,0 +1,22 @@
+@use "styles/_var.module.scss" as *;
+
+.cards {
+    width: 100%;
+    display: flex;
+    column-gap: 5%;
+    margin-top: 6.3rem;
+}
+
+@media screen and (max-width: 900px) {
+    .cards {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        row-gap: 7rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cards {
+        row-gap: 6%;
+    }
+}

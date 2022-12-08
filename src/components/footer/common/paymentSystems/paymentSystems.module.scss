@@ -1,0 +1,34 @@
+@use "styles/_var.module.scss" as *;
+
+.link {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+
+    &:hover {
+        filter: drop-shadow(0 0.3rem 0.3rem #0000008e);
+    }
+
+    &:nth-of-type(1) {
+        background: url("/assets/icons/footer/paymentSystems/visa.png") no-repeat 50% 50%;
+        margin-right: 2.5rem;
+    }
+    &:nth-of-type(2) {
+        background: url("/assets/icons/footer/paymentSystems/paypal.png") no-repeat 50% 50%;
+        margin-right: 2rem;
+    }
+    &:nth-of-type(3) {
+        background: url("/assets/icons/footer/paymentSystems/mc.png") no-repeat 50% 50%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .link {
+        &:nth-of-type(1),
+        &:nth-of-type(2),
+        &:nth-of-type(3) {
+            background-size: 30px;
+            margin: 0;
+        }
+    }
+}

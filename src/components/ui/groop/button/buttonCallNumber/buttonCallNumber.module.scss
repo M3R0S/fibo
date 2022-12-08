@@ -1,0 +1,15 @@
+@use "styles/_var.module.scss" as *;
+
+.call_number_root {
+    padding: 0.2em 0.3em;
+    color: $color-yellow;
+    font-size: 2.6em;
+    font-weight: 700;
+    border-radius: 1.7em;
+    white-space: nowrap;
+    background-color: inherit;
+
+    &:hover {
+        outline: 1px solid $color-yellow;
+    }
+}

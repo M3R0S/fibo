@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { IUser, IUserSlice } from "./types";
+import { IUser, IUserSlice } from "../types";
 
 const initialState: IUserSlice = {
   isLogin: true,
@@ -25,4 +25,4 @@ export const userSlice = createSlice({
 
 export const {setIsLogin, setUser} = userSlice.actions;
 
-export default userSlice.reducer;
+export const userReducer = userSlice.reducer;

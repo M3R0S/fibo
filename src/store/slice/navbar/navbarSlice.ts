@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { INavbarItem } from "./types";
+import { INavbarItem } from "../types";
 
 const initialState: INavbarItem = {
   linkActive: null,
@@ -21,4 +21,4 @@ export const navbarSlice = createSlice({
 
 export const { setOpenNavbarBurger, setLinkActive } = navbarSlice.actions;
 
-export default navbarSlice.reducer;
+export const navbarReducer = navbarSlice.reducer;

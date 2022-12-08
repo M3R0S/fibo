@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { IMainProductSlice, TSectionName } from "./types";
+import { IMainProductSlice, TSectionName } from "../types";
 
 const initialState: IMainProductSlice = {
   endLoadingProduct: {
@@ -11,7 +11,7 @@ const initialState: IMainProductSlice = {
   isEndLoadingProduct: false,
 };
 
-export const mainProduct = createSlice({
+export const mainProductSlice = createSlice({
   name: "global",
   initialState,
   reducers: {
@@ -30,6 +30,6 @@ export const mainProduct = createSlice({
 export const {
   setEndLoadingProduct,
   setIsEndLoadingProduct,
-} = mainProduct.actions;
+} = mainProductSlice.actions;
 
-export default mainProduct.reducer;
+export const mainProductReducer = mainProductSlice.reducer;

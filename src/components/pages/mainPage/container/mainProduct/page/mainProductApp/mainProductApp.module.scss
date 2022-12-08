@@ -1,0 +1,15 @@
+@use "styles/_var.module.scss" as *;
+
+.galleries_container {
+    margin-top: 7rem;
+    z-index: 1;
+    width: $section-width;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 1200px) {
+    .galleries_container {
+        width: 90%;
+    }
+}

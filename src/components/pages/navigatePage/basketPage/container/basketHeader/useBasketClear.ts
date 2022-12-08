@@ -1,14 +1,14 @@
-import { useAppDispatch } from "hook/useStore/useStore";
+import { useAppDispatch } from "store";
 import { clearBasket } from "store/slice/basketPage/basketPageSlice";
 
 const useBasketClear = () => {
-  const dispatch = useAppDispatch();
+    const dispatch = useAppDispatch();
 
-  function onClearBasket() {
-    dispatch(clearBasket());
-  }
+    function onClearBasket() {
+        dispatch(clearBasket());
+    }
 
-  return { onClearBasket };
+    return { onClearBasket };
 };
 
 export default useBasketClear;

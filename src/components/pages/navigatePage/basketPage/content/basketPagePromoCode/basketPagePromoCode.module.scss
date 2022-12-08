@@ -1,0 +1,103 @@
+@use "styles/_var.module.scss" as *;
+
+.promo {
+    &_code {
+        &_container {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+
+        &_result {
+            margin: 1rem 0 0 0.3rem;
+            font-size: 1.3rem;
+            min-height: 2rem;
+            opacity: 0;
+            color: $color-red;
+            transition: all 0.3s linear;
+
+            &_success {
+                color: $color-yellow;
+                opacity: 1;
+            }
+
+            &_fail {
+                color: $color-red;
+                opacity: 1;
+            }
+        }
+    }
+
+    &_check {
+        width: 220px;
+        height: 40px;
+        padding-left: 2.4rem;
+        border: 0.15rem solid $color-lightgray;
+        border-right: none;
+        border-radius: 0.8rem 0 0 0.8rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+        outline: none;
+        transition: all 0.3s linear;
+
+        &_disabled {
+            pointer-events: none;
+        }
+
+        &_warning {
+            border: 0.15rem solid $color-red;
+            border-right: none;
+        }
+
+        &_focus {
+            border: 0.15rem solid $color-yellow;
+            border-right: none;
+        }
+    }
+
+    &_enter {
+        width: 133px;
+        height: 43px;
+        background-color: $color-yellow;
+        border: 0.15rem solid $color-yellow;
+        border-left: none;
+        border-radius: 0 0.8rem 0.8rem 0;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #231f20;
+        transition: all 0.3s linear;
+
+        &_disabled {
+            pointer-events: none;
+            background-color: #f3f3f7;
+            border: 0.15rem solid $color-lightgray;
+            border-left: none;
+        }
+
+        &_focus {
+            border: 0.15rem solid $color-yellow;
+            border-left: none;
+        }
+
+        &_warning {
+            border: 0.15rem solid $color-red;
+            border-left: none;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .promo {
+        &_code {
+            width: 100%;
+        }
+
+        &_check {
+            width: 50%;
+        }
+
+        &_enter {
+            width: 40%;
+        }
+    }
+}

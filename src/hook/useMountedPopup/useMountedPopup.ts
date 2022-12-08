@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const useMountedPopup = (isOpened : boolean) => {
+export const useMountedPopup = (isOpened : boolean) => {
 
     const [isMounted, setIsMounted] = useState<boolean>(false);
 
@@ -16,5 +16,3 @@ const useMountedPopup = (isOpened : boolean) => {
 
       return isMounted
 }
-
-export default useMountedPopup

@@ -1,14 +1,14 @@
-import { useAppDispatch } from "hook/useStore/useStore";
+import { useAppDispatch } from "store";
 import { setOpenNavbarBurger } from "store/slice/navbar/navbarSlice";
 
 const useMainPageApp = () => {
-  const dispatch = useAppDispatch();
+    const dispatch = useAppDispatch();
 
-  function onCloseNavbarBurger() {
-    dispatch(setOpenNavbarBurger(false));
-  }
+    function onCloseNavbarBurger() {
+        dispatch(setOpenNavbarBurger(false));
+    }
 
-  return { onCloseNavbarBurger };
+    return { onCloseNavbarBurger };
 };
 
 export default useMainPageApp;

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const useClosePopup = () => {
+export const useClosePopup = () => {
   const [isOpened, setIsOpened] = useState<boolean>(true);
   const navigate = useNavigate();
 
@@ -12,5 +12,3 @@ const useClosePopup = () => {
 
   return { closePopup, isOpened };
 };
-
-export default useClosePopup;

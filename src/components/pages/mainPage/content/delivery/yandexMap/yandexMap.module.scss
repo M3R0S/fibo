@@ -1,0 +1,14 @@
+@use "styles/_var.module.scss" as *;
+
+.yandex_map {
+    margin-top: 3.2rem;
+    border-radius: 1.4rem;
+    width: 100%;
+    height: 322px;
+}
+
+@media screen and (max-width: 600px) {
+    .yandex_map {
+        margin-top: 10rem;
+    }
+}

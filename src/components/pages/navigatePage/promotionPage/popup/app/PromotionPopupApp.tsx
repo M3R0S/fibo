@@ -1,20 +1,20 @@
 import { FC } from "react";
-import useGetParamsPopup from "hook/useGetParamsPopup/useGetParamsPopup";
-import PopupOverlay from "components/ui/components/popup/popupOverlay/PopupOverlay";
+import { useGetParamsPopup } from "hook";
+import PopupOverlay from "components/ui";
 import PromotionPopupContainer from "../container/PromotionPopupContainer";
-import PopupPortal from "components/ui/components/popup/popupPortal/PopupPortal";
-import useClosePopup from "hook/useClosePopup/useClosePopup";
+import PopupPortal from "components/ui";
+import { useClosePopup } from "hook";
 
 const PromotionPopupApp: FC = () => {
-  const params = useGetParamsPopup();
-  const { closePopup, isOpened } = useClosePopup();
+    const params = useGetParamsPopup();
+    const { closePopup, isOpened } = useClosePopup();
 
-  return (
-    <PopupPortal>
-      <PopupOverlay isOpened={isOpened} onClose={closePopup} />
-      <PromotionPopupContainer isOpened={isOpened} onClose={closePopup} params={params} />
-    </PopupPortal>
-  );
+    return (
+        <PopupPortal>
+            <PopupOverlay isOpened={isOpened} onClose={closePopup} />
+            <PromotionPopupContainer isOpened={isOpened} onClose={closePopup} params={params} />
+        </PopupPortal>
+    );
 };
 
 export default PromotionPopupApp;

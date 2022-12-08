@@ -1,0 +1,57 @@
+@use "styles/_var.module.scss" as *;
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.2rem;
+    box-shadow: 0 0.4rem 2.4rem rgba(0, 0, 0, 0.06);
+
+    &:hover {
+        box-shadow: 0 0.8rem 2.4rem 0 #00000035;
+    }
+
+    &_enabled {
+        animation: forwards cardContainerEnabled 1s ease;
+    }
+
+    .info {
+        padding: 1.3rem 0.7rem 2rem 2rem;
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 2.8rem;
+        }
+
+        p {
+            font-size: 1.3rem;
+            font-weight: 500;
+            line-height: 2rem;
+            color: #797979;
+            margin-top: 0.7rem;
+        }
+    }
+
+    .open_popup {
+        width: 159px;
+        height: 45px;
+        background-color: $color-yellow;
+        color: #473e43;
+        font-size: 1.4rem;
+        font-weight: 700;
+        border-radius: 0.8rem;
+        margin: 0 0 2rem 2rem;
+        outline: none;
+
+        &:hover {
+            box-shadow: 0 0 2.4rem 0 #f7d22d4c;
+        }
+    }
+}
+
+@keyframes cardContainerEnabled {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
