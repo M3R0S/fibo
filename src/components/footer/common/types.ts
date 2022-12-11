@@ -1,25 +1,25 @@
-import { ReactNode } from "react"
+import { ReactNode } from "react";
 
-export interface ILinkContact {
-    id: string,
-    src: string
+export interface ILINK_CONTACTS {
+    id: string;
+    src: string;
 }
 
-export interface IPaymentSystem {
-    id: string,
-    src: string,
+export interface IPAYMENT_SYSTEM {
+    id: string;
+    src: string;
 }
 
-export interface ISocialNetwork {
-    id: string,
-    title: string,
-    src: string
+export interface ISOCIAL_NETWORK {
+    id: string;
+    title: string;
+    src: string;
 }
 
-export interface IUiClassName {
-    classNameWrapper?: string
+export interface IFooterConstantsClassName {
+    classNameWrapper?: string;
 }
 
-export interface IUiChildren {
-    children?: string | ReactNode
+export interface IFooterConstantsChildren {
+    children?: string | ReactNode;
 }

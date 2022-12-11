@@ -1,7 +1,7 @@
 import { useCallback, useEffect } from "react";
-import { IPopupOverlay } from "../types";
+import { IUseClosePopupOverlay } from "../types";
 
-export const useClosePopupOverlay = ({ isOpened, onClose }: IPopupOverlay) => {
+export const useClosePopupOverlay = ({ isOpened, onClose }: IUseClosePopupOverlay) => {
     const eventEscape = useCallback(
         (e: KeyboardEvent) => {
             if (e.code === "Escape") {

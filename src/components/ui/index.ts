@@ -14,4 +14,3 @@ export { ButtonOrderCall } from "./groop/button/buttonOrderCall/ButtonOrderCall"
 export { LinkBlank } from "./groop/link/linkBlank/LinkBlank";
 
 export { PopupOverlay } from "./groop/popup/popupOverlay/PopupOverlay";
-export { PopupPortal } from "./groop/popup/popupPortal/PopupPortal";

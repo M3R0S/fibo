@@ -13,6 +13,7 @@ import {
     promotionPageApiReducer,
     promotionPageApiReducerPath,
     userReducer,
+    loginReducer,
 } from "../slice";
 
 export const rootReducer = combineReducers({
@@ -21,6 +22,7 @@ export const rootReducer = combineReducers({
     global: globalReducer,
     mainProduct: mainProductReducer,
     user: userReducer,
+    login: loginReducer,
     [newProductApiReducerPath]: newProductApiReducer,
     [mainProductApiReducerPath]: mainProductApiReducer,
     [promotionPageApiReducerPath]: promotionPageApiReducer,

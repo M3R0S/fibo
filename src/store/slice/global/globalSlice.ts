@@ -2,28 +2,20 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { IGlobalSlice } from "../types";
 
 const initialState: IGlobalSlice = {
-    isOpenedLoginPopup: true,
-    globalIsIntersecting: true,
-    screenWidth: window.innerWidth,
+    globalScreenWidth: window.innerWidth,
 };
 
 export const globalSlice = createSlice({
     name: "global",
     initialState,
     reducers: {
-        setIsOpenedLoginPopup: (state, action: PayloadAction<boolean>) => {
-            state.isOpenedLoginPopup = action.payload;
-        },
-        setGlobalIsIntersecting: (state, action: PayloadAction<boolean>) => {
-            state.globalIsIntersecting = action.payload;
-        },
-        setScreenWidth: (state, action: PayloadAction<number>) => {
-            state.screenWidth = action.payload;
+        setGlobalScreenWidth: (state, action: PayloadAction<number>) => {
+            state.globalScreenWidth = action.payload;
         },
     },
 });
 
-export const { setGlobalIsIntersecting, setScreenWidth, setIsOpenedLoginPopup } =
+export const { setGlobalScreenWidth } =
     globalSlice.actions;
 
 export const globalReducer = globalSlice.reducer;

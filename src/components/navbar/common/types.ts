@@ -23,6 +23,6 @@ export interface IUseNavbarMenuItem {
     to: string;
 }
 
-export interface IButtonNavbarBurger {
+export interface IButtonBurgerMenu {
     className: string;
 }

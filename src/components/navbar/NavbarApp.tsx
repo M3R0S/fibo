@@ -2,8 +2,7 @@ import { FC } from "react";
 
 import { useScreenSize } from "hook";
 
-import { NavbarDeviceComputer } from "./device/computer/NavbarDeviceComputer";
-import { NavbarDeviceOther } from "./device/other/NavbarDeviceOther";
+import { NavbarDeviceComputer, NavbarDeviceOther } from "./device";
 
 export const NavbarApp: FC = () => {
     const { screenWidth } = useScreenSize();

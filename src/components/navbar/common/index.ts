@@ -1,3 +1,4 @@
-export { NavbarMenu } from "./navbarMenu/NavbarMenu";
-export { NavbarInfo } from "./navbarInfo/NavbarInfo";
-export { NavbarBurgerMenu } from "./navbarBurgerMenu/NavbarBurgerMenu";
+export { NavbarMenuApp } from "./menu/NavbarMenuApp";
+export { NavbarInfoApp } from "./info/NavbarInfoApp";
+export { NavbarBurgerMenuApp } from "./burgerMenu/NavbarBurgerMenuApp";
+export { ButtonBurgerMenu } from "./burgerMenu/button/ButtonBurgerMenu";

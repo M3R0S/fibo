@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { INavbarItem } from "../types";
+import { INavbarSlice } from "../types";
 
-const initialState: INavbarItem = {
-  linkActive: null,
+const initialState: INavbarSlice = {
+  navbarLinkActive: null,
   openNavbarBurger: false,
 };
 
@@ -10,8 +10,8 @@ export const navbarSlice = createSlice({
   name: "navbar",
   initialState,
   reducers: {
-    setLinkActive: (state, action: PayloadAction<string | null>) => {
-      state.linkActive = action.payload;
+    setNavbarLinkActive: (state, action: PayloadAction<string | null>) => {
+      state.navbarLinkActive = action.payload;
     },
     setOpenNavbarBurger: (state, action: PayloadAction<boolean>) => {
       state.openNavbarBurger = action.payload;
@@ -19,6 +19,6 @@ export const navbarSlice = createSlice({
   },
 });
 
-export const { setOpenNavbarBurger, setLinkActive } = navbarSlice.actions;
+export const { setOpenNavbarBurger, setNavbarLinkActive } = navbarSlice.actions;
 
 export const navbarReducer = navbarSlice.reducer;

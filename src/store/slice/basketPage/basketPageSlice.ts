@@ -32,32 +32,32 @@ export const basketPageSlice = createSlice({
       updatePriceAndLocalStorage(state, listUpdate, state.promoCodeRatio);
     },
 
-    changePromoCodeRatio: (state, action: PayloadAction<number>) => {
+    changeBasketPromoCodeRatio: (state, action: PayloadAction<number>) => {
       const promoCodeRatioUpdate = action.payload;
       state.promoCodeRatio = action.payload;
 
       updatePriceAndLocalStorage(state, state.list, promoCodeRatioUpdate);
     },
 
-    setPromoCodeActive: (state, action) => {
+    setBasketPromoCodeActive: (state, action) => {
       state.promoCodeActive = action.payload;
     },
 
-    incrementQuantityItem: (state, action: PayloadAction<string>) => {
+    incrementQuantityBasketItem: (state, action: PayloadAction<string>) => {
       const listUpdate = [...state.list];
       filterItems(listUpdate, action.payload)[0].quantity += 1;
 
       updatePriceAndLocalStorage(state, listUpdate, state.promoCodeRatio);
     },
 
-    decrementQuantityItem: (state, action: PayloadAction<string>) => {
+    decrementQuantityBasketItem: (state, action: PayloadAction<string>) => {
       const listUpdate = [...state.list];
       filterItems(listUpdate, action.payload)[0].quantity -= 1;
 
       updatePriceAndLocalStorage(state, listUpdate, state.promoCodeRatio);
     },
 
-    setQuantityItem: (state, action: PayloadAction<{ quantity: number; id: string }>) => {
+    setQuantityBasketItem: (state, action: PayloadAction<{ quantity: number; id: string }>) => {
       const listUpdate = [...state.list];
       filterItems(listUpdate, action.payload.id)[0].quantity = action.payload.quantity;
 
@@ -99,13 +99,13 @@ function filterItems(list: IBasketItem[], id: string, findOneItem: boolean = tru
 }
 
 export const {
-  setPromoCodeActive,
+  setBasketPromoCodeActive,
   postBasketItem,
   deleteBasketItem,
-  changePromoCodeRatio,
-  incrementQuantityItem,
-  decrementQuantityItem,
-  setQuantityItem,
+  changeBasketPromoCodeRatio,
+  incrementQuantityBasketItem,
+  decrementQuantityBasketItem,
+  setQuantityBasketItem,
   clearBasket,
 } = basketPageSlice.actions;
 

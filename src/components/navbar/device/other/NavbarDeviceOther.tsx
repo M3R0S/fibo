@@ -1,10 +1,9 @@
 import { FC } from "react";
+
 import cl from "./navbarDeviceOther.module.scss";
-import { ButtonNavigateBasket } from "components/ui";
-import { ButtonCallNumber } from "components/ui";
-import ButtonNavbarBurger from "components/ui/components/button/buttonNavbarBurger/ButtonNavbarBurger";
-import { Logo } from "components/ui";
-import { NavbarBurgerMenu } from "components/navbar/common";
+
+import { ButtonBurgerMenu, NavbarBurgerMenuApp } from "components/navbar/common";
+import { ButtonNavigateBasket, ButtonCallNumber, Logo } from "components/ui";
 
 export const NavbarDeviceOther: FC = () => {
     return (
@@ -14,8 +13,8 @@ export const NavbarDeviceOther: FC = () => {
                 <div className={cl.control}>
                     <ButtonCallNumber className={cl.call_number} />
                     <ButtonNavigateBasket className={cl.basket} />
-                    <ButtonNavbarBurger className={cl.burger} />
-                    <NavbarBurgerMenu />
+                    <ButtonBurgerMenu className={cl.burger} />
+                    <NavbarBurgerMenuApp />
                 </div>
             </section>
         </header>

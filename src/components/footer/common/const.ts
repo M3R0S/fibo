@@ -1,6 +1,6 @@
-import { ILinkContact, IPaymentSystem, ISocialNetwork } from "./types";
+import { ILINK_CONTACTS, IPAYMENT_SYSTEM, ISOCIAL_NETWORK } from "./types";
 
-export const linkContacts: ILinkContact[] = [
+export const LINK_CONTACTS: ILINK_CONTACTS[] = [
   {
     id: "1",
     src: "https://www.visa.com.ru/",
@@ -27,13 +27,13 @@ export const linkContacts: ILinkContact[] = [
   },
 ];
 
-export const paymentSystems: IPaymentSystem[] = [
+export const PAYMENT_SYSTEM: IPAYMENT_SYSTEM[] = [
   { id: "1", src: "https://www.visa.com.ru" },
   { id: "2", src: "https://www.paypal.com/ru" },
   { id: "3", src: "https://www.mastercard.ru" },
 ];
 
-export const socialNetwork: ISocialNetwork[] = [
+export const SOCIAL_NETWORK: ISOCIAL_NETWORK[] = [
   { id: "1", title: "YouTube", src: "https://www.youtube.com/" },
   { id: "2", title: "Facebook", src: "https://facebook.com/" },
   { id: "3", title: "Instagram", src: "https://instagram.com/" },

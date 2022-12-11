@@ -8,19 +8,27 @@ export interface IBasketPageSlice {
 }
 
 export interface IGlobalSlice {
+    globalScreenWidth: number | null;
+}
+
+export interface ILoginSlice {
+    isLogin: boolean
     isOpenedLoginPopup: boolean;
-    globalIsIntersecting: boolean;
-    screenWidth: number | null;
 }
 
 export interface IUserSlice {
-    isLogin: boolean;
     user: IUser;
 }
 
 export interface IMainProductSlice {
-    endLoadingProduct: IEndLoadingProduct;
-    isEndLoadingProduct: boolean;
+    isIntersectingMainProduct: boolean;
+    endLoadingMainProduct: IEndLoadingProduct;
+    isEndLoadingMainProduct: boolean;
+}
+
+export interface INavbarSlice {
+    navbarLinkActive: string | null;
+    openNavbarBurger: boolean;
 }
 
 //? Basket
@@ -85,13 +93,6 @@ export interface IEndLoadingProduct {
     pasta: boolean;
     soup: boolean;
     salad: boolean;
-}
-
-//? Navbar
-
-export interface INavbarItem {
-    linkActive: string | null;
-    openNavbarBurger: boolean;
 }
 
 //? NewProduct

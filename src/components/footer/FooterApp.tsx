@@ -4,9 +4,7 @@ import cl from "./footerApp.module.scss";
 
 import { useScreenSize } from "hook";
 
-import { FooterDeviceComputer } from "./device/computer/FooterDeviceComputer";
-import { FooterDevicePad } from "./device/pad/FooterDevicePad";
-import { FooterDeviceMobile } from "./device/mobile/FooterDeviceMobile";
+import {FooterDeviceComputer, FooterDeviceMobile, FooterDevicePad} from './device'
 
 import imageBackground from "assets/images/footer/footer-background.png";
 

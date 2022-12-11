@@ -1,9 +1,11 @@
 import { FC } from "react";
-import cl from "./navbarDeviceComputer.module.scss";
 import { CSSTransition } from "react-transition-group";
-import { useProcessingNavbarInfo } from "./useProcessingNavbarInfo";
-import { NavbarInfo, NavbarMenu } from "components/navbar/common";
+
+import cl from "./navbarDeviceComputer.module.scss";
+import { useProcessingNavbarInfo } from "./logic";
 import { TIMEOUT_ANIMATION_SCROLL_NAVBAR } from "../const";
+
+import { NavbarInfoApp, NavbarMenuApp } from "components/navbar/common";
 
 export const NavbarDeviceComputer: FC = () => {
     const { isScrollDown, isEnabledNavbarInfo, onDisabledNavbarInfo, onEnabledNavbarInfo } =
@@ -21,8 +23,8 @@ export const NavbarDeviceComputer: FC = () => {
             }}
         >
             <header className={cl.navbar}>
-                {isEnabledNavbarInfo ? <NavbarInfo /> : null}
-                <NavbarMenu />
+                {isEnabledNavbarInfo ? <NavbarInfoApp /> : null}
+                <NavbarMenuApp />
             </header>
         </CSSTransition>
     );

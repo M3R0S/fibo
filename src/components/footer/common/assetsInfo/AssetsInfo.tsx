@@ -1,11 +1,11 @@
 import { FC } from "react";
 
 import cl from "./assetsInfo.module.scss";
-import { IUiClassName } from "../types";
+import { IFooterConstantsClassName } from "../types";
 
 import { LinkBlank } from "components/ui";
 
-export const AssetsInfo: FC<IUiClassName> = ({ classNameWrapper }) => {
+export const AssetsInfo: FC<IFooterConstantsClassName> = ({ classNameWrapper }) => {
     return (
         <header className={classNameWrapper}>
             <LinkBlank href="/" className={cl.link}>
