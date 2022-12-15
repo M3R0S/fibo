@@ -1,3 +1,3 @@
-export { FooterDeviceComputer } from "./computer/FooterDeviceComputer";
-export { FooterDeviceMobile } from "./mobile/FooterDeviceMobile";
-export { FooterDevicePad } from "./pad/FooterDevicePad";
+export { FooterDeviceComputer } from "./containers/computer/FooterDeviceComputer";
+export { FooterDeviceMobile } from "./containers/mobile/FooterDeviceMobile";
+export { FooterDevicePad } from "./containers/pad/FooterDevicePad";

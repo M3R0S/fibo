@@ -1,11 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
+
 import { rootReducer } from "./rootReducer";
+
 import {
     loginApiMiddleware,
     mainProductApiMiddleware,
     newProductApiMiddleware,
     promotionPageApiMiddleware,
-} from "../slice";
+} from "../slice/containers";
 
 export const store = configureStore({
     reducer: rootReducer,

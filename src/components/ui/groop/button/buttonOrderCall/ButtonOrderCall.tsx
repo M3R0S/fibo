@@ -2,7 +2,7 @@ import { FC } from "react";
 import classNames from "classnames";
 
 import cl from "./buttonOrderCall.module.scss";
-import { IButtonOrderCall } from "../types";
+import { IButtonOrderCall } from "./constants/types";
 
 export const ButtonOrderCall: FC<IButtonOrderCall> = ({ className }) => {
     return (

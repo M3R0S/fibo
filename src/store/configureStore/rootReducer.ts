@@ -1,9 +1,11 @@
 import { combineReducers } from "redux";
+
 import {
     basketPageReducer,
     globalReducer,
     loginApiReducer,
     loginApiReducerPath,
+    loginReducer,
     mainProductApiReducer,
     mainProductApiReducerPath,
     mainProductReducer,
@@ -13,8 +15,7 @@ import {
     promotionPageApiReducer,
     promotionPageApiReducerPath,
     userReducer,
-    loginReducer,
-} from "../slice";
+} from "../slice/containers";
 
 export const rootReducer = combineReducers({
     navbar: navbarReducer,

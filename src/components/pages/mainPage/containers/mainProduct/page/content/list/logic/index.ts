@@ -1,0 +1,1 @@
+export { useIntersectingEndpoint } from "./useIntersectingEndpoint"

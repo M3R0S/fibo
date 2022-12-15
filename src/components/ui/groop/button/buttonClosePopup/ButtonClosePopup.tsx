@@ -2,14 +2,17 @@ import { FC } from "react";
 import classNames from "classnames";
 
 import cl from "./buttonClosePopup.module.scss";
-import { IButtonClosePopup } from "../types";
+import { IButtonClosePopup } from "./constants/types";
+import { CLOSE } from "./constants/const";
 
-import close from "assets/icons/ui/close.png";
+export const ButtonClosePopup: FC<IButtonClosePopup> = (props) => {
+    const { onClose, className } = props;
 
-export const ButtonClosePopup: FC<IButtonClosePopup> = ({ onClose, className }) => {
+    const { ALT, SRC } = CLOSE;
+
     return (
         <button onClick={onClose} className={classNames(cl.close_root, className)}>
-            <img className={cl.close_img} src={close} alt="Закрыть" />
+            <img className={cl.close_img} src={SRC} alt={ALT} />
         </button>
     );
 };

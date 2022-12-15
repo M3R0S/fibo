@@ -1,12 +1,16 @@
-import ButtonHome from "components/ui";
 import { FC } from "react";
-import { Logo } from "./image/header-logo.png";
-import { ILogo } from "../types";
+
+import { ILogo } from "./constants/types";
+import { LOGO } from "./constants/const";
+
+import { ButtonNavigateMain } from "components/ui";
 
 export const Logo: FC<ILogo> = ({ classNameLogo, classNameHome }) => {
+    const { ALT, SRC } = LOGO;
+
     return (
-        <ButtonHome className={classNameHome}>
-            <img src={logo} alt="Фибо" className={classNameLogo} />
-        </ButtonHome>
+        <ButtonNavigateMain className={classNameHome}>
+            <img src={SRC} alt={ALT} className={classNameLogo} />
+        </ButtonNavigateMain>
     );
 };

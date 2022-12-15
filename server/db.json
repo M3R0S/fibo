@@ -426,6 +426,11 @@
       "id": "2f1a1251-b71f-470c-8eb1-740c2c2ec37b",
       "email": "kisa@mail.ru",
       "password": "12345678"
+    },
+    {
+      "id": "f039a41b-807e-4f6e-918a-88cac0b6b078",
+      "email": "bogdan_yalta@mail.ru",
+      "password": "122345"
     }
   ]
 }

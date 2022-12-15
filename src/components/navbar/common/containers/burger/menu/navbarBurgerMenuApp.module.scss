@@ -1,0 +1,35 @@
+@use "styles/_var.module.scss" as *;
+
+.mobile_container_enter {
+    opacity: 0;
+    transform: translateY(-20rem);
+}
+
+.mobile_container_enter_active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.5s linear;
+}
+
+.mobile_container_exit_active {
+    transform: translateY(-20rem);
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+
+.pad_container_enter {
+    transform: translateY(-7rem);
+    opacity: 0;
+}
+
+.pad_container_enter_active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.5s linear;
+}
+
+.pad_container_exit_active {
+    opacity: 0;
+    transform: translateY(-7rem);
+    transition: all 0.5s linear;
+}

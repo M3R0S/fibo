@@ -1,0 +1,1 @@
+export { PromotionPageApp } from "./app/PromotionPageApp"

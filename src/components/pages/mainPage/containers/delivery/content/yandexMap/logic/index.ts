@@ -1,0 +1,1 @@
+export { useMountYandexMap } from "./useMountYandexMap";

@@ -1,0 +1,1 @@
+export { PromotionPageList } from "./list/PromotionPageList"

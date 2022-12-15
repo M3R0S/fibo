@@ -1,12 +1,12 @@
-import cl from "./buttonNavigateBasket.module.scss";
-import { useNavigateBasket } from "./useNavigateBasket";
-import { IButtonNavigateBasket } from "../types";
-
-import { useAppSelector } from "store";
-
 import { FC } from "react";
 import CountUp from "react-countup";
 import classNames from "classnames";
+
+import cl from "./buttonNavigateBasket.module.scss";
+import { useNavigateBasket } from "./logic";
+import { IButtonNavigateBasket } from "./constants/types";
+
+import { useAppSelector } from "store";
 
 export const ButtonNavigateBasket: FC<IButtonNavigateBasket> = ({ className }) => {
     const { totalPrice } = useAppSelector((state) => state.basketPage);

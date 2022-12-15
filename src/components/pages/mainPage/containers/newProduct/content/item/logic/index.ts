@@ -1,0 +1,1 @@
+export { useNewProductItem } from "./useNewProductItem"

@@ -1,18 +1,24 @@
 import { FC } from "react";
-import cl from "./errorPageApp.module.scss";
-import ErrorContent from "../content/ErrorContent";
 import { Outlet } from "react-router-dom";
-import { useLocationLinkActive } from "hook";
 
-const ErrorPageApp: FC = () => {
+import cl from "./errorPageApp.module.scss";
+
+import { useLocationLinkActive } from "hook";
+import { ButtonBack, ButtonNavigateMain } from "components/ui";
+
+export const ErrorPageApp: FC = () => {
     useLocationLinkActive();
 
     return (
         <main className={cl.page}>
-            <ErrorContent />
+            <section className={cl.container}>
+                <h1>К сожалению, страница недоступна</h1>
+                <div className={cl.control}>
+                    <ButtonBack className={cl.back}>Назад</ButtonBack>
+                    <ButtonNavigateMain className={cl.home}>На главную</ButtonNavigateMain>
+                </div>
+            </section>
             <Outlet />
         </main>
     );
 };
-
-export default ErrorPageApp;

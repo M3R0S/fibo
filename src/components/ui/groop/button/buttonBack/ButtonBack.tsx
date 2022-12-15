@@ -2,7 +2,7 @@ import { FC } from "react";
 import classNames from "classnames";
 
 import cl from "./buttonBack.module.scss";
-import { IButtonBack } from "../types";
+import { IButtonBack } from "./constants/types";
 
 import { useGoBack } from "hook";
 

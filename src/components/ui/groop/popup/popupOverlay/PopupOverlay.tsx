@@ -2,8 +2,9 @@ import { FC } from "react";
 import classNames from "classnames";
 
 import cl from "./popupOverlay.module.scss";
-import { useClosePopupOverlay } from "./useClosePopupOverlay";
-import { IPopupOverlay } from "../types";
+import { useClosePopupOverlay } from "./logic";
+import { IPopupOverlay } from "./constants/types"; 
+
 import { PopupPortal } from "../popupPortal/PopupPortal";
 
 export const PopupOverlay: FC<IPopupOverlay> = ({ isOpened, onClose, children }) => {

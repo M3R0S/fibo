@@ -1,5 +1,5 @@
-export { AssetsInfo } from "./assetsInfo/AssetsInfo";
-export { Copyright } from "./copyright/Copyright";
-export { LinkContacts } from "./linkContacts/LinkContacts";
-export { PaymentSystems } from "./paymentSystems/PaymentSystems";
-export { SocialNetwork } from "./socialNetwork/SocialNetwork";
+export { FooterCommonAssetsInfo } from "./containers/assetsInfo/FooterCommonAssetsInfo";
+export { FooterCommonCopyright } from "./containers/copyright/FooterCommonCopyright";
+export { FooterCommonLinkContacts } from "./containers/linkContacts/FooterCommonLinkContacts";
+export { FooterCommonPaymentSystems } from "./containers/paymentSystems/FooterCommonPaymentSystems";
+export { FooterCommonSocialNetwork } from "./containers/socialNetwork/FooterCommonSocialNetwork";

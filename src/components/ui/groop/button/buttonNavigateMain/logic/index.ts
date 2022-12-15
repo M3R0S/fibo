@@ -1,0 +1,1 @@
+export { useNavigateMain } from "./useNavigateMain";

@@ -1,7 +1,8 @@
 import { FC } from "react";
-import cl from "./error.module.scss";
-import { IError } from "../types";
 import classNames from "classnames";
+
+import cl from "./error.module.scss";
+import { IError } from "./constants/types";
 
 export const Error: FC<IError> = ({ className, children = "Ошибка", isPopup = false, onClose }) => {
     return (

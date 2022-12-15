@@ -1,6 +1,4 @@
 export {
-    basketPageReducer,
-    basketPageSlice,
     changeBasketPromoCodeRatio,
     clearBasket,
     decrementQuantityBasketItem,
@@ -9,52 +7,24 @@ export {
     postBasketItem,
     setBasketPromoCodeActive,
     setQuantityBasketItem,
-} from "./basketPage/basketPageSlice";
-export { globalReducer, globalSlice, setGlobalScreenWidth } from "./global/globalSlice";
-export { userReducer, userSlice, setUser } from "./login/userSlice";
-export { loginReducer, loginSlice, setIsOpenedLoginPopup, setIsLogin } from "./login/loginSlice";
+} from "./containers/basketPage/basketPageSlice";
+export { setGlobalScreenWidth } from "./containers/global/globalSlice";
+export { setUser } from "./containers/login/userSlice";
+export { setIsOpenedLoginPopup, setIsLogin } from "./containers/login/loginSlice";
 export {
-    mainProductReducer,
-    mainProductSlice,
     setEndLoadingMainProduct,
     setIsEndLoadingMainProduct,
     setIsIntersectingMainProduct,
-} from "./mainProduct/mainProductSlice";
-export {
-    navbarReducer,
-    navbarSlice,
-    setNavbarLinkActive,
-    setOpenNavbarBurger,
-} from "./navbar/navbarSlice";
+} from "./containers/mainProduct/mainProductSlice";
+export { setNavbarLinkActive, setOpenNavbarBurger } from "./containers/navbar/navbarSlice";
 
+export { useLazyGetUsersQuery, usePostUserMutation } from "./containers/login/loginApi";
 export {
-    loginApiReducer,
-    loginApiReducerPath,
-    loginApiMiddleware,
-    loginApi,
-    useLazyGetUsersQuery,
-    usePostUserMutation,
-} from "./login/loginApi";
-export {
-    mainProductApiReducer,
-    mainProductApiReducerPath,
-    mainProductApiMiddleware,
-    mainProductApi,
     useGetMainProductPopupDefaultQuery,
     useLazyGetMainProductListQuery,
-} from "./mainProduct/mainProductApi";
+} from "./containers/mainProduct/mainProductApi";
+export { useGetNewProductListQuery } from "./containers/newProduct/newProductApi";
 export {
-    newProductApiReducer,
-    newProductApiReducerPath,
-    newProductApiMiddleware,
-    newProductApi,
-    useGetNewProductListQuery,
-} from "./newProduct/newProductApi";
-export {
-    promotionPageApiReducer,
-    promotionPageApiReducerPath,
-    promotionPageApiMiddleware,
-    promotionPageApi,
     useGetPromotionModalItemQuery,
     useGetPromotionPageListQuery,
-} from "./promotionPage/promotionPageApi";
+} from "./containers/promotionPage/promotionPageApi";

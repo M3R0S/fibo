@@ -1,8 +1,8 @@
 import { FC } from "react";
 import ReactDOM from "react-dom";
 
-import { IPopupPortal } from "../types";
-import { useCreatePopupPortal } from "./useCreatePopupPortal";
+import { IPopupPortal } from "./constants/types";
+import { useCreatePopupPortal } from "./logic";
 
 export const PopupPortal: FC<IPopupPortal> = ({ children }) => {
     const { container } = useCreatePopupPortal();

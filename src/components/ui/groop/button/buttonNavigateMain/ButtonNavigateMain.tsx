@@ -2,8 +2,8 @@ import { FC } from "react";
 import classNames from "classnames";
 
 import cl from "./buttonNavigateMain.module.scss";
-import { useNavigateMain } from "./useNavigateMain";
-import { IButtonNavigateMain } from "../types";
+import { useNavigateMain } from "./logic";
+import { IButtonNavigateMain } from "./constants/types";
 
 export const ButtonNavigateMain: FC<IButtonNavigateMain> = ({ children, className }) => {
     const { navigateMain } = useNavigateMain();

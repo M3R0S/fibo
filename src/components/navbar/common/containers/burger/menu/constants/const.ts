@@ -1,0 +1,1 @@
+export const TIMEOUT_ANIMATION_BURGER_POPUP = 500;
