@@ -6,7 +6,12 @@ import cl from "../loginPopupForm.module.scss";
 import { IUseIsLogin } from "../constants/type";
 
 import { useAppDispatch, useAppSelector } from "store";
-import { setIsLogin, useLazyGetUsersQuery, usePostUserMutation } from "store/slice";
+import {
+    setIsAuthorized,
+    setIsLogin,
+    useLazyGetUsersQuery,
+    usePostUserMutation,
+} from "store/slice";
 
 export const useIsLogin = ({
     email,
@@ -21,7 +26,7 @@ export const useIsLogin = ({
 
     const [isValidEmail, setIsValidEmail] = useState<boolean | null>(null);
 
-    const [createPost] = usePostUserMutation();
+    const [createPost, {isLoading}] = usePostUserMutation();
 
     const [trigger, { data: users = [], isFetching, isError, isSuccess }] = useLazyGetUsersQuery();
 
@@ -39,7 +44,7 @@ export const useIsLogin = ({
         if (!isFetching && isSuccess && users.length > 0 && isValidEmail === null) {
             if (isLogin) {
                 naviagte(-1);
-                dispatch(setIsLogin(false));
+                dispatch(setIsAuthorized(true));
             }
             if (!isLogin) {
                 setEmailValidation("Такой email уже используется");
@@ -55,13 +60,13 @@ export const useIsLogin = ({
             if (!isLogin) {
                 createPost({ id: uuid(), email, password });
                 naviagte(-1);
-                dispatch(setIsLogin(false));
+                dispatch(setIsAuthorized(true));
             }
-        }
-        if (isError) {
-            setEmailValidation("Произошла ошибка");
-            setEmailClassName([cl.email, cl.email_warning].join(" "));
-            setIsValidEmail(false);
+            if (isError) {
+                setEmailValidation("Произошла ошибка");
+                setEmailClassName([cl.email, cl.email_warning].join(" "));
+                setIsValidEmail(false);
+            }
         }
     }, [
         users,
@@ -79,5 +84,5 @@ export const useIsLogin = ({
         isLogin,
     ]);
 
-    return { isLogin, onSetIsLogin, onSubmit };
+    return { isLogin, onSetIsLogin, onSubmit, isLoading, isFetching };
 };

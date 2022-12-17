@@ -10,7 +10,7 @@ export {
 } from "./containers/basketPage/basketPageSlice";
 export { setGlobalScreenWidth } from "./containers/global/globalSlice";
 export { setUser } from "./containers/login/userSlice";
-export { setIsOpenedLoginPopup, setIsLogin } from "./containers/login/loginSlice";
+export { setIsLogin, setIsAuthorized } from "./containers/login/loginSlice";
 export {
     setEndLoadingMainProduct,
     setIsEndLoadingMainProduct,

@@ -13,7 +13,7 @@ export interface IGlobalSlice {
 
 export interface ILoginSlice {
     isLogin: boolean;
-    isOpenedLoginPopup: boolean;
+    isAuthorized: boolean
 }
 
 export interface IUserSlice {

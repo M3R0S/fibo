@@ -26,6 +26,9 @@ export const MainProductPopupPizzaItem: FC<IMainProductPopupPizzaItem> = (props)
             />
             <ButtonAddInBasket
                 {...props}
+                weight={weight}
+                size={size}
+                dough={dough}
                 isPopup={true}
                 price={totalPrice}
                 className={cl.add_basket}

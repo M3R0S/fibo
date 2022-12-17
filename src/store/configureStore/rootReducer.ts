@@ -17,7 +17,7 @@ import {
     userReducer,
 } from "../slice/containers";
 
-export const rootReducer = combineReducers({
+export const ROOT_REDUCER = combineReducers({
     navbar: navbarReducer,
     basketPage: basketPageReducer,
     global: globalReducer,

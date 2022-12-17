@@ -431,6 +431,26 @@
       "id": "f039a41b-807e-4f6e-918a-88cac0b6b078",
       "email": "bogdan_yalta@mail.ru",
       "password": "122345"
+    },
+    {
+      "id": "a110d2ae-16ea-4945-8904-977ad937402b",
+      "email": "123@mail.ru",
+      "password": "123456"
+    },
+    {
+      "id": "07cfccf0-dcf8-46cb-9415-fc1578d8512d",
+      "email": "123456@mail.ru",
+      "password": "123456"
+    },
+    {
+      "id": "ac956b31-08ab-462b-a152-e557177afcea",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "a231c377-3188-4de9-b999-ad3cf6184238",
+      "email": "hfghdgd@mail.ru",
+      "password": "e65e654"
     }
   ]
 }

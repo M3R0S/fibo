@@ -1,5 +1,10 @@
 @use "styles/_var.module.scss" as *;
 
+.loader {
+    position: absolute;
+    margin-top: 0.5rem;
+}
+
 .form {
     width: 100%;
     margin-top: 8rem;

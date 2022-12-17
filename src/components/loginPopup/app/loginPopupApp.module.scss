@@ -6,12 +6,33 @@
     background: #fff;
     border-radius: 1.2rem;
     display: flex;
+    justify-content: center;
     z-index: 1;
     padding-bottom: 6rem;
+
+    &_active {
+        animation: forwards containerActive 0.5s linear;
+    }
+
+    &_disabled {
+        animation: forwards containerDisabled 0.5s linear;
+    }
 }
 
 .close {
     position: absolute;
     top: 1rem;
     right: 1rem;
+}
+
+@keyframes containerActive {
+    0% {
+        opacity: 0;
+    }
+}
+
+@keyframes containerDisabled {
+    100% {
+        opacity: 0;
+    }
 }

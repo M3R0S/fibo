@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import { rootReducer } from "./rootReducer";
+import { ROOT_REDUCER } from "./rootReducer";
 
 import {
     loginApiMiddleware,
@@ -10,7 +10,7 @@ import {
 } from "../slice/containers";
 
 export const store = configureStore({
-    reducer: rootReducer,
+    reducer: ROOT_REDUCER,
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware()
             .concat(promotionPageApiMiddleware)
