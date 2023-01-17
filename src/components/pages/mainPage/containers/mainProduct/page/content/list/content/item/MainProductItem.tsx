@@ -22,7 +22,12 @@ export const MainProductItem: FC<IMainProductItem> = (props) => {
     return (
         <article onClick={onOpenPopup} className={cl.card}>
             <header className={cl.header}>
-                <img src={img} alt="Изображение продукта" />
+                <img
+                    src={img}
+                    width={315}
+                    height={240}
+                    alt="Изображение продукта"
+                />
                 <div className={cl.title}>
                     <h2>{title}</h2>
                 </div>
@@ -41,7 +46,11 @@ export const MainProductItem: FC<IMainProductItem> = (props) => {
                         Открыть
                     </button>
                 ) : (
-                    <ButtonAddInBasket className={cl.basket} isPopup={false} {...props} />
+                    <ButtonAddInBasket
+                        className={cl.basket}
+                        isPopup={false}
+                        {...props}
+                    />
                 )}
             </footer>
         </article>

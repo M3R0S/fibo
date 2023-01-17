@@ -1,6 +1,6 @@
 import { Navigate } from "react-router-dom";
 
-import { IPUBLIC_ROUTES, RoutesName } from "../constants/types";
+import { PUBLIC_ROUTES, RoutesName } from "../constants/types";
 
 import {
     BasketPageApp,
@@ -12,7 +12,7 @@ import {
     PromotionPopupApp,
 } from "components/pages";
 
-export const PUBLIC_ROUTES: IPUBLIC_ROUTES[] = [
+export const PUBLIC_ROUTES: PUBLIC_ROUTES[] = [
     {
         patch: RoutesName.START,
         element: <Navigate to={RoutesName.APP_PAGE} replace />,

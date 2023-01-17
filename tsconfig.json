@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "baseUrl": "src",
+    "baseUrl": "srcNew",
     "lib": [
       "dom",
       "dom.iterable",
@@ -23,5 +23,5 @@
   },
   "include": [
     "src"
-  ]
+, "srcNew"  ]
 }

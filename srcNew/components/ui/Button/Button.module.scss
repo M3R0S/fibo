@@ -1,0 +1,78 @@
+@use "styles/_var.module.scss" as *;
+
+.button_root {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    border: none;
+}
+
+.order_call {
+    width: 180px;
+    height: 42px;
+    background: #f3f3f7;
+    border-radius: 2.5rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #696f7a;
+
+    &:hover {
+        border: 0.1rem solid $color-yellow;
+        color: #000;
+    }
+}
+
+.call_number {
+    padding: 0.2em 0.3em;
+    color: $color-yellow;
+    font-size: 2.6em;
+    font-weight: 700;
+    border-radius: 1.7em;
+    white-space: nowrap;
+    background-color: inherit;
+
+    &:hover {
+        outline: 1px solid $color-yellow;
+    }
+}
+
+.nav_link {
+    padding: 0.7rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $color-black;
+    border-radius: 1.2rem;
+    transition: all 0.2s linear;
+
+    &:hover {
+        background-color: $color-yellow;
+    }
+
+    &_active {
+        color: $color-yellow;
+
+        &:hover {
+            background-color: #fff;
+        }
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .nav_link {
+        color: $color-black;
+        background-color: $color-yellow;
+        font-size: 1.9rem;
+
+        &:hover {
+            background-color: #fff;
+        }
+
+        &_active {
+            color: #fff;
+
+            &:hover {
+                background-color: $color-yellow;
+            }
+        }
+    }
+}
